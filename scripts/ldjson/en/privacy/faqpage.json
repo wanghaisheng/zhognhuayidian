@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my personal data handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your data is only used to improve the product experience and will not be shared with third parties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I delete my account and data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can request deletion of your account and all data at any time in your profile settings."
+      }
+    }
+  ]
+}

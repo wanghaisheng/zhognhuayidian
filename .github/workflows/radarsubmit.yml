@@ -1,0 +1,51 @@
+name: Parse Sitemap and Submit URLs to Radar
+
+on:
+  push:
+    paths:
+      - sitemap.xml  # Trigger the action on pushes to the main branch
+  workflow_dispatch:
+    inputs:
+      sitemap_url:
+        description: 'Enter the URL of the sitemap or leave empty to use the default local file'
+        required: false
+        default: ''  # Leave empty for default folder path option
+
+jobs:
+  parse-sitemap:
+    runs-on: ubuntu-latest  # Run on an Ubuntu runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Use your preferred version of Python
+
+      - name: Install dependencies
+        run: |
+          pip install DrissionPage python-dotenv DataRecorder aiohttp loguru pandas
+
+      - name: Set the sitemap file path
+        id: set_sitemap_path
+        run: |
+          if [ -z "${{ github.event.inputs.sitemap_url }}" ]; then
+            # If sitemap_url input is empty, use a default local path
+            echo "Using default local path for sitemap."
+            echo "sitemap_file=sitemap.xml" >> $GITHUB_ENV
+          else
+            # Otherwise, use the provided URL
+            echo "Using provided sitemap URL."
+            echo "sitemap_file=${{ github.event.inputs.sitemap_url }}" >> $GITHUB_ENV
+          fi
+
+      - name: Download sitemap file (if URL provided)
+        if: ${{ github.event.inputs.sitemap_url != '' }}
+        run: |
+          curl -O ${{ github.event.inputs.sitemap_url }}  # Download the sitemap from the provided URL
+
+      - name: Parse sitemap and submit URLs to Radar
+        run: |
+          python radar_submit.py ${{ env.sitemap_file }}  # Pass the sitemap file or URL to the Python script

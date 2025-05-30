@@ -1,0 +1,29 @@
+on:
+  # push:
+    # branches:
+      # - master 
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/master'
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Build only' 
+        uses: tsg-iitkgp/next-build-export-action@v1.1
+        env:
+          BUILD_DIR: .
+          BUILD_ONLY: true
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Build and deploy'
+        uses: tsg-iitkgp/next-build-export-action@v1.1
+        env:
+          BUILD_DIR: .
+          PAGES_BRANCH: sample-site-build
+          TOKEN: ${{ secrets.TOKEN }}

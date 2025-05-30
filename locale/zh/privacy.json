@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "description": "WebSim Vibe 编程启动器隐私政策。了解当您使用我们的AI驱动网站构建器启动项目时，我们如何处理您的数据。",
+    "keywords": "WebSim, 隐私政策, 数据保护, SaaS, 编程启动器, AI, 网站构建器",
+    "og:title": "隐私政策 - WebSim Vibe 编程启动器",
+    "og:description": "了解我们对您在使用 WebSim Vibe 编程启动器时的隐私承诺。",
+    "og:image": "https://websimstarter.borninsea.com/og-image-privacy.png",
+    "og:image:alt": "WebSim Vibe 隐私政策横幅",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:site_name": "WebSim Vibe 编程启动器",
+    "google": "notranslate",
+    "author": "WebSim 团队",
+    "robots": "index, follow, noarchive"
+  }
+}

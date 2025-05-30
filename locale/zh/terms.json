@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "description": "WebSim Vibe 编程启动器服务条款。了解使用我们AI驱动网站构建器的条款和条件。",
+    "keywords": "WebSim, 服务条款, SaaS, 编程启动器, AI, 网站构建器, 法律",
+    "og:title": "服务条款 - WebSim Vibe 编程启动器",
+    "og:description": "在使用我们的平台前，请阅读 WebSim Vibe 编程启动器的服务条款。",
+    "og:image": "https://websimstarter.borninsea.com/og-image-terms.png",
+    "og:image:alt": "WebSim Vibe 服务条款横幅",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:site_name": "WebSim Vibe 编程启动器",
+    "google": "notranslate",
+    "author": "WebSim 团队",
+    "robots": "index, follow, noarchive"
+  }
+}

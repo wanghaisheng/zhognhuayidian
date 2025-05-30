@@ -1,0 +1,188 @@
+User-agent: Googlebot
+User-agent: Applebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Yeti
+User-agent: Twitterbot
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+User-agent: 360Spider
+User-agent: Yisouspider
+User-agent: Sogouspider
+Disallow: /
+
+User-agent: ALL-AI-BOTS
+Allow: /llms.txt
+Disallow: /
+
+User-agent: AI2Bot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Amazonbot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Applebot-Extended
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Bytespider
+Allow: /llms.txt
+Disallow: /
+
+User-agent: CCBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: ChatGPT-User
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Claude-Web
+Allow: /llms.txt
+Disallow: /
+
+User-agent: ClaudeBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Diffbot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: FacebookBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: FriendlyCrawler
+Allow: /llms.txt
+Disallow: /
+
+User-agent: GPTBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Google-Extended
+Allow: /llms.txt
+Disallow: /
+
+User-agent: GoogleOther
+Allow: /llms.txt
+Disallow: /
+
+User-agent: GoogleOther-Image
+Allow: /llms.txt
+Disallow: /
+
+User-agent: GoogleOther-Video
+Allow: /llms.txt
+Disallow: /
+
+User-agent: ICC-Crawler
+Allow: /llms.txt
+Disallow: /
+
+User-agent: ISSCyberRiskCrawler
+Allow: /llms.txt
+Disallow: /
+
+User-agent: ImagesiftBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Kangaroo Bot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /llms.txt
+Disallow: /
+
+User-agent: OAI-SearchBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: PetalBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Scrapy
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Sidetrade indexer bot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Timpibot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Allow: /llms.txt
+Disallow: /
+
+User-agent: Webzio-Extended
+Allow: /llms.txt
+Disallow: /
+
+User-agent: YouBot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: anthropic-ai
+Allow: /llms.txt
+Disallow: /
+
+User-agent: cohere-ai
+Allow: /llms.txt
+Disallow: /
+
+User-agent: facebookexternalhit
+Allow: /llms.txt
+Disallow: /
+
+User-agent: iaskspider/2.0
+Allow: /llms.txt
+Disallow: /
+
+User-agent: img2dataset
+Allow: /llms.txt
+Disallow: /
+
+User-agent: omgili
+Allow: /llms.txt
+Disallow: /
+
+User-agent: omgilibot
+Allow: /llms.txt
+Disallow: /
+
+User-agent: *
+Allow: /
+Allow: /zh
+Disallow: /js
+Disallow: /scripts
+Disallow: /lang
+Disallow: /locale
+Disallow: /css
+Disallow: /docs
+Disallow: /reference
+Disallow: /template
+Disallow: /input
+Sitemap: https://websimstarter.borninsea.com/sitemap.xml

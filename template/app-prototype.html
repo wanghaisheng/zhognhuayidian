@@ -1,0 +1,1590 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeastMeet - 酷酷年轻人的约饭神器</title>
+  <style>
+    :root {
+      /* 主色调 */
+      --primary: #8C52FF;
+      --primary-dark: #6E3AD9;
+      --primary-light: #A875FF;
+      
+      /* 霓虹色调 */
+      --neon-pink: #FF2E93;
+      --neon-blue: #00E9FF;
+      --neon-green: #00FF85;
+      --neon-yellow: #FFDE59;
+      
+      /* 暗色背景 */
+      --bg-dark: #121212;
+      --bg-card: #1E1E1E;
+      --bg-card-hover: #252525;
+      
+      /* 文本颜色 */
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+      --text-tertiary: rgba(255, 255, 255, 0.5);
+      --text-disabled: rgba(255, 255, 255, 0.3);
+      
+      /* 边框与阴影 */
+      --border-light: rgba(255, 255, 255, 0.1);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+      --shadow-neon: 0 0 15px rgba(140, 82, 255, 0.5);
+      
+      /* 间距 */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      
+      /* 圆角 */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: var(--space-md);
+    }
+    
+    .app-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xl);
+      justify-content: center;
+      padding-bottom: var(--space-xl);
+    }
+    
+    .screen {
+      width: 360px;
+      height: 720px;
+      background: var(--bg-dark);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-light);
+    }
+    
+    .header {
+      padding: var(--space-md) var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .header-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+    .header-action {
+      display: flex;
+      gap: var(--space-sm);
+    }
+    
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .icon-button:hover, .icon-button:active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .content {
+      height: calc(100% - 160px);
+      overflow-y: auto;
+      padding: 0 var(--space-md) var(--space-md);
+    }
+    
+    .full-content {
+      height: calc(100% - 80px);
+      overflow-y: auto;
+      padding: 0 var(--space-md) var(--space-md);
+    }
+    
+    .nav-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--bg-card);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid var(--border-light);
+      padding: 0 var(--space-md);
+    }
+    
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      font-size: 12px;
+    }
+    
+    .nav-item.active {
+      color: var(--primary);
+    }
+    
+    .nav-icon {
+      font-size: 24px;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-md);
+      border: 1px solid var(--border-light);
+      transition: all 0.2s ease;
+    }
+    
+    .card:active {
+      transform: scale(0.98);
+      background: var(--bg-card-hover);
+    }
+    
+    .feast-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+    
+    .feast-image {
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feast-image-bg {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      filter: brightness(0.7);
+    }
+    
+    .feast-details {
+      padding: var(--space-md);
+    }
+    
+    .feast-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .feast-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+    }
+    
+    .feast-icon {
+      margin-right: var(--space-xs);
+    }
+    
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin: var(--space-sm) 0;
+    }
+    
+    .tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-full);
+      font-size: 12px;
+    }
+    
+    .tag.highlighted {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .button.primary {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .button.primary:hover, .button.primary:active {
+      background: var(--primary-dark);
+    }
+    
+    .button.outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .button.outline:hover, .button.outline:active {
+      background: rgba(140, 82, 255, 0.1);
+    }
+    
+    .button.full {
+      width: 100%;
+    }
+    
+    .button-icon {
+      margin-right: var(--space-sm);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(to right, var(--neon-pink), var(--primary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: var(--space-lg) 0 var(--space-md);
+      display: flex;
+      align-items: center;
+    }
+    
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+    }
+    
+    .avatar.small {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .avatar-group {
+      display: flex;
+      margin-left: var(--space-sm);
+    }
+    
+    .avatar-group .avatar {
+      margin-left: -10px;
+      border: 2px solid var(--bg-card);
+    }
+    
+    .avatar-group .avatar:first-child {
+      margin-left: 0;
+    }
+    
+    .users-more {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-left: -10px;
+      border: 2px solid var(--bg-card);
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border-radius: var(--radius-full);
+      padding: var(--space-sm) var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    .search-icon {
+      color: var(--text-tertiary);
+      margin-right: var(--space-sm);
+    }
+    
+    .search-input {
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      flex: 1;
+      font-size: 16px;
+    }
+    
+    .search-input:focus {
+      outline: none;
+    }
+    
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      gap: var(--space-sm);
+      padding: var(--space-xs) 0;
+      margin-bottom: var(--space-md);
+      scrollbar-width: none;
+    }
+    
+    .categories::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .category-item {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-card);
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      color: var(--text-secondary);
+    }
+    
+    .category-item.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: var(--space-sm);
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: var(--space-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 16px;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    textarea.form-input {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .form-select {
+      width: 100%;
+      padding: var(--space-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 16px;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right var(--space-md) center;
+    }
+    
+    .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    .chat-message {
+      display: flex;
+      margin-bottom: var(--space-md);
+    }
+    
+    .chat-message.outgoing {
+      flex-direction: row-reverse;
+    }
+    
+    .message-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      margin-right: var(--space-sm);
+    }
+    
+    .chat-message.outgoing .message-avatar {
+      margin-right: 0;
+      margin-left: var(--space-sm);
+    }
+    
+    .message-content {
+      max-width: 70%;
+    }
+    
+    .message-bubble {
+      background: var(--bg-card);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .chat-message.outgoing .message-bubble {
+      background: var(--primary);
+    }
+    
+    .message-time {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      text-align: right;
+    }
+    
+    .chat-input-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-md);
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+    }
+    
+    .chat-input {
+      flex: 1;
+      padding: var(--space-md);
+      background: var(--bg-card);
+      border: none;
+      border-radius: var(--radius-full);
+      color: var(--text-primary);
+      margin-right: var(--space-sm);
+    }
+    
+    .chat-input:focus {
+      outline: none;
+    }
+    
+    .pulse {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: var(--radius-full);
+      background: var(--neon-green);
+      margin-right: var(--space-sm);
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 133, 0.5);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 255, 133, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 133, 0);
+      }
+    }
+    
+    .profile-header {
+      background: linear-gradient(to right, var(--neon-blue), var(--primary));
+      padding: var(--space-xl) var(--space-md) var(--space-lg);
+      margin: -16px -16px 0;
+      text-align: center;
+      position: relative;
+    }
+    
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-full);
+      border: 3px solid white;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .profile-stats {
+      display: flex;
+      justify-content: space-around;
+      margin: var(--space-md) 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+    
+    .login-logo {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      margin: var(--space-xl) 0;
+    }
+    
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+    
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--bg-card);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--text-primary);
+    }
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      color: var(--text-tertiary);
+      margin: var(--space-xl) 0;
+    }
+    
+    .divider:before, .divider:after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+    
+    .divider:before {
+      margin-right: var(--space-md);
+    }
+    
+    .divider:after {
+      margin-left: var(--space-md);
+    }
+    
+    .create-feast-fab {
+      position: absolute;
+      bottom: 100px;
+      right: var(--space-md);
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-full);
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-neon);
+      border: none;
+      font-size: 24px;
+      z-index: 100;
+    }
+    
+    /* Material Icons */
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;  /* Preferred icon size */
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- 启动/登录页 -->
+  <div class="screen" id="login">
+    <div class="full-content">
+      <div style="height: 30%"></div>
+      
+      <div class="login-logo">
+        <span class="gradient-text">FeastMeet</span>
+        <div style="font-size: 16px; color: var(--text-secondary); font-weight: normal; margin-top: 8px;">美食相遇，灵魂碰撞</div>
+      </div>
+      
+      <div class="social-login">
+        <a href="#home" class="social-icon">
+          <span class="material-icons">alternate_email</span>
+        </a>
+        <a href="#home" class="social-icon">
+          <span class="material-icons">chat</span>
+        </a>
+        <a href="#home" class="social-icon">
+          <span class="material-icons">language</span>
+        </a>
+      </div>
+      
+      <div class="divider">或使用邮箱登录</div>
+      
+      <div class="form-group">
+        <input type="email" class="form-input" placeholder="邮箱地址">
+      </div>
+      
+      <div class="form-group">
+        <input type="password" class="form-input" placeholder="密码">
+      </div>
+      
+      <a href="#home" class="button primary full" style="margin-bottom: var(--space-md);">登录</a>
+      <a href="#home" class="button outline full">注册新账号</a>
+      
+      <div style="text-align: center; margin-top: var(--space-xl); color: var(--text-tertiary);">
+        登录即表示您同意我们的<br>
+        <a href="#" style="color: var(--primary);">服务条款</a> 和 <a href="#" style="color: var(--primary);">隐私政策</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 主页/发现页 -->
+  <div class="screen" id="home">
+    <div class="header">
+      <div class="header-title">探索饭局</div>
+      <div class="header-action">
+        <button class="icon-button">
+          <span class="material-icons">notifications</span>
+        </button>
+        <button class="icon-button">
+          <span class="material-icons">tune</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="search-bar">
+        <span class="material-icons search-icon">search</span>
+        <input type="text" class="search-input" placeholder="搜索饭局、餐厅或美食...">
+      </div>
+      
+      <div class="categories">
+        <div class="category-item active">推荐</div>
+        <div class="category-item">新奇体验</div>
+        <div class="category-item">职场社交</div>
+        <div class="category-item">音乐爱好者</div>
+        <div class="category-item">电影交流</div>
+        <div class="category-item">艺术文化</div>
+      </div>
+      
+      <a href="#feast-detail" class="feast-card">
+        <div class="feast-image">
+          <div class="feast-image-bg" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');"></div>
+          <div style="position: absolute; top: var(--space-md); right: var(--space-md); background: rgba(0,0,0,0.6); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-full); font-size: 12px; color: white;">
+            <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 2px;">person</span> 3/6
+          </div>
+        </div>
+        <div class="feast-details">
+          <h3>创意料理夜 @ 深蓝餐厅</h3>
+          <div class="feast-meta">
+            <div class="feast-date">
+              <span class="material-icons feast-icon">event</span>
+              今晚 19:30
+            </div>
+            <div class="feast-date">
+              <span class="material-icons feast-icon">location_on</span>
+              1.2km
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-sm);">分享对创意料理的热爱，探讨未来美食趋势，交流味蕾体验。</p>
+          <div class="tags-container">
+            <span class="tag highlighted">美食探索</span>
+                        <span class="tag">创意料理</span>
+            <span class="tag">社交晚餐</span>
+          </div>
+          <div style="display: flex; align-items: center; margin-top: var(--space-md); justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar small">
+              <div style="margin-left: var(--space-sm); font-size: 14px;">
+                <div>Alex Chen</div>
+                <div style="color: var(--text-tertiary); font-size: 12px; display: flex; align-items: center;">
+                  <span class="material-icons" style="font-size: 14px; margin-right: 2px;">star</span>
+                  4.8
+                </div>
+              </div>
+            </div>
+            <div style="color: var(--neon-pink); font-weight: 600;">¥128/位</div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#feast-detail" class="feast-card">
+        <div class="feast-image">
+          <div class="feast-image-bg" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+          <div style="position: absolute; top: var(--space-md); right: var(--space-md); background: rgba(0,0,0,0.6); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-full); font-size: 12px; color: white;">
+            <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 2px;">person</span> 2/4
+          </div>
+        </div>
+        <div class="feast-details">
+          <h3>爵士乐与红酒之夜</h3>
+          <div class="feast-meta">
+            <div class="feast-date">
+              <span class="material-icons feast-icon">event</span>
+              明天 20:00
+            </div>
+            <div class="feast-date">
+              <span class="material-icons feast-icon">location_on</span>
+              3.5km
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-sm);">边听爵士乐边品红酒，聊聊音乐与艺术，结交志同道合的朋友。</p>
+          <div class="tags-container">
+            <span class="tag highlighted">音乐爱好者</span>
+            <span class="tag">红酒</span>
+            <span class="tag">爵士乐</span>
+          </div>
+          <div style="display: flex; align-items: center; margin-top: var(--space-md); justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar small">
+              <div style="margin-left: var(--space-sm); font-size: 14px;">
+                <div>Sophia Lin</div>
+                <div style="color: var(--text-tertiary); font-size: 12px; display: flex; align-items: center;">
+                  <span class="material-icons" style="font-size: 14px; margin-right: 2px;">star</span>
+                  4.9
+                </div>
+              </div>
+            </div>
+            <div style="color: var(--neon-pink); font-weight: 600;">¥168/位</div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#feast-detail" class="feast-card">
+        <div class="feast-image">
+          <div class="feast-image-bg" style="background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+          <div style="position: absolute; top: var(--space-md); right: var(--space-md); background: rgba(255,46,147,0.8); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-full); font-size: 12px; color: white;">
+            火爆
+          </div>
+        </div>
+        <div class="feast-details">
+          <h3>科技创业者交流会 @ 云端咖啡</h3>
+          <div class="feast-meta">
+            <div class="feast-date">
+              <span class="material-icons feast-icon">event</span>
+              周六 13:00
+            </div>
+            <div class="feast-date">
+              <span class="material-icons feast-icon">location_on</span>
+              0.8km
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-sm);">轻松氛围中交流创业心得，寻找合作伙伴，碰撞创新火花。</p>
+          <div class="tags-container">
+            <span class="tag highlighted">职场社交</span>
+            <span class="tag">创业</span>
+            <span class="tag">科技</span>
+          </div>
+          <div style="display: flex; align-items: center; margin-top: var(--space-md); justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+              <div class="avatar-group">
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" class="avatar small">
+                <img src="https://randomuser.me/api/portraits/women/79.jpg" class="avatar small">
+                <div class="users-more">+3</div>
+              </div>
+              <div style="margin-left: var(--space-sm); font-size: 14px;">
+                <div>多人主办</div>
+              </div>
+            </div>
+            <div style="color: var(--neon-pink); font-weight: 600;">¥88/位</div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#create-feast" class="create-feast-fab">
+        <span class="material-icons">add</span>
+      </a>
+    </div>
+    
+    <div class="nav-bar">
+      <a href="#home" class="nav-item active">
+        <span class="material-icons nav-icon">explore</span>
+        <span>发现</span>
+      </a>
+      <a href="#nearby" class="nav-item">
+        <span class="material-icons nav-icon">map</span>
+        <span>附近</span>
+      </a>
+      <a href="#messages" class="nav-item">
+        <span class="material-icons nav-icon">chat</span>
+        <span>消息</span>
+      </a>
+      <a href="#profile" class="nav-item">
+        <span class="material-icons nav-icon">person</span>
+        <span>我的</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 饭局详情页 -->
+  <div class="screen" id="feast-detail">
+    <div class="header">
+      <button class="icon-button" onclick="window.location.href='#home'">
+        <span class="material-icons">arrow_back</span>
+      </button>
+      <div class="header-title">饭局详情</div>
+      <div class="header-action">
+        <button class="icon-button">
+          <span class="material-icons">share</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="full-content">
+      <div style="height: 200px; position: relative; margin: -16px -16px 16px;">
+        <div style="position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'); background-size: cover; background-position: center;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,18,18,1) 0%, rgba(18,18,18,0) 100%);"></div>
+      </div>
+      
+      <h2 style="margin-bottom: var(--space-sm);">创意料理夜 @ 深蓝餐厅</h2>
+      
+      <div class="feast-meta" style="margin-bottom: var(--space-md);">
+        <div class="feast-date">
+          <span class="material-icons feast-icon">event</span>
+          今晚 19:30-21:30
+        </div>
+        <div class="feast-date">
+          <span class="material-icons feast-icon">location_on</span>
+          深蓝餐厅 · 1.2km
+        </div>
+      </div>
+      
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-sm);">关于这场饭局</h4>
+        <p style="color: var(--text-secondary); line-height: 1.6;">分享对创意料理的热爱，探讨未来美食趋势，交流味蕾体验。今晚的主厨特别推出分子料理新菜单，我们将共同品尝并进行有趣的美食讨论。</p>
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-top: var(--space-sm);">适合喜欢尝试新事物、对料理有热情的朋友。席间将有轻松的交流环节，不用担心尴尬。</p>
+        
+        <div style="margin-top: var(--space-md);">
+          <div class="tags-container">
+            <span class="tag highlighted">美食探索</span>
+            <span class="tag">创意料理</span>
+            <span class="tag">社交晚餐</span>
+            <span class="tag">分子料理</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-md);">主办人</h4>
+        <div style="display: flex; align-items: center;">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar">
+          <div style="margin-left: var(--space-md);">
+            <div style="font-weight: 500;">Alex Chen</div>
+            <div style="color: var(--text-tertiary); font-size: 14px; margin-top: var(--space-xs);">美食博主 | 料理爱好者</div>
+            <div style="display: flex; align-items: center; margin-top: var(--space-xs);">
+              <span class="material-icons" style="font-size: 16px; color: var(--neon-yellow); margin-right: 2px;">star</span>
+              <span>4.8</span>
+              <span style="margin-left: var(--space-xs); color: var(--text-tertiary);">(已举办32场)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-sm); display: flex; justify-content: space-between;">
+          <span>已报名 (3/6)</span>
+          <a href="#attendees" style="color: var(--primary); font-size: 14px; text-decoration: none;">查看全部 ></a>
+        </h4>
+        <div style="display: flex; margin-bottom: var(--space-md);">
+          <img src="https://randomuser.me/api/portraits/women/33.jpg" class="avatar small" style="margin-right: var(--space-xs);">
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" class="avatar small" style="margin-right: var(--space-xs);">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar small" style="margin-right: var(--space-xs);">
+          <div style="width: 36px; height: 36px; border-radius: var(--radius-full); border: 1px dashed var(--border-light); display: flex; align-items: center; justify-content: center;">
+            <span class="material-icons" style="color: var(--text-tertiary);">add</span>
+          </div>
+        </div>
+        
+        <div style="color: var(--text-tertiary); font-size: 14px; margin-bottom: var(--space-md);">
+          <span class="pulse"></span>
+          刚刚有新朋友加入！
+        </div>
+      </div>
+      
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-md);">餐厅信息</h4>
+        <div style="display: flex; margin-bottom: var(--space-md);">
+          <div style="width: 80px; height: 80px; border-radius: var(--radius-sm); background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); background-size: cover; background-position: center;"></div>
+          <div style="margin-left: var(--space-md);">
+            <div style="font-weight: 500;">深蓝餐厅</div>
+            <div style="color: var(--text-tertiary); font-size: 14px; margin-top: var(--space-xs);">创意西餐 | ¥¥¥</div>
+            <div style="display: flex; align-items: center; margin-top: var(--space-xs);">
+              <span class="material-icons" style="font-size: 16px; color: var(--neon-yellow); margin-right: 2px;">star</span>
+              <span>4.6</span>
+              <span style="margin-left: var(--space-md); color: var(--text-tertiary);">距您1.2km</span>
+            </div>
+          </div>
+        </div>
+        <a href="#map" style="display: block; height: 120px; border-radius: var(--radius-sm); background-image: url('https://i.imgur.com/2Z18SXa.png'); background-size: cover; background-position: center; margin-bottom: var(--space-sm);"></a>
+        <div style="color: var(--text-tertiary); font-size: 14px;">中央商务区波特兰街89号</div>
+      </div>
+      
+      <div style="margin-bottom: var(--space-xl); padding: var(--space-md) 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+          <div>
+            <div style="color: var(--text-tertiary);">人均费用</div>
+            <div style="font-size: 20px; font-weight: 600; color: var(--neon-pink);">¥128</div>
+          </div>
+          <div>
+            <div style="color: var(--text-tertiary);">剩余名额</div>
+            <div style="font-size: 20px; font-weight: 600;">3位</div>
+          </div>
+        </div>
+        
+        <a href="#join-confirmation" class="button primary full">
+          <span class="button-icon material-icons">check_circle</span>
+          立即加入
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 创建饭局页 -->
+  <div class="screen" id="create-feast">
+    <div class="header">
+      <button class="icon-button" onclick="window.location.href='#home'">
+        <span class="material-icons">arrow_back</span>
+      </button>
+      <div class="header-title">创建新饭局</div>
+    </div>
+    
+    <div class="full-content">
+      <div class="form-group">
+        <label class="form-label">饭局标题</label>
+        <input type="text" class="form-input" placeholder="给你的饭局起个吸引人的名字">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">饭局时间</label>
+        <div style="display: flex; gap: var(--space-md);">
+          <input type="date" class="form-input" style="flex: 1;">
+          <input type="time" class="form-input" style="flex: 1;">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">选择餐厅</label>
+        <div style="position: relative;">
+          <input type="text" class="form-input" placeholder="搜索餐厅...">
+          <span class="material-icons" style="position: absolute; right: var(--space-md); top: 50%; transform: translateY(-50%); color: var(--text-tertiary);">search</span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">饭局描述</label>
+        <textarea class="form-input" placeholder="描述一下你的饭局内容、氛围、适合什么样的人参加等..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">人数上限</label>
+        <select class="form-select">
+          <option>2人</option>
+          <option>4人</option>
+          <option selected>6人</option>
+          <option>8人</option>
+          <option>10人</option>
+          <option>不限</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">人均预算</label>
+        <div style="position: relative;">
+          <input type="number" class="form-input" placeholder="输入人均消费金额">
+          <span style="position: absolute; left: var(--space-md); top: 50%; transform: translateY(-50%); color: var(--text-primary);">¥</span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">添加标签 (最多选择3个)</label>
+        <div class="tags-container" style="margin-top: 0;">
+          <span class="tag highlighted">美食探索</span>
+          <span class="tag">创意料理</span>
+          <span class="tag">聊天交友</span>
+          <span class="tag">职场社交</span>
+          <span class="tag">音乐</span>
+          <span class="tag">电影</span>
+          <span class="tag">艺术</span>
+          <span class="tag">读书会</span>
+          <span class="tag">创业</span>
+          <span class="tag">科技</span>
+          <span class="tag">游戏</span>
+          <span class="tag">运动</span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">饭局封面</label>
+        <div style="background: var(--bg-card); border-radius: var(--radius-md); height: 150px; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--border-light);">
+          <span class="material-icons" style="font-size: 36px; color: var(--text-tertiary);">add_photo_alternate</span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">饭局类型</label>
+        <div style="display: flex; gap: var(--space-md);">
+          <div style="flex: 1; background: var(--bg-card); padding: var(--space-md); border-radius: var(--radius-md); text-align: center; border: 2px solid var(--primary);">
+            <span class="material-icons" style="font-size: 36px; color: var(--primary);">group</span>
+            <div style="margin-top: var(--space-xs);">公开饭局</div>
+            <div style="font-size: 12px; color: var(--text-tertiary);">所有人可见</div>
+          </div>
+          <div style="flex: 1; background: var(--bg-card); padding: var(--space-md); border-radius: var(--radius-md); text-align: center; border: 1px solid var(--border-light);">
+            <span class="material-icons" style="font-size: 36px; color: var(--text-tertiary);">lock</span>
+            <div style="margin-top: var(--space-xs);">私密饭局</div>
+            <div style="font-size: 12px; color: var(--text-tertiary);">仅邀请可见</div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#home" class="button primary full" style="margin: var(--space-xl) 0;">
+        <span class="button-icon material-icons">celebration</span>
+        发布饭局
+      </a>
+    </div>
+  </div>
+  
+  <!-- 附近餐厅/地图页 -->
+  <div class="screen" id="nearby">
+    <div class="header">
+      <div class="header-title">附近饭局</div>
+      <div class="header-action">
+        <button class="icon-button">
+          <span class="material-icons">filter_list</span>
+        </button>
+      </div>
+    </div>
+    
+    <div style="position: absolute; top: 80px; left: 0; right: 0; bottom: 80px; background-image: url('https://i.imgur.com/4N1QiVN.png'); background-size: cover; background-position: center;">
+      <!-- 地图标记 -->
+      <div style="position: absolute; top: 30%; left: 45%; background: var(--neon-pink); width: 16px; height: 16px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 2px var(--neon-pink);"></div>
+      
+      <div style="position: absolute; top: 50%; left: 30%; background: var(--primary); width: 16px; height: 16px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 2px var(--primary);"></div>
+      
+      <div style="position: absolute; top: 40%; left: 70%; background: var(--neon-green); width: 16px; height: 16px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 2px var(--neon-green);"></div>
+      
+      <!-- 当前选中地点 -->
+      <div style="position: absolute; top: 65%; left: 50%; transform: translateX(-50%); background: white; border-radius: var(--radius-md); padding: var(--space-sm); width: 90%; box-shadow: var(--shadow-card);">
+        <div style="display: flex;">
+          <div style="width: 80px; height: 80px; border-radius: var(--radius-sm); background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'); background-size: cover; background-position: center;"></div>
+          <div style="margin-left: var(--space-md); flex: 1; color: var(--bg-dark);">
+            <div style="font-weight: 600;">创意料理夜 @ 深蓝餐厅</div>
+            <div style="font-size: 14px; opacity: 0.7; margin-bottom: var(--space-xs);">今晚 19:30 · 1.2km</div>
+            <div style="display: flex; gap: var(--space-xs);">
+              <span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 10px; font-size: 12px;">3/6人</span>
+              <span style="background: var(--neon-pink); color: white; padding: 2px 8px; border-radius: 10px; font-size: 12px;">¥128/位</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <span class="material-icons" style="color: var(--bg-dark);">navigate_next</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="categories" style="position: absolute; top: 90px; left: var(--space-md); right: var(--space-md); z-index: 10; background: rgba(18,18,18,0.8); padding: var(--space-sm); border-radius: var(--radius-full);">
+      <div class="category-item active">全部</div>
+      <div class="category-item">创意料理</div>
+      <div class="category-item">红酒品鉴</div>
+      <div class="category-item">咖啡馆</div>
+      <div class="category-item">日料</div>
+    </div>
+    
+    <div class="nav-bar">
+      <a href="#home" class="nav-item">
+        <span class="material-icons nav-icon">explore</span>
+        <span>发现</span>
+      </a>
+      <a href="#nearby" class="nav-item active">
+        <span class="material-icons nav-icon">map</span>
+        <span>附近</span>
+      </a>
+      <a href="#messages" class="nav-item">
+        <span class="material-icons nav-icon">chat</span>
+        <span>消息</span>
+      </a>
+      <a href="#profile" class="nav-item">
+        <span class="material-icons nav-icon">person</span>
+        <span>我的</span>
+      </a>
+    </div>
+  </div>
+  
+  <!-- 消息列表页 -->
+  <div class="screen" id="messages">
+    <div class="header">
+      <div class="header-title">消息</div>
+      <div class="header-action">
+        <button class="icon-button">
+          <span class="material-icons">edit</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="search-bar">
+        <span class="material-icons search-icon">search</span>
+        <input type="text" class="search-input" placeholder="搜索消息...">
+      </div>
+      
+      <div class="categories">
+        <div class="category-item active">全部</div>
+        <div class="category-item">饭局</div>
+        <div class="category-item">好友</div>
+        <div class="category-item">系统</div>
+      </div>
+      
+      <a href="#chat" class="card" style="margin-bottom: var(--space-md); padding: var(--space-md);">
+        <div style="display: flex; align-items: center;">
+          <div style="position: relative;">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar">
+            <span style="position: absolute; bottom: 0; right: 0; width: 12px; height: 12px; background: var(--neon-green); border-radius: 50%; border: 2px solid var(--bg-card);"></span>
+          </div>
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-weight: 500;">Alex Chen</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">14:30</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-xs);">
+              <div style="color: var(--text-secondary); font-size: 14px;">期待今晚见到你！我已经准备...</div>
+              ```html
+              <div style="background: var(--primary); color: white; font-size: 12px; height: 20px; width: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#feast-chat" class="card" style="margin-bottom: var(--space-md); padding: var(--space-md);">
+        <div style="display: flex; align-items: center;">
+          <div style="position: relative;">
+            <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'); background-size: cover; background-position: center;"></div>
+          </div>
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-weight: 500;">创意料理夜 (6人)</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">12:05</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-xs);">
+              <div style="color: var(--text-secondary); font-size: 14px;">Alex: 大家可以提前10分钟到餐厅...</div>
+              <div style="background: var(--primary); color: white; font-size: 12px; height: 20px; width: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">5</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#chat" class="card" style="margin-bottom: var(--space-md); padding: var(--space-md);">
+        <div style="display: flex; align-items: center;">
+          <div style="position: relative;">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar">
+          </div>
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-weight: 500;">Sophia Lin</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">昨天</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-xs);">
+              <div style="color: var(--text-secondary); font-size: 14px;">我很喜欢上次的红酒品鉴！下次...</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#chat" class="card" style="margin-bottom: var(--space-md); padding: var(--space-md);">
+        <div style="display: flex; align-items: center;">
+          <div style="position: relative;">
+            <img src="https://randomuser.me/api/portraits/men/85.jpg" class="avatar">
+          </div>
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-weight: 500;">Jack Zhang</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">上周</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-xs);">
+              <div style="color: var(--text-tertiary); font-size: 14px;">你已成功加入科技创业者交流会</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="card" style="margin-bottom: var(--space-md); padding: var(--space-md); background: rgba(140, 82, 255, 0.1); border: 1px solid var(--primary);">
+        <div style="display: flex; align-items: center;">
+          <div style="position: relative;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center;">
+              <span class="material-icons" style="color: white; font-size: 28px;">notifications</span>
+            </div>
+          </div>
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-weight: 500;">系统通知</div>
+              <div style="font-size: 12px; color: var(--text-tertiary);">3天前</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-xs);">
+              <div style="color: var(--primary); font-size: 14px;">你的饭局评价获得了5个赞！查看...</div>
+              <div style="background: var(--primary); color: white; font-size: 12px; height: 20px; width: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <a href="#home" class="nav-item">
+        <span class="material-icons nav-icon">explore</span>
+        <span>发现</span>
+      </a>
+      <a href="#nearby" class="nav-item">
+        <span class="material-icons nav-icon">map</span>
+        <span>附近</span>
+      </a>
+      <a href="#messages" class="nav-item active">
+        <span class="material-icons nav-icon">chat</span>
+        <span>消息</span>
+      </a>
+      <a href="#profile" class="nav-item">
+        <span class="material-icons nav-icon">person</span>
+        <span>我的</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 聊天页面 -->
+  <div class="screen" id="chat">
+    <div class="header">
+      <button class="icon-button" onclick="window.location.href='#messages'">
+        <span class="material-icons">arrow_back</span>
+      </button>
+      <div class="header-title" style="display: flex; align-items: center;">
+        <div>Alex Chen</div>
+        <div style="width: 8px; height: 8px; background: var(--neon-green); border-radius: 50%; margin-left: var(--space-xs);"></div>
+      </div>
+      <div class="header-action">
+        <button class="icon-button">
+          <span class="material-icons">more_vert</span>
+        </button>
+      </div>
+    </div>
+
+    <div style="height: calc(100% - 140px); overflow-y: auto; padding: var(--space-md);">
+      <div style="text-align: center; color: var(--text-tertiary); font-size: 12px; margin: var(--space-md) 0;">
+        今天 14:25
+      </div>
+
+      <div class="chat-message">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">
+            嘿！很高兴你加入了今晚的创意料理夜！
+          </div>
+          <div class="message-time">14:25</div>
+        </div>
+      </div>
+
+      <div class="chat-message">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">
+            我是主办人Alex，今晚的主厨会带来一些分子料理的新创作，希望你会喜欢！
+          </div>
+          <div class="message-time">14:26</div>
+        </div>
+      </div>
+
+      <div class="chat-message outgoing">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">
+            你好Alex！我很期待今晚的活动，我对分子料理很感兴趣！
+          </div>
+          <div class="message-time">14:28</div>
+        </div>
+      </div>
+
+      <div class="chat-message">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">
+            太好了！今晚除了美食，我们还会讨论一些创意料理的趋势和技巧，你有什么特别感兴趣的方面吗？
+          </div>
+          <div class="message-time">14:30</div>
+        </div>
+      </div>
+
+      <div class="chat-message outgoing">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="message-avatar">
+        <div class="message-content">
+          <div class="message-bubble">
+            我最近在尝试一些植物性料理，对可持续美食很感兴趣。希望能听到大家的经验和想法！
+          </div>
+          <div class="message-time">14:45</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-md); background: var(--bg-dark); border-top: 1px solid var(--border-light); display: flex; align-items: center;">
+      <input type="text" placeholder="发送消息..." class="chat-input">
+      <button class="icon-button" style="background: var(--primary);">
+        <span class="material-icons" style="color: white;">send</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 个人资料页 -->
+  <div class="screen" id="profile">
+    <div class="profile-header">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" class="profile-avatar">
+      <h2>Lisa Wang</h2>
+      <div style="color: rgba(255,255,255,0.7);">美食探险家 | 摄影爱好者</div>
+    </div>
+
+    <div class="content" style="padding-top: 0;">
+      <div class="profile-stats">
+        <div class="stat-item">
+          <div class="stat-value">15</div>
+          <div class="stat-label">已参与饭局</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">3</div>
+          <div class="stat-label">已创建饭局</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">28</div>
+          <div class="stat-label">好友</div>
+        </div>
+      </div>
+
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-weight: 500;">社交信用分</div>
+          <div style="font-size: 20px; font-weight: 700; color: var(--neon-green); display: flex; align-items: center;">
+            <span>4.9</span>
+            <span class="material-icons" style="font-size: 16px; margin-left: var(--space-xs);">verified</span>
+          </div>
+        </div>
+        <div style="width: 50px; height: 50px; border-radius: var(--radius-full); background: var(--neon-green); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 255, 133, 0.5);">
+          <span class="material-icons" style="color: var(--bg-dark); font-size: 28px;">emoji_events</span>
+        </div>
+      </div>
+
+      <div class="section-title">兴趣标签</div>
+      <div class="tags-container">
+        <span class="tag highlighted">分子料理</span>
+        <span class="tag highlighted">咖啡文化</span>
+        <span class="tag highlighted">摄影</span>
+        <span class="tag">旅行</span>
+        <span class="tag">艺术展览</span>
+        <span class="tag">音乐剧</span>
+        <span class="tag">建筑设计</span>
+      </div>
+
+      <div class="section-title">即将参加</div>
+      <a href="#feast-detail" class="card" style="margin-bottom: var(--space-md); padding: var(--space-md);">
+        <div style="display: flex; align-items: center;">
+          <div style="width: 60px; height: 60px; border-radius: var(--radius-md); background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'); background-size: cover; background-position: center; margin-right: var(--space-md);"></div>
+          <div>
+            <div style="font-weight: 500;">创意料理夜 @ 深蓝餐厅</div>
+            <div style="color: var(--text-secondary); font-size: 14px; margin-top: var(--space-xs);">今晚 19:30 · 3/6人</div>
+          </div>
+        </div>
+      </a>
+
+      <div class="section-title">我的动态</div>
+      <div class="card">
+        <div style="display: flex;">
+          <img src="https://randomuser.me/api/portraits/women/33.jpg" class="avatar small">
+          <div style="margin-left: var(--space-md); flex: 1;">
+            <div style="font-weight: 500;">Lisa Wang</div>
+            <div style="color: var(--text-tertiary); font-size: 12px;">昨天 · 公开</div>
+          </div>
+        </div>
+        <p style="margin: var(--space-md) 0; color: var(--text-secondary);">
+          昨天参加了"爵士与红酒之夜"，遇到了几位志同道合的朋友，聊得很开心！音乐氛围很棒，红酒也很精选。感谢 @Sophia 的组织！
+        </p>
+        <div style="border-radius: var(--radius-md); overflow: hidden; height: 150px; background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); background-size: cover; background-position: center; margin-bottom: var(--space-md);"></div>
+
+        <div style="display: flex; align-items: center; color: var(--text-tertiary);">
+          <div style="display: flex; align-items: center; margin-right: var(--space-lg);">
+            <span class="material-icons" style="font-size: 18px; margin-right: var(--space-xs);">favorite</span>
+            <span>12</span>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <span class="material-icons" style="font-size: 18px; margin-right: var(--space-xs);">comment</span>
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 80px;"></div>
+    </div>
+
+    <div class="nav-bar">
+      <a href="#home" class="nav-item">
+        <span class="material-icons nav-icon">explore</span>
+        <span>发现</span>
+      </a>
+      <a href="#nearby" class="nav-item">
+        <span class="material-icons nav-icon">map</span>
+        <span>附近</span>
+      </a>
+      <a href="#messages" class="nav-item">
+        <span class="material-icons nav-icon">chat</span>
+        <span>消息</span>
+      </a>
+      <a href="#profile" class="nav-item active">
+        <span class="material-icons nav-icon">person</span>
+        <span>我的</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 加入饭局确认页 -->
+  <div class="screen" id="join-confirmation">
+    <div class="header">
+      <button class="icon-button" onclick="window.location.href='#feast-detail'">
+        <span class="material-icons">arrow_back</span>
+      </button>
+      <div class="header-title">确认加入</div>
+    </div>
+
+    <div class="full-content" style="display: flex; flex-direction: column; align-items: center; padding-top: var(--space-xl);">
+      <div style="width: 100px; height: 100px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-lg); box-shadow: 0 0 20px rgba(140, 82, 255, 0.4);">
+        <span class="material-icons" style="font-size: 48px; color: white;">restaurant</span>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-md);">创意料理夜 @ 深蓝餐厅</h2>
+
+      <div style="text-align: center; color: var(--text-secondary); margin-bottom: var(--space-xl); padding: 0 var(--space-lg);">
+        你即将加入由 <span style="color: var(--primary);">Alex Chen</span> 主办的饭局，与其他美食爱好者一起探索创意料理！
+      </div>
+
+      <div class="card" style="width: 100%;">
+        <h4 style="margin-bottom: var(--space-md);">饭局详情</h4>
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+          <div style="color: var(--text-tertiary);">时间</div>
+          <div>今晚 19:30-21:30</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+          <div style="color: var(--text-tertiary);">地点</div>
+          <div>深蓝餐厅 (1.2km)</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+          <div style="color: var(--text-tertiary);">人均费用</div>
+          <div style="color: var(--neon-pink); font-weight: 600;">¥128</div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="color: var(--text-tertiary);">已报名</div>
+          <div>3/6人</div>
+        </div>
+      </div>
+
+      <div class="form-group" style="width: 100%; margin-top: var(--space-lg);">
+        <label class="form-label">留言给主办人 (选填)</label>
+        <textarea class="form-input" placeholder="有什么想告诉主办人的吗？比如饮食禁忌、过敏原等..."></textarea>
+      </div>
+
+      <div style="margin-top: var(--space-xl); width: 100%;">
+        <a href="#join-success" class="button primary full" style="margin-bottom: var(--space-md);">
+          <span class="button-icon material-icons">check_circle</span>
+          确认加入
+        </a>
+        <a href="#feast-detail" class="button outline full">返回</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 加入成功页面 -->
+  <div class="screen" id="join-success">
+    <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-xl);">
+      <div style="width: 120px; height: 120px; background: var(--neon-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-lg); box-shadow: 0 0 30px rgba(0, 255, 133, 0.4); animation: pulse 1.5s infinite;">
+        <span class="material-icons" style="font-size: 60px; color: white;">check</span>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-md); text-align: center;">饭局加入成功！</h2>
+
+      <div style="text-align: center; color: var(--text-secondary); margin-bottom: var(--space-xl);">
+        恭喜你成功加入「创意料理夜」！<br>已将饭局信息添加到你的日程中，我们向你发送了一条确认消息。
+      </div>
+
+      <div style="display: flex; gap: var(--space-md); width: 100%; margin-bottom: var(--space-xl);">
+        <a href="#messages" class="button outline" style="flex: 1;">
+          <span class="button-icon material-icons">chat</span>
+          聊天群组
+        </a>
+        <a href="#feast-detail" class="button outline" style="flex: 1;">
+          <span class="button-icon material-icons">info</span>
+          饭局详情
+        </a>
+      </div>
+
+      <a href="#home" class="button primary full">
+        <span class="button-icon material-icons">explore</span>
+        继续探索
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+

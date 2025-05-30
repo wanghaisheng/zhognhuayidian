@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "borninsea",
+  "url": "https://websimstarter.borninsea.com",
+  "logo": "https://websimstarter.borninsea.com/img/logo.svg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-000-000-0000",
+    "contactType": "Customer Service",
+    "email": "support@borninsea.com",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["en", "zh"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/borninsea",
+    "https://twitter.com/borninsea",
+    "https://www.instagram.com/borninsea"
+  ]
+}

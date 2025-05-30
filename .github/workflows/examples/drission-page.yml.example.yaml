@@ -1,0 +1,68 @@
+name: 注册账号
+
+on:
+  workflow_dispatch:
+    inputs:
+      DOMAIN:
+        description: '请输入域名'
+        required: true
+        type: string
+
+env:
+  PYTHON_VERSION: '3.11'
+  PYTHONIOENCODING: 'utf-8'
+
+jobs:
+  register-account:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 设置中文环境
+        run: |
+          $env:LANG = "zh_CN.UTF-8"
+          $env:LC_ALL = "zh_CN.UTF-8"
+          [System.Environment]::SetEnvironmentVariable('LANG', 'zh_CN.UTF-8', 'Process')
+          [System.Environment]::SetEnvironmentVariable('LC_ALL', 'zh_CN.UTF-8', 'Process')
+
+      - name: 运行注册脚本
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: python github_action_register.py
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          DOMAIN: ${{ inputs.DOMAIN }}
+          MOE_MAIL_URL: ${{ secrets.MOE_MAIL_URL }}
+          LANG: zh_CN.UTF-8
+          LC_ALL: zh_CN.UTF-8
+
+      - name: 上传CSV文件（仅成功时）
+        uses: actions/upload-artifact@v4
+        with:
+          name: registered-accounts
+          path: "**/*.csv"
+          retention-days: 7
+
+      - name: 上传日志文件（总是上传）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: execution-logs
+          path: "**/*.log"
+          retention-days: 7

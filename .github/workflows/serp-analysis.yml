@@ -1,0 +1,37 @@
+name: SERP Analysis
+
+on:
+  push:
+    paths:
+      - 'sitemap.xml'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly run
+
+jobs:
+  analyze:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 DrissionPage python-dotenv
+
+      - name: Run SERP analysis
+        run: |
+          python scripts/analyze_serp.py
+        env:
+          EXCLUDE_PATTERNS: "about,career,privacy,terms,contact,faq,support,legal,cookie"
+
+      - name: Upload analysis results
+        uses: actions/upload-artifact@v3
+        with:
+          name: serp-analysis
+          path: scripts/serp_analysis.json

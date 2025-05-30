@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "{{itemReviewed.type}}",
+    "name": "{{itemReviewed.name}}"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{review.ratingValue}}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "name": "{{review.name}}",
+  "author": {
+    "@type": "Person",
+    "name": "{{review.author.name}}"
+  },
+  "datePublished": "{{review.datePublished}}",
+  "reviewBody": "{{review.reviewBody}}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{review.publisher.name}}"
+  }
+}

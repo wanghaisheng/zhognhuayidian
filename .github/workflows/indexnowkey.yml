@@ -1,0 +1,55 @@
+name: Generate and Use IndexNow Key
+
+on:
+  # schedule:
+    # Runs at 00:00 and 12:00 UTC every day
+    # - cron: '0 0,12 * * *'
+  workflow_dispatch:  # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  generate-and-use-key:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # You can specify the desired Python version
+
+    - name: Install dependencies (if any)
+      run: |
+        # If you have any dependencies to install, you can add them here
+        # For example, installing pip packages
+
+    - name: Run Python script to generate and use key
+      run: |
+        python generateKey.py  # Assuming the script is named generate_key.py
+
+    - name: Read the generated key from file
+      id: read-key
+      run: |
+        KEY=$(cat indexnow_key.txt)  # Read the content of the key file
+        echo "::set-output name=indexnow_key::$KEY"
+
+    - name: Save key to GitHub secrets
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const key = process.env.INDEXNOW_KEY;
+          github.actions.createOrUpdateRepoSecret({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            secret_name: 'INDEXNOW_KEY',
+            encrypted_value: key
+          });
+      env:
+        INDEXNOW_KEY: ${{ steps.read-key.outputs.indexnow_key }}
+
+    - name: Push changes
+      run: |
+        git add .
+        git commit -m "${{ env.FAKE_HASH }}" 
+        git push -f

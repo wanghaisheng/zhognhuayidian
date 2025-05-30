@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "description": "AI-powered vision board and self-growth platform. Supports multilingual, community, and privacy.",
+    "keywords": "vision board, manifestation, goal setting, self-growth, AI, multilingual, community, privacy",
+    "og:title": "Vision Board - AI Manifestation & Vision Tool",
+    "og:description": "Achieve your goals with AI vision board, boost self-growth, join a vibrant community, and enjoy multilingual support and privacy.",
+    "og:image": "https://visionboard.heymanifestation.com/og-image.png",
+    "og:image:alt": "Vision Board App Banner",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:site_name": "HeyManifestation Vision Board",
+    "google": "notranslate",
+    "author": "HeyManifestation Team",
+    "robots": "index, follow"
+  }
+}

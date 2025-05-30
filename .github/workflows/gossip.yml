@@ -1,0 +1,63 @@
+name: who is talking 
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: 'like twitter.com '
+        type: string
+        required: False
+        default: ''
+      count:
+        description: 'count limit'
+        type: string
+        required: False
+        default: '100'        
+      keywords:
+        description: 'keywords list, use comma as separator'
+        type: string
+        required: False
+        default: "saas starter,shipany"
+      action:
+        description: 'Choose action: "commit" to commit to repo, "upload" to upload to release'
+        type: string
+        required: False
+        default: 'upload'  # Default action is commit
+
+jobs:
+  scrape_and_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install all necessary packages
+        run:  |
+          sudo apt-get install ffmpeg
+
+          pip install pydub SpeechRecognition  httpx google-play-scraper aiohttp aiohttp_socks bs4 DataRecorder pandas DrissionPage python-dotenv app_store_scraper requests tqdm waybackpy cdx_toolkit lxml
+
+        
+      - name: Run the scraping script
+        run: python saaskit.py
+        env:
+          domain: ${{ github.event.inputs.domain }}          
+          count: ${{ github.event.inputs.count }}          
+          keywords: ${{ github.event.inputs.keywords }}          
+
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_D1_DATABASE_ID: ${{ secrets.D1_APP_DATABASE_ID }}    
+          RESULT_FOLDER: ./result  # Adjust if necessary
+          OUTPUT_FOLDER: ./output
+
+      - name: upload files          
+        uses: actions/upload-artifact@v4
+        with:
+            name: healthapps-${{ env.keyword }}
+            path: ./result/ # or path/to/artifact

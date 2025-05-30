@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "description": "Privacy Policy for WebSim Vibe Coding Starter. Learn how we handle your data when you use our AI-powered website builder to launch your projects.",
+    "keywords": "WebSim, Privacy Policy, Data Protection, SaaS, Coding Starter, AI, Website Builder",
+    "og:title": "Privacy Policy - WebSim Vibe Coding Starter",
+    "og:description": "Understand our commitment to your privacy when using WebSim Vibe Coding Starter.",
+    "og:image": "https://websimstarter.borninsea.com/og-image-privacy.png",
+    "og:image:alt": "WebSim Vibe Privacy Policy Banner",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:site_name": "WebSim Vibe Coding Starter",
+    "google": "notranslate",
+    "author": "WebSim Team",
+    "robots": "index, follow, noarchive"
+  }
+}

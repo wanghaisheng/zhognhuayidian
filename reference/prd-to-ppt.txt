@@ -1,0 +1,74 @@
+Okay, this significantly increases the complexity and pushes the boundaries of what an LLM can reliably generate in one go. Generating fully functional, styled, and animated HTML/CSS/JS presentations based *purely* on a PRD and textual descriptions is ambitious. The AI cannot *see* your prototypes, so image integration will require manual effort from you.
+
+The prompt will now instruct the AI to:
+1.  Generate the conceptual PPT structure (as before).
+2.  Generate corresponding HTML, CSS, and basic JavaScript code for a simple web-based slideshow, using placeholders where prototype images should go.
+
+**Important Considerations & Caveats:**
+
+*   **Code Quality:** The generated code might be basic and require significant refinement and debugging. Styling will likely be rudimentary.
+*   **Image Placeholders:** The AI will insert placeholder image tags (`<img>`). You *must* manually replace the `src` attributes with paths to your actual prototype images.
+*   **Animation Complexity:** The AI might implement very basic transitions (like fades or simple slides) via CSS. Complex, interaction-specific animations described conceptually might not be fully translated into working JS code.
+*   **Frameworks:** For simplicity and better AI compatibility, this prompt won't explicitly mandate a specific JS slideshow framework (like Reveal.js, Swiper.js), but will ask for basic navigation logic. You might need to integrate the generated content into such a framework yourself for more robust features.
+*   **Feasibility:** Generating a large presentation this way might hit token limits or result in incomplete/buggy code. It might be more practical for smaller sets of slides.
+
+---
+
+### **Enhanced Prompt Template: Generating PPT Structure & Basic Web Presentation Code**
+
+**Prompt Template Version:** 2.1
+**Last Updated:** 2025-04-27
+
+**Role:** You are an expert UX/UI Designer and Full-Stack Developer tasked with translating a Product Requirements Document (PRD) into both a conceptual presentation plan and functional web-based presentation code (HTML/CSS/JS).
+
+**Context:** You will be given a PRD in Markdown format describing a **new application that is not yet developed but for which functional prototype designs exist.** The user providing this prompt possesses these prototype designs. [Optional: Briefly mention the application's core concept here]. The goal is to create resources for a presentation to a **diverse audience** (potential users, stakeholders, technical teams).
+
+**Objective:** Generate **two distinct outputs**:
+1.  **Part A: Conceptual PPT Structure:** A detailed slide-by-slide textual outline describing the user flows, UI elements (based on PRD), user benefits, and meaningful animation suggestions, suitable for planning and discussion.
+2.  **Part B: Web Presentation Code:** Basic, functional HTML, CSS, and JavaScript code representing the presentation structure outlined in Part A. This code should serve as a starting point for a web-based slideshow, using placeholders for prototype images.
+
+**Important Notes for AI:**
+*   You do not have access to the user's prototype designs. Base all UI descriptions and code structure *solely* on the PRD's functional requirements.
+*   For Part B, generate clear placeholders (e.g., `<img src="prototype-image-placeholder-slide-X.png" alt="Description based on PRD function">`) where prototype screenshots should be inserted by the user.
+*   The generated code (Part B) should be functional but may require user refinement, especially for styling and complex animations. Aim for clarity and basic structure.
+*   Keep the CSS and JS relatively simple and self-contained unless specific interactions are crucial according to the PRD.
+
+**Specific Requirements for the Output:**
+
+**Part A: Conceptual PPT Structure (Text Outline)**
+
+1.  **Identify Key User Flows:** Analyze PRD, list primary user journeys.
+2.  **Structure the Presentation Outline:** Organize logically: Title, Intro, Flow Overview, Detailed Flow Steps, Secondary Flows (if any), Conclusion, Q&A.
+3.  **Content per Flow Step Slide Outline:** For each significant step:
+    *   **Flow Step Title:** Clear identifier.
+    *   **User Goal/Benefit:** State user value.
+    *   **UI Description (PRD-Based):** Describe key functional elements/info required by PRD.
+    *   **UX-Enhancing Animation Idea:** Suggest purposeful conceptual animations (feedback, transitions, guidance).
+    *   **Guidance for Prototype Image:** Describe *what functional aspect* of the user's prototype should be shown.
+
+**Part B: Web Presentation Code (HTML/CSS/JS)**
+
+1.  **Output Format:** Provide the code in separate, clearly labeled blocks for HTML, CSS, and JavaScript.
+2.  **HTML Structure:**
+    *   Use semantic HTML (e.g., `<main>`, `<section>` per slide).
+    *   Each slide (`<section>`) should correspond to a slide outlined in Part A.
+    *   Include headings, paragraphs, and lists as appropriate based on the conceptual structure from Part A.
+    *   **Crucially, insert image placeholders (`<img src="placeholder-prototype-[FlowName]-[StepNumber].png" alt="[Description of PRD function shown]">`) where prototype visuals are indicated in Part A's guidance.** Use descriptive placeholder filenames/alt text.
+3.  **CSS Styling:**
+    *   Provide basic CSS for slide layout (e.g., making sections full-screen or centered, basic visibility handling).
+    *   Include minimal styling for text elements (headings, paragraphs) for readability.
+    *   Attempt to implement *simple* transitions (e.g., fade-in/out) between slides using CSS transitions/animations if feasible.
+4.  **JavaScript Functionality:**
+    *   Implement basic slide navigation (e.g., using 'Next'/'Previous' buttons or keyboard arrow keys).
+    *   Manage slide visibility (showing the current slide, hiding others).
+    *   If simple animations were suggested in Part A and not handled by CSS, attempt basic JS implementation (e.g., adding/removing animation classes). Avoid complex logic or external libraries unless absolutely necessary per the PRD.
+
+**Input PRD:**
+
+```markdown
+[ *** PASTE THE ENTIRE CONTENT OF YOUR PRD.MD FILE HERE *** ]
+```
+
+**Instruction:** Now, please generate **both** the conceptual PPT structure (Part A) and the basic web presentation code (Part B - HTML, CSS, JS) based on the PRD provided above. Adhere strictly to all requirements outlined in this prompt (Version 2.1, Last Updated 2025-04-27). Ensure Part B uses appropriate placeholders for prototype images and that the code structure reflects the plan in Part A. Prioritize clarity and basic functionality for the code.
+
+---

@@ -1,0 +1,44 @@
+name: Deploy to staging
+
+env:
+    CONTEXT_DIR: './'
+    IMAGE_NAME: ${{ github.repository }}/staging
+    DOCKERFILE: Dockerfile.staging
+    CAPROVER_APP: myapp-staging
+    DOCKER_REGISTRY: ghcr.io
+
+on:
+    # push:
+        # branches:
+            - main
+        # you can specify path if you have a monorepo and you want to deploy if particular directory is changed, make sure to update `CONTEXT_DIR` too
+        # paths:
+        #   - "backend-app/**"
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+    build-and-publish:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - run: |
+                  echo "IMAGE_NAME_WITH_REGISTRY=$DOCKER_REGISTRY/$IMAGE_NAME" >> $GITHUB_ENV
+                  export IMAGE_NAME_WITH_REGISTRY=$DOCKER_REGISTRY/$IMAGE_NAME
+                  echo "FULL_IMAGE_NAME=$IMAGE_NAME_WITH_REGISTRY:$GITHUB_SHA-gitsha" >> $GITHUB_ENV
+                  echo "CAPROVER_GIT_COMMIT_SHA=$GITHUB_SHA" >> $GITHUB_ENV
+            - name: Log in to the Container registry
+              uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+              with:
+                  registry: ${{ env.DOCKER_REGISTRY }}
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Build and Push Release to DockerHub
+              shell: bash
+              run: ./build_and_push.sh
+            - name: Deploy to CapRover
+              uses: caprover/deploy-from-github@d76580d79952f6841c453bb3ed37ef452b19752c
+              with:
+                  server: ${{ secrets.CAPROVER_HOST }}
+                  app: ${{ env.CAPROVER_APP }}
+                  token: '${{ secrets.CAPROVER_APP_TOKEN }}'
+                  image: '${{ env.FULL_IMAGE_NAME }}'

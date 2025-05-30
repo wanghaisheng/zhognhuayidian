@@ -1,0 +1,10 @@
+uses: surestacks/chatgpt-buttler@v0.1.0
+with:
+    openai-key: <openai key>
+
+
+
+#改造这个action 识别issue 标题中的标签，比如 from idea to brainstorm more idea，
+from idea to concept ,from concept to design ,from design to color palette，博客内容规划,
+
+准备好这些内容，好的直接拿到doc里面，或者博客里面

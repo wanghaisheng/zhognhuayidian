@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "MoodWheel - 转动你的感受，发现内心的彩虹",
+  "url": "https://websimstarter.borninsea.com/zh/index.html",
+  "description": "MoodWheel 帮助你理解、表达和管理情绪，让每一种感受都成为自我成长的养分",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://websimstarter.borninsea.com/zh/index.html"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://websimstarter.borninsea.com/zh/index.html"
+    }]
+  }
+}

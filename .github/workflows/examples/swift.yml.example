@@ -1,0 +1,45 @@
+name: swift to GitHub Pages
+
+on:
+  # push:
+    # branches:
+      # - main
+  # pull_request:
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: macos-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/Publish_build
+            .build
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Setup JohnSundell/Publish
+        run: |
+          cd ${HOME}
+          export PUBLISH_VERSION="0.7.0"
+          git clone https://github.com/JohnSundell/Publish.git
+          cd ./Publish && git checkout ${PUBLISH_VERSION}
+          mv ~/Publish_build .build || true
+          swift build -c release
+          cp -r .build ~/Publish_build || true
+          echo "${HOME}/Publish/.build/release" >> ${GITHUB_PATH}
+
+      - run: publish-cli generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Output

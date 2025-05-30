@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我的个人数据会被如何处理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "您的数据仅用于提升产品体验，不会泄露给第三方。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以删除我的账户和数据吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "您可随时在个人中心申请删除账户及全部数据。"
+      }
+    }
+  ]
+}

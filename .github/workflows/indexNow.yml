@@ -1,0 +1,66 @@
+name: "IndexNow"
+
+on:
+  workflow_dispatch:  # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Check if IndexNow key exists
+      id: check-key
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const secrets = await github.actions.listRepoSecrets({
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          return secrets.secrets.some(secret => secret.name === 'INDEXNOW_KEY');
+
+    - name: Generate IndexNow key if not exists
+      if: steps.check-key.outputs.result == 'false'
+      run: |
+        # Generate the key (replace this with your actual key generation logic)
+        echo "GENERATED_INDEXNOW_KEY=$(python generateKey.py)" >> $GITHUB_ENV
+        # Save the generated key to a file
+        echo $GENERATED_INDEXNOW_KEY > indexnow_key.txt
+
+    - name: Save IndexNow key to GitHub secrets
+      if: steps.check-key.outputs.result == 'false'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const key = process.env.GENERATED_INDEXNOW_KEY;
+          github.actions.createOrUpdateRepoSecret({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            secret_name: 'INDEXNOW_KEY',
+            encrypted_value: key
+          });
+
+    - name: Read IndexNow key from secret
+      if: steps.check-key.outputs.result == 'true'
+      uses: actions/github-script@v6
+      id: read-secret
+      with:
+        script: |
+          const secret = await github.actions.getRepoSecret({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            secret_name: 'INDEXNOW_KEY'
+          });
+          return secret.encrypted_value;
+      env:
+        INDEXNOW_KEY: ${{ steps.read-secret.outputs.result }}
+
+    - name: Submit URLs from sitemap.xml to IndexNow
+      run: |
+        pip install requests
+        python scripts/submit_indexnow.py sitemap.xml
+      env:
+        INDEXNOW_KEY: ${{ env.INDEXNOW_KEY }}

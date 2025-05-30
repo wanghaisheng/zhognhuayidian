@@ -1,0 +1,8 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "服务条款页",
+  "author": {"@type": "Organization", "name": "HeyManifestation"},
+  "datePublished": "2024-01-01",
+  "mainEntityOfPage": "https://visionboard.heymanifestation.com/zh/terms.html"
+}

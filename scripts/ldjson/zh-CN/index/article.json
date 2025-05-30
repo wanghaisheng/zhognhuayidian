@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MoodWheel：理解、表达和管理你的情绪",
+  "author": {
+    "@type": "Organization",
+    "name": "MoodWheel 团队",
+    "url": "https://websimstarter.borninsea.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MoodWheel 团队",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://websimstarter.borninsea.com/img/logo.png"
+    }
+  },
+  "datePublished": "2024-07-26",
+  "dateModified": "2024-07-26",
+  "mainEntityOfPage": "https://websimstarter.borninsea.com/zh/index.html",
+  "description": "MoodWheel 是一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。",
+  "articleBody": "MoodWheel 帮助你理解、表达和管理情绪，让每一种感受都成为自我成长的养分。通过互动式轮盘设计，层层深入探索你的情绪，从基础感受到细微情绪，精确定位你的内心状态。为你的情绪配上文字、照片和语音，记录当下的感受，留存珍贵的情绪轨迹。通过时间轴、日历视图查看情绪变化趋势，发现情绪触发因素和规律。基于你的情绪状态，智能推荐冥想、音乐、表达练习等调节方式，帮助你平衡情绪。将情绪探索游戏化，解锁全部情绪，完成一次心灵冒险之旅。"
+}

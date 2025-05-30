@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MoodWheel",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "description": "一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。",
+  "author": {
+    "@type": "Organization",
+    "name": "borninsea"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "borninsea",
+    "url": "{{website.url}}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "100"
+  },
+  "screenshot": "{{app.screenshot}}",
+  "softwareVersion": "1.0.0",
+  "downloadUrl": "{{app.downloadUrl}}",
+  "applicationSuite": "MoodWheel Suite",
+  "countriesSupported": "Worldwide",
+  "featureList": [
+    "情绪轮盘导航",
+    "情绪日记记录",
+    "情绪图谱分析",
+    "情绪调节工具",
+    "心情探索地图 (游戏化)"
+  ],
+  "inLanguage": "{{page.lang}}"
+}

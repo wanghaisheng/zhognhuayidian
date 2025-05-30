@@ -1,0 +1,39 @@
+{
+  "baseUrl": "https://websimstarter.borninsea.com",
+  "defaultLang": "en",
+  "email":"support@borninsea.com",
+  "apptype":"app",
+  "localepath":"locale",
+  "robots": {
+    "allowedBots": [
+      "Googlebot",
+      "Applebot",
+      "Bingbot",
+      "DuckDuckBot",
+      "Yeti",
+      "Twitterbot",
+      "Yandex"
+    ],
+    "blockedBots": [
+      "Baiduspider",
+      "360Spider",
+      "Yisouspider",
+      "Sogouspider"
+    ],
+    "allowedPaths": [
+      "/",
+      "/zh"
+    ],
+    "blockedPaths": [
+      "/js",
+      "/scripts",
+      "/lang",
+      "/locale",
+      "/css",
+      "/docs",
+      "/reference",
+      "/template",
+      "/input"
+    ]
+  }
+}

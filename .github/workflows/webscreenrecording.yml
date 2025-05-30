@@ -1,0 +1,24 @@
+# https://github.com/marketplace/actions/auto-website-to-gif-or-webp
+
+name: Generate demo file
+
+on: 
+  # push
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  generate-gif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Website to file
+        uses: PabloLec/website-to-gif@2.1.5
+        with:
+          url: "https://docs.github.com/en/get-started"
+      - name: Commit file to GH repo
+        run: |
+          git config --global user.name "PabloLec/website-to-gif"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m 'Update file'
+          git push

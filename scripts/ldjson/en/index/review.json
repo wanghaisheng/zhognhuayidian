@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "WebSim Vibe Coding Starter",
+    "url": "https://websimstarter.borninsea.com/"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "A. Developer"
+  },
+  "datePublished": "2024-07-16",
+  "reviewBody": "The WebSim Vibe Coding Starter is an amazing toolkit! It helped me launch a prototype for my SaaS idea in minutes, not days. The AI-powered features and SEO automation are top-notch.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WebSim Team"
+  }
+}

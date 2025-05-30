@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MoodWheel",
+  "operatingSystem": "iOS, Android, Web",
+  "applicationCategory": "LifestyleApplication",
+  "description": "MoodWheel 是一款情绪探索与记录应用，帮助用户理解、表达和管理情绪。它采用互动式情绪轮盘，并提供日记、模式分析和情绪调节工具，将每一种感受都化为个人成长的养分。",
+  "inLanguage": "zh-CN",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CNY"
+  },
+  "url": "https://websimstarter.borninsea.com/zh/index.html",
+  "downloadUrl": "https://websimstarter.borninsea.com/zh/index.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MoodWheel 团队",
+    "url": "https://websimstarter.borninsea.com"
+  },
+  "featureList": [
+    "情绪轮盘导航",
+    "情绪日记记录",
+    "情绪图谱分析",
+    "情绪调节工具箱",
+    "心情探索地图"
+  ],
+  "keywords": "情绪, 心情, 日记, 追踪, 心理健康, 自我关怀, 情绪轮盘"
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WebSim Vibe Coding Starter",
+  "url": "https://websimstarter.borninsea.com/",
+  "description": "WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WebSim Team"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://websimstarter.borninsea.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+} 

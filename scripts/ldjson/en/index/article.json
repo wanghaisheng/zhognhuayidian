@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MoodWheel: Understand, Express, and Manage Your Emotions",
+  "author": {
+    "@type": "Organization",
+    "name": "MoodWheel Team",
+    "url": "https://websimstarter.borninsea.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MoodWheel Team",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://websimstarter.borninsea.com/img/logo.png"
+    }
+  },
+  "datePublished": "2024-07-26",
+  "dateModified": "2024-07-26",
+  "mainEntityOfPage": "https://websimstarter.borninsea.com/index.html",
+  "description": "MoodWheel is an emotion exploration and recording app based on the imagery of an emotion wheel, helping users better understand, express, and manage their emotions.",
+  "articleBody": "MoodWheel helps you understand, express, and manage emotions, making every feeling a resource for personal growth. Explore your emotions layer by layer through an interactive wheel design, from basic feelings to subtle emotions, precisely locating your inner state. Pair your emotions with text, photos, and voice recordings to document your current feelings and preserve valuable emotional trajectories. View emotional change trends through timeline and calendar views to discover emotional triggers and patterns. Intelligently recommends meditation, music, expressive exercises, and other regulation methods based on your emotional state to help balance emotions. Gamify emotional exploration, unlock all emotions, and complete a journey of inner adventure."
+}

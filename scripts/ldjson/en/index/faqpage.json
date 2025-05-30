@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is MoodWheel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel is an emotion exploration and recording app based on the imagery of an emotion wheel, helping users better understand, express, and manage their emotions. It helps you understand, express, and manage emotions, making every feeling a resource for personal growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to Use MoodWheel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Select Emotion: Click on the emotion wheel to explore your current emotional state layer by layer. 2. Record Experience: Rate emotional intensity, record text descriptions, photos, or voice. 3. Gain Insights: View emotional change trends, discover emotional triggers. 4. Balance Emotions: Use recommended emotion regulation tools to improve emotional management ability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main features of MoodWheel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel offers several key features: Emotional Wheel Navigation to explore feelings, Emotion Journal Recording to document experiences, Emotion Pattern Analysis to understand trends, an Emotion Regulation Toolkit with helpful resources, and a Mood Exploration Map to gamify the journey of emotional discovery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is MoodWheel for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel is for anyone who wants to better understand their emotions. This includes individuals who find it difficult to identify or express feelings, those who wish to track their moods for self-awareness, people looking to understand their emotional triggers, and those seeking tools for emotional regulation."
+      }
+    }
+  ]
+}

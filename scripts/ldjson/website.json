@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MoodWheel",
+  "url": "https://websimstarter.borninsea.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://websimstarter.borninsea.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "borninsea",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://websimstarter.borninsea.com/img/logo.svg",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "inLanguage": "{{page.lang}}",
+  "description": "MoodWheel - 一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。"
+}

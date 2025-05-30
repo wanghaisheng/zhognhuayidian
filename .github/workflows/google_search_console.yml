@@ -1,0 +1,30 @@
+name: "Google Search Console Submit"
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/config.json'
+      - 'sitemap.xml'
+
+jobs:
+  google-search-console-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+      - name: Run google_search_console.py to add site and submit sitemap
+        run: |
+          python scripts/google_search_console.py
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}

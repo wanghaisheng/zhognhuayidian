@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WebSim Team",
+  "url": "https://websimstarter.borninsea.com/about.html",
+  "logo": "https://websimstarter.borninsea.com/favicon.svg",
+  "description": "A small, dedicated team passionate about creating innovative web solutions.",
+  "sameAs": [
+    "https://github.com/wanghaisheng/a_websim-website-starter"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@borninsea.com"
+  }
+} 

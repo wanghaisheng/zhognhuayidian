@@ -1,0 +1,18 @@
+#https://github.com/marketplace/actions/screenshot-website
+jobs:
+  screenshot:
+    name: Screenshot
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        width: [1200, 992, 768, 600]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+    - name: Screenshot Website
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: https://github.com/swinton/screenshot-website
+        destination: screenshot-${{ matrix.os }}-${{ matrix.width }}.png
+        width: ${{ matrix.width }}

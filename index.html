@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">WebSim Vibe Coding Starter</title>
+    <meta name="description" content="WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。">
+    <meta name="keywords" content="WebSim, SaaS, Coding Starter, SEO, AI, Playground, 多语言, 创意, 极致体验">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/bootstrap-scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="js/lang.js" defer></script>
+    <script src="js/playground.js" defer></script>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://websimstarter.borninsea.com/"},{"@type":"ListItem","position":2,"name":"首页","item":"https://websimstarter.borninsea.com/"}],"language":"en"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"WebSim Team","url":"https://websimstarter.borninsea.com/about.html","description":"A small, dedicated team passionate about creating innovative web solutions.","logo":"https://websimstarter.borninsea.com/favicon.svg","sameAs":["https://github.com/wanghaisheng/a_websim-website-starter"],"foundingDate":"2023","founders":[{"@type":"Person","name":"Your Name"}],"address":"","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"contact@websimstarter.borninsea.com","telephone":""}],"audience":{"@type":"Audience","audienceType":"创业者, 产品经理, 编程小白"},"language":"zh"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"WebSim Vibe Coding Starter","url":"https://websimstarter.borninsea.com/","description":"WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。","inLanguage":"en","publisher":{"@type":"Organization","name":"WebSim Team"}}
+    </script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="WebSim Logo">
+                  <circle cx="20" cy="20" r="20" fill="url(#paint0_radial_header)"/>
+                  <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="18" font-family="monospace" dy=".3em">WS</text>
+                  <defs>
+                    <radialGradient id="paint0_radial_header" cx="0.5" cy="0.5" r="0.5" fx="0.2" fy="0.2">
+                      <stop offset="0%" stop-color="#6f00ff"/>
+                      <stop offset="100%" stop-color="#00eaff"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+                <span class="brand" data-i18n="brand">WebSim Vibe Coding Starter</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                    <li><a href="#playground" data-i18n="nav_playground">Playground</a></li>
+                    <li><a href="#showcase" data-i18n="nav_showcase">Showcase</a></li>
+                    <li><a href="#future" data-i18n="nav_future">Vision</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="career.html" data-i18n="nav_career">Career</a></li>
+                    <li class="language-selector">
+                         <div class="lang-switcher" id="lang-switcher"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">零代码，5分钟上线你的创业网站</h1>
+                <p data-i18n="hero_summary">WebSim Vibe Coding Starter 专为创业者、产品经理和编程经验有限的创新者打造。无需代码基础，5分钟内即可验证你的商业想法，快速上线专业网站。内置 SaaS 工具、游戏类 App 落地页与原型设计提示词模板、SEO 优化 prompt 及常用自动化脚本，助你高效实现从创意到落地。</p>
+                <p data-i18n="hero_subtitle">AI驱动，SEO极致优化，多语言支持，助力创新高效落地。</p>
+                <div class="hero-cta">
+                    <a href="#playground" class="btn btn-primary" data-i18n="cta_try">立即免费试用 | 零代码上线你的创意</a>
+                </div>
+            </div>
+            <div class="hero-bg-anim" id="hero-bg-anim"></div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 data-i18n="features_title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 data-i18n="features.ai_research.title">AI 研究与需求分析</h3>
+                    <p data-i18n="features.ai_research.description">集成 Grok.com，自动挖掘用户痛点、竞品分析。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.prd_generation.title">PRD 生成</h3>
+                    <p data-i18n="features.prd_generation.description">集成 Google AI Studio，根据用户输入与调研自动生成详细产品需求文档（PRD.md）。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.code_generation.title">代码与内容生成</h3>
+                    <p data-i18n="features.code_generation.description">集成 WebSim.com，结合 PRD.md 和 prompt 模板自动生成完整 HTML/CSS/JS 站点。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.seo_automation.title">SEO 自动化</h3>
+                    <p data-i18n="features.seo_automation.description">自动生成 sitemap、robots.txt，集成 IndexNow、Bing、Google Search Console API，自动提交和校验。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.multilingual.title">多语言支持</h3>
+                    <p data-i18n="features.multilingual.description">locale 目录自动生成中英文等多语言 JSON 资源，支持动态切换。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.one_click_deploy.title">一键部署</h3>
+                    <p data-i18n="features.one_click_deploy.description">支持 Cloudflare Pages、GitHub Pages 等静态托管，自动化 CI/CD。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.no_code.title">无需编程，自动生成全站</h3>
+                    <p data-i18n="features.no_code.description">通过AI和模板，快速生成网站，无需手动编码。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.fast_validation.title">5分钟快速验证产品概念</h3>
+                    <p data-i18n="features.fast_validation.description">迅速搭建原型，验证市场需求。</p>
+                </div>
+                 <div class="feature-card">
+                    <h3 data-i18n="features.pwa_mobile.title">PWA & mobile-first, blazing fast</h3>
+                    <p data-i18n="features.pwa_mobile.description">提供卓越的移动体验和性能。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="features.ai_scraper.title">AI Scraper friendly</h3>
+                    <p data-i18n="features.ai_scraper.description">自动生成 robots.txt & llms.txt，优化AI爬虫索引。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playground" class="playground-section">
+        <div class="container">
+            <h2 data-i18n="playground_title">Try the Interactive Playground</h2>
+            <div class="playground-tabs">
+                <ul class="tab-list">
+                    <li class="tab active" data-tab="step1" data-i18n="tab_grok" tabindex="0">1. Research on Grok</li>
+                    <li class="tab" data-tab="step2" data-i18n="tab_google" tabindex="0">2. Generate PRD.md</li>
+                    <li class="tab" data-tab="step3" data-i18n="tab_websim" tabindex="0">3. Generate Site with WebSim</li>
+                    <li class="tab" data-tab="step4" data-i18n="tab_deploy" tabindex="0">4. Deploy & Go Live</li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="step1">
+                        <div class="tab-desc">
+                            <div class="desc-main">
+                                <h3 data-i18n="grok_title">Research User Complaints on Grok</h3>
+                                <ul class="desc-features">
+                                    <li data-i18n="grok_feat1">AI-powered search for user pain points</li>
+                                    <li data-i18n="grok_feat2">Real-time trending topics</li>
+                                    <li data-i18n="grok_feat3">Export insights for product ideation</li>
+                                </ul>
+                                <div class="desc-resources">
+                                    <a href="https://grok.x.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="grok_cta">Go to Grok.com &rarr;</a>
+                                </div>
+                            </div>
+                            <div class="desc-media">
+                                <img src="https://assets.codeium.com/websim/grok-sample.png" alt="Grok.com Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
+                            </div>
+                        </div>
+                        <iframe src="https://grok.x.com/" title="Grok.com Research" style="width:100%;height:400px;border-radius:16px;border:none;box-shadow:0 2px 12px #00eaff44;"></iframe>
+                        <p data-i18n="grok_hint">Use Grok to research user pain points and complaints for your SaaS idea. Copy the insights for the next step.</p>
+                    </div>
+                    <div class="tab-pane" id="step2">
+                        <div class="tab-desc">
+                            <div class="desc-main">
+                                <h3 data-i18n="google_title">Generate PRD.md with Google AI Studio</h3>
+                                <ul class="desc-features">
+                                    <li data-i18n="google_feat1">AI generates detailed PRD.md from research</li>
+                                    <li data-i18n="google_feat2">Starter templates for SaaS, tools, apps</li>
+                                    <li data-i18n="google_feat3">Easy editing and export</li>
+                                </ul>
+                                <div class="desc-resources">
+                                    <a href="https://aistudio.google.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="google_cta">Go to Google AI Studio &rarr;</a>
+                                </div>
+                            </div>
+                             <div class="desc-media">
+                                <img src="https://assets.codeium.com/websim/google-ai-studio-sample.png" alt="Google AI Studio Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
+                            </div>
+                        </div>
+                        <p data-i18n="google_hint">Paste your Grok research into Google AI Studio with a PRD prompt to generate your product requirements. Download as PRD.md.</p>
+                    </div>
+                    <div class="tab-pane" id="step3">
+                        <div class="tab-desc">
+                            <div class="desc-main">
+                                <h3 data-i18n="websim_title">Generate Site with WebSim.com</h3>
+                                <ul class="desc-features">
+                                    <li data-i18n="websim_feat1">AI generates full website from PRD.md</li>
+                                    <li data-i18n="websim_feat2">Multiple design templates</li>
+                                    <li data-i18n="websim_feat3">Download HTML, CSS, JS files</li>
+                                </ul>
+                                <div class="desc-resources">
+                                    <a href="https://websim.com/" target="_blank" class="desc-cta btn btn-secondary" data-i18n="websim_cta">Go to WebSim.com &rarr;</a>
+                                </div>
+                            </div>
+                            <div class="desc-media">
+                                <img src="https://assets.codeium.com/websim/websim-sample.png" alt="WebSim.com Screenshot" loading="lazy" style="max-width:260px;border-radius:12px;box-shadow:0 2px 12px #00eaff44;">
+                            </div>
+                        </div>
+                        <p data-i18n="websim_hint">Upload your PRD.md to WebSim, choose a template, and generate your website code.</p>
+                    </div>
+                    <div class="tab-pane" id="step4">
+                        <div class="tab-desc">
+                            <div class="desc-main">
+                                <h3 data-i18n="deploy_title">Deploy & Go Live</h3>
+                                <ul class="desc-features">
+                                    <li data-i18n="deploy_feat1">Easy deployment to Cloudflare Pages, GitHub Pages</li>
+                                    <li data-i18n="deploy_feat2">Automated CI/CD setup</li>
+                                    <li data-i18n="deploy_feat3">Global content delivery network</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p data-i18n="deploy_hint">Place generated files in your project, configure `config.json`, connect to Cloudflare/GitHub, and `git push` to deploy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <h2 data-i18n="showcase_title">Showcase</h2>
+            <p data-i18n="showcase_content">案例展示即将推出，敬请期待！</p>
+            <!-- Placeholder for showcase items -->
+        </div>
+    </section>
+
+    <section id="future" class="future-section">
+        <div class="container">
+            <h2 data-i18n="future_title">未来愿景</h2>
+            <div class="features-grid">
+                 <div class="feature-card">
+                    <h3 data-i18n="future.api.title">支持更多第三方 API</h3>
+                    <p data-i18n="future.api.description">如 Notion、Figma、Midjourney 等，拓展集成能力。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="future.customization.title">支持自定义主题与 UI 组件市场</h3>
+                    <p data-i18n="future.customization.description">提供更丰富的个性化选项和设计资源。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="future.intelligent_updates.title">智能内容更新与 A/B 测试</h3>
+                    <p data-i18n="future.intelligent_updates.description">助力持续优化网站内容和用户体验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_copyright">&copy; 2024 WebSim Vibe Coding Starter. All rights reserved.</p>
+            <!-- Add other footer links if needed -->
+        </div>
+    </footer>
+
+</body>
+</html>

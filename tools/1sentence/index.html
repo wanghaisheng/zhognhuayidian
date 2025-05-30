@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>AI UI Asset Workflow Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>AI UI Asset Workflow Demo</h1>
+
+    <div class="input-container">
+        <div class="input-section">
+            <label for="rawIdea">Enter your raw UI idea (single sentence):</label>
+            <input type="text" id="rawIdea" value="I need a screen to show the player's inventory and let them select an item.">
+        </div>
+
+        <div class="input-section">
+            <label for="targetStyle">Enter the target art style (e.g., Pixel Art, Sci-Fi Minimalist, Fantasy Cartoon):</label>
+            <input type="text" id="targetStyle" value="Fantasy Cartoon">
+        </div>
+
+        <div class="input-section">
+            <label for="outputType">Select output type:</label>
+            <select id="outputType">
+                <option value="app">App Prototype Only</option>
+                <option value="website">Website Landing Page Only</option>
+                <option value="website+app">Website + App (Full Demo)</option>
+            </select>
+        </div>
+
+
+        <button id="generateBtn">Generate Workflow Steps</button>
+
+        <div id="loading" class="loading">Loading...</div>
+    </div>
+
+    <div class="tab-interface">
+        <div class="tabs">
+            <button class="tab-button" data-tab="prd">Step 1: PRD Excerpt</button>
+            <button class="tab-button" data-tab="csv">Step 2: Assets CSV</button>
+            <button class="tab-button" data-tab="landingPage">Step 3: Website Landing Page</button>
+            <button class="tab-button" data-tab="appPrototype">Step 4: App Prototype</button>
+            <button class="tab-button" data-tab="fullDemo">Step 5: Full Demo</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="prd" class="tab-pane">
+                <h2>Step 1: Raw Idea to Preliminary PRD Excerpt</h2>
+                <pre id="prdOutput"></pre>
+            </div>
+
+            <div id="csv" class="tab-pane">
+                <h2>Step 2: Preliminary PRD to Modular UI Assets CSV</h2>
+                <pre id="csvOutput"></pre>
+            </div>
+
+            <div id="landingPage" class="tab-pane">
+                <h2>Step 3: Website Landing Page Design Brief (landing-page-brief.md)</h2>
+                <pre id="landingPageBriefOutput"></pre>
+                <h2>Step 3: Generated Website Landing Page Prototype (Preview)</h2>
+                <p>Preview of the generated Landing Page:</p>
+                <iframe id="landingPageIframe" title="Landing Page Preview"></iframe>
+            </div>
+
+            <div id="appPrototype" class="tab-pane">
+                <h2>Step 4: App Design Brief (app-design-brief.md)</h2>
+                <pre id="appDesignBriefOutput"></pre>
+                 <h2>Step 4: Generated App Prototype (Preview)</h2>
+                <p>Preview of the generated App Prototype:</p>
+                <iframe id="appPrototypeIframe" title="App Prototype Preview"></iframe>
+            </div>
+
+            <div id="fullDemo" class="tab-pane">
+                <h2>Step 5: Full Demo (Website + App)</h2>
+                <div class="full-demo-container">
+                    <div class="demo-section">
+                        <h3>Website Landing Page Preview</h3>
+                        <iframe id="fullDemoLandingPageIframe" title="Full Demo Landing Page Preview"></iframe>
+                    </div>
+                    <div class="demo-section">
+                        <h3>App Prototype Preview</h3>
+                        <iframe id="fullDemoAppPrototypeIframe" title="Full Demo App Prototype Preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

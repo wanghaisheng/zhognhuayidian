@@ -1,0 +1,74 @@
+Okay, I understand. You want to combine the idea of analyzing a *live URL* (specifically its sitemap and structure) with the output format requested in the previous prompt (a conceptual PPT outline *and* basic web presentation code), but adapted for documenting an *existing* site instead of a *future* product based on a PRD.
+
+This means the AI needs to:
+1.  Analyze the site structure (primarily via sitemap).
+2.  Infer flows and features from that analysis.
+3.  Generate a conceptual PPT outline documenting these findings.
+4.  Generate basic HTML/CSS/JS for a simple web slideshow *presenting this analysis*, using placeholders where the *user* should insert screenshots of the *actual live website*.
+
+**This is a complex task for an AI, especially:**
+*   **Deep Analysis:** Going beyond the sitemap to analyze page content for UI details requires web scraping capabilities, which might be limited or blocked. Analysis will likely rely heavily on URL structure and sitemap data.
+*   **Screenshot Interpretation:** The AI cannot *see* or take screenshots. It can only generate placeholders and *describe* what kind of screenshot the user should insert.
+*   **Code Purpose:** The generated code will be a simple framework to *display the analysis*, not an attempt to replicate the target website's functionality or complex styling.
+
+---
+
+### **Enhanced Prompt Template: URL Analysis to Presentation Structure & Basic Web Code**
+
+**Prompt Template Version:** 3.0 (URL Input)
+**Last Updated:** 2024-08-13
+
+**Role:** You are an expert Web Analyst and Technical Documenter tasked with analyzing a live website URL, inferring its structure, user flows, and features, and then generating both a conceptual presentation plan and functional web-based presentation code (HTML/CSS/JS) to document these findings.
+
+**Context:** You will be given a URL of a live website. Your analysis should primarily rely on publicly accessible information, starting with the `sitemap.xml` file if available. The goal is to create resources for a presentation documenting the website's structure and key user journeys for a diverse audience (e.g., stakeholders, new team members, auditors). The user providing this prompt can capture screenshots of the live website.
+
+**Objective:** Generate **two distinct outputs**:
+1.  **Part A: Conceptual Presentation Structure:** A detailed slide-by-slide textual outline describing the inferred website structure, user flows, key UI element types (based on analysis), and meaningful animation suggestions for dynamic flows (like onboarding), suitable for planning and discussion.
+2.  **Part B: Web Presentation Code:** Basic, functional HTML, CSS, and JavaScript code representing the presentation structure outlined in Part A. This code should serve as a starting point for a web-based slideshow *documenting the analysis*, using placeholders where the user should insert screenshots of the live website.
+
+**Important Notes for AI:**
+*   You cannot directly browse the web in the same way a user does, interact with dynamic elements perfectly, or log in. Your primary analysis tool should be the `sitemap.xml`. If the sitemap is unavailable or lacks detail, state this limitation and base inferences on common URL patterns and potentially fetched HTML structure of the main page if possible.
+*   You cannot take screenshots. For Part B, generate clear placeholders (e.g., `<img src="live-screenshot-placeholder-slide-X.png" alt="Description of what live page/state to capture">`) where screenshots of the live website should be inserted by the user.
+*   The generated code (Part B) should be functional but simple. It is intended to present the *analysis*, not replicate the target website's design or complex functionality. Aim for clarity and basic structure.
+*   Keep the CSS and JS relatively simple and self-contained.
+
+**Specific Requirements for the Output:**
+
+**Part A: Conceptual Presentation Structure (Text Outline)**
+
+1.  **Sitemap & Structure Analysis:**
+    *   Attempt to locate and parse `sitemap.xml`. Report findings (found/not found, number of URLs, key categories inferred from URL patterns like `/blog/`, `/products/`, `/account/`).
+    *   List key inferred sections/features of the site based on this structure.
+2.  **Identify Key Inferred User Flows:** Based on sitemap structure and common web patterns, outline primary user journeys (e.g., Purchase Flow, Registration/Onboarding, Content Discovery). Clearly state these are *inferred*.
+3.  **Structure the Presentation Outline:** Organize logically: Title, Sitemap/Structure Overview, Flow 1 Detail, Flow 2 Detail, Key Features Summary, Conclusion.
+4.  **Content per Flow Step Slide Outline:** For each significant step in an inferred flow:
+    *   **Flow Step Title:** Clear identifier (e.g., "Step 3: View Cart Page").
+    *   **Inferred User Goal:** State the likely user objective at this step.
+    *   **Key URL(s):** List the URL(s) corresponding to this step (e.g., `/cart`).
+    *   **Expected UI Elements (General):** Describe the *types* of functional elements typically found here (e.g., "List of items, quantity adjusters, subtotal, proceed to checkout button"). Base this on standard conventions for such pages.
+    *   **UX-Enhancing Animation Idea (Optional):** If relevant (e.g., onboarding), suggest purposeful conceptual animations.
+    *   **Guidance for User Screenshot:** Describe *what specific page or state* of the live website the user should capture as a screenshot to illustrate this step (e.g., "Capture a screenshot of the main shopping cart page after adding an item").
+
+**Part B: Web Presentation Code (HTML/CSS/JS)**
+
+1.  **Output Format:** Provide the code in separate, clearly labeled blocks for HTML, CSS, and JavaScript.
+2.  **HTML Structure:**
+    *   Use semantic HTML (e.g., `<main>`, `<section>` per slide).
+    *   Each slide (`<section>`) should correspond to a slide outlined in Part A (Sitemap Overview, Flow Steps, Features Summary, etc.).
+    *   Include headings, paragraphs, and lists containing the analysis points from Part A.
+    *   **Crucially, insert image placeholders (`<img src="live-screenshot-placeholder-[PageOrFlowStepName].png" alt="[Guidance for user screenshot from Part A]">`) where live website screenshots are indicated in Part A's guidance.** Use descriptive placeholder filenames/alt text.
+3.  **CSS Styling:**
+    *   Provide basic CSS for slide layout (e.g., making sections full-screen or centered, basic visibility handling).
+    *   Include minimal styling for text elements for readability.
+    *   Implement *simple* transitions (e.g., fade-in/out) between slides using CSS transitions/animations.
+4.  **JavaScript Functionality:**
+    *   Implement basic slide navigation (e.g., using 'Next'/'Previous' buttons or keyboard arrow keys).
+    *   Manage slide visibility (showing the current slide, hiding others).
+
+**Input:**
+
+*   **Target Website URL:** `[ *** PASTE THE FULL URL OF THE LIVE WEBSITE HERE *** ]`
+
+**Instruction:** Now, please perform the analysis of the provided URL and generate **both** the conceptual presentation structure (Part A) and the basic web presentation code (Part B - HTML, CSS, JS) based on your findings. Adhere strictly to all requirements outlined in this prompt (Version 3.0 URL Input, Last Updated 2024-08-13). Ensure Part B uses appropriate placeholders for user-provided screenshots and that the code structure reflects the analysis plan in Part A. Prioritize clarity, accurate analysis (within limitations), and basic functionality for the code. If the sitemap cannot be accessed, state this clearly and proceed with analysis based on inference from the main URL structure if possible.
+
+---

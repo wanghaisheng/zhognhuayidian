@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "MoodWheel 是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel 是一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。它帮助你理解、表达和管理情绪，让每一种感受都成为自我成长的养分。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何使用 MoodWheel？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. 选择情绪：在情绪轮盘上点击，逐层探索你当前的情绪状态。 2. 记录体验：评分情绪强度，记录文字描述、照片或语音。 3. 获取洞察：查看情绪变化趋势，发现情绪触发因素。 4. 平衡情绪：使用推荐的情绪调节工具，提升情绪管理能力。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MoodWheel 的主要功能有哪些？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel 提供几项核心功能：通过“情绪轮盘导航”探索感受，通过“情绪日记记录”来记录体验，通过“情绪图谱分析”了解趋势，提供“情绪调节工具箱”帮助平衡情绪，以及通过“心情探索地图”游戏化情绪探索之旅。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MoodWheel 适合哪些用户？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MoodWheel 适合任何想要更好地了解自己情绪的人。这包括难以准确表达或识别自己具体情绪的用户，希望记录每日心情和事件以提升自我觉察能力的用户，希望长期查看自己情绪变化趋势并了解情绪触发因素的用户，以及在体验强烈情绪时希望获取适当资源以调节情绪状态的用户。"
+      }
+    }
+  ]
+}

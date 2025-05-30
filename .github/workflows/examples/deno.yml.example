@@ -1,0 +1,23 @@
+# https://github.com/denoland/deployctl
+name: deno Deploy
+  workflow_dispatch:  # Allows manual trigger
+
+# on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
+      contents: read
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: my-project # the name of the project on Deno Deploy
+          entrypoint: main.ts # the entrypoint to deploy

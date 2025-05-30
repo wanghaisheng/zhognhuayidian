@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WebSim Vibe 编程启动器",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "description": "一个入门套件，可在5分钟内借助AI辅助构建现代化的、SEO优化的网站。具有无代码开发、多语言支持和自动化SEO等特点。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "softwareVersion": "1.0.0",
+  "url": "https://websimstarter.borninsea.com/zh/"
+} 

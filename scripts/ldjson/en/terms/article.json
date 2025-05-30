@@ -1,0 +1,8 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Terms of Service Page",
+  "author": {"@type": "Organization", "name": "HeyManifestation"},
+  "datePublished": "2024-01-01",
+  "mainEntityOfPage": "https://visionboard.heymanifestation.com/terms.html"
+}

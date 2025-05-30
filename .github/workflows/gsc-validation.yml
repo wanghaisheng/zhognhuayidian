@@ -1,0 +1,55 @@
+name: GSC Validation
+
+on:
+  push:
+    paths:
+      - '**/*.html'
+      - 'robots.txt'
+      - 'sitemap.xml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'robots.txt'
+      - 'sitemap.xml'
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install cheerio
+
+      - name: Validate GSC requirements
+        run: node scripts/validate-gsc.js
+
+      - name: Validate URLs and redirects
+        run: node scripts/validate-urls.js
+
+      - name: Validate robots.txt
+        run: |
+          if (Test-Path robots.txt) {
+            $content = Get-Content robots.txt -Raw
+            if ($content -match "Disallow: /\s*$") {
+              Write-Error "robots.txt contains Disallow: / which blocks entire site"
+              exit 1
+            }
+          }
+
+      - name: Validate sitemap.xml
+        run: |
+          if (Test-Path sitemap.xml) {
+            $content = Get-Content sitemap.xml -Raw
+            if (-not ($content -match "<?xml")) {
+              Write-Error "Invalid sitemap.xml format"
+              exit 1
+            }
+          }

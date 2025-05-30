@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WebSim Vibe Coding Starter",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "description": "A starter kit to build modern, SEO-optimized websites in 5 minutes with AI assistance. Features no-code development, multi-language support, and automated SEO.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "softwareVersion": "1.0.0",
+  "url": "https://websimstarter.borninsea.com/"
+}

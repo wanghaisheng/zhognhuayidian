@@ -1,0 +1,22 @@
+name: "Bing Webmaster Submit"
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/config.json'
+      - 'sitemap.xml'
+
+jobs:
+  bing-webmaster-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run bing_webmaster.py to add site and submit sitemap
+        run: |
+          pip install requests
+          python scripts/bing_webmaster.py
+        env:
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}

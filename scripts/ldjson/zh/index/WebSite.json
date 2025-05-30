@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WebSim Vibe 编程启动器",
+  "url": "https://websimstarter.borninsea.com/zh/",
+  "description": "WebSim Vibe 编程启动器：5分钟构建一个现代化的、SEO优化的网站。AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。",
+  "inLanguage": "zh",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WebSim 团队"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://websimstarter.borninsea.com/zh/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+} 

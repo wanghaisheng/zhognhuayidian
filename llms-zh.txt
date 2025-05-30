@@ -1,0 +1,73 @@
+# WebSim Vibe Coding Starter - 网站完整介绍
+> WebSim Vibe Coding Starter：5分钟构建一个现代化的、SEO优化的网站。AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。
+
+## 网站背景
+WebSim Vibe Coding Starter 专为创业者、产品经理和编程经验有限的创新者打造。无需代码基础，5分钟内即可验证你的商业想法，快速上线专业网站。内置 SaaS 工具、游戏类 App 落地页与原型设计提示词模板、SEO 优化 prompt 及常用自动化脚本，助你高效实现从创意到落地。
+
+## 主要网址说明（根据 sitemap.xml）
+- https://websimstarter.borninsea.com/
+  - WebSim Vibe Coding Starter 的主登陆页面。
+- https://websimstarter.borninsea.com/#features
+  - 详细介绍该入门套件功能的区域。
+- https://websimstarter.borninsea.com/#playground
+  - 体验工作流程的互动实验区。
+- https://websimstarter.borninsea.com/#showcase
+  - 使用 WebSim Vibe 构建的项目展示。
+- https://websimstarter.borninsea.com/#future
+  - 未来发展和优势展望。
+- https://websimstarter.borninsea.com/about.html
+  - 关于团队和项目的信息。
+- https://websimstarter.borninsea.com/career.html
+  - 工作机会。
+- https://websimstarter.borninsea.com/privacy.html
+  - 详细说明应用程序的隐私政策。
+- https://websimstarter.borninsea.com/terms.html
+  - 概述服务条款。
+
+## 内容分类详情
+### [首页](https://websimstarter.borninsea.com/)
+介绍 WebSim Vibe Coding Starter、其宗旨和核心价值主张。强调无代码开发和快速部署等主要优势。
+
+### [功能特性](https://websimstarter.borninsea.com/#features)
+列出主要功能，包括：
+- 🪄 无需编程，自动生成全站
+- 🚀 5分钟快速验证产品概念
+- 💡 创业者/产品经理友好
+- 📝 SaaS/游戏App落地页与原型设计 Prompt 模板
+- 🔍 SEO 优化专用 Prompt 模板
+- ⚙️ 常用自动化脚本（生成、部署、SEO 提交）
+- 🌍 多语言支持 & 自动生成站点地图
+- 🔍 自动化SEO：IndexNow, Bing, Google,元数据,验证
+- 🤖 AI驱动的博客 & 图片生成
+- 📱 PWA & 移动优先，速度极快
+- 🔑 关键词研究，分析，清晰度
+- 👤 真实用户管理 (Cloudflare Workers)
+- 🤖 AI Scraper 友好的 robots.txt & llms.txt 自动生成
+
+### [互动实验区](https://websimstarter.borninsea.com/#playground)
+一个四步引导体验：
+1.  **Grok调研**：研究用户抱怨和痛点。
+2.  **用 Google AI Studio 生成 PRD.md**：创建产品需求文档。
+3.  **用 WebSim 生成网站**：使用 PRD 和提示生成网站。
+4.  **部署上线**：将网站部署到 Cloudflare 或静态主机。
+
+### [案例展示](https://websimstarter.borninsea.com/#showcase)
+展示使用 WebSim Vibe Coding Starter 构建的网站和应用程序示例，例如 AI SaaS 登陆页面和多语言博客。
+
+### [未来展望](https://websimstarter.borninsea.com/#future)
+概述未来优势和项目愿景，包括：
+- 持续的 AI 集成：更智能、更具创意的网站生成
+- SEO 自动化：始终与最新算法保持同步
+- 大胆、创意的 UI/UX：GSAP 驱动的微交互和动画
+- 从 MVP 到企业级的可扩展性
+
+## 用户价值
+- 无需编码即可快速验证商业想法。
+- 提供一个全面的工具包，用于快速构建和启动专业网站。
+- 自动化 SEO、多语言支持和其他复杂任务。
+- 提供模板和 AI 驱动的工具以简化开发。
+- 默认关注性能、可访问性和移动响应性。
+
+## 技术 SEO 优化
+- 动态注入 SEO 元标签、备用语言链接和 LD+JSON 结构化数据，以实现最佳搜索引擎可见性和多语言支持。
+- AI Scraper 友好的配置和全面的站点地图确保有效的抓取和索引。

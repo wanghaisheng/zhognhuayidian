@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://websimstarter.borninsea.com/zh/index.html"
+    }
+  ]
+}
