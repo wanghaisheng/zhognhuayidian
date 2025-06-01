@@ -3,6 +3,151 @@
 http://www.tcmdoc.cn/book/bookList.aspx
 1740+
 
+https://pan.quark.cn/s/e0cf37737ef7#/list/share
+中医古籍医书孤本大全免费下载（2100册）
+
+
+
+```
+[![](http://www.zhongyijinnang.com/wp-content/uploads/2016/06/00-钥匙与书-300x199.jpg)](http://www.zhongyijinnang.com/wp-content/uploads/2016/06/00-钥匙与书.jpg)
+
+      **本人为退休医学编辑，喜好收藏图书，纸书两万，电子版约百万，愿交流分享资源。几个月前整理了文本格式的中医书1200本，其中主要是古籍，包括“殆知阁古文献”****中的“医藏-911部”、“古代文献藏书（十藏）”中的“医藏-0869部”和“中医古籍700本”，在此免费分享给需要的人。**
+
+（编者注：所有文档都为文本格式（txt格式），可方便地进行阅读。感恩杨老先生的慷慨分享，愿中医的奥妙能被传承、发扬、光大。）
+
+更新版本：2023-2-8 更新了部分链接。
+
+*   中医古籍700本
+
+000～100    https://www.123pan.com/s/IztRVv-4Fu7v  提取码:y516  
+101～200    https://www.123pan.com/s/IztRVv-xFu7v  提取码:y516  
+201～300    https://www.123pan.com/s/IztRVv-pFu7v  提取码:y516  
+301～400    https://www.123pan.com/s/IztRVv-fFu7v   提取码:y516  
+401～500    https://www.123pan.com/s/IztRVv-aFu7v  提取码:y516  
+501～600    https://www.123pan.com/s/IztRVv-BFu7v  提取码:y516  
+601～700    https://www.123pan.com/s/IztRVv-JFu7v   提取码:y516
+
+*   中医书1200种（“中医古籍700本”之外的500种）
+
+https://www.123pan.com/s/IztRVv-pgu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-fgu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-agu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-Bgu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-Jgu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-Igu7v  提取码:y516  
+https://www.123pan.com/s/IztRVv-Mgu7v  提取码:y516
+
+        ================
+
+*   中医书1200种（“中医古籍700本”之外的49种：A~C）
+
+        链接: https://pan.baidu.com/s/18tPohj8YDZsAZd-iFy2YtA 密码: 4zmf
+
+*   中医书1200种（“中医古籍700本”之外的21种：D~F）
+
+       **链接: [https://cloud.189.cn/t/YrYjquvmm2ie](https://cloud.189.cn/t/YrYjquvmm2ie)   访问码: 8rv7**
+
+*   中医书1200种（“中医古籍700本”之外的122种：《古今图书集成》（520卷））
+
+       **链接: [https://pan.baidu.com/s/17\_KgXWmPGzq4i5ZtcdBIcg](https://pan.baidu.com/s/17_KgXWmPGzq4i5ZtcdBIcg)  密码: 69no**
+
+*   中医书1200种（“中医古籍700本”之外的45种：G~J）
+
+        **链接:  [https://cloud.189.cn/t/qERv2qveQZR3](https://cloud.189.cn/t/qERv2qveQZR3)    访问码:  8mzv**
+
+*   中医书1200种（“中医古籍700本”之外的45种：L~R）
+
+        链接: https://pan.baidu.com/s/1xfIRCFXI3oWOdU\_xaO3OEw 密码: 464e
+
+*   中医书1200种（“中医古籍700本”之外的80种：S~T）
+
+        链接: https://pan.baidu.com/s/1YWdUzoaBTHigzzGmShoWzA 密码: ram8
+
+*   中医书1200种（“中医古籍700本”之外的10种：Wa~xian
+
+        链接: https://pan.baidu.com/s/184H\_qnic1MmWbJVz\_LXBGw 密码: knbj
+
+*   中医书1200种（“中医古籍700本”之外的5种：Xiao~Xue
+
+        链接: https://pan.baidu.com/s/1d0Cyzgt1vQzmeWq5WBfU8A 密码: 97tg
+
+*   中医书1200种（“中医古籍700本”之外的3种：Yan
+
+        链接: https://pan.baidu.com/s/1ihcvx-wX7j\_7uq8Pk9Oe-g 密码: gbrd
+
+*   中医书1200种（“中医古籍700本”之外的2种：Yang
+
+        链接: https://pan.baidu.com/s/1uPrKcS1TeX7Ivo008aAyQA 密码: r342
+
+*   中医书1200种（“中医古籍700本”之外的19种：Yang～Yao
+
+        链接: https://pan.baidu.com/s/1w8jUBApfm\_juPj1325TwNQ 密码: 284w
+
+*   中医书1200种（“中医古籍700本”之外的39种：Yi~Yue）
+
+        **链接:  [https://cloud.189.cn/t/Nziqi2muINva](https://cloud.189.cn/t/Nziqi2muINva)    访问码: 2buv**
+
+*   中医书1200种（“中医古籍700本”之外的11种：Za～Zhen）
+
+        链接: https://pan.baidu.com/s/1xD1gUjq0\_D56ezGqEAAZgw 密码: uihu
+
+*   中医书1200种（“中医古籍700本”之外的12种：Zhen～Zhong）
+
+        链接: https://pan.baidu.com/s/1fmCgNRTwoDK4zAp8K4iJvw 密码: 43yw
+
+*   中医书1200种（“中医古籍700本”之外的25种：ZGyao～Zyer
+
+        链接: https://pan.baidu.com/s/1GCBAFoG3wrkHLAX96eNwMA 密码: t5ns
+
+*   中医书1200种（“中医古籍700本”之外的49种：Zyf～Zun）
+
+        **链接: [https://pan.baidu.com/s/10T\_q-3s3M5UAuuZQpiErXQ](https://pan.baidu.com/s/10T_q-3s3M5UAuuZQpiErXQ)    提取码：181w**
+
+        ================
+
+*   張笑農醫學筆記（修订）rar，百度云网盘：
+
+        链接: https://pan.baidu.com/s/19hU3rf5hE0N1d7G51pSYJw 密码: zfu2
+
+        ================
+
+(2019年6月10日补充）
+
+      前面免费分享了中医药书1200本，实际数量有1233本，下面再补充29本：  
+  
+链接：[https://pan.baidu.com/s/157Bhpu1xuQKW3RQTLI8HVQ](https://pan.baidu.com/s/157Bhpu1xuQKW3RQTLI8HVQ) 提取码: 3gu3  
+    目录  112,573 700.李培生老中医经验集(名老中医经验集 第三卷p156～237).rar  
+1,601,581 本草纲目（金陵本）.rar  
+  213,438 本草纲目（中国医药古籍宝典系列）.rar  
+  154,843 病征与方剂Txt.rar  
+  136,488 拨开迷雾学中医——重归中医经典思维（王伟）.rar  
+   83,632 不生病的智慧(马悦凌)\_Txt.rar  
+  196,933 巢氏诸病源候总论（四库全书本）\_Txt.rar  
+  650,919 赤水元珠（明）孙一奎.rar  
+   89,994 道家医方（节选）.rar  
+  611,612 郝万山伤寒论讲稿.rar  
+   14,644 花柳指迷〔美〕嘉约翰口述（清）林东湘译.rar  
+  391,423 黄帝内经素问白话解（王洪图）Txt.rar  
+   17,879 精订摄生种子秘剖.rar  
+   57,513 老老恒言\[清\]曹庭栋.rar  
+1,445,155 历代本草药性汇解（马子密 傅延龄）.rar  
+1,000,903 临床中药学（王伟）.rar  
+   88,840 零起点学中医（中医入门讲稿，带你体验中医的12堂课）.天下无疾.rar  
+   68,020 刘希彦老师《伤寒论讲稿》.rar  
+  306,261 任之堂医话.rar  
+3,255,949 伤寒论慢慢教（JT叔叔史上最全慢慢教完整手打）.rar  
+   59,965 随息居饮食谱-清-王士雄.rar  
+  725,279 外台秘要方（唐）王焘.rar  
+  112,377 细说中医【中医概论】\_Txt.rar  
+  770,570 薛氏医案（明）薛巳.rar  
+  945,677 御纂医宗金鉴（清）吴谦等.rar  
+  686,513 中药学（张廷模）讲稿.rar  
+  164,141 中医歌诀15种.rar  
+   69,148 中医太美（徐文兵，16~19讲）Txt .rar  
+  194,385 中医太美（徐文兵，1~15讲）Txt.rar
+
+      以上全部数量超过1260种。
+```
 
 https://gydc-v4.cintcm.cn/#/home
 
