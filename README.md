@@ -9,6 +9,10 @@ https://pan.quark.cn/s/e0cf37737ef7#/list/share
 
 https://github.com/wanghaisheng/tcm-entity
 
+https://github.com/Sporot/TCM_word2vec/blob/master/utils.py
+
+
+
 ```
 [![](http://www.zhongyijinnang.com/wp-content/uploads/2016/06/00-钥匙与书-300x199.jpg)](http://www.zhongyijinnang.com/wp-content/uploads/2016/06/00-钥匙与书.jpg)
 
