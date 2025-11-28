@@ -11,6 +11,10 @@ https://github.com/wanghaisheng/tcm-entity
 
 https://github.com/Sporot/TCM_word2vec/blob/master/utils.py
 
+https://gydc-v4.cintcm.cn/#/home
+古籍种数3254
+
+
 
 
 ```
