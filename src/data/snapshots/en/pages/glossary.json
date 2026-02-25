@@ -1,0 +1,1388 @@
+{
+  "categories": {
+    "technical": [
+      {
+        "term": "CT Scanner",
+        "english": "Computed Tomography Scanner",
+        "definition": "Medical diagnostic equipment that uses X-ray beams rotating around the body to generate cross-sectional images through computer processing.",
+        "tags": [
+          "Basic Concepts",
+          "Imaging Equipment"
+        ],
+        "aliases": [
+          "CT",
+          "Computed Tomography",
+          "CT machine"
+        ],
+        "why": "Covers emergency, cardiovascular, oncology and routine exams; procurement should consider slice count, gantry aperture, dose control, workflow and service.",
+        "choose": "Select slice count by clinical needs and budget; for cardiac/emergency, ≥128-slice is recommended; consider mobile/portable options for space-limited sites; compare service terms and lifecycle costs.",
+        "mistakes": "Focusing only on slice count while ignoring service and site build costs; overlooking dose-quality balance; ignoring accessories and training."
+      },
+      {
+        "term": "MRI",
+        "english": "Magnetic Resonance Imaging",
+        "definition": "Diagnostic technology that uses strong magnetic fields and radio frequency pulses to excite hydrogen atoms in the body, generating high-resolution images by detecting signal changes.",
+        "tags": [
+          "Basic Concepts",
+          "Imaging Equipment"
+        ],
+        "aliases": [
+          "Magnetic Resonance",
+          "MRI system",
+          "NMR"
+        ],
+        "why": "Superior soft-tissue contrast for neuro, MSK and oncology; procurement should consider field strength, coil ecosystem, acoustic quietness and service response.",
+        "choose": "Choose between 1.5T and 3T based on specialty needs; prioritize quiet technologies, patient comfort and high-channel coils; verify parts coverage and service SLAs.",
+        "mistakes": "Overemphasizing field strength while ignoring coil ecosystem and service quality; overlooking shielding and site requirements; neglecting workflow and training."
+      },
+      {
+        "term": "Slice Thickness",
+        "english": "Slice Thickness",
+        "definition": "The thickness of each tomographic image in a CT scan, usually in millimeters (mm). Thinner slices mean higher resolution but increased scan time.",
+        "tags": [
+          "Technical Parameters",
+          "CT"
+        ],
+        "aliases": [
+          "Slice",
+          "Layer Thickness"
+        ],
+        "why": "Directly affects spatial resolution and noise, critical for bone detail and small lesion visibility.",
+        "choose": "Prefer thin slices for bone/high-detail tasks; in low-dose or fast scans, balance slice thickness with reconstruction kernels and noise.",
+        "mistakes": "Pursuing ultra-thin slices without considering noise and artifacts; ignoring patient dose and total exam time impacts."
+      },
+      {
+        "term": "Magnetic Field Strength",
+        "english": "Magnetic Field Strength",
+        "definition": "The intensity of the magnetic field produced by MRI equipment, measured in Tesla (T). Common strengths are 1.5T, 3.0T, and 7.0T; higher strength generally means better image quality.",
+        "tags": [
+          "Technical Parameters",
+          "MRI"
+        ],
+        "aliases": [
+          "Field Strength",
+          "T-value"
+        ],
+        "why": "Directly affects SNR and contrast performance; higher fields benefit research and high-resolution tasks.",
+        "choose": "Balance budget and specialty needs between 1.5T and 3.0T; consider quiet technologies and wide-bore designs for comfort.",
+        "mistakes": "Focusing solely on field strength while ignoring gradient/RF systems and coil ecosystem; underestimating shielding and operations."
+      },
+      {
+        "term": "Shielding Method",
+        "english": "Shielding Method",
+        "definition": "Magnet and gradient field containment strategies, commonly active shielding plus EMI control, to reduce fringe fields and site requirements.",
+        "tags": [
+          "Magnet",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Shimming",
+        "english": "Shimming",
+        "definition": "Improving magnetic field homogeneity (DSV) via passive/active coils or algorithms to enhance image quality and sequence stability.",
+        "tags": [
+          "Magnet",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Bore Diameter",
+        "english": "Bore Diameter",
+        "definition": "The minimum diameter of the patient bore (e.g., 60 cm), affecting comfort, positioning, and coil compatibility.",
+        "tags": [
+          "Installation & Use",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Helium Consumption",
+        "english": "Helium Consumption",
+        "definition": "Helium evaporation and refill requirements under normal operation; “zero consumption” indicates sealed/zero boil-off designs.",
+        "tags": [
+          "Operations",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Helium Volume",
+        "english": "Helium Volume",
+        "definition": "Maximum helium capacity in the magnet (e.g., ≤1300 L), related to cryogenic stability and maintenance.",
+        "tags": [
+          "Operations",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "5‑Gauss Line",
+        "english": "5‑Gauss Line",
+        "definition": "The safety boundary where field strength reaches 5 gauss, used for site planning and safety control.",
+        "tags": [
+          "Installation & Use",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Magnet Weight",
+        "english": "Magnet Weight",
+        "definition": "Total magnet weight including helium and operational state weight, affecting load bearing and logistics.",
+        "tags": [
+          "Installation & Use",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "RF Transmit Power",
+        "english": "RF Transmit Power",
+        "definition": "Maximum RF transmit power under various sequences, linked to patient SAR and sequence availability.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Frequency Accuracy",
+        "english": "Frequency Accuracy",
+        "definition": "System control and stability of center frequency (e.g., ≤0.07 Hz), impacting sequence consistency and artifact control.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "RF Transmit Bandwidth",
+        "english": "RF Transmit Bandwidth",
+        "definition": "Maximum RF transmit bandwidth under various sequences (e.g., ≤550 kHz), affecting contrast, selectivity and sequence robustness.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": [
+          "TX BW",
+          "Transmit BW"
+        ],
+        "why": "Controls pulse selectivity and performance; critical for sequence stability and contrast control.",
+        "choose": "Narrow bandwidth improves selectivity; wider bandwidth enhances pulse robustness; optimize by sequence and target tissue.",
+        "mistakes": "Ignoring trade-offs among bandwidth, chemical shift and selectivity; overlooking hardware limits."
+      },
+      {
+        "term": "Receive Bandwidth",
+        "english": "Receive Bandwidth",
+        "definition": "Per-channel receive bandwidth capability (e.g., ≥1 MHz), affecting chemical shift artifacts and sampling performance.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": [
+          "RX BW",
+          "Receive BW"
+        ],
+        "why": "Determines sampling rate and chemical shift control; core to frequency-domain imaging stability.",
+        "choose": "Higher bandwidth reduces chemical shift/distortion but raises noise; balance with resolution and timing.",
+        "mistakes": "Blindly increasing bandwidth raises noise; ignoring sequence/coil constraints on bandwidth."
+      },
+      {
+        "term": "Receive Channels",
+        "english": "Receive Channels",
+        "definition": "Maximum number of parallel receive channels, affecting parallel imaging acceleration and coil combination flexibility.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Coil Interface Ports",
+        "english": "Coil Interface Ports",
+        "definition": "Maximum number of coil interfaces, determining how many coils can be connected simultaneously and layout options.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Gradient Strength",
+        "english": "Gradient Strength",
+        "definition": "Maximum single-axis gradient strength (e.g., ≥33 mT/m), affecting minimum slice thickness, resolution, and advanced sequence capabilities.",
+        "tags": [
+          "Gradient System",
+          "MRI"
+        ],
+        "aliases": [
+          "Gmax",
+          "mT/m",
+          "Gradient"
+        ],
+        "why": "Determines spatial resolution and fast sequence capability; a core indicator for advanced body and neuro protocols.",
+        "choose": "Evaluate together with slew rate; prioritize higher Gmax and robust cooling for advanced tasks.",
+        "mistakes": "Ignoring continuous performance and thermal management; overlooking practical sequence availability and artifact control."
+      },
+      {
+        "term": "Slew Rate",
+        "english": "Slew Rate",
+        "definition": "Rate of gradient change (e.g., ≥100 mT/m/ms), impacting fast sequences and EPI performance and artifact control.",
+        "tags": [
+          "Gradient System",
+          "MRI"
+        ],
+        "aliases": [
+          "SR",
+          "mT/m/ms"
+        ],
+        "why": "Impacts temporal resolution and artifact control in fast sequences, critical for EPI/functional imaging.",
+        "choose": "Assess with Gmax; focus on stability and cooling under high load.",
+        "mistakes": "Overlooking patient comfort and acoustic noise; not evaluating derating and temperature rise in continuous scans."
+      },
+      {
+        "term": "Cooling Method",
+        "english": "Cooling Method",
+        "definition": "Thermal management schemes for RF amplifiers and gradient systems (e.g., water cooling), affecting stability and continuous operation.",
+        "tags": [
+          "Operations",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Field of View",
+        "english": "Field of View",
+        "definition": "Spatial coverage of imaging (minimum/maximum FOV), affecting resolution, distortion, and clinical applicability.",
+        "tags": [
+          "Technical Parameters",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Repetition Time (TR)",
+        "english": "Repetition Time (TR)",
+        "definition": "Time interval between two excitations, influencing contrast and SNR; a core sequence parameter.",
+        "tags": [
+          "Sequence Parameters",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Echo Time (TE)",
+        "english": "Echo Time (TE)",
+        "definition": "Time point of signal sampling, influencing contrast and sensitivity; works with TR to determine image characteristics.",
+        "tags": [
+          "Sequence Parameters",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Matrix",
+        "english": "Matrix",
+        "definition": "Reconstruction matrix size (e.g., 256×256, 512×512), affecting spatial resolution, acquisition time and noise behavior.",
+        "tags": [
+          "Sequence Parameters",
+          "MRI"
+        ],
+        "aliases": [
+          "Reconstruction Matrix",
+          "Matrix"
+        ],
+        "why": "Larger matrix increases detail but requires higher SNR and longer time; closely tied to FOV/pixel size.",
+        "choose": "Increase matrix for high-detail tasks; balance with bandwidth, acceleration factor and coil channels.",
+        "mistakes": "Blindly increasing matrix raises noise and time; ignoring FOV and patient size constraints."
+      },
+      {
+        "term": "Parallel Imaging",
+        "english": "Parallel Imaging",
+        "definition": "Acceleration technique using multi-channel coils (factors e.g., ≥2/4/8) to reduce time and artifacts while maintaining resolution.",
+        "tags": [
+          "Post-processing",
+          "MRI"
+        ],
+        "aliases": [
+          "PI",
+          "Acceleration Factor",
+          "R value"
+        ],
+        "why": "Significantly reduces acquisition time in time-sensitive tasks, lowering motion artifacts and wait time.",
+        "choose": "Decide factor by coil channels and SNR; beware residual artifacts and noise amplification at high R.",
+        "mistakes": "Excessive acceleration causes reconstruction artifacts and notable SNR loss; ignoring coil geometry and sensitivity calibration."
+      },
+      {
+        "term": "Silent MRI",
+        "english": "Silent MRI",
+        "definition": "Lowering scan acoustic noise via hardware silencing and sequence optimization, improving patient comfort and compliance.",
+        "tags": [
+          "Advanced Features",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Motion Correction",
+        "english": "Motion Correction",
+        "definition": "Prospective/retrospective techniques to suppress motion artifacts, applicable to multiple regions and contrasts.",
+        "tags": [
+          "Post-processing",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Dixon Water‑Fat Separation",
+        "english": "Dixon Water‑Fat Separation",
+        "definition": "Rapid 3D imaging based on chemical shift to separate water/fat, commonly used in abdominal and body imaging.",
+        "tags": [
+          "Advanced Features",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Gantry Bore",
+        "english": "Gantry Bore",
+        "definition": "CT gantry opening diameter (e.g., ≥80 cm), affecting positioning and accommodation of large patients.",
+        "tags": [
+          "Installation & Use",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Rotation Time",
+        "english": "Rotation Time",
+        "definition": "Time for the gantry to complete a 360° rotation (e.g., ≤0.28 s), impacting temporal resolution and cardiac imaging.",
+        "tags": [
+          "Technical Parameters",
+          "CT"
+        ],
+        "aliases": [
+          "Gantry Rotation",
+          "Rotation Period"
+        ],
+        "why": "Directly determines temporal resolution; essential for cardiac and rapid imaging scenarios.",
+        "choose": "Prefer shorter rotation time for cardiac tasks; balance gantry stability and dose control.",
+        "mistakes": "Chasing extreme specs while ignoring image quality and noise; overlooking workflow impact on actual speed."
+      },
+      {
+        "term": "Temporal Resolution",
+        "english": "Temporal Resolution",
+        "definition": "System ability to resolve rapid motion (e.g., ≤30 ms), crucial for cardiac and dynamic imaging.",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Focal Spot Size",
+        "english": "Focal Spot Size",
+        "definition": "X-ray tube focal size (e.g., 1.2×0.7 mm), affecting spatial resolution and heat load management.",
+        "tags": [
+          "X-ray System",
+          "CT"
+        ],
+        "aliases": [
+          "Focal Spot"
+        ],
+        "why": "Smaller focal spots improve spatial resolution but reduce heat handling; balance by task intensity.",
+        "choose": "Prefer small focal spots for bone/high-detail tasks; for continuous high-load scans, consider larger focal spots.",
+        "mistakes": "Focusing only on small focal spots while ignoring heat capacity and continuity; overlooking reconstruction kernel and noise."
+      },
+      {
+        "term": "Anode Heat Capacity",
+        "english": "Anode Heat Capacity",
+        "definition": "Maximum heat the tube anode can withstand (e.g., ≥6.8 MHu), determining continuous scan and high-load capability.",
+        "tags": [
+          "X-ray System",
+          "CT"
+        ],
+        "aliases": [
+          "Heat Capacity",
+          "MHu"
+        ],
+        "why": "Determines stability and downtime risk under prolonged and high-load scanning.",
+        "choose": "Prioritize higher capacity for cardiac and large coverage tasks; evaluate together with cooling rate.",
+        "mistakes": "Ignoring sustained load and cooling ability; underestimating efficiency loss from cooldown downtime."
+      },
+      {
+        "term": "Cooling Rate",
+        "english": "Cooling Rate",
+        "definition": "Heat the tube can dissipate per unit time (e.g., ≥2.0 MHu/min), affecting workflow efficiency and overheat protection.",
+        "tags": [
+          "X-ray System",
+          "CT"
+        ],
+        "aliases": [
+          "MHu/min"
+        ],
+        "why": "Determines turnaround efficiency and stability under high workload.",
+        "choose": "Favor higher cooling rate in high-throughput scenarios; consider whole‑system cooling and room HVAC.",
+        "mistakes": "Ignoring overall cooling bottlenecks and environment; not assessing derating strategy for continuous scans."
+      },
+      {
+        "term": "Tube Current",
+        "english": "Tube Current",
+        "definition": "Tube current range during scanning (e.g., 10–700 mA), influencing dose and image noise.",
+        "tags": [
+          "X-ray System",
+          "CT"
+        ],
+        "aliases": [
+          "mA"
+        ],
+        "why": "Directly impacts dose and noise; core variable for dose management and image quality.",
+        "choose": "Configure by body habitus and region; pair with AEC and iterative reconstruction to balance dose and quality.",
+        "mistakes": "Increasing mA blindly without dose control; ignoring reconstruction and kernel impact on quality."
+      },
+      {
+        "term": "Tube Voltage",
+        "english": "Tube Voltage (kVp)",
+        "definition": "Tube accelerating voltage range (e.g., 80–140 kVp), affecting contrast, penetration and spectral imaging performance.",
+        "tags": [
+          "X-ray System",
+          "CT"
+        ],
+        "aliases": [
+          "kVp"
+        ],
+        "why": "Impacts material contrast and dose efficiency; key parameter for spectral and dose optimization.",
+        "choose": "Use lower kVp for pediatrics/low-dose; for iodine-enhanced exams, tailor kVp with mA to body habitus.",
+        "mistakes": "Using fixed kVp without considering task/body habitus; not leveraging spectral strategies to boost contrast."
+      },
+      {
+        "term": "Matrix Size",
+        "english": "Matrix Size",
+        "definition": "Display and reconstruction matrix dimensions (e.g., 512×512, 1024×1024), affecting resolution and post-processing.",
+        "tags": [
+          "Post-processing",
+          "CT"
+        ],
+        "aliases": [
+          "Matrix"
+        ],
+        "why": "Larger matrices add detail but demand higher sampling and raise noise; increase compute load.",
+        "choose": "Increase matrix for high-detail tasks; coordinate with FOV, pixel size and reconstruction kernel.",
+        "mistakes": "Blindly enlarging matrix increases pixel noise; ignoring FOV and sampling physical limits."
+      },
+      {
+        "term": "CT HU Range",
+        "english": "CT HU Range",
+        "definition": "Supported non-extended CT value range (e.g., −1024 to 3072 HU), used for tissue density quantification.",
+        "tags": [
+          "Technical Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Detector Rows",
+        "english": "Detector Rows",
+        "definition": "Physical number of detector rows along the Z-axis (e.g., ≥128 rows), determining coverage and scanning speed.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Detector Layers",
+        "english": "Detector Layers",
+        "definition": "Number of imaging layers in the detector direction (e.g., ≥256 layers), affecting equivalent resolution and reconstruction capability.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "DAS Sampling Rate",
+        "english": "DAS Sampling Rate",
+        "definition": "CT Data Acquisition System sampling frequency per second (e.g., ≥8900 Hz), impacting temporal resolution and high‑speed scans.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Slip Ring Transfer Speed",
+        "english": "Slip Ring Transfer Speed",
+        "definition": "Gantry slip ring data transfer rate (e.g., ≥20 Gbps), ensuring stable links under high‑speed rotation.",
+        "tags": [
+          "Gantry System",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Source‑to‑Detector Distance",
+        "english": "Source‑to‑Detector Distance",
+        "definition": "Geometric distance from tube focal spot to detector (e.g., ≤110 cm), affecting magnification, scatter, and spatial resolution.",
+        "tags": [
+          "Geometry",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Source‑to‑Isocenter Distance",
+        "english": "Source‑to‑Isocenter Distance",
+        "definition": "Distance from tube focal spot to the center of the scan field (e.g., ≥62 cm), influencing projection geometry and parameter setup.",
+        "tags": [
+          "Geometry",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Gantry Acoustic Noise",
+        "english": "Gantry Acoustic Noise",
+        "definition": "Acoustic noise at maximum rotation speed (e.g., ≤69 dB), related to patient comfort and compliance.",
+        "tags": [
+          "Gantry System",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Detector Elements per Row",
+        "english": "Detector Elements per Row",
+        "definition": "Physical element count per detector row (e.g., ≥830), impacting sampling density and spatial resolution.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Total Detector Elements",
+        "english": "Total Detector Elements",
+        "definition": "Total number of detector elements per single layer (e.g., ≥106000), determining coverage and image detail.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Maximum Receive Dynamic Range",
+        "english": "Maximum Receive Dynamic Range",
+        "definition": "Upper limit of system dynamic range (e.g., ≥160 dB), determining measurability and linearity across weak/strong signals.",
+        "tags": [
+          "RF System",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MTF 10% (X/Y Axes)",
+        "english": "MTF 10% (X/Y Axes)",
+        "definition": "Spatial resolution metric at 10% modulation transfer function in planar directions, indicating fine detail performance.",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MTF 50% (X/Y Axes)",
+        "english": "MTF 50% (X/Y Axes)",
+        "definition": "Composite contrast/detail performance metric at 50% MTF in planar directions.",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MTF 10% (Z Axis)",
+        "english": "MTF 10% (Z Axis)",
+        "definition": "Resolution metric along slice direction, reflecting volumetric coverage and layer detail.",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MTF 50% (Z Axis)",
+        "english": "MTF 50% (Z Axis)",
+        "definition": "Contrast/detail metric along slice direction, commonly used in phantom evaluations.",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Low‑Contrast Detectability",
+        "english": "Low‑Contrast Detectability",
+        "definition": "Ability to detect low‑contrast targets under specified phantom and CTDIvol conditions (e.g., 5 mm @ 0.3%).",
+        "tags": [
+          "Image Quality",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Helical Pitch Range",
+        "english": "Helical Pitch Range",
+        "definition": "Geometric pitch range for helical scans (e.g., ≥0.508:1–1.5:1), affecting speed, coverage, and artifacts.",
+        "tags": [
+          "Scan Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Collimation Coverage per Rotation",
+        "english": "Collimation Coverage per Rotation",
+        "definition": "Physical Z‑axis collimation coverage per rotation (e.g., ≥8 cm), determining volumetric efficiency.",
+        "tags": [
+          "Scan Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Continuous Spiral Scan Time",
+        "english": "Continuous Spiral Scan Time",
+        "definition": "Maximum uninterrupted helical scan duration (e.g., ≥60 s), reflecting thermal and stability capacity.",
+        "tags": [
+          "Efficiency",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Trigger‑to‑Scan Latency",
+        "english": "Trigger‑to‑Scan Latency",
+        "definition": "Time delay from threshold/gating trigger to scan start (e.g., ≤1 s), impacting timing alignment and cardiac protocols.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Max Scan Field",
+        "english": "Max Scan Field",
+        "definition": "Maximum geometric coverage of the scan field (e.g., ≥50 cm), impacting large body habitus and whole‑body coverage.",
+        "tags": [
+          "Technical Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Max Display Field",
+        "english": "Max Display Field",
+        "definition": "Maximum field of view for display/post‑processing (e.g., ≥50 cm), related to matrix and FOV configuration.",
+        "tags": [
+          "Post-processing",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Display Matrix",
+        "english": "Display Matrix",
+        "definition": "Matrix dimension of the display pipeline (e.g., ≥1024×1024), complements reconstruction matrix for visual detail.",
+        "tags": [
+          "Post-processing",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "CTDIvol",
+        "english": "CTDIvol",
+        "definition": "CT dose index per unit volume, reflecting protocol radiation level for dose management and comparisons.",
+        "tags": [
+          "Safety",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "DLP (Dose Length Product)",
+        "english": "DLP (Dose Length Product)",
+        "definition": "Total dose across the entire exam proportional to scan length.",
+        "tags": [
+          "Safety",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Automatic Exposure Control (AEC)",
+        "english": "Automatic Exposure Control (AEC)",
+        "definition": "Strategy to automatically modulate tube current based on anatomy/thickness to optimize dose and image quality.",
+        "tags": [
+          "Dose Management",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "ECG‑based Dose Modulation",
+        "english": "ECG‑based Dose Modulation",
+        "definition": "mA modulation across cardiac cycle to boost key phases and reduce dose in non‑key phases.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Model‑based Iterative Reconstruction",
+        "english": "Model‑based Iterative Reconstruction",
+        "definition": "Iterative reconstruction using optics/noise/physics models to significantly reduce noise and improve low‑contrast detection.",
+        "tags": [
+          "Reconstruction",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Dose Reduction Effectiveness",
+        "english": "Dose Reduction Effectiveness",
+        "definition": "Relative dose reduction percentage versus filtering/FBP under specified algorithms and phantoms (e.g., ≥82%).",
+        "tags": [
+          "Dose Management",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Regulatory Certification",
+        "english": "Regulatory Certification",
+        "definition": "Regulatory status for a specific technology/algorithm (e.g., FDA/NMPA), reflecting compliance and trustworthiness.",
+        "tags": [
+          "Compliance",
+          "CT/MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T1 Mapping",
+        "english": "T1 Mapping",
+        "definition": "Quantitative measurement and parametric maps of tissue T1 values for myocardium and multi‑system assessment.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T2 Mapping",
+        "english": "T2 Mapping",
+        "definition": "Quantitative measurement of tissue T2 reflecting hydration and inflammatory processes.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T2* Mapping",
+        "english": "T2* Mapping",
+        "definition": "Quantification related to R2* dephasing effects, used for iron deposition and microbleed analysis.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Extracellular Volume Fraction (ECV)",
+        "english": "Extracellular Volume Fraction (ECV)",
+        "definition": "Estimated interstitial volume fraction via T1 mapping and hematocrit, used for myocardial fibrosis assessment.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Apparent Diffusion Coefficient (ADC)",
+        "english": "Apparent Diffusion Coefficient (ADC)",
+        "definition": "Quantitative parameter from diffusion‑weighted imaging reflecting restricted diffusion; used in oncology and stroke.",
+        "tags": [
+          "Diffusion",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Fractional Anisotropy (FA)",
+        "english": "Fractional Anisotropy (FA)",
+        "definition": "DTI metric reflecting integrity and directionality of white matter fiber structures.",
+        "tags": [
+          "Diffusion",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "R2* (Transverse Relaxation Rate)",
+        "english": "R2* (Transverse Relaxation Rate)",
+        "definition": "Quantitative parameter related to T2* for iron deposition and oxygenation changes.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T1rho",
+        "english": "T1rho",
+        "definition": "Quantitative parameter in the rotating frame reflecting biochemical changes and viscosity in cartilage.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Magnetization Transfer Ratio (MTR)",
+        "english": "Magnetization Transfer Ratio (MTR)",
+        "definition": "Quantitative parameter derived from magnetization transfer effects to assess myelin and tissue composition changes.",
+        "tags": [
+          "Molecular Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Ktrans",
+        "english": "Ktrans",
+        "definition": "Plasma–interstitium transfer constant in DCE quantification, reflecting permeability and perfusion properties.",
+        "tags": [
+          "Perfusion",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Axial Images per Rotation",
+        "english": "Axial Images per Rotation",
+        "definition": "Number of image layers acquired per rotation in axial mode (e.g., ≥256), impacting coverage and efficiency.",
+        "tags": [
+          "Scan Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Axial Z Coverage per Rotation",
+        "english": "Axial Z Coverage per Rotation",
+        "definition": "Z‑axis coverage per rotation in axial scans (e.g., ≥8 cm), reflecting volumetric efficiency per acquisition.",
+        "tags": [
+          "Scan Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Cine Z Coverage per Rotation",
+        "english": "Cine Z Coverage per Rotation",
+        "definition": "Detector Z coverage per rotation in cine scans (e.g., ≥8 cm), for dynamic or high frame‑rate scenarios.",
+        "tags": [
+          "Scan Parameters",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "HD Scan Modes",
+        "english": "HD Scan Modes",
+        "definition": "High‑definition scan modes supported (axial, helical, cine) to optimize detail and temporal performance across scenarios.",
+        "tags": [
+          "Scan Modes",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Mode Switch Time",
+        "english": "Mode Switch Time",
+        "definition": "Time to switch from axial to helical (e.g., ≤3 s), reflecting workflow responsiveness.",
+        "tags": [
+          "Efficiency",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Gantry Control Panels",
+        "english": "Gantry Control Panels",
+        "definition": "Number of available gantry control panels (e.g., ≥4), affecting convenience and redundancy.",
+        "tags": [
+          "Gantry System",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Patient Info Display",
+        "english": "Patient Info Display",
+        "definition": "Built‑in patient information display on the gantry for identity confirmation and operator guidance.",
+        "tags": [
+          "Gantry System",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "3D Post Collimator",
+        "english": "3D Post Collimator",
+        "definition": "Post collimator structure blocking scatter in X/Y/Z and guiding incident X‑rays precisely to reduce artifacts and improve quality.",
+        "tags": [
+          "Detector",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Artifact Reduction",
+        "english": "Artifact Reduction",
+        "definition": "Combined post‑collimator and algorithmic strategies to suppress beam hardening and metal artifacts for clinical readability.",
+        "tags": [
+          "Post-processing",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MR Spectroscopy",
+        "english": "MR Spectroscopy",
+        "definition": "Quantitative imaging of metabolites and chemical environment; commonly used for oncology and metabolic assessment.",
+        "tags": [
+          "Molecular Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Non‑contrast MRA",
+        "english": "Non‑contrast MRA",
+        "definition": "Vascular imaging without contrast agent (e.g., 4D NCEMRA) for vessel assessment and follow‑up.",
+        "tags": [
+          "Vascular Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Contrast‑enhanced MRA",
+        "english": "Contrast‑enhanced MRA",
+        "definition": "Contrast‑based vascular imaging (e.g., 4D CEMRA) to improve visualization and quantitative evaluation.",
+        "tags": [
+          "Vascular Imaging",
+          "MRI"
+        ],
+        "aliases": []
+      }
+    ],
+    "performance": [
+      {
+        "term": "Spatial Resolution",
+        "english": "Spatial Resolution",
+        "definition": "The minimum distance between two adjacent structures that an imaging system can distinguish, determining image clarity and detail display capability.",
+        "tags": [
+          "Image Quality",
+          "Performance"
+        ]
+      },
+      {
+        "term": "Contrast Resolution",
+        "english": "Contrast Resolution",
+        "definition": "The ability of an imaging system to distinguish tissues of different densities or signal intensities, especially important for soft tissue imaging.",
+        "tags": [
+          "Image Quality",
+          "Performance"
+        ]
+      },
+      {
+        "term": "Scan Time",
+        "english": "Scan Time",
+        "definition": "The time required to complete a full scan, affecting patient comfort and equipment efficiency.",
+        "tags": [
+          "Performance",
+          "Efficiency"
+        ]
+      },
+      {
+        "term": "Noise Level",
+        "english": "Noise Level",
+        "definition": "Random signals in the image caused by system electronic noise, quantum noise, etc., affecting image quality.",
+        "tags": [
+          "Image Quality",
+          "Technology"
+        ]
+      }
+    ],
+    "clinical": [
+      {
+        "term": "Contrast Agent",
+        "english": "Contrast Agent",
+        "definition": "Drugs injected into the body to enhance the visibility of specific tissues or blood vessels, improving lesion detection rates and diagnostic accuracy.",
+        "tags": [
+          "Diagnostic Technology",
+          "Drugs"
+        ]
+      },
+      {
+        "term": "Functional Imaging",
+        "english": "Functional Imaging",
+        "definition": "Imaging technology that not only shows tissue structure but also reflects organ functional status, such as functional MRI, perfusion imaging, etc.",
+        "tags": [
+          "Advanced Features",
+          "Diagnosis"
+        ]
+      },
+      {
+        "term": "Multiplanar Reconstruction",
+        "english": "Multiplanar Reconstruction",
+        "definition": "Post-processing technology that reconstructs cross-sectional images into coronal, sagittal, or arbitrary angle planes.",
+        "tags": [
+          "Post-processing",
+          "3D Imaging"
+        ]
+      },
+      {
+        "term": "Radiation Dose",
+        "english": "Radiation Dose",
+        "definition": "The amount of ionizing radiation a patient receives during an X-ray examination, measured in millisieverts (mSv), which needs to be strictly controlled.",
+        "tags": [
+          "Safety",
+          "CT"
+        ]
+      },
+      {
+        "term": "Spectral Imaging",
+        "english": "Spectral Imaging",
+        "definition": "CT imaging using energy spectrum decomposition to differentiate materials and contrasts; supports volumetry and gout/stone analysis.",
+        "tags": [
+          "Advanced Features",
+          "CT"
+        ]
+      },
+      {
+        "term": "Dual‑source CT",
+        "english": "Dual‑source CT",
+        "definition": "CT architecture with two tube/detector chains, improving temporal resolution and motion robustness for cardiac imaging.",
+        "tags": [
+          "Architecture",
+          "CT"
+        ]
+      },
+      {
+        "term": "ECG Gating",
+        "english": "ECG Gating",
+        "definition": "Timing cardiac CT/MRI acquisitions using ECG trigger or phase selection to optimize temporal alignment and dose.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "Arterial Spin Labeling (ASL)",
+        "english": "Arterial Spin Labeling (ASL)",
+        "definition": "Non-contrast perfusion MRI by magnetizing inflowing blood; widely used for cerebral perfusion assessment.",
+        "tags": [
+          "Perfusion",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Dynamic Contrast‑Enhanced (DCE)",
+        "english": "Dynamic Contrast‑Enhanced (DCE)",
+        "definition": "Time-series contrast acquisition and quantitative analysis for perfusion, permeability, and microenvironment evaluation.",
+        "tags": [
+          "Perfusion",
+          "MRI"
+        ]
+      },
+      {
+        "term": "BOLD Functional MRI",
+        "english": "BOLD Functional MRI",
+        "definition": "Functional imaging based on blood oxygen level–dependent signal changes for brain activation and network mapping.",
+        "tags": [
+          "Functional Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Diffusion Tensor Imaging / Tractography",
+        "english": "Diffusion Tensor Imaging / Tractography",
+        "definition": "Advanced diffusion techniques for anisotropy quantification and white matter fiber tractography.",
+        "tags": [
+          "Diffusion",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Intravoxel Incoherent Motion (IVIM)",
+        "english": "Intravoxel Incoherent Motion (IVIM)",
+        "definition": "Multi‑b value fitting to separate perfusion and diffusion components for microcirculation evaluation.",
+        "tags": [
+          "Diffusion",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Diffusion Kurtosis Imaging (DKI)",
+        "english": "Diffusion Kurtosis Imaging (DKI)",
+        "definition": "Assessing non‑Gaussian diffusion behavior to reflect tissue complexity and microstructural changes.",
+        "tags": [
+          "Diffusion",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Quantitative Susceptibility Mapping (QSM)",
+        "english": "Quantitative Susceptibility Mapping (QSM)",
+        "definition": "Quantitative imaging via susceptibility inversion for metals, iron deposition, and oxygenation‑related changes.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Chemical Exchange Saturation Transfer (CEST)",
+        "english": "Chemical Exchange Saturation Transfer (CEST)",
+        "definition": "Molecular imaging technique using selective saturation to visualize metabolites and chemical environments.",
+        "tags": [
+          "Molecular Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "UTE / ZTE Imaging",
+        "english": "UTE / ZTE Imaging",
+        "definition": "Capturing signals from very short‑T2 tissues (e.g., cortical bone, lung) using extremely short TE for structure and quantification.",
+        "tags": [
+          "Advanced Features",
+          "MRI"
+        ]
+      },
+      {
+        "term": "4D Flow MRI",
+        "english": "4D Flow MRI",
+        "definition": "3D dynamic quantification of blood flow velocity and direction for cardiovascular assessment.",
+        "tags": [
+          "Quantitative Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Compressed Sensing",
+        "english": "Compressed Sensing",
+        "definition": "Sparse reconstruction‑based acceleration enabling faster 2D/3D/4D sequences while maintaining resolution.",
+        "tags": [
+          "Acceleration",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Time‑of‑Flight MRA (ToF)",
+        "english": "Time‑of‑Flight MRA (ToF)",
+        "definition": "Non‑contrast MRA leveraging unsaturated inflowing blood signal entering the imaging volume for vessel visualization.",
+        "tags": [
+          "Vascular Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Phase‑Contrast MRA (PCA)",
+        "english": "Phase‑Contrast MRA (PCA)",
+        "definition": "Vascular imaging based on phase changes to quantify blood flow velocity and direction.",
+        "tags": [
+          "Vascular Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Black‑Blood Imaging",
+        "english": "Black‑Blood Imaging",
+        "definition": "Suppresses intraluminal blood signal to highlight vessel wall and myocardial structures; useful for plaque and inflammation assessment.",
+        "tags": [
+          "Cardiovascular Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Late Gadolinium Enhancement (LGE)",
+        "english": "Late Gadolinium Enhancement (LGE)",
+        "definition": "Delayed‑phase myocardial imaging after contrast injection to assess fibrosis, scar, and ischemia/infarction.",
+        "tags": [
+          "Cardiac Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Free‑Breathing Cine",
+        "english": "Free‑Breathing Cine",
+        "definition": "Cine acquisition under free breathing with motion correction/navigation to improve patient compliance.",
+        "tags": [
+          "Cardiac Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Coronary CTA (CCTA)",
+        "english": "Coronary CTA (CCTA)",
+        "definition": "CT examination for coronary artery evaluation including stenosis, plaque, and anatomical variants.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT"
+        ]
+      },
+      {
+        "term": "Virtual Monochromatic Imaging (VMI)",
+        "english": "Virtual Monochromatic Imaging (VMI)",
+        "definition": "Spectral reconstruction of single‑energy images at various keV to reduce noise, suppress metal artifacts, and optimize contrast.",
+        "tags": [
+          "Spectral",
+          "CT"
+        ]
+      },
+      {
+        "term": "Effective Atomic Number",
+        "english": "Effective Atomic Number",
+        "definition": "Equivalent atomic number derived from spectral material decomposition for identification and quantitative analysis.",
+        "tags": [
+          "Spectral",
+          "CT"
+        ]
+      },
+      {
+        "term": "Iodine Concentration Quantification",
+        "english": "Iodine Concentration Quantification",
+        "definition": "Quantification of iodine concentration (mg/ml) via spectral imaging for perfusion, enhancement, and lesion analysis.",
+        "tags": [
+          "Spectral",
+          "CT"
+        ]
+      },
+      {
+        "term": "Deep Learning Reconstruction",
+        "english": "Deep Learning Reconstruction",
+        "definition": "Reconstruction strategy using trained deep networks for denoising and detail recovery, improving low‑dose image quality.",
+        "tags": [
+          "Reconstruction",
+          "CT"
+        ]
+      },
+      {
+        "term": "DICOM RDSR",
+        "english": "DICOM RDSR",
+        "definition": "Structured dose report in DICOM for compliance and tracking of exam dose metrics.",
+        "tags": [
+          "Dose Management",
+          "CT"
+        ]
+      },
+      {
+        "term": "Organ‑based Dose Modulation",
+        "english": "Organ‑based Dose Modulation",
+        "definition": "Tube current modulation strategy targeting sensitive organs to reduce localized radiation.",
+        "tags": [
+          "Dose Management",
+          "CT"
+        ]
+      },
+      {
+        "term": "Prospective ECG Gating",
+        "english": "Prospective ECG Gating",
+        "definition": "Acquisition within predefined ECG phase windows; lower dose but limited phase range, suitable for stable heart rates.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT"
+        ]
+      },
+      {
+        "term": "Retrospective ECG Gating",
+        "english": "Retrospective ECG Gating",
+        "definition": "Continuous acquisition with phase selection during post‑processing; flexible temporal resolution but higher dose, for unstable heart rates.",
+        "tags": [
+          "Cardiac Imaging",
+          "CT"
+        ]
+      },
+      {
+        "term": "Signal‑to‑Noise Ratio (SNR)",
+        "english": "Signal‑to‑Noise Ratio (SNR)",
+        "definition": "Ratio of image signal to noise that drives readability and detail rendering.",
+        "tags": [
+          "Image Quality",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "Contrast‑to‑Noise Ratio (CNR)",
+        "english": "Contrast‑to‑Noise Ratio (CNR)",
+        "definition": "Contrast between tissues relative to noise, a stronger indicator of clinical interpretability.",
+        "tags": [
+          "Image Quality",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "B0 Field Mapping",
+        "english": "B0 Field Mapping",
+        "definition": "Quantitative assessment and correction of main magnetic field inhomogeneity to reduce distortion and stabilize sequences.",
+        "tags": [
+          "Calibration",
+          "MRI"
+        ]
+      },
+      {
+        "term": "B1 Field Mapping",
+        "english": "B1 Field Mapping",
+        "definition": "Measurement and correction of RF field inhomogeneity to improve contrast and quantitative accuracy.",
+        "tags": [
+          "Calibration",
+          "MRI"
+        ]
+      },
+      {
+        "term": "SENSE / GRAPPA",
+        "english": "SENSE / GRAPPA",
+        "definition": "Mainstream parallel imaging reconstruction methods leveraging multi‑channel coils for acceleration while maintaining resolution.",
+        "tags": [
+          "Parallel Imaging",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Balanced SSFP (bSSFP)",
+        "english": "Balanced SSFP (bSSFP)",
+        "definition": "High‑SNR sequence commonly used for rapid cardiac/body imaging; sensitive to B0/B1 but offers strong contrast and temporal performance.",
+        "tags": [
+          "Sequence",
+          "MRI"
+        ]
+      },
+      {
+        "term": "Echo Planar Imaging (EPI)",
+        "english": "Echo Planar Imaging (EPI)",
+        "definition": "Ultra‑fast acquisition widely used for DWI/BOLD, but prone to distortion and susceptibility artifacts.",
+        "tags": [
+          "Sequence",
+          "MRI"
+        ]
+      }
+    ]
+  }
+}

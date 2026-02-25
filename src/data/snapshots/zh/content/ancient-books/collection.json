@@ -1,0 +1,303 @@
+{
+  "books": [
+    {
+      "id": "huangdi-neijing",
+      "title": "黄帝内经",
+      "author": "佚名",
+      "dynasty": "先秦",
+      "year": "战国时期",
+      "category": "医经",
+      "description": "《黄帝内经》是中国现存最早、最完整、最系统的中医理论著作，分为《素问》和《灵枢》两部分。它奠定了中医学理论基础，包括阴阳五行、脏腑经络、病因病机、诊法治则等。",
+      "tags": ["基础理论", "内经", "先秦医学", "阴阳五行"],
+      "chapters": 18,
+      "characters": 50000,
+      "influence": "中医理论奠基之作",
+      "preservation": "完好",
+      "difficulty": "高"
+    },
+    {
+      "id": "shanghan-zabing-lun",
+      "title": "伤寒杂病论",
+      "author": "张仲景",
+      "dynasty": "东汉",
+      "year": "200年",
+      "category": "伤寒金匮",
+      "description": "东汉张仲景所著，是中医辨证论治的奠基之作。原书16卷，后世整理为《伤寒论》和《金匮要略》两部分，确立了六经辨证和脏腑辨证的诊疗体系。",
+      "tags": ["伤寒", "杂病", "辨证论治", "张仲景", "东汉医学"],
+      "chapters": 16,
+      "characters": 45000,
+      "influence": "辨证论治奠基之作",
+      "preservation": "较好",
+      "difficulty": "高"
+    },
+    {
+      "id": "bencao-gangmu",
+      "title": "本草纲目",
+      "author": "李时珍",
+      "dynasty": "明",
+      "year": "1596年",
+      "category": "本草",
+      "description": "明代李时珍历时27年编成的药物学巨著，收录药物1892种，方剂11096首，附图1109幅。是中国古代药物学的集大成之作，对后世药物学发展影响深远。",
+      "tags": ["药物学", "本草学", "李时珍", "明代医学", "药物分类"],
+      "chapters": 52,
+      "characters": 1900000,
+      "influence": "药物学集大成之作",
+      "preservation": "完好",
+      "difficulty": "中"
+    },
+    {
+      "id": "qianjin-fang",
+      "title": "千金要方",
+      "author": "孙思邈",
+      "dynasty": "唐",
+      "year": "652年",
+      "category": "方书",
+      "description": "唐代孙思邈所著，收录方剂5300余首，分为妇人、少小婴孺、七窍病、伤寒、内脏、疮肿、备急等科。是中国历史上第一部临床医学百科全书。",
+      "tags": ["方剂学", "临床医学", "孙思邈", "唐代医学", "百科全书"],
+      "chapters": 30,
+      "characters": 680000,
+      "influence": "临床医学百科全书",
+      "preservation": "较好",
+      "difficulty": "中"
+    },
+    {
+      "id": "mai-jing",
+      "title": "脉经",
+      "author": "王叔和",
+      "dynasty": "西晋",
+      "year": "280年",
+      "category": "诊法",
+      "description": "西晋王叔和编撰，是中国第一部脉学专著。全书10卷，系统论述了脉象的形成、脉诊方法、脉象主病等，奠定了中医脉学基础。",
+      "tags": ["脉学", "诊法", "王叔和", "西晋医学", "脉诊"],
+      "chapters": 10,
+      "characters": 25000,
+      "influence": "脉学奠基之作",
+      "preservation": "残缺",
+      "difficulty": "高"
+    },
+    {
+      "id": "jiayi-jing",
+      "title": "甲乙经",
+      "author": "皇甫谧",
+      "dynasty": "魏晋",
+      "year": "256年",
+      "category": "针灸",
+      "description": "魏晋皇甫谧编撰，是中国最早的针灸学专著。全书12卷，收录穴位349个，分654穴，系统论述了针灸理论、腧穴定位、主治病症等。",
+      "tags": ["针灸学", "腧穴", "皇甫谧", "魏晋医学", "穴位"],
+      "chapters": 12,
+      "characters": 38000,
+      "influence": "针灸学奠基之作",
+      "preservation": "较好",
+      "difficulty": "高"
+    },
+    {
+      "id": "shanghan-zalun",
+      "title": "伤寒论",
+      "author": "张仲景",
+      "dynasty": "东汉",
+      "year": "200年",
+      "category": "伤寒金匮",
+      "description": "从《伤寒杂病论》中分离出来的专论外感热病的著作，共10卷，论述了六经病证、传变规律、辨证要点和治疗方法，是伤寒学的经典。",
+      "tags": ["伤寒", "六经辨证", "张仲景", "东汉医学", "外感热病"],
+      "chapters": 10,
+      "characters": 35000,
+      "influence": "伤寒学经典",
+      "preservation": "较好",
+      "difficulty": "高"
+    },
+    {
+      "id": "jinkui-yaolue",
+      "title": "金匮要略",
+      "author": "张仲景",
+      "dynasty": "东汉",
+      "year": "200年",
+      "category": "伤寒金匮",
+      "description": "从《伤寒杂病论》中分离出来的专论内科杂病的著作，共3卷25篇，论述了脏腑经络病证、内科杂病的辨证论治，是杂病学的基础。",
+      "tags": ["杂病", "脏腑辨证", "张仲景", "东汉医学", "内科杂病"],
+      "chapters": 25,
+      "characters": 28000,
+      "influence": "杂病学基础",
+      "preservation": "较好",
+      "difficulty": "高"
+    },
+    {
+      "id": "wenzhen-xue",
+      "title": "温病条辨",
+      "author": "叶天士",
+      "dynasty": "清",
+      "year": "1746年",
+      "category": "温病",
+      "description": "清代叶天士所著，是温病学派的代表作。全书4卷，以卫气营血、三焦辨证为纲，系统论述了温病的病因、病机、传变、诊断和治疗。",
+      "tags": ["温病", "卫气营血", "三焦辨证", "叶天士", "清代医学"],
+      "chapters": 4,
+      "characters": 45000,
+      "influence": "温病学派代表作",
+      "preservation": "完好",
+      "difficulty": "高"
+    },
+    {
+      "id": "yixue-rumen",
+      "title": "医学入门",
+      "author": "李梴",
+      "dynasty": "明",
+      "year": "1575年",
+      "category": "综合医书",
+      "description": "明代李梴所著，是一部综合性医学入门读物。全书7卷，包括医学源流、脏腑经络、脉诊、药性、方剂、针灸、内外妇儿各科等内容。",
+      "tags": ["医学入门", "综合医书", "李梴", "明代医学", "医学教育"],
+      "chapters": 7,
+      "characters": 85000,
+      "influence": "医学入门经典",
+      "preservation": "完好",
+      "difficulty": "低"
+    }
+  ],
+  "categories": [
+    {
+      "id": "medical-classics",
+      "name": "医经",
+      "description": "中医基础理论著作，包括内经、难经等",
+      "count": 156,
+      "icon": "📚"
+    },
+    {
+      "id": "diagnostics",
+      "name": "诊法",
+      "description": "诊断方法著作，包括脉学、望诊等",
+      "count": 89,
+      "icon": "🩺"
+    },
+    {
+      "id": "materia-medica",
+      "name": "本草",
+      "description": "药物学著作，包括各种本草纲目",
+      "count": 234,
+      "icon": "🌿"
+    },
+    {
+      "id": "prescriptions",
+      "name": "方书",
+      "description": "方剂学著作，收录各种方剂",
+      "count": 178,
+      "icon": "💊"
+    },
+    {
+      "id": "acupuncture",
+      "name": "针灸推拿",
+      "description": "针灸学和推拿按摩著作",
+      "count": 145,
+      "icon": " needles"
+    },
+    {
+      "id": "shanghan",
+      "name": "伤寒金匮",
+      "description": "伤寒杂病论相关著作",
+      "count": 67,
+      "icon": "🤒"
+    },
+    {
+      "id": "warm-diseases",
+      "name": "温病",
+      "description": "温病学派相关著作",
+      "count": 45,
+      "icon": "🌡️"
+    },
+    {
+      "id": "comprehensive",
+      "name": "综合医书",
+      "description": "综合性医学著作",
+      "count": 89,
+      "icon": "📖"
+    },
+    {
+      "id": "clinical",
+      "name": "临证各科",
+      "description": "临床各科专著",
+      "count": 123,
+      "icon": "🏥"
+    },
+    {
+      "id": "health",
+      "name": "养生食疗外治",
+      "description": "养生、食疗、外治法著作",
+      "count": 78,
+      "icon": "🧘"
+    },
+    {
+      "id": "theories",
+      "name": "医论医案",
+      "description": "医学理论和医案著作",
+      "count": 156,
+      "icon": "📝"
+    },
+    {
+      "id": "others",
+      "name": "其他",
+      "description": "其他医学著作",
+      "count": 34,
+      "icon": "📋"
+    }
+  ],
+  "dynasties": [
+    {
+      "id": "pre-qin",
+      "name": "先秦",
+      "description": "中医理论奠基时期",
+      "count": 15,
+      "years": "公元前221年以前"
+    },
+    {
+      "id": "han",
+      "name": "两汉",
+      "description": "张仲景《伤寒杂病论》",
+      "count": 28,
+      "years": "公元前206年-公元220年"
+    },
+    {
+      "id": "wei-jin",
+      "name": "魏晋南北朝",
+      "description": "王叔和《脉经》、皇甫谧《甲乙经》",
+      "count": 45,
+      "years": "220年-589年"
+    },
+    {
+      "id": "sui-tang",
+      "name": "隋唐",
+      "description": "孙思邈《千金要方》《千金翼方》",
+      "count": 67,
+      "years": "581年-907年"
+    },
+    {
+      "id": "song-jin-yuan",
+      "name": "宋金元",
+      "description": "金元四大家学术争鸣",
+      "count": 156,
+      "years": "960年-1368年"
+    },
+    {
+      "id": "ming-qing",
+      "name": "明清",
+      "description": "李时珍《本草纲目》、温病学派",
+      "count": 389,
+      "years": "1368年-1912年"
+    }
+  ],
+  "statistics": {
+    "totalBooks": 1000,
+    "totalCharacters": 400000000,
+    "totalCategories": 12,
+    "totalDynasties": 6,
+    "mostInfluential": [
+      "黄帝内经",
+      "伤寒杂病论", 
+      "本草纲目",
+      "千金要方",
+      "温病条辨"
+    ],
+    "preservationStatus": {
+      "excellent": 342,
+      "good": 456,
+      "fair": 178,
+      "poor": 24
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "labels": {
+    "title": "黄帝内经",
+    "description": "中医理论奠基之作"
+  },
+  "content": {
+    "id": "huangdi-neijing",
+    "title": {
+      "zh": "黄帝内经",
+      "en": "Yellow Emperor's Inner Canon"
+    },
+    "dynasty": "先秦",
+    "author": "佚名",
+    "category": "medical-classics",
+    "metadata": {
+      "dynasty": "先秦",
+      "author": "佚名",
+      "chapters": 18,
+      "wordCount": 25000,
+      "publishYear": "-2000",
+      "tags": ["医经", "基础理论", "黄帝", "阴阳", "五行"],
+      "coverImage": "/images/books/huangdi-neijing-cover.jpg",
+      "difficulty": "高",
+      "influence": "中医理论奠基之作",
+      "preservation": "完好"
+    },
+    "chapters": [
+      {
+        "id": "suwen-1",
+        "title": {
+          "zh": "上古天真论",
+          "en": "Ancient Heaven and Truth"
+        },
+        "order": 0,
+        "summary": "论述上古之人懂得养生之道，能够度百岁而动作不衰",
+        "sections": [
+          {
+            "id": "suwen-1-1",
+            "title": "上古天真论第一",
+            "order": 0,
+            "originalText": "昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而聪明。上问于天师曰：余闻上古之人，春秋皆度百岁，而动作不衰；今时之人，年半百而动作皆衰者，时世异耶？人将失之耶？岐伯对曰：上古之人，其知道者，法于阴阳，和于术数，食饮有节，起居有常，不妄作劳，故能形与神俱，而尽终其天年。",
+            "translation": "从前黄帝出生时就神灵，幼年时就能说话，少年时就很聪慧，成年时敦厚敏捷，壮年时更加聪明。黄帝向天师问道：我听说上古时代的人，年龄都能超过百岁，而动作不显衰老；现在的人，年龄到五十岁，动作就都衰老了，这是时代不同呢？还是人们失去了养生之道呢？岐伯回答说：上古时代的人，懂得养生之道，效法于阴阳，调和于术数，饮食有节制，作息有规律，不过度劳作，所以能够形体与精神都保持健康，活到天赋的年寿。",
+            "interpretation": "这段话阐述了中医养生的核心理念。体现了中医'天人合一'的整体观念，强调人要顺应自然规律，保持阴阳平衡，才能健康长寿。现代医学也证实，规律作息、适度运动、合理饮食是健康长寿的基础。",
+            "keyConcepts": [
+              {
+                "id": "yin-yang",
+                "term": "阴阳",
+                "description": "中医哲学的核心概念，指宇宙中相互对立又相互依存的两种基本力量",
+                "category": "基础理论",
+                "relatedConcepts": ["五行", "脏腑"]
+              }
+            ]
+          }
+        ],
+        "keyConcepts": [
+          {
+            "id": "tian-ren-he-yi",
+            "term": "天人合一",
+            "description": "人与自然和谐统一的哲学观念",
+            "category": "基础理论",
+            "relatedConcepts": ["阴阳", "五行"]
+          }
+        ]
+      },
+      {
+        "id": "suwen-2",
+        "title": {
+          "zh": "四气调神大论",
+          "en": "On the Four Qi to Adjust the Spirit"
+        },
+        "order": 1,
+        "summary": "论述如何顺应四时之气变化来调养精神",
+        "sections": [
+          {
+            "id": "suwen-2-1",
+            "title": "四气调神大论第一",
+            "order": 0,
+            "originalText": "春三月，此谓发陈。天地俱生，万物以荣。夜卧早起，广步于庭，被发缓形，以使志生。生而勿杀，予而勿夺，赏而勿罚。此春气之应，养生之道也。",
+            "translation": "春季的三个月，是推陈出新的季节。天地间万物都开始生长发育，欣欣向荣。人们应该晚睡早起，在庭院里散步，披散头发，放松形体，以使情志舒畅。要顺应春生之气，多给予少索取，多奖励少惩罚。这就是顺应春气、保养身心的方法。",
+            "interpretation": "本章论述了春季的养生原则。春季是生发的季节，对应中医的木和肝脏。强调要顺应自然规律，保持情绪舒畅，适当活动。体现了'天人相应'的观念，强调季节性养生方法。",
+            "keyConcepts": [
+              {
+                "id": "si-qi-tiao-shen",
+                "term": "四气调神",
+                "description": "顺应四时之气变化来调养精神的方法",
+                "category": "养生",
+                "relatedConcepts": ["五行", "四季"]
+              }
+            ]
+          }
+        ],
+        "keyConcepts": [
+          {
+            "id": "chun-qi",
+            "term": "春气",
+            "description": "春季的气机特点，对应生发",
+            "category": "季节理论",
+            "relatedConcepts": ["木", "肝"]
+          }
+        ]
+      }
+    ],
+    "relatedBooks": ["shanghan-zabing-lun", "jinkui-yaolue", "bencao-gangmu", "nan-jing"],
+    "readingTime": {
+      "estimated": "8小时",
+      "difficulty": "高级",
+      "prerequisites": ["中医基础理论", "阴阳理论理解"]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "确立了中医学的理论基础",
+        "系统阐述了阴阳五行学说",
+        "创建了脏腑经络理论",
+        "确立了诊法治则"
+      ],
+      "clinicalApplications": [
+        "指导临床诊断治疗",
+        "针灸理论基础",
+        "中药学理论基础",
+        "养生预防医学"
+      ],
+      "historicalSignificance": [
+        "最早的系统医学理论著作",
+        "影响2000多年医学发展",
+        "各中医学派的基础",
+        "世界医学史文化瑰宝"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 18,
+    "totalWords": 25000,
+    "totalSections": 81,
+    "relatedBooks": 4,
+    "keyConcepts": 156,
+    "readingTime": 480,
+    "difficulty": 5
+  },
+  "updatedAt": "2024-01-01T00:00:00Z",
+  "metadata": {
+    "sourceFlags": ["db", "markdown", "seed"],
+    "version": "1.0.0",
+    "lastReviewed": "2024-01-01T00:00:00Z"
+  }
+}

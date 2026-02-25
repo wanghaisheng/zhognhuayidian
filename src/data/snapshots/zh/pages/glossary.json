@@ -1,0 +1,1394 @@
+{
+  "categories": {
+    "technical": [
+      {
+        "term": "CT 扫描仪",
+        "english": "Computed Tomography Scanner",
+        "definition": "利用绕体旋转的 X 射线束并通过计算机处理生成断层图像的医疗诊断设备。",
+        "tags": [
+          "基础概念",
+          "影像设备"
+        ],
+        "aliases": [
+          "CT",
+          "计算机断层",
+          "CT机"
+        ],
+        "why": "覆盖急诊、心血管、肿瘤与常规检查；采购需关注排数、机架孔径、剂量控制、工作流与维保能力。",
+        "choose": "按临床需求与预算选择排数；心脏/急诊建议 ≥128 排；空间受限考虑移动/便携方案；综合比较服务条款与生命周期成本。",
+        "mistakes": "只看排数忽略服务与机房改造成本；忽视剂量‑质量平衡；忽略配件与培训。"
+      },
+      {
+        "term": "MRI",
+        "english": "Magnetic Resonance Imaging",
+        "definition": "利用强磁场与射频脉冲激发体内氢原子，通过检测信号变化生成高分辨率图像的诊断技术。",
+        "tags": [
+          "基础概念",
+          "影像设备"
+        ],
+        "aliases": [
+          "磁共振",
+          "MRI设备",
+          "核磁"
+        ],
+        "why": "软组织对比优势明显，适合神经、肌骨与肿瘤；采购应关注场强、线圈生态、静音与服务响应。",
+        "choose": "根据科室需求在 1.5T 与 3T 之间权衡；优先安静技术、患者舒适与高通道线圈；核验备件覆盖与服务 SLA。",
+        "mistakes": "只看场强忽略梯度/射频系统与线圈生态；低估屏蔽与安装要求；忽视工作流与培训。"
+      },
+      {
+        "term": "层厚",
+        "english": "Slice Thickness",
+        "definition": "CT 扫描中每幅断层图像的厚度（mm）。层厚越薄分辨率越高，但扫描时间增加。",
+        "tags": [
+          "技术参数",
+          "CT"
+        ],
+        "aliases": [
+          "层厚度",
+          "Slice"
+        ],
+        "why": "直接影响空间分辨率与噪声，是骨科细节与小病灶可见性的关键。",
+        "choose": "高细节任务倾向薄层；低剂量或快速场景需在层厚、重建核与噪声间权衡。",
+        "mistakes": "盲目追求极薄层导致噪声与伪影；忽视剂量与检查时长的综合影响。"
+      },
+      {
+        "term": "磁场强度",
+        "english": "Magnetic Field Strength",
+        "definition": "MRI 设备产生的磁场强度（T）。常见 1.5T、3.0T、7.0T；一般越高图像质量越好。",
+        "tags": [
+          "技术参数",
+          "MRI"
+        ],
+        "aliases": [
+          "场强",
+          "T 值",
+          "Field Strength"
+        ],
+        "why": "直接影响信噪比与对比表现；高场对科研与高分辨任务更有利。",
+        "choose": "在 1.5T 与 3.0T 间按预算与专业需求平衡；兼顾静音与宽孔径舒适度。",
+        "mistakes": "只看场强忽视梯度/射频与线圈生态；低估屏蔽与运维要求。"
+      },
+      {
+        "term": "屏蔽方式",
+        "english": "Shielding Method",
+        "definition": "磁体外部与梯度线圈的磁场约束策略，常见为主动屏蔽与电磁干扰屏蔽组合，用于降低场外泄与安装要求。",
+        "tags": [
+          "磁体",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "匀场方式",
+        "english": "Shimming",
+        "definition": "通过被动/主动线圈或算法改善磁场均匀度（DSV），提升图像质量与序列稳定性。",
+        "tags": [
+          "磁体",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "孔径",
+        "english": "Bore Diameter",
+        "definition": "患者检查通道的最窄直径（如 60cm），影响舒适性、体位与特定线圈适配。",
+        "tags": [
+          "安装与使用",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "液氦消耗量",
+        "english": "Helium Consumption",
+        "definition": "磁体在常规运行下的液氦蒸发与补充需求，零消耗表示全封闭/零蒸发设计。",
+        "tags": [
+          "运维",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "液氦容积",
+        "english": "Helium Volume",
+        "definition": "磁体内液氦储量上限（如 ≤1300L），与低温稳定性与维保相关。",
+        "tags": [
+          "运维",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "5 高斯线范围",
+        "english": "5‑Gauss Line",
+        "definition": "磁场强度达到 5 高斯的安全边界范围，用于规划安装与安全管控区域。",
+        "tags": [
+          "安装与使用",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "磁体重量",
+        "english": "Magnet Weight",
+        "definition": "磁体含液氦的总重量与运行状态重量，影响承重与设备搬运。",
+        "tags": [
+          "安装与使用",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "射频发射功率",
+        "english": "RF Transmit Power",
+        "definition": "系统在不同序列下的最大 RF 发射功率上限，关联患者 SAR 与序列可用性。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "频率控制精度",
+        "english": "Frequency Accuracy",
+        "definition": "系统对中心频率的控制与稳定指标（如 ≤0.07Hz），影响序列一致性与图像伪影。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "接收通道数",
+        "english": "Receive Channels",
+        "definition": "系统可用的并行接收通道上限，影响并行采集加速与线圈组合灵活性。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "线圈接口数量",
+        "english": "Coil Interface Ports",
+        "definition": "系统可提供的线圈接口数目上限，决定可同时连接的线圈数量与布局。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "梯度场强度",
+        "english": "Gradient Strength",
+        "definition": "单轴最大梯度强度（如 ≥33 mT/m），影响最小层厚、分辨率与高级序列能力。",
+        "tags": [
+          "梯度系统",
+          "MRI"
+        ],
+        "aliases": [
+          "Gmax",
+          "mT/m",
+          "Gradient"
+        ],
+        "why": "决定空间分辨与快速序列能力，是高端体部与神经序列的核心指标之一。",
+        "choose": "结合 Slew Rate 共同评估；高端任务优先更高 Gmax 与更优冷却能力。",
+        "mistakes": "只看名义 Gmax 忽略持续性能与热管理；忽视序列实际可用性与伪影控制。"
+      },
+      {
+        "term": "梯度切换率",
+        "english": "Slew Rate",
+        "definition": "梯度场变化速度（如 ≥100 mT/m/ms），影响快速序列与 EPI 的成像性能与伪影控制。",
+        "tags": [
+          "梯度系统",
+          "MRI"
+        ],
+        "aliases": [
+          "SR",
+          "mT/m/ms"
+        ],
+        "why": "影响时间分辨与高速序列的伪影控制，是 EPI/功能成像的重要参数。",
+        "choose": "与 Gmax 协同评估，关注高负载下的稳定性与冷却方案。",
+        "mistakes": "忽略患者舒适与声噪；未评估持续扫描下的降额与温升。"
+      },
+      {
+        "term": "冷却方式",
+        "english": "Cooling Method",
+        "definition": "射频放大器与梯度系统的散热方案（如水冷），影响稳定性与连续运行能力。",
+        "tags": [
+          "运维",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "扫描视野",
+        "english": "Field of View",
+        "definition": "成像的空间覆盖范围（最小/最大 FOV），影响分辨率、畸变与临床适用性。",
+        "tags": [
+          "技术参数",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "重复时间（TR）",
+        "english": "Repetition Time (TR)",
+        "definition": "两次激发之间的时间间隔，影响对比与信噪比，是序列参数核心之一。",
+        "tags": [
+          "序列参数",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "回波时间（TE）",
+        "english": "Echo Time (TE)",
+        "definition": "信号采样的时间点，影响对比与敏感性，与 TR 配合决定图像特性。",
+        "tags": [
+          "序列参数",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "矩阵",
+        "english": "Matrix",
+        "definition": "序列的重建矩阵尺寸（如 256×256、512×512），影响空间分辨率、采样时间与噪声表现。",
+        "tags": [
+          "序列参数",
+          "MRI"
+        ],
+        "aliases": [
+          "重建矩阵",
+          "Matrix"
+        ],
+        "why": "更大矩阵提升细节，但对 SNR 与时间提出更高要求；与 FOV/像素尺寸密切相关。",
+        "choose": "高分辨任务可加大矩阵；需结合带宽、加速因子与线圈通道数综合权衡时间与图像质量。",
+        "mistakes": "盲目增大矩阵导致噪声与采集时间显著增加；忽视 FOV 与体型的实际限制。"
+      },
+      {
+        "term": "并行采集",
+        "english": "Parallel Imaging",
+        "definition": "利用多通道线圈加速采集的技术（因子如 ≥2/4/8），在保持分辨率前提下降低时间与伪影。",
+        "tags": [
+          "后处理",
+          "MRI"
+        ],
+        "aliases": [
+          "PI",
+          "加速因子",
+          "R 值"
+        ],
+        "why": "在时间敏感任务中显著缩短采集时间，降低运动伪影与等待成本。",
+        "choose": "结合线圈通道数与 SNR 决定加速因子；注意高 R 下的残余伪影与噪声放大。",
+        "mistakes": "过高的加速导致重建伪影与显著 SNR 损失；忽视线圈几何与灵敏度校准。"
+      },
+      {
+        "term": "静音成像",
+        "english": "Silent MRI",
+        "definition": "通过硬件静音与序列优化降低扫描噪声，提升患者舒适度与特定场景配合度。",
+        "tags": [
+          "高级功能",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "运动伪影校正",
+        "english": "Motion Correction",
+        "definition": "前瞻/回顾性技术用于抑制患者运动造成的伪影，适用于多部位与多对比序列。",
+        "tags": [
+          "后处理",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Dixon 水脂分离",
+        "english": "Dixon Water‑Fat Separation",
+        "definition": "基于化学位移实现水/脂分离的快速 3D 成像技术，常用于腹部与体部成像。",
+        "tags": [
+          "高级功能",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "机架孔径",
+        "english": "Gantry Bore",
+        "definition": "CT 机架环形开口直径（如 ≥80cm），影响体位摆放与大体型患者适配。",
+        "tags": [
+          "安装与使用",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "旋转时间",
+        "english": "Rotation Time",
+        "definition": "机架完成 360° 旋转的时间（如 ≤0.28s），影响时间分辨率与心脏成像能力。",
+        "tags": [
+          "技术参数",
+          "CT"
+        ],
+        "aliases": [
+          "旋转周期",
+          "Gantry Rotation"
+        ],
+        "why": "直接决定时间分辨率，心脏与快速成像场景尤为关键。",
+        "choose": "心脏任务优先更短旋转时间；兼顾机架稳定与剂量控制策略。",
+        "mistakes": "只看极限指标忽视图像质量与噪声；不考虑工作流对实际速度的影响。"
+      },
+      {
+        "term": "时间分辨率",
+        "english": "Temporal Resolution",
+        "definition": "系统对快速运动的区分能力（如 ≤30ms），关键于心脏与动态成像。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "焦点尺寸",
+        "english": "Focal Spot Size",
+        "definition": "球管焦点大小（如 1.2×0.7mm），影响空间分辨率与热负荷管理。",
+        "tags": [
+          "X 线系统",
+          "CT"
+        ],
+        "aliases": [
+          "焦点",
+          "Focal Spot"
+        ],
+        "why": "焦点越小，空间分辨率越高；但热负荷能力下降需与任务强度平衡。",
+        "choose": "骨科与高分辨任务偏小焦点；高负荷连续扫描需兼顾大焦点的耐热能力。",
+        "mistakes": "只看小焦点忽略热容量与扫描连续性；忽视重建核与噪声的综合影响。"
+      },
+      {
+        "term": "阳极热容量",
+        "english": "Anode Heat Capacity",
+        "definition": "球管阳极可承受的最大热量（如 ≥6.8 MHu），决定连续扫描与高负荷能力。",
+        "tags": [
+          "X 线系统",
+          "CT"
+        ],
+        "aliases": [
+          "热容量",
+          "MHu"
+        ],
+        "why": "决定长时间与高负荷扫描的稳定性与停机风险。",
+        "choose": "心脏与大体覆盖任务优先更高热容量；结合冷却率评估工作流。",
+        "mistakes": "只看瞬时性能忽略持续负载与冷却能力；忽视停机冷却带来的效率损失。"
+      },
+      {
+        "term": "散热率",
+        "english": "Cooling Rate",
+        "definition": "球管单位时间可释放的热量（如 ≥2.0 MHu/min），影响工作效率与过热保护。",
+        "tags": [
+          "X 线系统",
+          "CT"
+        ],
+        "aliases": [
+          "冷却率",
+          "MHu/min"
+        ],
+        "why": "决定高负荷任务之间的周转效率与设备稳定性。",
+        "choose": "高吞吐场景优先更高散热率；关注整机冷却链路与环境温控。",
+        "mistakes": "忽视整机冷却瓶颈与机房环境影响；未评估连续扫描的降额策略。"
+      },
+      {
+        "term": "管电流",
+        "english": "Tube Current",
+        "definition": "球管在扫描时的电流范围（如 10–700mA），影响剂量与图像噪声水平。",
+        "tags": [
+          "X 线系统",
+          "CT"
+        ],
+        "aliases": [
+          "mA",
+          "毫安"
+        ],
+        "why": "直接影响剂量与噪声，是剂量管理与图像质量的核心变量。",
+        "choose": "结合体型与部位设置毫安；配合 AEC 与迭代重建平衡剂量与质量。",
+        "mistakes": "一味提高毫安忽视剂量；忽视重建与核函数对图像质量的决定作用。"
+      },
+      {
+        "term": "管电压",
+        "english": "Tube Voltage (kVp)",
+        "definition": "球管加速电压范围（如 80–140 kVp），影响对比、穿透与能谱成像表现。",
+        "tags": [
+          "X 线系统",
+          "CT"
+        ],
+        "aliases": [
+          "kVp",
+          "千伏峰值"
+        ],
+        "why": "影响材料对比与剂量效率，是能谱与剂量优化的重要参数。",
+        "choose": "儿童与低剂量倾向低 kVp；碘对比增强需结合体型优化 kVp 与 mA。",
+        "mistakes": "只看固定 kVp 忽视体型与任务差异；未结合能谱策略提升对比度。"
+      },
+      {
+        "term": "图像矩阵",
+        "english": "Matrix Size",
+        "definition": "显示与重建使用的矩阵尺寸（如 512×512、1024×1024），影响分辨率与后处理。",
+        "tags": [
+          "后处理",
+          "CT"
+        ],
+        "aliases": [
+          "矩阵",
+          "Matrix"
+        ],
+        "why": "矩阵越大细节越丰富，但对采样密度与噪声更敏感，计算负载更高。",
+        "choose": "高分辨任务可用更大矩阵；需与 FOV、像素尺寸与重建核协同优化。",
+        "mistakes": "单纯增大矩阵导致像素噪声过高；忽视 FOV 与采样的物理限制。"
+      },
+      {
+        "term": "CT 值范围",
+        "english": "CT HU Range",
+        "definition": "系统支持的非扩展 CT 值范围（如 −1024 至 3072 HU），用于组织密度量化。",
+        "tags": [
+          "技术参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "探测器排数",
+        "english": "Detector Rows",
+        "definition": "CT 探测器在 Z 轴方向的物理排数（如 ≥128 排），决定体覆盖与扫描速度。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "探测器层数",
+        "english": "Detector Layers",
+        "definition": "CT 探测器在层方向的成像层数（如 ≥256 层），影响等效分辨率与重建能力。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "数据采集采样率",
+        "english": "DAS Sampling Rate",
+        "definition": "CT 数据采集系统（DAS）每秒的采样频率（如 ≥8900 Hz），影响时间分辨率与高速扫描能力。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "滑环数据传输速度",
+        "english": "Slip Ring Transfer Speed",
+        "definition": "机架滑环的数据传输速率（如 ≥20 Gbps），决定高速旋转下的稳定数据链路。",
+        "tags": [
+          "机架系统",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "焦点到探测器距离",
+        "english": "Source‑to‑Detector Distance",
+        "definition": "球管焦点至探测器的几何距离（如 ≤110 cm），影响放大率、散射与空间分辨率。",
+        "tags": [
+          "几何参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "焦点到等中心距离",
+        "english": "Source‑to‑Isocenter Distance",
+        "definition": "球管焦点至扫描野中心的距离（如 ≥62 cm），影响投影几何与成像参数配置。",
+        "tags": [
+          "几何参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "机架噪音",
+        "english": "Gantry Acoustic Noise",
+        "definition": "机架在最高转速下的声噪指标（如 ≤69 dB），关联患者舒适度与设备合规。",
+        "tags": [
+          "机架系统",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "每排探测器单元数",
+        "english": "Detector Elements per Row",
+        "definition": "单层单排探测器物理单元数量（如 ≥830 个），影响采样密度与空间分辨率。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "探测器总单元数",
+        "english": "Total Detector Elements",
+        "definition": "单套单层探测器的总单元数量（如 ≥106000 个），决定覆盖能力与图像细节。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "射频发射带宽",
+        "english": "RF Transmit Bandwidth",
+        "definition": "系统在不同序列下的 RF 发射总带宽上限（如 ≤550 kHz），影响对比、选择性与序列稳定。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": [
+          "TX BW",
+          "Transmit BW"
+        ],
+        "why": "影响选择性与脉冲性能，是序列稳定与对比控制的关键因素。",
+        "choose": "窄带提升选择性，宽带提升脉冲鲁棒性；结合序列类型与目标组织优化。",
+        "mistakes": "忽视带宽与化学位移、选择性之间的权衡；未评估硬件限制。"
+      },
+      {
+        "term": "接收带宽",
+        "english": "Receive Bandwidth",
+        "definition": "各通道的接收带宽能力（如 ≥1 MHz），影响化学位移伪影与时间采样性能。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": [
+          "RX BW",
+          "Receive BW"
+        ],
+        "why": "决定采样速率与化学位移伪影控制，是频域成像稳定性的核心。",
+        "choose": "高带宽降低化学位移与失真，但噪声上升；需与目标分辨率与时间权衡。",
+        "mistakes": "一味提高带宽导致噪声上升；忽视序列与线圈对带宽的约束。"
+      },
+      {
+        "term": "最高接收动态范围",
+        "english": "Maximum Receive Dynamic Range",
+        "definition": "接收系统的动态范围上限（如 ≥160 dB），决定弱信号与强信号的同时可测性与线性度。",
+        "tags": [
+          "射频系统",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "X/Y 轴 MTF 10%",
+        "english": "MTF 10% (X/Y Axes)",
+        "definition": "调制传递函数在 10% 时的空间分辨率指标，衡量系统在平面方向的细节成像能力。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "X/Y 轴 MTF 50%",
+        "english": "MTF 50% (X/Y Axes)",
+        "definition": "调制传递函数在 50% 时的空间分辨率指标，体现系统在平面方向的对比与细节综合表现。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Z 轴 MTF 10%",
+        "english": "MTF 10% (Z Axis)",
+        "definition": "沿层厚方向的分辨率指标，反映体覆盖与层面细节的综合成像能力。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Z 轴 MTF 50%",
+        "english": "MTF 50% (Z Axis)",
+        "definition": "沿层厚方向的对比与细节表现指标，常用于评价体模测试结果。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "低对比可检出率",
+        "english": "Low‑Contrast Detectability",
+        "definition": "在给定体模与 CTDIvol 条件下对低对比目标的检出能力（如 5mm@0.3%）。",
+        "tags": [
+          "图像质量",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "螺距范围",
+        "english": "Helical Pitch Range",
+        "definition": "螺旋扫描的几何螺距范围（如 ≥0.508:1–1.5:1），影响速度、覆盖与伪影。",
+        "tags": [
+          "扫描参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "单圈准直器覆盖",
+        "english": "Collimation Coverage per Rotation",
+        "definition": "单圈扫描在 Z 轴的准直器物理覆盖范围（如 ≥8cm），决定体覆盖效率。",
+        "tags": [
+          "扫描参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "连续螺旋扫描时间",
+        "english": "Continuous Spiral Scan Time",
+        "definition": "设备在不间断螺旋模式下的最长扫描时间（如 ≥60s），反映散热与稳定能力。",
+        "tags": [
+          "效率",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "触发切换延迟",
+        "english": "Trigger‑to‑Scan Latency",
+        "definition": "阈值/门控触发至开始扫描的时间延迟（如 ≤1s），影响时间配准与心脏扫描。",
+        "tags": [
+          "心脏成像",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "最大扫描野",
+        "english": "Max Scan Field",
+        "definition": "系统支持的最大扫描几何覆盖（如 ≥50cm），影响大体型与整体覆盖。",
+        "tags": [
+          "技术参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "最大显示野",
+        "english": "Max Display Field",
+        "definition": "图像显示与后处理的最大视野范围（如 ≥50cm），与矩阵及 FOV 配置相关。",
+        "tags": [
+          "后处理",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "显示矩阵",
+        "english": "Display Matrix",
+        "definition": "显示管线的矩阵尺寸（如 ≥1024×1024），与重建矩阵共同决定显示细节。",
+        "tags": [
+          "后处理",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "CTDIvol",
+        "english": "CTDIvol",
+        "definition": "单位体积的 CT 剂量指数，反映扫描协议的辐射水平，用于剂量管理与对比评估。",
+        "tags": [
+          "安全",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "DLP",
+        "english": "DLP (Dose Length Product)",
+        "definition": "剂量长度乘积，反映整次检查的剂量总量，与扫描长度相关。",
+        "tags": [
+          "安全",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "自动曝光控制",
+        "english": "Automatic Exposure Control (AEC)",
+        "definition": "根据解剖与厚度自动调节管电流以优化剂量与图像质量的控制策略。",
+        "tags": [
+          "剂量管理",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "心电剂量调控",
+        "english": "ECG‑based Dose Modulation",
+        "definition": "基于心电周期的毫安调控以在关键相位提升时间分辨率并降低非关键期剂量。",
+        "tags": [
+          "心脏成像",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "模型迭代重建",
+        "english": "Model‑based Iterative Reconstruction",
+        "definition": "结合光学/噪声/物理模型的迭代重建方法，显著降低噪声并提升低对比检出。",
+        "tags": [
+          "重建",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "剂量降低效能",
+        "english": "Dose Reduction Effectiveness",
+        "definition": "在指定算法与体模下相对滤波/FBP的剂量降低百分比（如 ≥82%）。",
+        "tags": [
+          "剂量管理",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "法规认证",
+        "english": "Regulatory Certification",
+        "definition": "特定技术或算法的法规认证状态（如 FDA/NMPA），体现合规与可信度。",
+        "tags": [
+          "合规",
+          "CT/MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T1 映射",
+        "english": "T1 Mapping",
+        "definition": "对组织 T1 值进行定量测量与参数图生成，用于心肌与多系统评估。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T2 映射",
+        "english": "T2 Mapping",
+        "definition": "对组织 T2 值进行定量测量，反映含水变化与炎症等生理病理过程。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T2* 映射",
+        "english": "T2* Mapping",
+        "definition": "对 R2* 相关的去相位效应进行定量评估，常用于铁沉积与微出血分析。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "ECV 细胞外容积分数",
+        "english": "Extracellular Volume Fraction (ECV)",
+        "definition": "基于 T1 映射与血细胞容积分数估算的组织间质体积比例，用于心肌纤维化等评估。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "ADC 表观弥散系数",
+        "english": "Apparent Diffusion Coefficient (ADC)",
+        "definition": "弥散加权成像的定量参数，反映水分子扩散受限程度，常用于肿瘤与脑卒中评估。",
+        "tags": [
+          "弥散",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "FA 分数各向异性",
+        "english": "Fractional Anisotropy (FA)",
+        "definition": "DTI 的定量指标，反映白质纤维结构完整性与方向性。",
+        "tags": [
+          "弥散",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "R2* 横向弛豫率",
+        "english": "R2* (Transverse Relaxation Rate)",
+        "definition": "与 T2* 相关的定量参数，常用于铁沉积与血氧变化的评估。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "T1rho",
+        "english": "T1rho",
+        "definition": "旋转坐标系下的弛豫时间定量参数，反映软骨生化变化与组织黏度特性。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "MTR 磁化转移比",
+        "english": "Magnetization Transfer Ratio (MTR)",
+        "definition": "基于磁化转移效应的定量参数，评估髓鞘与组织成分变化。",
+        "tags": [
+          "分子成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "Ktrans 交换率",
+        "english": "Ktrans",
+        "definition": "DCE 定量中的血浆–组织间隙转移常数，反映通透性与灌注特性。",
+        "tags": [
+          "灌注",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "每圈轴扫图像层数",
+        "english": "Axial Images per Rotation",
+        "definition": "轴扫模式下每圈采集的图像层数（如 ≥256 层），影响体覆盖与扫描效率。",
+        "tags": [
+          "扫描参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "单圈轴扫 Z 覆盖",
+        "english": "Axial Z Coverage per Rotation",
+        "definition": "单圈轴扫在 Z 轴方向的覆盖范围（如 ≥8cm），反映单次采集的体覆盖效率。",
+        "tags": [
+          "扫描参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "单圈电影扫描 Z 覆盖",
+        "english": "Cine Z Coverage per Rotation",
+        "definition": "单圈电影扫描的探测器 Z 轴覆盖范围（如 ≥8cm），用于动态或高帧率场景。",
+        "tags": [
+          "扫描参数",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "高清扫描模式",
+        "english": "HD Scan Modes",
+        "definition": "高清扫描支持的模式（轴扫、螺旋、电影），用于在不同场景下提升细节与时间性能。",
+        "tags": [
+          "扫描模式",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "模式切换时间",
+        "english": "Mode Switch Time",
+        "definition": "轴扫切换至螺旋的时间（如 ≤3s），体现系统在工作流中的响应效率。",
+        "tags": [
+          "效率",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "机架控制面板数量",
+        "english": "Gantry Control Panels",
+        "definition": "机架可用的控制面板数量（如 ≥4），影响现场操作便利性与冗余。",
+        "tags": [
+          "机架系统",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "病人信息显示装置",
+        "english": "Patient Info Display",
+        "definition": "机架内置病人信息显示功能，辅助身份确认与操作引导。",
+        "tags": [
+          "机架系统",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "3D 后准直器",
+        "english": "3D Post Collimator",
+        "definition": "在 X/Y/Z 方向阻挡散射并精确制导入射线束的后准直器结构，降低伪影并提升成像质量。",
+        "tags": [
+          "探测器",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "伪影抑制技术",
+        "english": "Artifact Reduction",
+        "definition": "综合使用后准直与算法抑制线束硬化与金属伪影，提升临床可读性。",
+        "tags": [
+          "后处理",
+          "CT"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "波谱成像",
+        "english": "MR Spectroscopy",
+        "definition": "对代谢物与化学环境进行定量成像的技术，常用于肿瘤与组织代谢评估。",
+        "tags": [
+          "分子成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "非增强血管成像",
+        "english": "Non‑contrast MRA",
+        "definition": "无需造影剂的血管成像技术（如 4D NCEMRA），用于血管评估与随访。",
+        "tags": [
+          "血管成像",
+          "MRI"
+        ],
+        "aliases": []
+      },
+      {
+        "term": "对比增强血管成像",
+        "english": "Contrast‑enhanced MRA",
+        "definition": "使用造影剂进行血管显影与动态评估（如 4D CEMRA），提升血管可视化与定量。",
+        "tags": [
+          "血管成像",
+          "MRI"
+        ],
+        "aliases": []
+      }
+    ],
+    "performance": [
+      {
+        "term": "空间分辨率",
+        "english": "Spatial Resolution",
+        "definition": "成像系统可区分的两个相邻结构的最小距离，决定图像清晰度与细节显示能力。",
+        "tags": [
+          "图像质量",
+          "性能"
+        ]
+      },
+      {
+        "term": "对比分辨率",
+        "english": "Contrast Resolution",
+        "definition": "成像系统区分不同密度或信号强度组织的能力，软组织成像尤为重要。",
+        "tags": [
+          "图像质量",
+          "性能"
+        ]
+      },
+      {
+        "term": "扫描时间",
+        "english": "Scan Time",
+        "definition": "完成一次全扫描所需时间，影响患者舒适度与设备效率。",
+        "tags": [
+          "性能",
+          "效率"
+        ]
+      },
+      {
+        "term": "噪声水平",
+        "english": "Noise Level",
+        "definition": "由系统电子噪声、量子噪声等造成的图像随机信号，影响图像质量。",
+        "tags": [
+          "图像质量",
+          "技术"
+        ]
+      }
+    ],
+    "clinical": [
+      {
+        "term": "对比剂",
+        "english": "Contrast Agent",
+        "definition": "注入体内以增强特定组织或血管显影的药物，提高病灶检出率与诊断准确性。",
+        "tags": [
+          "诊断技术",
+          "药物"
+        ]
+      },
+      {
+        "term": "功能成像",
+        "english": "Functional Imaging",
+        "definition": "不仅显示组织结构，还反映器官功能状态的成像技术，如功能 MRI、灌注成像等。",
+        "tags": [
+          "高级功能",
+          "诊断"
+        ]
+      },
+      {
+        "term": "多平面重建",
+        "english": "Multiplanar Reconstruction",
+        "definition": "将断层图像重建为冠状、矢状或任意角度平面的后处理技术。",
+        "tags": [
+          "后处理",
+          "三维成像"
+        ]
+      },
+      {
+        "term": "辐射剂量",
+        "english": "Radiation Dose",
+        "definition": "患者在 X 射线检查中接受的电离辐射量，单位毫西弗（mSv），需严格控制。",
+        "tags": [
+          "安全",
+          "CT"
+        ]
+      },
+      {
+        "term": "能谱成像",
+        "english": "Spectral Imaging",
+        "definition": "利用不同能量谱分解材料与对比差异的 CT 成像技术，支持容积测量、结石/痛风等分析。",
+        "tags": [
+          "高级功能",
+          "CT"
+        ]
+      },
+      {
+        "term": "双源 CT",
+        "english": "Dual‑source CT",
+        "definition": "采用两套球管与探测器的 CT 结构，提升时间分辨率并增强心脏等快速运动场景成像能力。",
+        "tags": [
+          "技术架构",
+          "CT"
+        ]
+      },
+      {
+        "term": "心电门控",
+        "english": "ECG Gating",
+        "definition": "通过心电信号触发或相位选择实现心脏 CT/MRI 成像的时间配准与剂量优化。",
+        "tags": [
+          "心脏成像",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "动脉自旋标记",
+        "english": "Arterial Spin Labeling (ASL)",
+        "definition": "不使用造影剂，通过磁化血液实现灌注定量的 MRI 技术，常用于脑灌注评估。",
+        "tags": [
+          "灌注",
+          "MRI"
+        ]
+      },
+      {
+        "term": "动态增强成像",
+        "english": "Dynamic Contrast‑Enhanced (DCE)",
+        "definition": "基于时间序列的对比增强定量采集与分析技术，可评估灌注、通透与组织微环境。",
+        "tags": [
+          "灌注",
+          "MRI"
+        ]
+      },
+      {
+        "term": "BOLD 功能成像",
+        "english": "BOLD Functional MRI",
+        "definition": "基于血氧水平依赖的信号变化实现脑功能网络与激活图谱的成像分析。",
+        "tags": [
+          "功能成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "DTI/DTT",
+        "english": "Diffusion Tensor Imaging / Tractography",
+        "definition": "通过各向异性扩散构建白质纤维束追踪与定量评估的高级弥散技术。",
+        "tags": [
+          "弥散",
+          "MRI"
+        ]
+      },
+      {
+        "term": "IVIM 弥散",
+        "english": "Intravoxel Incoherent Motion (IVIM)",
+        "definition": "通过多 b 值拟合分离灌注与扩散成分，用于肝脏/肿瘤等组织微循环评估。",
+        "tags": [
+          "弥散",
+          "MRI"
+        ]
+      },
+      {
+        "term": "DKI 峰度成像",
+        "english": "Diffusion Kurtosis Imaging (DKI)",
+        "definition": "评估非高斯扩散行为的高级弥散技术，反映组织复杂性与微结构变化。",
+        "tags": [
+          "弥散",
+          "MRI"
+        ]
+      },
+      {
+        "term": "QSM 定量磁化率",
+        "english": "Quantitative Susceptibility Mapping (QSM)",
+        "definition": "通过磁化率反演评估金属、铁沉积与血氧相关变化的定量成像技术。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "CEST 化学交换饱和转移",
+        "english": "Chemical Exchange Saturation Transfer (CEST)",
+        "definition": "通过选择性饱和实现代谢物与化学环境对比的分子成像技术。",
+        "tags": [
+          "分子成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "超短/零回波成像",
+        "english": "UTE / ZTE Imaging",
+        "definition": "通过极短 TE 获取皮质骨、肺等短 T2 组织的信号，实现结构显示与定量评估。",
+        "tags": [
+          "高级功能",
+          "MRI"
+        ]
+      },
+      {
+        "term": "4D 流动成像",
+        "english": "4D Flow MRI",
+        "definition": "对血流速度与方向进行三维动态量化的成像技术，用于心脑血管评估。",
+        "tags": [
+          "定量成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "压缩感知",
+        "english": "Compressed Sensing",
+        "definition": "基于稀疏重建的加速成像策略，支持 2D/3D/4D 序列以缩短扫描时间与提升分辨率。",
+        "tags": [
+          "加速技术",
+          "MRI"
+        ]
+      },
+      {
+        "term": "ToF 时间飞跃法 MRA",
+        "english": "Time‑of‑Flight MRA (ToF)",
+        "definition": "利用血流进入成像体积的未饱和信号实现血管显影的非增强 MRA 技术。",
+        "tags": [
+          "血管成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "PCA 相位对比 MRA",
+        "english": "Phase‑Contrast MRA (PCA)",
+        "definition": "基于相位变化的血流速度与方向成像，用于动静脉与定量评估。",
+        "tags": [
+          "血管成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "黑血成像",
+        "english": "Black‑Blood Imaging",
+        "definition": "抑制腔内血流信号以突出血管壁与心肌结构的成像技术，常用于斑块与炎症评估。",
+        "tags": [
+          "心血管成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "延迟增强（LGE）",
+        "english": "Late Gadolinium Enhancement (LGE)",
+        "definition": "使用造影剂后的延迟相心肌成像，用于纤维化、瘢痕与缺血/梗死评估。",
+        "tags": [
+          "心脏成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "自由呼吸电影成像",
+        "english": "Free‑Breathing Cine",
+        "definition": "结合运动校正与导航，在自由呼吸下获取心脏电影序列，提高患者配合度。",
+        "tags": [
+          "心脏成像",
+          "MRI"
+        ]
+      },
+      {
+        "term": "冠状动脉 CTA",
+        "english": "Coronary CTA (CCTA)",
+        "definition": "对冠状动脉进行 CTA 评估的 CT 检查，常用于狭窄、斑块与解剖变异分析。",
+        "tags": [
+          "心脏成像",
+          "CT"
+        ]
+      },
+      {
+        "term": "虚拟单能成像（VMI）",
+        "english": "Virtual Monochromatic Imaging (VMI)",
+        "definition": "基于能谱数据重建不同 keV 的单能图像，用于降噪、金属伪影抑制与对比优化。",
+        "tags": [
+          "能谱",
+          "CT"
+        ]
+      },
+      {
+        "term": "有效原子序数",
+        "english": "Effective Atomic Number",
+        "definition": "能谱成像对材料进行分解后得到的等效原子序数指标，用于材料识别与定量分析。",
+        "tags": [
+          "能谱",
+          "CT"
+        ]
+      },
+      {
+        "term": "碘浓度定量",
+        "english": "Iodine Concentration Quantification",
+        "definition": "能谱成像对碘的浓度进行定量（mg/ml），用于灌注、强化与病灶分析。",
+        "tags": [
+          "能谱",
+          "CT"
+        ]
+      },
+      {
+        "term": "深度学习重建",
+        "english": "Deep Learning Reconstruction",
+        "definition": "通过训练的深度网络进行降噪与细节恢复的重建策略，提升低剂量图像质量。",
+        "tags": [
+          "重建",
+          "CT"
+        ]
+      },
+      {
+        "term": "剂量结构化报告（RDSR）",
+        "english": "DICOM RDSR",
+        "definition": "以结构化方式记录检查剂量数据的 DICOM 报告，用于剂量合规与追踪。",
+        "tags": [
+          "剂量管理",
+          "CT"
+        ]
+      },
+      {
+        "term": "器官敏感剂量调控",
+        "english": "Organ‑based Dose Modulation",
+        "definition": "针对敏感器官进行管电流调控的策略，以降低特定器官受照剂量。",
+        "tags": [
+          "剂量管理",
+          "CT"
+        ]
+      },
+      {
+        "term": "前瞻性心电门控",
+        "english": "Prospective ECG Gating",
+        "definition": "在指定心电相位窗口内采集，剂量更低但相位范围有限，适合较稳定心率。",
+        "tags": [
+          "心脏成像",
+          "CT"
+        ]
+      },
+      {
+        "term": "回顾性心电门控",
+        "english": "Retrospective ECG Gating",
+        "definition": "持续采集并在后处理选择相位，时间分辨率灵活但剂量较高，适合不稳定心率。",
+        "tags": [
+          "心脏成像",
+          "CT"
+        ]
+      },
+      {
+        "term": "信噪比（SNR）",
+        "english": "Signal‑to‑Noise Ratio (SNR)",
+        "definition": "图像信号与噪声的比值，决定图像可读性与细节呈现能力。",
+        "tags": [
+          "图像质量",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "对比噪声比（CNR）",
+        "english": "Contrast‑to‑Noise Ratio (CNR)",
+        "definition": "两组织对比与噪声之间的比值，更能反映临床可判读性。",
+        "tags": [
+          "图像质量",
+          "CT/MRI"
+        ]
+      },
+      {
+        "term": "B0 场图",
+        "english": "B0 Field Mapping",
+        "definition": "对主磁场不均匀进行定量评估与校正的测量，用于减少失真与提升序列稳定。",
+        "tags": [
+          "校准",
+          "MRI"
+        ]
+      },
+      {
+        "term": "B1 场图",
+        "english": "B1 Field Mapping",
+        "definition": "对射频场非均匀进行评估与校正的测量，用于改善对比与定量准确性。",
+        "tags": [
+          "校准",
+          "MRI"
+        ]
+      },
+      {
+        "term": "并行采集方法（SENSE/GRAPPA）",
+        "english": "SENSE / GRAPPA",
+        "definition": "主流并行成像重建方法，利用多通道线圈缩短采集时间并维持分辨率。",
+        "tags": [
+          "并行采集",
+          "MRI"
+        ]
+      },
+      {
+        "term": "平衡稳态自由进动（bSSFP）",
+        "english": "Balanced SSFP (bSSFP)",
+        "definition": "高 SNR 与快速心脏/体部成像常用序列，对 B0/B1 敏感但提供优良对比与时间性能。",
+        "tags": [
+          "序列",
+          "MRI"
+        ]
+      },
+      {
+        "term": "EPI 回波平面成像",
+        "english": "Echo Planar Imaging (EPI)",
+        "definition": "超快速采集序列，常用于 DWI/BOLD，但易受畸变与磁化率伪影影响。",
+        "tags": [
+          "序列",
+          "MRI"
+        ]
+      }
+    ]
+  }
+}

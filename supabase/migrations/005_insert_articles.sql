@@ -1,0 +1,47 @@
+-- 插入文章数据（基于Google Search Console表现好的页面）
+INSERT INTO articles (title, slug, content, excerpt, category, tags, author, seo_title, seo_description, is_published, published_at, translations) VALUES
+
+('The First CT Scanner: A Revolutionary Medical Breakthrough', 'first-ct-scanner', 
+'The invention of the first CT scanner in 1971 by Godfrey Hounsfield marked a revolutionary breakthrough in medical imaging...', 
+'Learn about the groundbreaking invention of the first CT scanner and its impact on modern medicine.', 
+'history', ARRAY['CT scanner', 'medical history', 'Hounsfield', 'invention'], 'Medical History Team', 
+'The First CT Scanner: Revolutionary Medical Breakthrough | History', 
+'Discover the fascinating story of the first CT scanner invented by Godfrey Hounsfield in 1971 and how it revolutionized medical imaging forever.',
+true, '2024-01-15 10:00:00+00',
+'{"zh": {"title": "首台CT扫描仪：医学革命性突破", "content": "1971年Godfrey Hounsfield发明的首台CT扫描仪标志着医学影像领域的革命性突破...", "excerpt": "了解首台CT扫描仪的突破性发明及其对现代医学的影响。"}, "en": {"title": "The First CT Scanner: A Revolutionary Medical Breakthrough", "content": "The invention of the first CT scanner in 1971 by Godfrey Hounsfield marked a revolutionary breakthrough in medical imaging...", "excerpt": "Learn about the groundbreaking invention of the first CT scanner and its impact on modern medicine."}}'),
+
+('Battle for Domestic CT Market: United Imaging, Neusoft, Mingfeng', 'battle-for-domestic-ct-market-united-imaging-neusoft-mingfeng',
+'The Chinese CT scanner market has become increasingly competitive with domestic manufacturers like United Imaging, Neusoft, and Mingfeng challenging international giants...', 
+'Analysis of the competitive landscape in China''s CT scanner market featuring domestic manufacturers.', 
+'market-analysis', ARRAY['United Imaging', 'Neusoft', 'Mingfeng', 'CT market', 'China'], 'Market Analysis Team', 
+'Battle for Domestic CT Market: United Imaging vs Neusoft vs Mingfeng', 
+'In-depth analysis of the competitive battle between Chinese CT scanner manufacturers United Imaging, Neusoft, and Mingfeng in the domestic market.',
+true, '2024-02-01 14:30:00+00',
+'{"zh": {"title": "国产CT市场争夺战：联影、东软、明峰", "content": "中国CT扫描仪市场竞争日趋激烈，联影、东软、明峰等国产制造商正在挑战国际巨头...", "excerpt": "分析中国CT扫描仪市场的竞争格局，重点关注国产制造商。"}, "en": {"title": "Battle for Domestic CT Market: United Imaging, Neusoft, Mingfeng", "content": "The Chinese CT scanner market has become increasingly competitive with domestic manufacturers like United Imaging, Neusoft, and Mingfeng challenging international giants...", "excerpt": "Analysis of the competitive landscape in China''s CT scanner market featuring domestic manufacturers."}}'),
+
+('CT Scanner Development Timeline: From 1971 to Today', 'ct-scanner-development-timeline',
+'Explore the complete timeline of CT scanner development from the first prototype in 1971 to today''s advanced multi-slice systems...', 
+'A comprehensive timeline covering major milestones in CT scanner technology development.', 
+'history', ARRAY['CT scanner', 'timeline', 'development', 'medical technology'], 'Technology Team', 
+'CT Scanner Development Timeline: Complete History from 1971 to Today', 
+'Complete timeline of CT scanner development covering major technological breakthroughs from 1971 to modern multi-slice systems.',
+true, '2024-01-20 09:15:00+00',
+'{"zh": {"title": "CT扫描仪发展时间线：从1971年至今", "content": "探索CT扫描仪从1971年首个原型到今天先进多层系统的完整发展时间线...", "excerpt": "涵盖CT扫描仪技术发展重要里程碑的综合时间线。"}, "en": {"title": "CT Scanner Development Timeline: From 1971 to Today", "content": "Explore the complete timeline of CT scanner development from the first prototype in 1971 to today''s advanced multi-slice systems...", "excerpt": "A comprehensive timeline covering major milestones in CT scanner technology development."}}'),
+
+('MRI Development Timeline: Evolution of Magnetic Resonance Imaging', 'mri-development-timeline',
+'Trace the evolution of MRI technology from early research to today''s high-field systems, including China''s contributions to the field...', 
+'Complete timeline of MRI technology development and China''s growing role in the industry.', 
+'history', ARRAY['MRI', 'timeline', 'magnetic resonance', 'China', 'medical imaging'], 'Medical Technology Team', 
+'MRI Development Timeline: Complete Evolution of Magnetic Resonance Imaging', 
+'Comprehensive timeline of MRI development from early research to modern high-field systems, featuring China''s growing contributions.',
+true, '2024-01-25 11:45:00+00',
+'{"zh": {"title": "MRI发展时间线：磁共振成像的演进", "content": "追溯MRI技术从早期研究到今天高场强系统的演进，包括中国对该领域的贡献...", "excerpt": "MRI技术发展的完整时间线以及中国在该行业中日益重要的作用。"}, "en": {"title": "MRI Development Timeline: Evolution of Magnetic Resonance Imaging", "content": "Trace the evolution of MRI technology from early research to today''s high-field systems, including China''s contributions to the field...", "excerpt": "Complete timeline of MRI technology development and China''s growing role in the industry."}}'),
+
+('Import Guide: Choosing Chinese-Made CT and MRI Equipment', 'import-guide',
+'A comprehensive guide for international buyers looking to import CT and MRI equipment from Chinese manufacturers...', 
+'Essential guide for importing medical imaging equipment from China with tips on quality, certification, and logistics.', 
+'guide', ARRAY['import', 'China', 'CT scanner', 'MRI', 'medical equipment'], 'Import Specialist Team', 
+'Import Guide: How to Choose Chinese-Made CT and MRI Equipment', 
+'Complete guide for importing CT and MRI equipment from China covering quality assessment, certifications, and procurement best practices.',
+true, '2024-02-10 16:20:00+00',
+'{"zh": {"title": "进口指南：选择中国制造的CT和MRI设备", "content": "为希望从中国制造商进口CT和MRI设备的国际买家提供的综合指南...", "excerpt": "从中国进口医学影像设备的基本指南，包含质量、认证和物流方面的建议。"}, "en": {"title": "Import Guide: Choosing Chinese-Made CT and MRI Equipment", "content": "A comprehensive guide for international buyers looking to import CT and MRI equipment from Chinese manufacturers...", "excerpt": "Essential guide for importing medical imaging equipment from China with tips on quality, certification, and logistics."}}');

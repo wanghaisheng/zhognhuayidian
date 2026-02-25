@@ -1,0 +1,46 @@
+name: Validate Sitemap and Create Release
+
+on:
+  push:
+    branches:
+      - main  # Or the branch you want this action to run on
+    paths:
+      - 'sitemap.xml'  # Trigger the workflow only if sitemap.xml is changed
+
+jobs:
+  validate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Set the Node.js version you need
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run sitemap validation
+      run: node validate-sitemap.js  # Make sure to run the script you wrote earlier
+
+    - name: Commit validation result to the repository
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git add result.log  # Adjust this if your validation script outputs to a different file
+        git commit -m "Add sitemap validation results"
+        git push origin main
+
+    - name: Create a GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: result.log  # This could be the validation log or any other file you want to include in the release
+
+    - name: Publish Release
+      if: success()
+      run: |
+        echo "Release published successfully"

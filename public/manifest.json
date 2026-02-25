@@ -1,0 +1,25 @@
+{
+  "name": "CT Scanner Compass",
+  "short_name": "CT Compass",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/portrait-2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/portrait-2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Medical Imaging Brands | A-Z List of CT & MRI Manufacturers</title>
+     <meta name="description" content="Browse an alphabetical list of leading manufacturers of CT and MRI scanners. Discover the brands that power our medical imaging solutions.">
+    <meta name="keywords" content="medical equipment brands, CT manufacturer list, MRI manufacturer list, global medical brands, China medical equipment companies">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .container {
+           max-width: 960px;
+           margin: 0 auto;
+            padding: 20px;
+        }
+          h1, h2, h3 {
+            color: #2c3e50;
+            line-height: 1.3;
+            font-weight: 700;
+            margin-bottom: 1rem;
+         }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+       h3 { font-size: 1.5rem; }
+       .brand-list {
+            padding: 20px 0;
+           display: flex;
+             flex-wrap: wrap;
+            justify-content: flex-start;
+          }
+          .brand-item {
+              border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+             text-align: center;
+           max-width: 150px;
+            width: calc(15% - 20px);
+         }
+        .brand-item img {
+           max-width: 100px;
+             height: auto;
+              margin: 0 auto 10px auto;
+            display: block;
+       }
+       .brand-item a {
+            display: block;
+           text-decoration: none;
+             color: #3498db;
+        }
+         .brand-item a:hover{
+             text-decoration: underline;
+         }
+        .footer {
+            text-align: center;
+           padding: 20px 0;
+           background-color: #2c3e50;
+             color: white;
+         }
+          @media (max-width: 768px) {
+             .container {
+                padding: 10px;
+            }
+             h1 {
+                font-size: 2rem;
+             }
+            h2 {
+                 font-size: 1.5rem;
+             }
+             h3 {
+                font-size: 1.2rem;
+             }
+            .brand-item {
+                max-width: 100px;
+             width: calc(25% - 20px);
+             }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Global Medical Imaging Brands</h1>
+         <p>
+             Explore our full network of partners, and discover the best global manufacturers of CT and MRI equipment.
+         </p>
+        <div class="brand-list" id="brands-container">
+           </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+            <p>© 2024 Affordable Medical Scanners. All Rights Reserved.</p>
+           <p><a href="/privacy" style="color: white">Privacy Policy</a> | <a href="/terms" style="color: white">Terms of Service</a></p>
+            <p>Contact us at: <a href="tel:+15551234567" style="color:white">+1-555-123-4567</a> or <a href="mailto:info@example.com" style="color:white">info@example.com</a></p>
+        </div>
+    </footer>
+   <script>
+        fetch('/data/brands.json')
+            .then(response => response.json())
+            .then(data => {
+                const brandsContainer = document.getElementById('brands-container');
+                 let brandsHTML = '';
+                data.forEach(brand => {
+                   brandsHTML += `
+                        <div class="brand-item">
+                            <img src="${brand.logo}" alt="${brand.name}" loading="lazy">
+                            <a href="${brand.url}">${brand.name}</a>
+                        </div>
+                   `;
+                 });
+                brandsContainer.innerHTML = brandsHTML;
+            })
+            .catch(error => console.error('Error loading brands data:', error));
+    </script>
+</body>
+</html>

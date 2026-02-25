@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Imaging Devices - A-Z</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#device-list {
+  display:flex;
+  flex-direction: column;
+}
+
+.brand-section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.device-list {
+   padding-left: 20px; /* Indent device lists */
+   display:flex;
+    flex-direction: column;
+
+}
+.device-item{
+ padding-bottom: 10px;
+ border-bottom: 1px solid #eeeeee
+}
+.device-item strong {
+    display: block;
+    margin-top: 5px;
+}
+.device-item p {
+  margin-top: 5px;
+}
+.device-item span {
+  font-weight: bold;
+  }
+    </style>
+<body>
+  <header>
+    <h1>Medical Imaging Devices - A-Z List</h1>
+  </header>
+  <main>
+    <section id="filters">
+        <label for="equipmentType">Equipment Type:</label>
+        <select id="equipmentType">
+            <option value="all">All</option>
+            <option value="ctScanners">CT Scanners</option>
+            <option value="mriScanners">MRI Scanners</option>
+        </select>
+    </section>
+     <section id="device-list">
+          <!-- Devices will be populated here, will be generated in js -->
+        </section>
+  </main>
+  <script>
+const deviceListSection = document.getElementById('device-list');
+const equipmentTypeSelect = document.getElementById('equipmentType');
+
+// Function to fetch and load the JSON data
+async function loadData() {
+  try {
+    const response = await fetch('data.json'); // Assumes 'data.json' is in the same directory
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const jsonData = await response.json();
+        init(jsonData);
+    } catch (error) {
+      console.error('Failed to load JSON data:', error);
+  }
+}
+
+
+function displayDevices(jsonData, equipmentType) {
+  deviceListSection.innerHTML = ''; // Clear previous content
+  let devices = [];
+
+  if (equipmentType === 'all') {
+    devices = [...jsonData.imagingEquipment.ctScanners, ...jsonData.imagingEquipment.mriScanners];
+  } else {
+     devices = jsonData.imagingEquipment[equipmentType];
+  }
+
+  const brandMap = new Map();
+  devices.forEach(deviceType => {
+    if (!brandMap.has(deviceType.brand)) {
+      brandMap.set(deviceType.brand, []);
+    }
+      brandMap.get(deviceType.brand).push(...deviceType.models)
+  });
+
+  const sortedBrands = Array.from(brandMap.keys()).sort();
+    sortedBrands.forEach(brand => {
+      const brandDiv = document.createElement('div');
+        brandDiv.classList.add('brand-section');
+        brandDiv.innerHTML = `<h2>${brand}</h2>`;
+      const modelList = document.createElement('div');
+      modelList.classList.add('device-list');
+
+        brandMap.get(brand).forEach(model => {
+            const deviceItem = document.createElement('div');
+            deviceItem.classList.add('device-item');
+
+            deviceItem.innerHTML = `
+               <strong>${model.name}</strong>
+                 <p><span>Description:</span> ${model.description}</p>
+                <p><span>Price Range:</span> ${model.priceRange}</p>
+              `;
+           modelList.appendChild(deviceItem);
+        });
+        brandDiv.appendChild(modelList)
+        deviceListSection.appendChild(brandDiv);
+    });
+}
+
+function init(jsonData) {
+  displayDevices(jsonData,'all');
+}
+
+equipmentTypeSelect.addEventListener('change', () => {
+    displayDevices(jsonData,equipmentTypeSelect.value);
+});
+
+
+// Call loadData to initialize the page
+loadData();
+
+      
+</script>
+</body>
+</html>
+

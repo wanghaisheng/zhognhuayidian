@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /data/
+Allow: /
+
+Sitemap: https://chinactscanner.org/sitemap.xml

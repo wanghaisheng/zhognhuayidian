@@ -1,0 +1,13 @@
+{
+  "hub": {
+    "title": "Medical Imaging Technology",
+    "description": "Deep dive into the core technologies powering modern CT and MRI scanners."
+  },
+  "detail": {
+    "takeaways": [
+      "Understanding the core physics improves purchasing decisions.",
+      "New solid-state detectors offer ~40% better dose efficiency.",
+      "Gradient slew rates are the primary cost driver in 3T MRI systems."
+    ]
+  }
+}

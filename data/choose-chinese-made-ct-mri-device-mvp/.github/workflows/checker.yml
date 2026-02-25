@@ -1,0 +1,45 @@
+name:  google-search-console-checker  
+
+on:
+  # push:
+    # branches:
+      # - main   # Trigger on push to the main branch
+  workflow_dispatch:  # Allow manual trigger with inputs
+    inputs:
+      website_url:
+        description: 'Website URL to check (e.g., https://feelingchart.heytcm.com)'
+        required: true
+        default: 'https://feelingchart.heytcm.com'  # Default URL in case it's not provided
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Set the Node.js version (can be updated as needed)
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm install -g google-search-console-checker  # Install SEO checker tool globally
+
+      # Step 4: Run the SEO checker tool with URL from input
+      - name: Run SEO Checker on website
+        run: |
+          SEOchecker --all '${{ github.event.inputs.website_url }}' > seo-checker-report.txt || echo "SEO Checker failed with exit code $?" >> seo-checker-report.txt
+          cat seo-checker-report.txt  # Print output to console for debugging
+
+      # Step 5: Upload SEO Check Results as an Artifact
+      - name: Upload SEO check results
+        uses: actions/upload-artifact@v3
+        with:
+          name: seo-check-results
+          path: ./seo-checker-report.txt  # Assuming the tool outputs results to a text file

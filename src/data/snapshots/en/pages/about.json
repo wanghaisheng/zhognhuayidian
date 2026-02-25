@@ -1,0 +1,20 @@
+{
+  "story": {
+    "content": [
+      "I am Wang Haisheng, with 15 years of experience in the healthcare IT industry, specializing in healthcare information standards (HL7, CDA, FHIR) and self-service equipment for radiology and laboratory services.",
+      "I come from Gansu Province, China, one of the two provinces with the lowest GDP in China and the most water-scarce region in the country. In such an economically underdevelop pipeline, medical resources are even more scarce, making quality medical equipment particularly precious for the local people.",
+      "The motivation behind creating this website is simple yet profound - to help my disabled father and mother. They are both farmers with only 200 RMB monthly pension. My parents have never left Gansu Province and have never had the opportunity to travel. Apart from medical expenses, each person only needs 200 RMB per month to maintain basic living, which reflects the extremely low cost of living locally, but also illustrates the difficult economic conditions.",
+      "As their son, I deeply feel the weight of responsibility. I hope to use my professional knowledge and skills in healthcare IT not only to create better living conditions for them, but also to help more families in similar situations.",
+      "This platform is not only my contribution to the medical equipment industry, but also a manifestation of my love and responsibility for my family. Every article and every data analysis carries my expectations for improving medical service quality and my beautiful vision for my family's future. At the same time, I also hope to help more underdeveloped regions like my hometown Gansu to obtain better medical equipment information and procurement guidance, making the most of limited medical resources."
+    ]
+  },
+  "mission": {
+    "content": "We are committed to building the most trusted information platform in the field of medical equipment procurement. By integrating global manufacturer resources and providing professional technical analysis and market insights, we help medical institutions make data-driven equipment procurement decisions, ultimately improving patient care experience and promoting medical technology advancement."
+  },
+  "challenge": {
+    "content": "This medical equipment information platform is one of my projects in the \"100 Days 100 Google AI Studio Products Challenge\". By leveraging the powerful capabilities of Google AI Studio, we can better analyze medical equipment data and provide more accurate market insights and technical comparisons."
+  },
+  "header": {
+    "subtitle": "Professional medical equipment information platform, dedicated to providing accurate and comprehensive CT scanner and MRI equipment information to medical institutions for informed procurement decisions"
+  }
+}

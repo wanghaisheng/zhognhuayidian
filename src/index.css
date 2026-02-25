@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 中医主题设计系统 */
+
+@layer base {
+  :root {
+    /* 中医主题色彩系统 */
+    --background: 47 91% 80%; /* 宣纸色 */
+    --foreground: 220 15% 10%; /* 墨黑色 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
+
+    /* 青瓷绿 - 主色调 */
+    --primary: 146 50% 36%;
+    --primary-foreground: 210 40% 98%;
+
+    /* 古铜金 - 辅助色 */
+    --secondary: 43 69% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 47 91% 80%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 47 35% 85%;
+    --accent-foreground: 220 15% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 146 50% 36%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* 暗色主题 */
+    --background: 220 15% 10%;
+    --foreground: 47 91% 80%;
+
+    --card: 222 47% 6%;
+    --card-foreground: 47 91% 80%;
+
+    --popover: 222 47% 6%;
+    --popover-foreground: 47 91% 80%;
+
+    --primary: 146 50% 46%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 43 69% 49%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 47 91% 80%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 146 50% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-chinese;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+
+  /* 确保main元素可见 */
+  main {
+    min-height: 100vh;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 确保内容区域可见 */
+  #main-content {
+    min-height: 100vh;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* 中医特色组件样式 */
+@layer components {
+  /* 宣纸卡片 */
+  .paper-card {
+    @apply bg-card/90 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg;
+    position: relative;
+  }
+  
+  .paper-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      rgba(184, 134, 11, 0.05) 0%, 
+      rgba(46, 139, 87, 0.05) 50%, 
+      rgba(184, 134, 11, 0.05) 100%);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  
+  /* 古籍标题 */
+  .ancient-title {
+    @apply font-ancient text-3xl md:text-4xl;
+    background: linear-gradient(135deg, hsl(146 50% 36%), hsl(43 69% 39%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* 卷轴按钮 */
+  .scroll-btn {
+    @apply px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-full 
+           font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* 中医标签 */
+  .tcm-tag {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-full
+           bg-primary/10 text-primary border border-primary/20
+           hover:bg-primary/20 transition-colors duration-200;
+  }
+  
+  /* 朝代标签 */
+  .dynasty-tag {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-full
+           bg-secondary/10 text-secondary border border-secondary/20
+           hover:bg-secondary/20 transition-colors duration-200;
+  }
+  
+  /* 搜索框中医风格 */
+  .tcm-search {
+    @apply w-full px-6 py-4 bg-card/80 backdrop-blur-sm border border-secondary/30 rounded-2xl
+           placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary/50
+           focus:border-primary transition-all duration-300;
+  }
+}
+
+/* 工具类 */
+@layer utilities {
+  .text-gradient-tcm {
+    background: linear-gradient(135deg, hsl(146 50% 36%), hsl(43 69% 39%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

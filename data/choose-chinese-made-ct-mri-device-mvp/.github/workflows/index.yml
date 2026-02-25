@@ -1,0 +1,26 @@
+name: "IndexNow"
+
+on:
+  schedule:
+    # Runs at 00:00 and 12:00 UTC every day
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:  # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Read IndexNow key from file
+      run: echo "INDEXNOW_KEY=$(cat indexnow_key.txt)" >> $GITHUB_ENV
+
+    - name: indexnow-action
+      uses: bojieyang/indexnow-action@v2
+      with:
+        sitemap-location: "https://feelingchart.heytcm.com/sitemap.xml"
+        since: 1
+        since-unit: "day"
+        key: ${{ env.INDEXNOW_KEY }}

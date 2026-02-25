@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#device-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.device-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.device-card h3 {
+    margin-top: 0;
+}
+#brand-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 20px;
+}
+#customer-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 20px;
+}
+#timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Adjust as needed */
+    gap: 20px;
+    }
+#timeline div{
+    border:1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+ }

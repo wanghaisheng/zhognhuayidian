@@ -1,0 +1,774 @@
+{
+    "metadata": {
+        "source": "Based on provided PDF and Markdown document",
+        "dateGenerated": "2024-04-22",
+        "currency": "CNY (Chinese Yuan)",
+        "disclaimer": "Data may not be fully comprehensive and includes approximate price ranges. Market share data pertains mostly to China."
+    },
+    "imagingEquipment": {
+        "ctScanners": [
+            {
+                "brand": "GE (General Electric)",
+                "models": [
+                    {
+                        "name": "Revolution Apex Expert",
+                        "description": "High-end CT system",
+                        "priceRange": "2,019.13万元",
+                        "detectorType": "Not specified",
+                        "marketShare": "2.74%"
+                    },
+                    {
+                        "name": "Revolution CT",
+                        "description": "Advanced CT System",
+                        "priceRange": "1,468.71万元",
+                        "detectorType": "Not specified",
+                        "marketShare": "2.74%"
+                    },
+                    {
+                        "name": "Optima CT680 Expert",
+                        "description": "Mid-Range CT System",
+                        "priceRange": "647.61万元",
+                        "detectorType": "Not specified",
+                        "marketShare": "2.74%"
+                    },
+                     {
+                        "name": "D3887T",
+                        "description": "Not specified",
+                        "priceRange": "4174万元",
+                        "detectorType": "Not specified",
+                         "marketShare": "2.74%"
+                     },
+                       {
+                        "name": "2137130-17",
+                        "description": "Not specified",
+                         "priceRange": "2706万元",
+                        "detectorType": "Not specified",
+                         "marketShare": "2.74%"
+                    },
+                       {
+                        "name": "2137130-11",
+                        "description": "Not specified",
+                         "priceRange": "1029万元",
+                        "detectorType": "Not specified",
+                           "marketShare": "2.74%"
+                    },
+                           {
+                        "name": "Revolution Advance",
+                         "description": "Not specified",
+                         "priceRange": "2839万元",
+                        "detectorType": "Not specified",
+                           "marketShare": "2.74%"
+                    },
+                           {
+                        "name": "Revolution Max I Mam",
+                         "description": "Not specified",
+                         "priceRange": "6016万元",
+                        "detectorType": "Not specified",
+                           "marketShare": "2.74%"
+                    }
+                ]
+            },
+            {
+                "brand": "Siemens",
+                "models": [
+                    {
+                        "name": "SOMATOM Drive",
+                        "description": "High-end CT system",
+                        "priceRange": "1,723.35万元",
+                        "detectorType": "Not specified",
+                        "marketShare": "2.93%"
+                    },
+                    {
+                        "name": "SOMATOM Force",
+                        "description": "High-end CT system",
+                        "priceRange": "2,120.27万元",
+                        "detectorType": "Not specified",
+                        "marketShare": "2.93%"
+                    },
+                     {
+                        "name": "SOMATOM",
+                        "description": "Mid range CT system",
+                        "priceRange": "546.49万元",
+                       "detectorType": "Not specified",
+                        "marketShare": "2.93%"
+                    },
+                       {
+                        "name": "Dura 422-MV",
+                        "description": "Not specified",
+                         "priceRange": "738万元",
+                         "detectorType": "Not specified",
+                         "marketShare": "2.93%"
+                    },
+                       {
+                        "name": "Somatom Go Up",
+                         "description": "Not specified",
+                         "priceRange": "3550万元",
+                        "detectorType": "Not specified",
+                         "marketShare": "2.93%"
+                    },
+                    {
+                        "name": "Somatom Go Top",
+                        "description": "Not specified",
+                        "priceRange": "5451万元",
+                        "detectorType": "Not specified",
+                         "marketShare": "2.93%"
+                    },
+                       {
+                        "name": "Dura 688-MV",
+                         "description": "Not specified",
+                         "priceRange": "1153万元",
+                        "detectorType": "Not specified",
+                         "marketShare": "2.93%"
+                    }
+                ]
+            },
+        {
+            "brand": "Philips",
+            "models": [
+               {
+                "name": "Spectral CT",
+                "description": "High-end Spectral CT",
+                "priceRange": "2,280.65万元",
+                "detectorType": "Not specified",
+                "marketShare":"1.92%"
+                },
+               {
+                 "name":"Incisive CT",
+                 "description": "Not specified",
+                 "priceRange":"588.11万元",
+                  "detectorType": "Not specified",
+                "marketShare":"1.92%"
+               },
+                {
+                  "name":"Incisive CT Power",
+                   "description": "Not specified",
+                  "priceRange":"690万元",
+                  "detectorType": "Not specified",
+                   "marketShare":"1.92%"
+               },
+                  {
+                  "name": "MRC600",
+                   "description": "Not specified",
+                "priceRange": "1741万元",
+                 "detectorType": "Not specified",
+                    "marketShare":"1.92%"
+               },
+                  {
+                  "name": "MRC880",
+                  "description": "Not specified",
+                "priceRange": "1817万元",
+                    "detectorType": "Not specified",
+                       "marketShare":"1.92%"
+                 },
+                   {
+                 "name": "Incisive CT",
+                 "description": "Not specified",
+                  "priceRange": "6601万元",
+                  "detectorType": "Not specified",
+                    "marketShare":"1.92%"
+               },
+                {
+                 "name":"Incisive CT ",
+                 "description": "Not specified",
+                 "priceRange":"3490万元",
+                "detectorType": "Not specified",
+                    "marketShare":"1.92%"
+               },
+                {
+                  "name":"MRC800",
+                   "description": "Not specified",
+                  "priceRange": "645万元",
+                    "detectorType": "Not specified",
+                       "marketShare":"1.92%"
+                }
+
+            ]
+        },
+        {
+            "brand": "Neusoft Medical (东软医疗)",
+            "models": [
+                {
+                    "name": "NeuViz Epoch",
+                    "description": "High-end CT System",
+                    "priceRange": "1,848.30万元",
+                    "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                },
+                {
+                    "name": "NeuViz 128",
+                    "description": "Mid-Range CT System",
+                    "priceRange": "464.88万元",
+                    "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                },
+                {
+                 "name": "NeuViz Glory",
+                 "description": "High-end CT System",
+                 "priceRange": "864.77万元",
+                  "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                },
+                {
+                    "name": "NeuViz 16 Classic",
+                    "description": "Not specified",
+                    "priceRange": "3348万元",
+                    "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                 },
+                 {
+                    "name": "NeuViz 128",
+                    "description": "Not specified",
+                    "priceRange": "5674万元",
+                   "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                  },
+                 {
+                    "name": "NeuViz",
+                    "description": "Not specified",
+                    "priceRange": "3342万元",
+                   "detectorType": "Not specified",
+                    "marketShare": "72.35%"
+                  },
+                  {
+                    "name": "NeuViz Ace 32",
+                    "description": "Not specified",
+                    "priceRange": "1296万元",
+                    "detectorType": "Not specified",
+                       "marketShare": "72.35%"
+                   },
+                   {
+                    "name": "NeuViz Ace",
+                     "description": "Not specified",
+                    "priceRange": "1136万元",
+                   "detectorType": "Not specified",
+                      "marketShare": "72.35%"
+                   }
+            ]
+        },
+    {
+        "brand": "United Imaging (联影医疗)",
+          "models": [
+             {
+              "name": "uCT 960+",
+               "description": "High-end CT System",
+             "priceRange":"1,426.51万元",
+             "detectorType": "Not specified",
+                 "marketShare": "11.15%"
+            },
+            {
+               "name": "uCT 528",
+                "description": "Mid-Range CT System",
+             "priceRange":"269.42万元",
+             "detectorType": "Not specified",
+                "marketShare": "11.15%"
+            },
+            {
+              "name":"uCT 860",
+              "description": "Mid-Range CT System",
+             "priceRange":"1,102.37万元",
+              "detectorType": "Not specified",
+                "marketShare":"11.15%"
+            },
+              {
+              "name": "uCT528",
+               "description":"Not specified",
+             "priceRange": "19319万元",
+                 "detectorType":"Not specified",
+                 "marketShare":"11.15%"
+            },
+               {
+              "name":"uCT 520",
+             "description":"Not specified",
+             "priceRange": "6510万元",
+                "detectorType": "Not specified",
+                 "marketShare":"11.15%"
+            },
+            {
+               "name": "uCT 960+",
+                "description":"Not specified",
+             "priceRange":"20674万元",
+               "detectorType": "Not specified",
+                 "marketShare": "11.15%"
+           },
+           {
+              "name":"uCT 760",
+               "description":"Not specified",
+             "priceRange":"13790万元",
+                "detectorType": "Not specified",
+                  "marketShare": "11.15%"
+            },
+               {
+              "name": "uCT 530+",
+               "description":"Not specified",
+             "priceRange":"8040万元",
+                "detectorType": "Not specified",
+                   "marketShare":"11.15%"
+            }
+          ]
+        },
+   {
+        "brand": "Wandong Medical (万东医疗)",
+        "models": [
+         {
+            "name":"TURBOTOM 3200S",
+             "description": "Not Specified",
+            "priceRange":"2799700 to 3985000 yuan",
+              "detectorType": "Not Specified",
+              "marketShare":"0.12%"
+           }
+        ]
+      },
+         {
+        "brand": "Anke (安科)",
+        "models": [
+           {
+            "name":"ANATOM 64 FIT",
+              "description":"Not Specified",
+            "priceRange":"2043万元",
+               "detectorType":"Not Specified",
+               "marketShare":"0.18%"
+           },
+              {
+            "name":"ANATOMA 200",
+                "description":"Not Specified",
+           "priceRange":"629万元",
+                "detectorType": "Not Specified",
+                  "marketShare":"0.18%"
+          },
+          {
+             "name": "ANATOM A200X",
+              "description":"Not Specified",
+            "priceRange":"569万元",
+                "detectorType": "Not Specified",
+                   "marketShare":"0.18%"
+           },
+             {
+               "name":"ANATOMS800",
+               "description":"Not Specified",
+             "priceRange": "1891万元",
+                "detectorType": "Not Specified",
+                  "marketShare": "0.18%"
+             },
+             {
+                "name":"ANATOM 64 CLARITY",
+                 "description":"Not Specified",
+              "priceRange": "336万元",
+                "detectorType":"Not Specified",
+                   "marketShare":"0.18%"
+            }
+        ]
+     },
+     {
+       "brand":"Mingfeng(明峰)",
+        "models": [
+            {
+               "name": "Scintcare M650",
+                "description":"Not Specified",
+               "priceRange": "881万元",
+                "detectorType": "Not Specified",
+                  "marketShare":"0.16%"
+            },
+             {
+                "name": "Scintcare Blue 755",
+                "description":"Not Specified",
+            "priceRange":"1985万元",
+                 "detectorType":"Not Specified",
+                    "marketShare":"0.16%"
+            },
+           {
+                "name": "Scintcare CT 32",
+                "description":"Not Specified",
+              "priceRange":"376万元",
+                 "detectorType":"Not Specified",
+                   "marketShare":"0.16%"
+            },
+              {
+                 "name": "Scintcare",
+                 "description":"Not Specified",
+               "priceRange":"427万元",
+                "detectorType":"Not Specified",
+                   "marketShare":"0.16%"
+            },
+           {
+                "name":"Scintcare CT 128",
+                 "description":"Not Specified",
+             "priceRange":"328万元",
+                "detectorType": "Not Specified",
+                   "marketShare":"0.16%"
+            }
+        ]
+      },
+         {
+        "brand": "Canon/Toshiba (佳能/东芝)",
+        "models": [
+             {
+              "name":"AQUILION PRIME TSX",
+                 "description":"Not Specified",
+              "priceRange": "0万元",
+                 "detectorType": "Not Specified"
+
+            },
+            {
+                "name": "CXB-750D",
+                 "description":"Not Specified",
+             "priceRange":"196万元",
+             "detectorType": "Not Specified"
+            },
+            {
+              "name":"AQUILION/PRIME",
+                 "description":"Not Specified",
+             "priceRange":"230万元",
+               "detectorType":"Not Specified"
+            },
+            {
+               "name": "AQUILION16",
+               "description":"Not Specified",
+            "priceRange":"12万元",
+                "detectorType": "Not Specified"
+           },
+           {
+               "name":"AQUILION64",
+               "description": "Not Specified",
+             "priceRange":"217万元",
+             "detectorType": "Not Specified"
+            },
+              {
+              "name":"CXB-750D",
+              "description": "Not Specified",
+              "priceRange":"1454万元",
+                 "detectorType":"Not Specified"
+            },
+           {
+              "name":"CXB-500B",
+                "description":"Not Specified",
+              "priceRange":"866万元",
+               "detectorType":"Not Specified"
+           },
+           {
+             "name": "CXB-400C",
+             "description":"Not Specified",
+            "priceRange":"207万元",
+               "detectorType":"Not Specified"
+           },
+          {
+             "name":"CXB-750G",
+              "description":"Not Specified",
+             "priceRange":"270万元",
+                "detectorType": "Not Specified"
+            },
+             {
+               "name": "CXB-750E",
+                 "description":"Not Specified",
+             "priceRange":"266万元",
+             "detectorType": "Not Specified"
+            }
+        ]
+     },
+      {
+       "brand":"Health-care (航卫通用电气)",
+        "models":[
+          {
+              "name":"Revolution Apex Expert",
+              "description":"Not Specified",
+              "priceRange":"3730万元",
+                "detectorType":"Not Specified",
+                  "marketShare":"0.49%"
+           },
+             {
+                "name": "Optima CT680 Expert",
+                 "description":"Not Specified",
+                "priceRange":"1595万元",
+                "detectorType":"Not Specified",
+                  "marketShare":"0.49%"
+           },
+             {
+                "name":"Revolution Star",
+                 "description":"Not Specified",
+              "priceRange":"340万元",
+                 "detectorType": "Not Specified",
+                   "marketShare":"0.49%"
+           },
+              {
+               "name":"Revolution Series",
+                 "description":"Not Specified",
+              "priceRange":"2979万元",
+                  "detectorType": "Not Specified",
+                    "marketShare":"0.49%"
+            },
+            {
+              "name":"Revolution Aspire Plus",
+                "description":"Not Specified",
+             "priceRange":"187万元",
+                "detectorType":"Not Specified",
+                   "marketShare":"0.49%"
+            }
+          ]
+         }
+    ],
+    "mriScanners": [
+       {
+        "brand": "GE (General Electric)",
+         "models":[
+             {
+               "name":"SIGNA",
+               "description":"Not Specified",
+              "priceRange": "1,454.99万元"
+              },
+               {
+              "name":"SIGNA Architect Air",
+              "description":"Not Specified",
+              "priceRange": "2,001.47万元"
+               },
+             {
+                "name":"SIGNA Pioneer",
+                "description":"Not Specified",
+             "priceRange": "1,671.86万元"
+             }
+             ]
+
+      },
+         {
+          "brand":"Siemens",
+          "models":[
+               {
+                "name":"MAGNETOM Vida",
+                 "description": "High-End MRI System",
+                 "priceRange":"1,989.79万元"
+
+               },
+              {
+               "name": "MAGNETOM Lumina",
+                "description":"Not Specified",
+               "priceRange":"1,880.03万元"
+               },
+                {
+                  "name":"MAGNETOM Mica",
+                   "description":"Not Specified",
+                 "priceRange": "898.16万元"
+                }
+
+            ]
+
+      },
+          {
+          "brand":"Philips",
+           "models":[
+               {
+                "name": "Ingenia Elition S",
+                "description":"Not Specified",
+             "priceRange":"2,149.23万元"
+            },
+             {
+                "name":"Ingenia Elition X",
+                "description":"Not Specified",
+             "priceRange":"2,251.67万元"
+              },
+              {
+              "name":"Ingenia Ambition S",
+              "description": "Not Specified",
+             "priceRange": "1,099.20万元"
+              }
+           ]
+
+      },
+      {
+           "brand":"Neusoft Medical (东软医疗)",
+           "models":[
+             {
+                "name":"NeuMR Rena",
+                 "description":"Not Specified",
+             "priceRange":"770万元/套"
+             }
+            ]
+
+      },
+     {
+           "brand":"United Imaging (联影医疗)",
+           "models":[
+                {
+                   "name":"uMR 880",
+                   "description": "High-End MRI System",
+                "priceRange":"1,806.87万元"
+               },
+               {
+                "name":"uMR 870",
+                 "description":"Not Specified",
+               "priceRange":"1,843.00万元"
+               },
+                {
+                 "name":"uMR 588",
+                  "description":"Not Specified",
+             "priceRange":"674.65万元"
+               },
+                {
+                   "name":"uMR 660",
+                   "description":"Not Specified",
+               "priceRange": "860万~889万元/套"
+               },
+                 {
+                     "name":"uMR 790",
+                     "description":"Not Specified",
+               "priceRange":"1682万元/套"
+                 },
+                 {
+                     "name": "uMR 870",
+                   "description":"Not Specified",
+               "priceRange":"1499.8万元"
+                 }
+            ]
+     },
+        {
+           "brand":"Wandong Medical (万东医疗)",
+             "models":[
+                {
+                    "name":"TURBOTOM 3200S",
+                     "description": "Not Specified",
+                     "priceRange": "2799700 to 3985000 yuan",
+                    }
+            ]
+      }
+    ]
+  },
+"customers":[
+   {
+      "brand":"GE (General Electric)",
+      "locations":[
+            "佛山市高明区人民医院"
+        ]
+    },
+   {
+      "brand":"Siemens",
+      "locations":[
+          "建德市第一人民医院",
+          "浙江省中医院",
+          "海盐县人民医院",
+           "长兴县中医院",
+          "惠州市第三人民医院",
+           "奈曼旗人民医院",
+           "首都医科大学附属北京胸科医院",
+          "长沙市望城区医健建设投资有限公司",
+         "中国医科大学附属第四医院",
+          "广东省中医院",
+          "台州市立医院",
+            "牡丹江心血管病医院",
+            "绍兴第二医院医共体总院(绍兴第二医院)",
+             "盐城市第三人民医院",
+           "河津市人民医院",
+             "淳安县中医院医共体",
+             "黑龙江省伊春市中心医院",
+            "潍坊市人民医院",
+             "丹东市中心医院(丹东市妇女儿童医院、丹东)",
+           "遵义医科大学附属医院",
+          "滨海县人民医院",
+           "绵阳市中医医院",
+           "佳木斯大学附属第一医院",
+           "泰和县人民医院",
+          "宁波市医疗中心李惠利医院",
+          "南京市浦口人民医院",
+            "保定市第一中心医院",
+            "锦州市太和区医院"
+           ]
+   },
+      {
+         "brand":"United Imaging (联影医疗)",
+         "locations":[
+              "太原市中医医院(太原市中医研究所)",
+              "河北省故城县医院",
+              "中山大学附属第一医院广西医院",
+              "神木市大柳塔试验区兴柳实业集团有限公司",
+             "秦皇岛市卫生健康委员会(秦皇岛市爱国卫生)",
+               "伊宁县人民医院",
+              "寿县卫生健康委员会",
+              "崇州市卫生健康局",
+              "上海中医药大学附属曙光医院",
+               "尼玛县人民政府",
+                "玉田县医院",
+              "金堂县第一人民医院",
+              "秦皇岛市卫生健康委员会(秦皇岛市爱国卫生)",
+              "天等县人民医院",
+               "鄂州市中心医院",
+               "榆社县人民医院",
+              "登封市妇幼保健院(登封市第二人民医院)",
+                "浙江大学医学院附属第二医院",
+                 "苏州市卫生健康委员会(苏州市中医药管理局)",
+              "山西省运城市中心医院",
+              "清河县人民医院",
+              "大理大学",
+               "广州市花都区人民医院",
+              "沧州市中心医院",
+                "曲靖市中医医院",
+               "湖口县人民医院",
+                "青岛大学附属医院",
+              "临武县人民医院",
+              "广西壮族自治区桂东人民医院",
+             "东港市第二医院",
+               "乌鲁木齐市第四人民医院",
+                "浙江大学",
+              "上海市长宁区精神卫生中心",
+              "北京大学第三医院",
+              "蒙城县第二人民医院",
+                "复旦大学附属肿瘤医院",
+                "烟台市中医医院",
+              "遵义市播州区人民医院",
+              "武汉市汉口医院",
+                "安徽中医药大学第一附属医院",
+                 "内蒙古自治区新康监狱",
+              "昭苏县人民医院",
+               "阜康市卫生健康委员会",
+                "任丘市中医院"
+           ]
+    }
+
+  ],
+    "historicalTimeline": {
+        "ct":[
+            {
+                "year":"2005",
+                "event":"United Imaging is founded"
+           },
+          {
+            "year":"2011",
+               "event":"United Imaging is launched by Dr. Xue Min"
+          }
+          ],
+    "mri":[
+      {
+       "year":"1982",
+        "event":"China began research in MRI Technology"
+      },
+      {
+           "year":"1986",
+          "event":"Shenzhen Anke High-tech Co., Ltd. was founded"
+      },
+         {
+            "year":"1987",
+            "event":"Anke introduced China's first 0.15T permanent magnet MRI"
+         },
+         {
+             "year":"1992",
+             "event":"Anke produced their first superconducting MRI machine"
+         },
+         {
+           "year":"2007",
+             "event":"Austar Medical’s Centauri 1.5T was the first completely China-made superconducting MRI machine        },
+        {
+            "year":"2008",
+            "event":"Austar Medical made history with their first sale of a Chinese-made 1.5T superconducting MRI scanner to an American hospital"
+       },
+        {
+           "year":"2015",
+           "event":"United Imaging entered the 3T MRI space with their own machine, and Austar’s 71cm large-bore 1.5T MRI system received FDA approval"
+        },
+        {
+           "year":"2020",
+             "event":"United Imaging launched the world's first 75cm large-bore 3.0T MRI system"
+        },
+         {
+              "year":"2021",
+              "event":"United Imaging released the world's first whole-body 5.0T MRI scanner, the uMR Jupiter"
+         }
+
+    ]
+
+  }
+}

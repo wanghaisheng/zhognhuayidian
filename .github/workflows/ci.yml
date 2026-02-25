@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+      
+      - name: I18n Long Content Migration Check
+        run: npm run i18n:migrate-long-content -- --check
+      
+      - name: I18n Long Content Report (non-blocking)
+        run: npm run i18n:report-long -- --threshold 240
+
+      - name: SEO Coverage
+        run: npm run seo:check
+
+      - name: Type Check (if available)
+        run: if npm run | grep -q "type-check"; then npm run type-check; else echo "No type-check script found, skipping"; fi
+
+      - name: Build
+        run: npm run build

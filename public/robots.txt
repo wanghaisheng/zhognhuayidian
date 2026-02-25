@@ -1,0 +1,75 @@
+User-agent: *
+Allow: /
+
+# AI 爬虫特殊支持
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+# 搜索引擎爬虫优化
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# 社交媒体爬虫
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# 禁止访问的路径
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /*?print=
+Disallow: /*?sort=
+Disallow: /*&sort=
+
+# AI 友好文件
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /api-docs.json
+
+# SEO工具爬虫
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# 站点地图
+Sitemap: https://chinactscanner.org/sitemap.xml
+
+# 主机信息
+Host: chinactscanner.org

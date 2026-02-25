@@ -1,0 +1,29 @@
+- 将图片文件放入 src/assets/ 目录。
+- 修改 Logo.tsx 文件：
+
+import React from 'react';
+import { cn } from '@/lib/utils';
+// 1. 引入您的图片
+import logoImg from '@/assets/logo.svg'; 
+
+interface LogoProps {
+  className?: string;
+  variant?: 'default' | 'white';
+}
+
+export const Logo: React.FC<LogoProps> = ({ className, variant = 'default' }) => {
+  return (
+    // 2. 替换 Aperture 组件为 img 标签
+    <img 
+      src={logoImg}
+      alt="China CT Scanner Logo"
+      className={cn(
+        "w-8 h-8 object-contain transition-transform group-hover:scale-110", 
+        // 如果是白色变体且图片不是SVG，可能需要 CSS filter 或另一张白色 Logo 图
+        className
+      )}
+    />
+  );
+};
+
+export default Logo;

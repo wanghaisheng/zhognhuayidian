@@ -1,0 +1,168 @@
+{
+  "siteName": "China CT Scanner",
+  "siteNameZh": "中国CT扫描仪网",
+  "description": "Global medical imaging equipment directory and professional analysis platform",
+  "focus": "Chinese CT & MRI equipment export to international markets",
+  "version": "1.0.0",
+  "baseUrl": "https://chinactscanner.org",
+  "languages": ["en-US", "zh-CN"],
+  "defaultLanguage": "en-US",
+  "endpoints": {
+    "homepage": "/",
+    "devices": "/devices",
+    "deviceDetail": "/device/:slug",
+    "manufacturers": "/manufacturers",
+    "manufacturerDetail": "/manufacturer/:slug",
+    "ctManufacturers": "/ct-manufacturers",
+    "mriManufacturers": "/mri-manufacturers",
+    "chinaCTManufacturers": "/china-ct-manufacturers",
+    "chinaMRIManufacturers": "/china-mri-manufacturers",
+    "marketAnalysis": "/analysis/market",
+    "expertAnalysis": "/analysis/expert",
+    "knowledgeCenter": "/knowledge",
+    "guides": "/guides",
+    "inquiry": "/contact"
+  },
+  "dataStructure": {
+    "device": {
+      "id": "string (UUID)",
+      "name": "string",
+      "slug": "string",
+      "manufacturer": "object",
+      "type": "ct | mri",
+      "sliceCount": "number (for CT)",
+      "fieldStrength": "string (for MRI)",
+      "priceRange": "string",
+      "certifications": ["FDA", "CE", "ISO13485", "CFDA"],
+      "exportMarkets": ["string"],
+      "technicalSpecs": "object",
+      "description": "string"
+    },
+    "manufacturer": {
+      "id": "string",
+      "name": "string",
+      "slug": "string",
+      "country": "string",
+      "founded": "number",
+      "category": "string",
+      "marketShare": "number",
+      "employeeCount": "number",
+      "headquarters": "string",
+      "certifications": ["string"],
+      "productLines": ["string"]
+    }
+  },
+  "keyDifferentiators": [
+    "40-60% cost savings compared to Western brands",
+    "Exported to 50+ countries worldwide",
+    "2000+ international installations",
+    "Full export support (logistics, training, warranty)",
+    "FDA & CE certified equipment",
+    "Professional market analysis and procurement guides",
+    "Multilingual support (English & Chinese)",
+    "Direct manufacturer connections"
+  ],
+  "targetAudience": [
+    "International hospital procurement managers",
+    "Medical equipment dealers and distributors",
+    "Government procurement officials",
+    "Healthcare investment analysts",
+    "Hospital administrators",
+    "Medical facility planners"
+  ],
+  "contentTypes": [
+    "Equipment technical specifications",
+    "Manufacturer profiles and analysis",
+    "Market research reports",
+    "Procurement guides and tutorials",
+    "International case studies",
+    "Regulatory compliance information",
+    "Price comparisons and ROI analysis",
+    "Export logistics guidance"
+  ],
+  "certifications": {
+    "FDA": "U.S. Food and Drug Administration approval",
+    "CE": "European Conformity marking",
+    "ISO13485": "Medical device quality management",
+    "CFDA": "China Food and Drug Administration registration"
+  },
+  "priceRanges": {
+    "16-slice CT": {
+      "china": "$80,000 - $150,000",
+      "western": "$200,000 - $300,000",
+      "savings": "40-60%"
+    },
+    "64-slice CT": {
+      "china": "$200,000 - $400,000",
+      "western": "$500,000 - $800,000",
+      "savings": "50-60%"
+    },
+    "128-slice CT": {
+      "china": "$400,000 - $800,000",
+      "western": "$1,000,000 - $1,500,000",
+      "savings": "50-65%"
+    },
+    "1.5T MRI": {
+      "china": "$300,000 - $600,000",
+      "western": "$800,000 - $1,200,000",
+      "savings": "45-60%"
+    },
+    "3.0T MRI": {
+      "china": "$600,000 - $1,200,000",
+      "western": "$1,500,000 - $3,000,000",
+      "savings": "50-70%"
+    }
+  },
+  "topManufacturers": {
+    "china": [
+      {
+        "name": "United Imaging",
+        "specialty": "High-end CT/MRI systems",
+        "marketPosition": "Premium tier",
+        "fdaApproved": true
+      },
+      {
+        "name": "Neusoft Medical",
+        "specialty": "Economic CT solutions",
+        "marketPosition": "Value tier",
+        "fdaApproved": true
+      },
+      {
+        "name": "Mindray",
+        "specialty": "Mid-range medical equipment",
+        "marketPosition": "Mid-tier",
+        "fdaApproved": true
+      },
+      {
+        "name": "Anke High-tech",
+        "specialty": "Professional MRI systems",
+        "marketPosition": "Specialized",
+        "fdaApproved": false
+      },
+      {
+        "name": "Wandong Medical",
+        "specialty": "Basic imaging equipment",
+        "marketPosition": "Entry tier",
+        "fdaApproved": false
+      }
+    ]
+  },
+  "seoKeywords": [
+    "CT scanner",
+    "MRI equipment",
+    "medical imaging devices",
+    "Chinese medical equipment",
+    "FDA approved CT scanner",
+    "hospital equipment procurement",
+    "medical device export",
+    "CT scanner price comparison",
+    "MRI manufacturer",
+    "medical equipment buyer guide"
+  ],
+  "updateFrequency": "Weekly",
+  "lastUpdated": "2024-01-15",
+  "contact": {
+    "email": "info@chinactscanner.org",
+    "inquiryForm": "/contact"
+  }
+}

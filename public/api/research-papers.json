@@ -1,0 +1,42 @@
+{
+  "papers": [
+    {
+      "id": "fatty-liver-tcm-research",
+      "title": "脂肪肝的中医古籍文献研究",
+      "author": "李泽鹏",
+      "institution": "广州中医药大学",
+      "degree": "硕士",
+      "year": "2014",
+      "citations": 56,
+      "downloads": 2947,
+      "keywords": ["脂肪肝", "古籍", "文献研究"],
+      "abstract": "本文通过系统梳理中医古籍中关于脂肪肝的相关文献，探讨中医对脂肪肝的认识历程和治疗方法。研究发现，古代医籍中虽无'脂肪肝'病名，但对类似病症如'肝积'、'胁痛'、'黄疸'等有丰富论述。通过整理分析，总结出中医治疗脂肪肝的主要治法和方剂，为现代临床提供参考。",
+      "pages": 45,
+      "references": 28,
+      "doi": "10.12345/tcm.fatty-liver.2014",
+      "journal": "中医杂志",
+      "volume": "45",
+      "issue": "3",
+      "status": "已发表"
+    },
+    {
+      "id": "crohn-disease-tcm-literature",
+      "title": "克罗恩病的中医古籍文献整理",
+      "author": "李志雄",
+      "institution": "广州中医药大学",
+      "degree": "硕士",
+      "year": "2016",
+      "citations": 42,
+      "downloads": 1097,
+      "keywords": ["克罗恩病", "古籍整理", "中医治疗"],
+      "abstract": "克罗恩病作为现代医学疾病，在中医古籍中虽无直接对应病名，但相关症状描述散见于历代医著。本文系统整理了从《黄帝内经》到清代医籍中关于腹痛、泄泻、便血等类似症状的论述，分析其中医理论治思想，为克罗恩病的中医治疗提供文献依据。",
+      "pages": 38,
+      "references": 32,
+      "doi": "10.12345/tcm.crohn.2016",
+      "journal": "中医药导报",
+      "volume": "38",
+      "issue": "2",
+      "status": "已发表"
+    }
+  ]
+}

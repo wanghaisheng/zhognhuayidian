@@ -1,0 +1,49 @@
+{
+  "books": [
+    {
+      "id": "huangdi-neijing",
+      "title": "黄帝内经",
+      "author": "佚名",
+      "dynasty": "先秦",
+      "year": "战国时期",
+      "category": "医经",
+      "description": "《黄帝内经》是中国现存最早、最完整、最系统的中医理论著作，分为《素问》和《灵枢》两部分。它奠定了中医学理论基础，包括阴阳五行、脏腑经络、病因病机、诊法治则等。",
+      "tags": ["基础理论", "内经", "先秦医学", "阴阳五行"],
+      "chapters": 18,
+      "characters": 50000,
+      "influence": "中医理论奠基之作",
+      "preservation": "完好",
+      "difficulty": "高"
+    },
+    {
+      "id": "shanghan-zabing-lun",
+      "title": "伤寒杂病论",
+      "author": "张仲景",
+      "dynasty": "东汉",
+      "year": "200年",
+      "category": "伤寒金匮",
+      "description": "东汉张仲景所著，是中医辨证论治的奠基之作。原书16卷，后世整理为《伤寒论》和《金匮要略》两部分，确立了六经辨证和脏腑辨证的诊疗体系。",
+      "tags": ["伤寒", "杂病", "辨证论治", "张仲景", "东汉医学"],
+      "chapters": 16,
+      "characters": 45000,
+      "influence": "辨证论治奠基之作",
+      "preservation": "较好",
+      "difficulty": "高"
+    },
+    {
+      "id": "bencao-gangmu",
+      "title": "本草纲目",
+      "author": "李时珍",
+      "dynasty": "明",
+      "year": "1596年",
+      "category": "本草",
+      "description": "明代李时珍历时27年编成的药物学巨著，收录药物1892种，方剂11096首，附图1109幅。是中国古代药物学的集大成之作，对后世药物学发展影响深远。",
+      "tags": ["药物学", "本草学", "李时珍", "明代医学", "药物分类"],
+      "chapters": 52,
+      "characters": 1900000,
+      "influence": "药物学集大成之作",
+      "preservation": "完好",
+      "difficulty": "中"
+    }
+  ]
+}

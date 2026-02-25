@@ -1,0 +1,36 @@
+name: "IndexNow"
+on:
+  schedule:
+    # Scheduled in UTC.
+    - cron:  '0 0,12 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate or retrieve IndexNow key
+        id: generate_key
+        run: |
+          # Install Node.js if not already installed
+          sudo apt-get install -y nodejs npm
+
+          # Run the generateKey.js script to generate or retrieve the key
+          node generateKey.js
+          
+          # Read the key from the file and save it to the output
+          echo "::set-output name=result::$(cat indexnow_key.txt)"
+
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: "https://mood-island.heytcm.com/sitemap.xml"
+          since: 1
+          since-unit: "day"
+          key: ${{ steps.generate_key.outputs.result }}
+

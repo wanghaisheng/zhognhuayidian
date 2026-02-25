@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Imaging Devices</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        #device-list {
+          display:flex;
+          flex-direction: column;
+        }
+
+        .brand-section {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .device-list {
+           padding-left: 20px; /* Indent device lists */
+           display:flex;
+            flex-direction: column;
+
+        }
+        .device-item{
+         padding-bottom: 10px;
+         border-bottom: 1px solid #eeeeee
+        }
+        .device-item strong {
+            display: block;
+            margin-top: 5px;
+        }
+        .device-item p {
+          margin-top: 5px;
+        }
+        .device-item span {
+          font-weight: bold;
+          }
+
+        #brand-list{
+          display: grid;
+          grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+          gap: 20px;
+        }
+
+         nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+       nav ul li a {
+          text-decoration:none;
+          color: blue;
+          }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Medical Imaging Devices</h1>
+  </header>
+  <main>
+     <nav>
+        <ul>
+          <li><a href="#" onclick="showContent('brands')">View Brands (A-Z)</a></li>
+          <li><a href="#" onclick="showContent('devices')">View Devices (A-Z)</a></li>
+        </ul>
+    </nav>
+    <section id="filters" style="display:none">
+          <label for="equipmentType">Equipment Type:</label>
+        <select id="equipmentType">
+            <option value="all">All</option>
+            <option value="ctScanners">CT Scanners</option>
+            <option value="mriScanners">MRI Scanners</option>
+        </select>
+    </section>
+    <section id="brand-list" style="display:none">
+          <!-- Brands will be populated here -->
+      </section>
+     <section id="device-list" style="display:none">
+          <!-- Devices will be populated here, will be generated in js -->
+        </section>
+  </main>
+
+  <script>
+const deviceListSection = document.getElementById('device-list');
+const brandListSection = document.getElementById("brand-list");
+const equipmentTypeSelect = document.getElementById('equipmentType');
+let jsonData;
+
+// Function to fetch and load the JSON data
+async function loadData() {
+  try {
+    const response = await fetch('data.json'); // Assumes 'data.json' is in the same directory
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      jsonData = await response.json();
+        init();
+    } catch (error) {
+      console.error('Failed to load JSON data:', error);
+  }
+}
+
+function displayDevices(equipmentType) {
+    deviceListSection.innerHTML = ''; // Clear previous content
+    let devices = [];
+
+  if (equipmentType === 'all') {
+      devices = [...jsonData.imagingEquipment.ctScanners, ...jsonData.imagingEquipment.mriScanners];
+  } else {
+     devices = jsonData.imagingEquipment[equipmentType];
+  }
+    const brandMap = new Map();
+    devices.forEach(deviceType => {
+        if (!brandMap.has(deviceType.brand)) {
+            brandMap.set(deviceType.brand, []);
+        }
+        brandMap.get(deviceType.brand).push(...deviceType.models)
+    });
+
+    const sortedBrands = Array.from(brandMap.keys()).sort();
+      sortedBrands.forEach(brand => {
+        const brandDiv = document.createElement('div');
+        brandDiv.classList.add('brand-section');
+        brandDiv.innerHTML = `<h2>${brand}</h2>`;
+        const modelList = document.createElement('div');
+        modelList.classList.add('device-list');
+
+          brandMap.get(brand).forEach(model => {
+              const deviceItem = document.createElement('div');
+              deviceItem.classList.add('device-item');
+
+              deviceItem.innerHTML = `
+                 <strong>${model.name}</strong>
+                   <p><span>Description:</span> ${model.description}</p>
+                  <p><span>Price Range:</span> ${model.priceRange}</p>
+                `;
+             modelList.appendChild(deviceItem);
+          });
+          brandDiv.appendChild(modelList)
+          deviceListSection.appendChild(brandDiv);
+      });
+}
+
+function displayBrands() {
+   brandListSection.innerHTML = '';
+ let devices = [...jsonData.imagingEquipment.ctScanners, ...jsonData.imagingEquipment.mriScanners];
+  const brandSet = new Set()
+   devices.forEach(deviceType => {
+    brandSet.add(deviceType.brand);
+
+   });
+    const sortedBrandSet = Array.from(brandSet).sort()
+    sortedBrandSet.forEach(brand =>{
+      const brandDiv = document.createElement("div");
+      brandDiv.innerHTML =`
+        <p>${brand}</p>
+      `;
+      brandListSection.appendChild(brandDiv);
+    });
+
+ }
+
+
+function init() {
+   //Initial setup
+  }
+
+function showContent(type) {
+   //Hide all display areas to start
+        document.getElementById("brand-list").style.display = "none";
+        document.getElementById("device-list").style.display = "none";
+        document.getElementById("filters").style.display = "none";
+
+         if (type === 'devices'){
+                displayDevices( 'all');
+                document.getElementById("device-list").style.display = "flex";
+                   document.getElementById("filters").style.display = "block";
+            } else if (type === 'brands') {
+                displayBrands();
+                document.getElementById("brand-list").style.display = "grid";
+                 document.getElementById("filters").style.display = "block";
+
+         }
+}
+
+if (equipmentTypeSelect){
+equipmentTypeSelect.addEventListener('change', () => {
+    if(document.getElementById("device-list").style.display === "flex"){
+        displayDevices( equipmentTypeSelect.value);
+    }
+});
+}
+
+// Call loadData to initialize the page
+loadData();
+  </script>
+</body>
+</html>

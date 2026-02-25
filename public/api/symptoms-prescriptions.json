@@ -1,0 +1,37 @@
+{
+  "symptoms": [
+    {
+      "id": "headache",
+      "name": "头痛",
+      "category": "头部症状",
+      "description": "头部疼痛的统称，可由多种原因引起",
+      "tcmTypes": ["外感头痛", "内伤头痛", "肝阳头痛", "血虚头痛", "痰湿头痛"],
+      "relatedClassics": ["伤寒论", "黄帝内经", "景岳全书"],
+      "commonPrescriptions": ["川芎茶调散", "天麻钩藤饮", "吴茱萸汤"],
+      "acupoints": ["百会", "风池", "太阳", "合谷"],
+      "severity": "中等"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": "liu-wei-di-huang",
+      "name": "六味地黄丸",
+      "source": "金匮要略",
+      "author": "张仲景",
+      "dynasty": "东汉",
+      "ingredients": [
+        {"name": "熟地黄", "dosage": "8钱", "nature": "滋阴补血"},
+        {"name": "山茱萸", "dosage": "4钱", "nature": "补益肝肾"},
+        {"name": "山药", "dosage": "4钱", "nature": "补脾益肾"},
+        {"name": "泽泻", "dosage": "3钱", "nature": "利水渗湿"},
+        {"name": "茯苓", "dosage": "3钱", "nature": "健脾渗湿"},
+        {"name": "牡丹皮", "dosage": "3钱", "nature": "清虚热"}
+      ],
+      "functions": "滋阴补肾",
+      "indications": ["肾阴亏损", "腰膝酸软", "头晕目眩", "盗汗遗精"],
+      "contraindications": ["脾胃虚寒", "阳虚体质"],
+      "dosage": "蜜丸，每服9g，日2次",
+      "preparation": "研末，蜜制为丸"
+    }
+  ]
+}

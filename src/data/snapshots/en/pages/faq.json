@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "selection": [
+      {
+        "question": "How to choose a CT scanner suitable for the hospital?",
+        "answer": "Factors to consider when choosing a CT scanner: 1) Hospital size and patient volume; 2) Clinical needs (cardiac, neurological, whole body, etc.); 3) Budget range; 4) Room space constraints; 5) Technician staffing. It is recommended to clarify the main application scenarios first, then choose based on technical parameters and cost-effectiveness.",
+        "tags": ["Equipment Selection", "CT Scanner", "Buying Guide"]
+      },
+      {
+        "question": "How to choose MRI magnetic field strength?",
+        "answer": "1.5T is suitable for routine examinations, relatively low cost, and simple maintenance; 3.0T provides higher resolution, suitable for high-end applications like neuroimaging and cardiac MRI; 7.0T is mainly for research. Most hospitals choose 1.5T or 3.0T depending on clinical needs and budget.",
+        "tags": ["MRI", "Magnetic Field Strength", "Technical Specs"]
+      },
+      {
+        "question": "Advice on choosing new vs. used equipment?",
+        "answer": "New equipment: Latest technology, full warranty, long service life, but higher price. Used equipment: Low cost, quick deployment, but requires careful assessment of equipment condition, remaining life, and maintenance costs. Recommended to prioritize certified refurbished equipment, which has some warranty and high cost-performance ratio.",
+        "tags": ["New Equipment", "Used Equipment", "Cost Analysis"]
+      }
+    ],
+    "specs": [
+      {
+        "question": "What is the significance of slice thickness and slice count in CT scanners?",
+        "answer": "Slice thickness determines image resolution; thinner slices mean higher resolution but longer scan time. Slice count affects scan speed and coverage. 64 slices are suitable for routine exams, 128+ slices for high-end applications like cardiac and angiography. Balance image quality, scan speed, and cost when choosing.",
+        "tags": ["CT", "Technical Parameters", "Slice Thickness"]
+      },
+      {
+        "question": "What are MRI features like DWI and fMRI?",
+        "answer": "DWI (Diffusion Weighted Imaging): Detects molecular motion, commonly used for stroke diagnosis; fMRI (Functional MRI): Observes brain functional activity; DTI (Diffusion Tensor Imaging): Displays nerve fiber tracts. These features require specific sequences and software support; confirm equipment configuration when purchasing.",
+        "tags": ["MRI", "Functional Imaging", "DWI", "fMRI"]
+      }
+    ],
+    "procurement": [
+      {
+        "question": "What certifications are required for medical equipment procurement?",
+        "answer": "1) Manufacturer needs FDA, CE, CFDA, etc. certifications; 2) Product needs medical device registration certificate; 3) Supplier needs operation license; 4) Installation and commissioning require appropriate qualifications. Verify the validity of all necessary documents before purchasing.",
+        "tags": ["Procurement Process", "Certifications", "Regulations"]
+      },
+      {
+        "question": "What to look for during equipment acceptance?",
+        "answer": "Technical acceptance: Check functions and performance indicators item by item against contract specs; Appearance acceptance: Check equipment integrity and packaging; Document acceptance: Confirm technical documents and certificates are complete; Training acceptance: Confirm operation training is completed. Recommended to invite third-party experts to participate in acceptance.",
+        "tags": ["Equipment Acceptance", "Quality Control", "Technical Inspection"]
+      }
+    ],
+    "maintenance": [
+      {
+        "question": "Frequency and content of equipment maintenance?",
+        "answer": "Daily maintenance: Daily power on/off check, cleaning; Periodic maintenance: Monthly system check, calibration; Annual maintenance: Comprehensive overhaul, parts replacement. Recommended to establish standard operating procedures, train specialized personnel, and sign maintenance contracts with manufacturers.",
+        "tags": ["Maintenance", "Equipment Management", "Preventive Maintenance"]
+      },
+      {
+        "question": "How to respond quickly to equipment failure?",
+        "answer": "Establish a fault grading system: Grade A (affects diagnosis/treatment) 4-hour response, Grade B (limited function) 24-hour response, Grade C (minor issue) 72-hour response. Agree on response time, spare parts supply, temporary alternatives, etc., with the supplier.",
+        "tags": ["Troubleshooting", "Emergency Plan", "Service Response"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "intro": {
+    "content": "Welcome to CT Scanner Compass (\"we,\" \"our,\" or \"us\"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
+  },
+  "dataCollection": {
+    "content": "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:",
+    "items": [
+      "Identity Data: first name, last name, username or similar identifier.",
+      "Contact Data: email address and telephone number.",
+      "Technical Data: IP address, login data, browser type and version, time zone and location, browser plug‑in types and versions, operating system and platform, and other technology on the devices used to access this website.",
+      "Usage Data: information about how you use our website, products and services."
+    ]
+  },
+  "dataUsage": {
+    "content": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:",
+    "items": [
+      "To perform the contract we are about to enter into or have entered into with you.",
+      "Where necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.",
+      "Where we need to comply with a legal or regulatory obligation."
+    ]
+  },
+  "cookies": {
+    "content": "You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly."
+  },
+  "security": {
+    "content": "We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know."
+  },
+  "contact": {
+    "content": "If you have any questions about this privacy policy or our privacy practices, please contact us at: info@chinactscanner.org"
+  }
+}

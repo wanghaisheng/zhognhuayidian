@@ -1,0 +1,42 @@
+name: Run sitemap and Commit
+
+on:
+  # push:
+    # branches: [ main ]
+  # pull_request:
+    # branches: [ main ]
+  # schedule:
+    # - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  test-and-commit:
+    runs-on: ubuntu-latest
+    env:
+      FAKE_HASH: "Automated deployment @ $(date '+%Y-%m-%d %H:%M:%S') Asia/Shanghai"
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup GIT user
+      uses: fregante/setup-git-user@v1
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    # - name: Install dependencies
+      # run: npm install
+
+    - name: Run test script
+      run: |
+        node sitemap.js
+        node  generateKey.js
+
+    -
+     name: Push
+     run: |
+          git add .
+          git commit -m "${{ env.FAKE_HASH }}" 
+          git push -f
