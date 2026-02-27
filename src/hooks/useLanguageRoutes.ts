@@ -10,30 +10,29 @@ export const useLanguageRoutes = () => {
   const switchLanguage = (newLanguage: SupportedLanguage) => {
     const currentPath = removeLanguagePrefix(location.pathname);
     const newPath = addLanguagePrefix(currentPath, newLanguage);
-    const searchValue = location.search as unknown;
-    const searchStr = (() => {
-      if (typeof searchValue === 'string') {
-        return searchValue;
+    
+    // 正确处理TanStack Router的search参数
+    let searchParams = {};
+    
+    // 检查location.search的类型并正确处理
+    if (location.search) {
+      if (typeof location.search === 'string') {
+        // 如果是字符串，解析为对象
+        const params = new URLSearchParams(location.search);
+        params.forEach((value, key) => {
+          searchParams[key] = value;
+        });
+      } else if (typeof location.search === 'object') {
+        // 如果已经是对象，直接使用
+        searchParams = location.search;
       }
-      if (searchValue && typeof searchValue === 'object') {
-        try {
-          const params = new URLSearchParams(searchValue as Record<string, string>);
-          const qs = params.toString();
-          return qs ? `?${qs}` : '';
-        } catch {
-          return '';
-        }
-      }
-      if (typeof window !== 'undefined' && typeof window.location?.search === 'string') {
-        return window.location.search;
-      }
-      return '';
-    })();
-    const newUrl = `${newPath}${searchStr}`;
-
-    if (newUrl !== `${location.pathname}${location.search}`) {
-      navigate({ to: newUrl, replace: true });
     }
+    
+    navigate({
+      to: newPath,
+      search: searchParams,
+      replace: true
+    });
   };
 
   const pathLanguage = getLanguageFromPath(location.pathname) as SupportedLanguage;

@@ -13,7 +13,7 @@ export type TranslationKeys = typeof enTranslations;
 export type SupportedLocale = 'en' | 'zh';
 
 // 导出默认语言
-export const DEFAULT_LOCALE: SupportedLocale = 'zh';
+export const DEFAULT_LOCALE: SupportedLocale = 'en';
 
 // 导出支持的语言列表
 export const SUPPORTED_LOCALES: SupportedLocale[] = ['en', 'zh'];

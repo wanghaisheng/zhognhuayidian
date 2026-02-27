@@ -134,10 +134,10 @@ const readJsonSafe = (p) => {
   }
 };
 
-const getDeviceEntries = (locale) => {
-  const idx = readJsonSafe(path.join(__dirname, `../src/data/snapshots/${locale}/devices.json`));
+const getBookEntries = (locale) => {
+  const idx = readJsonSafe(path.join(__dirname, `../src/data/snapshots/${locale}/books.json`));
   const items = Array.isArray(idx?.items) ? idx.items : [];
-  const contentDir = path.join(__dirname, `../src/data/snapshots/${locale}/content/devices`);
+  const contentDir = path.join(__dirname, `../src/data/snapshots/${locale}/content/books`);
   const contentSlugs = fs.existsSync(contentDir)
     ? fs.readdirSync(contentDir).filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/i, ''))
     : [];
@@ -150,44 +150,42 @@ const getDeviceEntries = (locale) => {
   return Array.from(bySlug.values());
 };
 
-const detectDeviceCategory = (locale, slug, fallback) => {
-  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/devices/${slug}.json`);
+const detectBookCategory = (locale, slug, fallback) => {
+  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${slug}.json`);
   const js = readJsonSafe(p);
   const fm = js?.frontMatter || {};
   const tags = Array.isArray(fm.tags) ? fm.tags.map(t => String(t).toLowerCase()) : [];
   const cat = String(fm.category || fm.type || fallback || '').toLowerCase();
   const slugLower = String(slug).toLowerCase();
-  if (slugLower.includes('mri')) return 'mri';
-  if (slugLower.includes('ct')) return 'ct';
-  if (cat.includes('mri')) return 'mri';
-  if (cat.includes('ct')) return 'ct';
-  if (tags.some(t => t.includes('mri'))) return 'mri';
-  if (tags.some(t => t.includes('ct'))) return 'ct';
-  return (String(fallback || '').toLowerCase() === 'mri') ? 'mri' : 'ct';
+  
+  // 中医古籍分类逻辑
+  if (cat.includes('medical-classics') || tags.some(t => t.includes('medical-classics'))) return 'medical-classics';
+  if (cat.includes('pharmacology') || tags.some(t => t.includes('pharmacology'))) return 'pharmacology';
+  if (cat.includes('formulas') || tags.some(t => t.includes('formulas'))) return 'formulas';
+  if (cat.includes('symptoms') || tags.some(t => t.includes('symptoms'))) return 'symptoms';
+  if (cat.includes('prescriptions') || tags.some(t => t.includes('prescriptions'))) return 'prescriptions';
+  
+  return String(fallback || '').toLowerCase() || 'medical-classics';
 };
 
-const detectDeviceSpec = (locale, slug, category) => {
-  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/devices/${slug}.json`);
+const detectBookSpec = (locale, slug, category) => {
+  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${slug}.json`);
   const js = readJsonSafe(p);
   const fm = js?.frontMatter || {};
   const tags = Array.isArray(fm.tags) ? fm.tags.map(t => String(t).toLowerCase()) : [];
-  if (category === 'ct') {
-    const slices = fm.sliceCount ?? fm.slices ?? fm.slice ?? fm.detectorSlices;
-    if (slices === 128 || String(slices) === '128') return '128-slice';
-    if (slices === 64 || String(slices) === '64') return '64-slice';
-    const type = String(fm.type || '').toLowerCase();
-    if (type.includes('mobile') || tags.includes('mobile')) return 'mobile';
-    if (type.includes('dual') || tags.includes('dual-energy')) return 'dual-energy';
-    if (type.includes('portable') || tags.includes('portable')) return 'portable';
-  } else {
-    const fsVal = fm.fieldStrength ?? fm.field_strength ?? fm.b0;
-    if (fsVal === 3 || fsVal === 3.0 || String(fsVal).toLowerCase() === '3t') return '3t';
-    if (fsVal === 1.5 || String(fsVal).toLowerCase() === '1.5t') return '1.5t';
-    const design = String(fm.designType || fm.design || '').toLowerCase();
-    if (design.includes('open') || tags.includes('open')) return 'open';
-    if (design.includes('wide') || tags.includes('wide-bore')) return 'wide-bore';
+  
+  // 中医古籍特殊分类
+  const dynasty = fm.dynasty || fm.era || fm.period;
+  if (dynasty) {
+    const dynastyLower = String(dynasty).toLowerCase();
+    if (dynastyLower.includes('qing') || dynastyLower.includes('清朝')) return 'qing';
+    if (dynastyLower.includes('ming') || dynastyLower.includes('明朝')) return 'ming';
+    if (dynastyLower.includes('yuan') || dynastyLower.includes('元朝')) return 'yuan';
+    if (dynastyLower.includes('song') || dynastyLower.includes('宋朝')) return 'song';
+    if (dynastyLower.includes('tang') || dynastyLower.includes('唐朝')) return 'tang';
   }
-  return null;
+  
+  return null; // 书籍通常不需要特殊规格分类
 };
 
 const generateRoutes = () => {
@@ -295,28 +293,29 @@ const generateRoutes = () => {
   });
 
   // ===== Combine All Routes =====
-  const deviceRoutes = [];
-  const deviceSpecRoutes = [];
+  const bookRoutes = [];
+  const bookSpecRoutes = [];
   for (const [locale, prefix] of languagePrefixes.entries()) {
-    const entries = getDeviceEntries(locale);
-    entries.forEach((d) => {
-      const contentPath = path.join(__dirname, `../src/data/snapshots/${locale}/content/devices/${d.slug}.json`);
+    const entries = getBookEntries(locale);
+    entries.forEach((book) => {
+      const contentPath = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${book.slug}.json`);
       if (!fs.existsSync(contentPath)) return;
-      const category = detectDeviceCategory(locale, d.slug, d.category);
-      const categoryPath = category === 'mri' ? 'mri-scanners' : 'ct-scanners';
-      const base = `${prefix}/devices/${categoryPath}/${d.slug}`;
-      deviceRoutes.push(base);
-      const spec = detectDeviceSpec(locale, d.slug, category);
+      const category = detectBookCategory(locale, book.slug, book.category);
+      const base = `${prefix}/library/${book.slug}`;
+      bookRoutes.push(base);
+      const spec = detectBookSpec(locale, book.slug, category);
       if (spec) {
-        deviceRoutes.push(`${prefix}/devices/${categoryPath}/${spec}/${d.slug}`);
-        deviceSpecRoutes.push(`${prefix}/devices/${categoryPath}/${spec}`);
+        bookRoutes.push(`${prefix}/library/${category}/${spec}/${book.slug}`);
+        bookSpecRoutes.push(`${prefix}/library/${category}/${spec}`);
       }
     });
-    // Add category index pages if the locale has at least one device in that category
-    const hasCT = entries.some(d => detectDeviceCategory(locale, d.slug, d.category) === 'ct');
-    const hasMRI = entries.some(d => detectDeviceCategory(locale, d.slug, d.category) === 'mri');
-    if (hasCT) deviceRoutes.push(`${prefix}/devices/ct-scanners`);
-    if (hasMRI) deviceRoutes.push(`${prefix}/devices/mri-scanners`);
+    // Add category index pages if the locale has at least one book in that category
+    const hasMedicalClassics = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'medical-classics');
+    const hasPharmacology = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'pharmacology');
+    const hasFormulas = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'formulas');
+    if (hasMedicalClassics) bookRoutes.push(`${prefix}/library/medical-classics`);
+    if (hasPharmacology) bookRoutes.push(`${prefix}/library/pharmacology`);
+    if (hasFormulas) bookRoutes.push(`${prefix}/library/formulas`);
   }
 
   const allRoutes = [
@@ -330,8 +329,8 @@ const generateRoutes = () => {
     ...manufacturerRoutes,
     ...comparisonRoutes,
     ...pricingRoutes,
-    ...deviceRoutes,
-    ...deviceSpecRoutes
+    ...bookRoutes,
+    ...bookSpecRoutes
   ];
 
   // Deduplicate
@@ -347,10 +346,11 @@ const generateRoutes = () => {
       guides: guidesRoutes.length,
       history: historyRoutes.length,
       reports: reportRoutes.length,
+      manufacturers: manufacturerRoutes.length,
       comparisons: comparisonRoutes.length,
       pricing: pricingRoutes.length,
-      devices: deviceRoutes.length,
-      deviceSpecs: deviceSpecRoutes.length,
+      books: bookRoutes.length,
+      bookSpecs: bookSpecRoutes.length,
       total: uniqueRoutes.length
     }
   };
@@ -368,8 +368,11 @@ const main = () => {
   console.log(`   - Learn: ${stats.learn}`);
   console.log(`   - Guides: ${stats.guides}`);
   console.log(`   - History: ${stats.history}`);
+  console.log(`   - Reports: ${stats.reports}`);
+  console.log(`   - Manufacturers: ${stats.manufacturers}`);
   console.log(`   - Comparisons: ${stats.comparisons}`);
   console.log(`   - Pricing: ${stats.pricing}`);
+  console.log(`   - Books: ${stats.books}`);
   console.log(`   - Total: ${stats.total} routes\n`);
   
   // Write to file

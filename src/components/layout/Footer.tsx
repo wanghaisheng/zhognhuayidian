@@ -1,8 +1,9 @@
 import React from 'react';
 import LangLink from '@/components/molecules/LangLink';
-import { Mail, Phone, MapPin, Globe, BookOpen } from 'lucide-react';
+import { Mail, Phone, MapPin, BookOpen } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { getSiteName } from '@/config/site';
+import { LanguageSelectorModal } from '@/components/molecules/LanguageSelectorModal';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -27,10 +28,13 @@ const Footer = () => {
             
             {/* Language Selector */}
             <div className="mb-8">
-              <button className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-all border border-slate-800 bg-slate-900/50 rounded-full px-4 py-2 hover:border-slate-600 hover:bg-slate-900">
-                <Globe className="w-4 h-4" />
-                <span>{currentLang === 'zh' ? '中文' : 'English'}</span>
-              </button>
+              <LanguageSelectorModal 
+                trigger={
+                  <button className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-all border border-slate-800 bg-slate-900/50 rounded-full px-4 py-2 hover:border-slate-600 hover:bg-slate-900">
+                    <span>{currentLang === 'zh' ? '中文' : 'English'}</span>
+                  </button>
+                }
+              />
             </div>
             
             {/* 联系信息 */}

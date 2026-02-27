@@ -16,19 +16,8 @@ export interface LanguageConfig {
 // 语言配置列表 - 添加新语言只需在此添加配置
 export const LANGUAGES: LanguageConfig[] = [
   {
-    code: 'zh',
-    prefix: '',           // 默认语言无前缀: /devices
-    hreflang: 'zh-CN',
-    locale: 'zh_CN',
-    name: '中文',
-    nameEn: 'Chinese',
-    dir: 'ltr',
-    country: 'China',
-    region: 'Asia Pacific'
-  },
-  {
     code: 'en',
-    prefix: '/en',        // 英文有前缀: /en/devices
+    prefix: '',           // 默认语言无前缀: /devices
     hreflang: 'en-US',
     locale: 'en_US',
     name: 'English',
@@ -36,6 +25,17 @@ export const LANGUAGES: LanguageConfig[] = [
     dir: 'ltr',
     country: 'United States',
     region: 'Americas'
+  },
+  {
+    code: 'zh',
+    prefix: '/zh',        // 中文有前缀: /zh/devices
+    hreflang: 'zh-CN',
+    locale: 'zh_CN',
+    name: '中文',
+    nameEn: 'Chinese',
+    dir: 'ltr',
+    country: 'China',
+    region: 'Asia Pacific'
   },
   // {
   //   code: 'fr',

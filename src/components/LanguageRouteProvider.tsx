@@ -13,7 +13,7 @@ interface LanguageRouteProviderProps {
  * 
  * 职责：
  * 1. 检测 URL 中的语言并同步到 i18n
- * 2. 处理旧 /en/* URL 格式迁移
+ * 2. 处理旧 /zh/* URL 格式迁移（现在中文是带前缀的语言）
  * 3. 设置文档语言方向 (LTR/RTL)
  * 
  * 注意：Trailing slash 处理已移至边缘层 (Cloudflare Pages)
@@ -28,8 +28,8 @@ const LanguageRouteProvider: React.FC<LanguageRouteProviderProps> = ({ children 
     const pathname = location.pathname;
     const search = location.search;
     
-    // Step 1: Detect old /en/* URL format and redirect to new format (no prefix)
-    // 这是必要的客户端重定向，因为可能有旧链接直接访问
+    // Step 1: Detect old /zh/* URL format and handle migration
+    // 现在中文是带前缀的语言，英文是默认语言（无前缀）
     const migratedPath = migrateOldEnUrl(pathname);
     if (migratedPath !== null) {
       navigate({ to: `${migratedPath}${search}`, replace: true });

@@ -20,20 +20,31 @@ export interface RouteConfig {
 // Base route configuration (without language prefix)
 export const baseRoutes = [
   '/',
-  '/devices',
-  '/devices/:id',
-  '/manufacturers',
-  '/manufacturers/:id',
-  '/customers',
-  '/customers/:id',
+  '/library',
+  '/library/:bookId',
+  '/library/:bookId/chapter/:chapterId',
+  '/search',
+  '/research',
+  '/learn',
+  '/learn/:slug',
   '/resources',
   '/resources/technology',
-  '/reports',
-  '/reports/market', 
-  '/reports/expert',
+  '/knowledge',
+  '/knowledge/history',
+  '/knowledge/history/:slug',
+  '/knowledge/technology',
+  '/analysis',
+  '/analysis/market',
+  '/analysis/expert',
   '/about',
   '/contact',
-  '/glossary'
+  '/glossary',
+  '/blog',
+  '/blog/:slug',
+  '/history',
+  '/history/:slug',
+  '/privacy',
+  '/terms'
 ];
 
 // Generate all language versions for each base route
@@ -145,14 +156,13 @@ export const generateHreflangLinks = (pathname: string, baseUrl: string = SITE_C
   return links;
 };
 
-// Detect old URL format (/en/*) and return new URL
+// Detect old URL format (/zh/*) and return new URL
 export const migrateOldEnUrl = (pathname: string): string | null => {
   const segments = pathname.split('/').filter(Boolean);
-  // Detect old /en/* format (since en is now default language without prefix)
-  if (segments.length > 0 && segments[0] === 'en') {
-    // Remove /en prefix, return new URL without prefix
-    const newPath = '/' + segments.slice(1).join('/') || '/';
-    return newPath;
+  // Detect old /zh/* format (since zh is now non-default language with /zh prefix)
+  if (segments.length > 0 && segments[0] === 'zh') {
+    // Keep /zh prefix, return same URL (no migration needed)
+    return null;
   }
   return null;
 };
