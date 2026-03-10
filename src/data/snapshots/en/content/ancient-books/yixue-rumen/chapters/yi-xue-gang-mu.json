@@ -1,0 +1,32 @@
+{
+  "id": "yi-xue-gang-mu",
+  "title": {
+    "en": "Medical Fundamentals",
+    "zh": "医学纲目"
+  },
+  "order": 1,
+  "summary": "Basic principles and methods of medical practice",
+  "sections": [
+    {
+      "id": "yi-xue-gang-mu-1",
+      "title": "Medical Fundamentals Chapter One",
+      "order": 0,
+      "originalText": "医道之大，莫过于阴阳。阴阳者，天地之道也，万物之纲纪。",
+      "translation": "The great way of medicine is none other than yin and yang. Yin and yang are the way of heaven and earth, the principle of all things.",
+      "interpretation": "This chapter establishes yin-yang theory as the fundamental principle of Chinese medicine.",
+      "keyConcepts": [
+        {
+          "id": "medical-foundations",
+          "term": "Medical Foundations",
+          "description": "The basic principles and theoretical foundations of Chinese medicine",
+          "category": "Medical Theory",
+          "relatedConcepts": [
+            "Yin-Yang Theory",
+            "Five Elements",
+            "Zang-Fu Theory"
+          ]
+        }
+      ]
+    }
+  ]
+}

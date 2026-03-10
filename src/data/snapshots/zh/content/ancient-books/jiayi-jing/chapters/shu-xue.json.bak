@@ -1,0 +1,38 @@
+{
+  "id": "shu-xue",
+  "title": {
+    "zh": "腧穴",
+    "en": "Acupoints"
+  },
+  "order": 1,
+  "summary": "Detailed description of acupuncture points and their functions",
+  "sections": [
+    {
+      "id": "shu-xue-1",
+      "title": {
+        "zh": "腧穴第一章",
+        "title": {
+          "zh": "腧穴第一章",
+          "en": "Acupoints Chapter One"
+        }
+      },
+      "order": 0,
+      "originalText": "腧穴者，经络之所会，气血之所行。知其所在，明其功能，则针到病除。",
+      "translation": "Acupoints are where meridians meet, where qi and blood flow. Knowing their locations and understanding their functions, needles arrive and illness is removed.",
+      "interpretation": "This chapter explains the fundamental concept of acupoints as the intersection points of meridians and the flow of qi and blood.",
+      "keyConcepts": [
+        {
+          "id": "acupoints",
+          "term": "Acupoints",
+          "description": "Specific points on the body where needles are inserted for therapeutic effect",
+          "category": "Acupuncture",
+          "relatedConcepts": [
+            "Meridians",
+            "Qi Flow",
+            "Therapeutic Points"
+          ]
+        }
+      ]
+    }
+  ]
+}

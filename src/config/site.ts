@@ -1,8 +1,8 @@
 // 站点配置中心 - 统一管理域名和品牌信息
 export const SITE_CONFIG = {
   // 域名配置
-  domain: 'zhonghuayidian.org',
-  url: 'https://zhonghuayidian.org',
+  domain: 'zhonghuayidian.heytcm.com',
+  url: 'https://zhonghuayidian.heytcm.com',
   
   // 品牌名称（多语言）
   name: {
@@ -24,8 +24,8 @@ export const SITE_CONFIG = {
   
   // 联系信息
   contact: {
-    email: 'info@zhonghuayidian.org',
-    supportEmail: 'support@zhonghuayidian.org'
+    email: 'info@zhonghuayidian.heytcm.com',
+    supportEmail: 'support@zhonghuayidian.heytcm.com'
   },
   
   // SEO 默认配置

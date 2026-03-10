@@ -1,0 +1,32 @@
+{
+  "id": "yangming-bing",
+  "title": {
+    "en": "Yangming Disease Patterns",
+    "zh": "阳明病脉证并治"
+  },
+  "order": 1,
+  "summary": "Discusses the diagnosis and treatment of Yangming disease patterns",
+  "sections": [
+    {
+      "id": "yangming-bing-1",
+      "title": "Yangming Disease Chapter One",
+      "order": 0,
+      "originalText": "阳明之为病，胃家实是也。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+      "translation": "When Yangming is diseased, the stomach house is replete. In Yangming disease, if one can eat, it is called wind strike; if one cannot eat, it is called cold strike. What are the exterior signs of Yangming disease? The answer is: body heat, spontaneous sweating, no aversion to cold, but rather aversion to heat.",
+      "interpretation": "This chapter describes Yangming disease patterns, which represent the interior heat stage with excess in the stomach and large intestine meridians.",
+      "keyConcepts": [
+        {
+          "id": "yangming-disease",
+          "term": "Yangming Disease",
+          "description": "The second stage of six meridian disease, representing interior heat patterns",
+          "category": "Six Meridians",
+          "relatedConcepts": [
+            "Taiyang Disease",
+            "Shaoyang Disease",
+            "Shaoyin Disease"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "taiyang-bing-zheng",
+  "title": {
+    "zh": "太阳病脉证并治",
+    "en": "Taiyang Disease Patterns"
+  },
+  "order": 0,
+  "summary": "根据六经理论讨论太阳病证的诊断和治疗",
+  "sections": [
+    {
+      "id": "taiyang-bing-zheng-1",
+      "title": {
+        "zh": "太阳病证第一章",
+        "en": "Taiyang Disease Patterns Chapter One"
+      },
+      "order": 0,
+      "originalText": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+      "translation": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+      "interpretation": "本章区分太阳病中的温病和伤寒证型，确立了鉴别诊断的标准。",
+      "summary": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+      "keyConcepts": [
+        {
+          "id": "taiyang-patterns",
+          "term": "太阳证型",
+          "description": "影响伤寒疾病中太阳经的疾病证型",
+          "category": "伤寒",
+          "relatedConcepts": [
+            "阳明证型",
+            "少阳证型",
+            "太阴证型"
+          ]
+        }
+      ]
+    }
+  ]
+}

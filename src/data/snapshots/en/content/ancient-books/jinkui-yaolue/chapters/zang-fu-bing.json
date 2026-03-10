@@ -1,0 +1,32 @@
+{
+  "id": "zang-fu-bing",
+  "title": {
+    "en": "Zang-Fu Diseases",
+    "zh": "脏腑经络先后病脉证"
+  },
+  "order": 0,
+  "summary": "Comprehensive discussion of zang-fu organ diseases",
+  "sections": [
+    {
+      "id": "zang-fu-bing-1",
+      "title": "Zang-Fu Diseases Chapter One",
+      "order": 0,
+      "originalText": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+      "translation": "Question: The superior physician treats not-yet-occurred diseases, the middle physician treats already-occurred diseases, what does this mean? The teacher said: The superior physician treating not-yet-occurred diseases means seeing liver disease, knowing it will transmit to the spleen, should first strengthen the spleen.",
+      "interpretation": "This chapter introduces the concept of preventive medicine and disease transmission patterns in Chinese medicine.",
+      "keyConcepts": [
+        {
+          "id": "zang-fu-diseases",
+          "term": "Zang-Fu Diseases",
+          "description": "Diseases affecting the zang-fu organs in traditional Chinese medicine",
+          "category": "Internal Medicine",
+          "relatedConcepts": [
+            "Qi-Blood Theory",
+            "Five Elements",
+            "Yin-Yang Theory"
+          ]
+        }
+      ]
+    }
+  ]
+}

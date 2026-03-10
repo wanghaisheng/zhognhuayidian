@@ -1,0 +1,32 @@
+{
+  "id": "yangming-bing-zheng",
+  "title": {
+    "en": "Yangming Disease Patterns",
+    "zh": "阳明病脉证并治"
+  },
+  "order": 1,
+  "summary": "Discussion of Yangming disease patterns in cold damage",
+  "sections": [
+    {
+      "id": "yangming-bing-zheng-1",
+      "title": "Yangming Disease Patterns Chapter One",
+      "order": 0,
+      "originalText": "阳明病，外证云何？曰：身热，汗自出，不恶寒，反恶热也。",
+      "translation": "What are the exterior signs of Yangming disease? The answer is: body heat, spontaneous sweating, no aversion to cold, but rather aversion to heat.",
+      "interpretation": "This chapter describes the characteristic exterior manifestations of Yangming disease patterns.",
+      "keyConcepts": [
+        {
+          "id": "yangming-patterns",
+          "term": "Yangming Patterns",
+          "description": "Disease patterns affecting the Yangming meridian in cold damage diseases",
+          "category": "Cold Damage",
+          "relatedConcepts": [
+            "Taiyang Patterns",
+            "Shaoyang Patterns",
+            "Taiyin Patterns"
+          ]
+        }
+      ]
+    }
+  ]
+}

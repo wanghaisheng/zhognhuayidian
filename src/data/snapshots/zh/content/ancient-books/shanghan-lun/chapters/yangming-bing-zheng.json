@@ -1,0 +1,36 @@
+{
+  "id": "yangming-bing-zheng",
+  "title": {
+    "zh": "阳明病脉证并治",
+    "en": "Yangming Disease Patterns"
+  },
+  "order": 1,
+  "summary": "讨论伤寒中阳明病证的特征和治疗方法",
+  "sections": [
+    {
+      "id": "yangming-bing-zheng-1",
+      "title": {
+        "zh": "阳明病证第一章",
+        "en": "Yangming Disease Patterns Chapter One"
+      },
+      "order": 0,
+      "originalText": "阳明病，外证云何？曰：身热，汗自出，不恶寒，反恶热也。",
+      "translation": "阳明病的外证是什么？答案是：身热，汗自出，不恶寒，反恶热。",
+      "interpretation": "本章描述阳明病证的特征性外证表现。",
+      "summary": "阳明病的外证是什么？答案是：身热，汗自出，不恶寒，反恶热。",
+      "keyConcepts": [
+        {
+          "id": "yangming-patterns",
+          "term": "阳明证型",
+          "description": "影响伤寒疾病中阳明经的疾病证型",
+          "category": "伤寒",
+          "relatedConcepts": [
+            "太阳证型",
+            "少阳证型",
+            "太阴证型"
+          ]
+        }
+      ]
+    }
+  ]
+}

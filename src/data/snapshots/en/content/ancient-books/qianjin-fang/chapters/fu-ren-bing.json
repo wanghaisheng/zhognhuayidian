@@ -1,0 +1,32 @@
+{
+  "id": "fu-ren-bing",
+  "title": {
+    "en": "Women's Diseases",
+    "zh": "妇人方"
+  },
+  "order": 0,
+  "summary": "Comprehensive discussion of gynecological and obstetric diseases",
+  "sections": [
+    {
+      "id": "fu-ren-bing-1",
+      "title": "Women's Diseases Chapter One",
+      "order": 0,
+      "originalText": "妇人者，众阴所集也。阴者，静也，藏也。故妇人病多，多于男子。",
+      "translation": "Women are the gathering of all yin. Yin is quiet, it is storage. Therefore, women have more illnesses than men.",
+      "interpretation": "This reflects the understanding of women's unique physiology in Chinese medicine and the need for specialized treatment approaches.",
+      "keyConcepts": [
+        {
+          "id": "womens-medicine",
+          "term": "Women's Medicine",
+          "description": "Medical practice focused on women's health and gynecological conditions",
+          "category": "Clinical Medicine",
+          "relatedConcepts": [
+            "Pediatrics",
+            "Obstetrics",
+            "Gynecology"
+          ]
+        }
+      ]
+    }
+  ]
+}

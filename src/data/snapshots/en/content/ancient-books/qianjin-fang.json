@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "Thousand Golden Prescriptions",
+    "description": "The first comprehensive clinical encyclopedia in Chinese medical history"
+  },
+  "content": {
+    "id": "qianjin-fang",
+    "title": {
+      "en": "Thousand Golden Prescriptions",
+      "zh": "千金要方"
+    },
+    "dynasty": "Tang",
+    "author": "Sun Simiao",
+    "category": "prescriptions",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Tang",
+      "author": "Sun Simiao",
+      "chapters": 2,
+      "wordCount": 680000,
+      "publishYear": "652",
+      "tags": [
+        "Prescriptions",
+        "Clinical Medicine",
+        "Sun Simiao",
+        "Tang Dynasty Medicine",
+        "Medical Encyclopedia"
+      ],
+      "coverImage": "/images/books/qianjin-fang-cover.jpg",
+      "difficulty": "Medium",
+      "influence": "Clinical Medicine Encyclopedia",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "fu-ren-bing",
+        "title": {
+          "en": "Women's Diseases",
+          "zh": "妇人方"
+        },
+        "order": 0,
+        "summary": "Comprehensive discussion of gynecological and obstetric diseases",
+        "sections": [
+          {
+            "id": "fu-ren-bing-1",
+            "title": "Women's Diseases Chapter One",
+            "order": 0,
+            "originalText": "妇人者，众阴所集也。阴者，静也，藏也。故妇人病多，多于男子。",
+            "translation": "Women are the gathering of all yin. Yin is quiet, it is storage. Therefore, women have more illnesses than men.",
+            "interpretation": "This reflects the understanding of women's unique physiology in Chinese medicine and the need for specialized treatment approaches.",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "shao-er-bing",
+        "title": {
+          "en": "Pediatric Diseases",
+          "zh": "少小婴孺方"
+        },
+        "order": 1,
+        "summary": "Discussion of pediatric diseases and treatments",
+        "sections": [
+          {
+            "id": "shao-er-bing-1",
+            "title": "Pediatric Diseases Chapter One",
+            "order": 0,
+            "originalText": "小儿者，纯阳之体，易寒易热，易虚易实。",
+            "translation": "Children are pure yang bodies, easily affected by cold and heat, easily becoming deficient or excessive.",
+            "interpretation": "This chapter describes the unique physiological characteristics of children and corresponding treatment principles.",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "qianjin-yifang",
+      "fu-ren-da-quan"
+    ],
+    "readingTime": {
+      "estimated": "20 hours",
+      "difficulty": "Intermediate",
+      "prerequisites": [
+        "Basic clinical medicine knowledge",
+        "Understanding of prescriptions",
+        "Medical ethics knowledge"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "First comprehensive clinical encyclopedia",
+        "Systematic organization by medical specialties",
+        "Integration of ethics and medical practice",
+        "Comprehensive collection of 5300+ prescriptions"
+      ],
+      "clinicalApplications": [
+        "Foundation for clinical practice",
+        "Reference for prescription formulation",
+        "Guide to medical ethics and practice",
+        "Source for various medical specialties"
+      ],
+      "historicalSignificance": [
+        "First medical encyclopedia in world history",
+        "Established clinical medicine standards",
+        "Integrated ethics into medical practice",
+        "Influenced medical education for centuries"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 680000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 6800,
+    "difficulty": 3
+  },
+  "updatedAt": "2026-02-25T17:26:46.758Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.758Z"
+  }
+}

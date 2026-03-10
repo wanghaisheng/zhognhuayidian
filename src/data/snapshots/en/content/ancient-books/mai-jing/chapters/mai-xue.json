@@ -1,0 +1,32 @@
+{
+  "id": "mai-xue",
+  "title": {
+    "en": "Pulse Study",
+    "zh": "脉学"
+  },
+  "order": 0,
+  "summary": "Systematic study of pulse diagnosis methods and theory",
+  "sections": [
+    {
+      "id": "mai-xue-1",
+      "title": "Pulse Study Chapter One",
+      "order": 0,
+      "originalText": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+      "translation": "Pulse is the mansion of blood. Long pulse indicates harmonious qi, short pulse indicates qi illness, rapid pulse indicates qi vexation, large pulse indicates qi illness, fine pulse indicates qi deficiency.",
+      "interpretation": "This chapter establishes the fundamental theory of pulse diagnosis, linking pulse characteristics to the state of qi and blood in the body.",
+      "keyConcepts": [
+        {
+          "id": "pulse-diagnosis",
+          "term": "Pulse Diagnosis",
+          "description": "The art and science of diagnosing disease through pulse examination",
+          "category": "Diagnostics",
+          "relatedConcepts": [
+            "Tongue Diagnosis",
+            "Abdominal Palpation",
+            "Inquiry"
+          ]
+        }
+      ]
+    }
+  ]
+}

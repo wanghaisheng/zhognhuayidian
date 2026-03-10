@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://chinactscanner.org</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/about</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/about" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/about" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/blog</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/blog" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/blog" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/compare</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/compare" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/compare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/compare" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/compare/ct-scanners</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/compare/ct-scanners" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/compare/ct-scanners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/compare/ct-scanners" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/compare/mri-scanners</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/compare/mri-scanners" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/compare/mri-scanners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/compare/mri-scanners" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/contact</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/contact" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/contact" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/customers</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/customers" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/customers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/customers" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners/128-slice</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners/128-slice" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners/128-slice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners/128-slice" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners/64-slice</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners/64-slice" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners/64-slice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners/64-slice" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners/dual-energy</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners/dual-energy" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners/dual-energy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners/dual-energy" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners/mobile</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners/mobile" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners/mobile" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners/mobile" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/ct-scanners/portable</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/ct-scanners/portable" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/ct-scanners/portable" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/ct-scanners/portable" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/mri-scanners</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/mri-scanners" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/mri-scanners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/mri-scanners" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/mri-scanners/1.5t</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/mri-scanners/1.5t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/mri-scanners/1.5t" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/mri-scanners/1.5t" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/mri-scanners/3t</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/mri-scanners/3t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/mri-scanners/3t" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/mri-scanners/3t" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/mri-scanners/open</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/mri-scanners/open" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/mri-scanners/open" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/mri-scanners/open" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/devices/mri-scanners/wide-bore</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/devices/mri-scanners/wide-bore" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/devices/mri-scanners/wide-bore" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/devices/mri-scanners/wide-bore" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/glossary</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/glossary" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/glossary" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/glossary" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/history</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/history" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/history" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/history" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/learn</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/learn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/learn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/learn" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/manufacturers</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/manufacturers" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/manufacturers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/manufacturers" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/pricing</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/pricing" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/reports</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/reports" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/reports" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/reports/expert</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/reports/expert" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/reports/expert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/reports/expert" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/reports/market</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/reports/market" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/reports/market" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/reports/market" />
+  </url>
+  <url>
+    <loc>https://chinactscanner.org/resources</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://chinactscanner.org/resources" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://chinactscanner.org/zh/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chinactscanner.org/resources" />
+  </url>
+</urlset>

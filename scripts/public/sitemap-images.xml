@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://chinactscanner.org/</loc>
+    <image:image>
+      <image:loc>https://chinactscanner.org/assets/og-home.jpg</image:loc>
+      <image:caption>China CT Scanner - Medical Imaging Equipment Export Platform</image:caption>
+      <image:title>China CT Scanner Homepage</image:title>
+    </image:image>
+    <lastmod>2026-03-10</lastmod>
+  </url>
+</urlset>

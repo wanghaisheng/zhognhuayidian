@@ -1,0 +1,36 @@
+{
+  "id": "san-jiao-bian-zheng",
+  "title": {
+    "zh": "三焦辨证",
+    "en": "Three Jiao Differentiation"
+  },
+  "order": 1,
+  "summary": "用于温病诊断的三焦理论",
+  "sections": [
+    {
+      "id": "san-jiao-bian-zheng-1",
+      "title": {
+        "zh": "三焦辨证第一章",
+        "en": "Three Jiao Differentiation Chapter One"
+      },
+      "order": 0,
+      "originalText": "上焦如雾，中焦如沤，下焦如渎。",
+      "translation": "上焦如雾，中焦如沤，下焦如渎。",
+      "interpretation": "本章使用生动的比喻描述三焦在温病病理中的特征和功能。",
+      "summary": "上焦如雾，中焦如沤，下焦如渎。",
+      "keyConcepts": [
+        {
+          "id": "san-jiao-theory",
+          "term": "三焦理论",
+          "description": "将身体分为上、中、下三焦用于温病诊断的理论框架",
+          "category": "温病",
+          "relatedConcepts": [
+            "四层理论",
+            "脏腑理论",
+            "三焦"
+          ]
+        }
+      ]
+    }
+  ]
+}

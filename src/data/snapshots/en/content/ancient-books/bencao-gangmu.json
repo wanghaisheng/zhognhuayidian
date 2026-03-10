@@ -1,0 +1,155 @@
+{
+  "labels": {
+    "title": "Compendium of Materia Medica",
+    "description": "The most comprehensive pharmacological work in Chinese medical history"
+  },
+  "content": {
+    "id": "bencao-gangmu",
+    "title": {
+      "en": "Compendium of Materia Medica",
+      "zh": "本草纲目"
+    },
+    "dynasty": "Ming",
+    "author": "Li Shizhen",
+    "category": "materia-medica",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Ming",
+      "author": "Li Shizhen",
+      "chapters": 2,
+      "wordCount": 1900000,
+      "publishYear": "1596",
+      "tags": [
+        "Pharmacology",
+        "Materia Medica",
+        "Li Shizhen",
+        "Ming Dynasty Medicine",
+        "Drug Classification"
+      ],
+      "coverImage": "/images/books/bencao-gangmu-cover.jpg",
+      "difficulty": "Medium",
+      "influence": "Comprehensive Pharmacological Masterpiece",
+      "preservation": "Excellent"
+    },
+    "chapters": [
+      {
+        "id": "huo-bu",
+        "title": {
+          "en": "Fire Section",
+          "zh": "火部"
+        },
+        "order": 1,
+        "summary": "Discusses fire-related substances and their medicinal properties",
+        "sections": [
+          {
+            "id": "huo-bu-1",
+            "title": "Fire Section Chapter One",
+            "order": 0,
+            "originalText": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+            "translation": "Fire is the qi of the south, its nature is flaming upward, its use is warming. Fire can generate earth, but can also overcome metal.",
+            "interpretation": "This chapter explores the properties of fire in Chinese medicine and its relationship with the five elements theory.",
+            "keyConcepts": [
+              {
+                "id": "fire-medicines",
+                "term": "Fire Medicines",
+                "description": "Medicinal substances with warming properties",
+                "category": "Pharmacology",
+                "relatedConcepts": [
+                  "Water Medicines",
+                  "Earth Medicines",
+                  "Metal Medicines"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shui-bu",
+        "title": {
+          "en": "Water Section",
+          "zh": "水部"
+        },
+        "order": 1,
+        "summary": "Discusses various types of water and their medicinal properties",
+        "sections": [
+          {
+            "id": "shui-bu-1",
+            "title": "Water Section Chapter One",
+            "order": 0,
+            "originalText": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+            "translation": "Heavenly water is one, earthly water is two, human water is three. Water is the source of all things, water is the chief of all medicines.",
+            "interpretation": "This chapter establishes the fundamental importance of water in both nature and medicine, reflecting the holistic view of Chinese pharmacology.",
+            "keyConcepts": [
+              {
+                "id": "water-medicines",
+                "term": "Water Medicines",
+                "description": "Medicinal substances derived from water sources",
+                "category": "Pharmacology",
+                "relatedConcepts": [
+                  "Fire Medicines",
+                  "Earth Medicines",
+                  "Metal Medicines"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shen-nong-ben-cao-jing",
+      "qianjin-fang",
+      "bencao-jing-jizhu"
+    ],
+    "readingTime": {
+      "estimated": "40 hours",
+      "difficulty": "Intermediate",
+      "prerequisites": [
+        "Basic knowledge of Chinese pharmacology",
+        "Understanding of drug properties",
+        "Herbal medicine basics"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Comprehensive collection of 1892 medicinal substances",
+        "Systematic classification of drugs by nature and properties",
+        "Detailed descriptions of drug processing and preparation",
+        "Integration of previous pharmacological works"
+      ],
+      "clinicalApplications": [
+        "Foundation for modern Chinese materia medica",
+        "Reference for herbal formula composition",
+        "Guide to drug processing and preparation",
+        "Source for pharmacological research"
+      ],
+      "historicalSignificance": [
+        "Most comprehensive pharmacological work in Chinese history",
+        "Influenced pharmacology worldwide",
+        "Standardized drug classification system",
+        "Bridge between traditional and modern pharmacology"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 1900000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 19000,
+    "difficulty": 3
+  },
+  "updatedAt": "2026-02-25T17:26:46.740Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.742Z"
+  }
+}

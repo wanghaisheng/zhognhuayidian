@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "千金要方",
+    "description": "千金要方中医古籍"
+  },
+  "content": {
+    "id": "qianjin-fang",
+    "title": {
+      "zh": "千金要方",
+      "en": "Thousand Golden Prescriptions"
+    },
+    "dynasty": "唐代",
+    "author": "孙思邈",
+    "category": "方剂",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "唐代",
+      "author": "孙思邈",
+      "chapters": 2,
+      "wordCount": 680000,
+      "publishYear": "652",
+      "tags": [
+        "方剂",
+        "临床医学",
+        "孙思邈",
+        "唐代医学",
+        "医学百科全书"
+      ],
+      "coverImage": "/images/books/qianjin-fang-cover.jpg",
+      "difficulty": "Medium",
+      "influence": "Clinical Medicine Encyclopedia",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "fu-ren-bing",
+        "title": {
+          "zh": "妇人方",
+          "en": "Women's Diseases"
+        },
+        "order": 0,
+        "summary": "妇科和产科疾病的综合讨论",
+        "sections": [
+          {
+            "id": "fu-ren-bing-1",
+            "title": "妇人病第一章",
+            "order": 0,
+            "originalText": "妇人者，众阴所集也。阴者，静也，藏也。故妇人病多，多于男子。",
+            "translation": "妇人者，众阴所集也。阴者，静也，藏也。故妇人病多，多于男子。",
+            "interpretation": "这反映了中医对女性独特生理的理解和对专门治疗方法的需求。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "shao-er-bing",
+        "title": {
+          "zh": "少小婴孺方",
+          "en": "Pediatric Diseases"
+        },
+        "order": 1,
+        "summary": "儿科疾病和治疗的讨论",
+        "sections": [
+          {
+            "id": "shao-er-bing-1",
+            "title": "儿科疾病第一章",
+            "order": 0,
+            "originalText": "小儿者，纯阳之体，易寒易热，易虚易实。",
+            "translation": "小儿者，纯阳之体，易寒易热，易虚易实。",
+            "interpretation": "本章描述了儿童独特的生理特征和相应的治疗原则。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "qianjin-yifang",
+      "fu-ren-da-quan"
+    ],
+    "readingTime": {
+      "estimated": "20 hours",
+      "difficulty": "Intermediate",
+      "prerequisites": [
+        "Basic clinical medicine knowledge",
+        "Understanding of prescriptions",
+        "Medical ethics knowledge"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "First comprehensive clinical encyclopedia",
+        "Systematic organization by medical specialties",
+        "Integration of ethics and medical practice",
+        "Comprehensive collection of 5300+ prescriptions"
+      ],
+      "clinicalApplications": [
+        "Foundation for clinical practice",
+        "Reference for prescription formulation",
+        "Guide to medical ethics and practice",
+        "Source for various medical specialties"
+      ],
+      "historicalSignificance": [
+        "First medical encyclopedia in world history",
+        "Established clinical medicine standards",
+        "Integrated ethics into medical practice",
+        "Influenced medical education for centuries"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 680000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 6800,
+    "difficulty": 3
+  },
+  "updatedAt": "2026-02-25T18:10:53.332Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.758Z"
+  }
+}

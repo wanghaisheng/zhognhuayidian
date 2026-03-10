@@ -1,0 +1,36 @@
+{
+  "id": "mai-xiang",
+  "title": {
+    "zh": "脉象",
+    "en": "Pulse Images"
+  },
+  "order": 1,
+  "summary": "不同脉象及其意义的详细描述",
+  "sections": [
+    {
+      "id": "mai-xiang-1",
+      "title": {
+        "zh": "脉象第一章",
+        "en": "Pulse Images Chapter One"
+      },
+      "order": 0,
+      "originalText": "浮脉为表，沉脉为里，迟脉为寒，数脉为热。",
+      "translation": "浮脉主表，沉脉主里，迟脉主寒，数脉主热。",
+      "interpretation": "本章根据位置和速度提供脉象的基本分类。",
+      "summary": "浮脉为表，沉脉为里，迟脉为寒，数脉为热。",
+      "keyConcepts": [
+        {
+          "id": "pulse-qualities",
+          "term": "脉象",
+          "description": "诊断中脉的不同特征和性质",
+          "category": "诊断",
+          "relatedConcepts": [
+            "脉诊",
+            "鉴别诊断",
+            "临床评估"
+          ]
+        }
+      ]
+    }
+  ]
+}

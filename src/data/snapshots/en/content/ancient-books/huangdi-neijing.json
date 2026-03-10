@@ -18,7 +18,13 @@
       "chapters": 18,
       "wordCount": 25000,
       "publishYear": "-2000",
-      "tags": ["Medical Classic", "Basic Theory", "Yellow Emperor", "Yin-Yang", "Five Elements"],
+      "tags": [
+        "Medical Classic",
+        "Basic Theory",
+        "Yellow Emperor",
+        "Yin-Yang",
+        "Five Elements"
+      ],
       "coverImage": "/images/books/huangdi-neijing-cover.jpg",
       "difficulty": "High",
       "influence": "Foundation of Chinese Medicine Theory",
@@ -43,22 +49,16 @@
             "interpretation": "This passage expounds the core concept of health preservation in Chinese medicine. It reflects the holistic concept of unity of heaven and humanity, emphasizing that humans should follow natural laws and maintain yin-yang balance for health and longevity.",
             "keyConcepts": [
               {
-                "id": "yin-yang",
-                "term": "Yin-Yang",
-                "description": "The core concept of Chinese philosophy, referring to the two fundamental forces in the universe that are opposite yet interdependent",
+                "id": "tian-ren-he-yi",
+                "term": "Unity of Heaven and Humanity",
+                "description": "The philosophical concept that humans are an integral part of nature and should follow natural laws",
                 "category": "Basic Theory",
-                "relatedConcepts": ["Five Elements", "Zang-Fu Organs"]
+                "relatedConcepts": [
+                  "Yin-Yang",
+                  "Five Elements"
+                ]
               }
             ]
-          }
-        ],
-        "keyConcepts": [
-          {
-            "id": "tian-ren-he-yi",
-            "term": "Unity of Heaven and Humanity",
-            "description": "The philosophical concept that humans are an integral part of nature and should follow natural laws",
-            "category": "Basic Theory",
-            "relatedConcepts": ["Yin-Yang", "Five Elements"]
           }
         ]
       },
@@ -80,66 +80,75 @@
             "interpretation": "This chapter describes the health preservation principles for spring. Spring is the season of growth and development, corresponding to wood element and liver in Chinese medicine.",
             "keyConcepts": [
               {
-                "id": "si-qi-tiao-shen",
-                "term": "Four Qi Spirit Regulation",
-                "description": "Health preservation methods by adapting to seasonal qi changes",
-                "category": "Health Preservation",
-                "relatedConcepts": ["Five Elements", "Seasons"]
+                "id": "chun-qi",
+                "term": "Spring Qi",
+                "description": "The qi characteristics of spring season, corresponding to growth and development",
+                "category": "Seasonal Theory",
+                "relatedConcepts": [
+                  "Wood Element",
+                  "Liver"
+                ]
               }
             ]
-          }
-        ],
-        "keyConcepts": [
-          {
-            "id": "chun-qi",
-            "term": "Spring Qi",
-            "description": "The qi characteristics of spring season, corresponding to growth and development",
-            "category": "Seasonal Theory",
-            "relatedConcepts": ["Wood Element", "Liver"]
           }
         ]
       }
     ],
-    "relatedBooks": ["shanghan-zabing-lun", "jinkui-yaolue", "bencao-gangmu", "nan-jing"],
+    "relatedBooks": [
+      "nan-jing",
+      "shanghan-zabing-lun",
+      "jinkui-yaolue",
+      "bencao-gangmu"
+    ],
     "readingTime": {
       "estimated": "8 hours",
       "difficulty": "Advanced",
-      "prerequisites": ["Basic Chinese medicine theory", "Understanding of yin-yang theory"]
+      "prerequisites": [
+        "Basic Chinese medicine theory",
+        "Understanding of yin-yang theory",
+        "Knowledge of five elements theory",
+        "Foundation of zang-fu theory"
+      ]
     },
     "studyNotes": {
       "keyPoints": [
         "Established the theoretical foundation of Chinese medicine",
-        "Systematically expounded yin-yang and five elements theory",
-        "Created the zang-fu organ and meridian theory",
-        "Established diagnostic and treatment principles"
+        "Systematically elaborated yin-yang and five elements theory",
+        "Created the zang-fu organ theory system",
+        "Established the holistic concept of unity of heaven and humanity"
       ],
       "clinicalApplications": [
-        "Guiding principles for diagnosis and treatment",
-        "Foundation for acupuncture and moxibustion theory",
-        "Theoretical basis for herbal medicine",
-        "Health preservation and preventive medicine"
+        "Foundation for all clinical practice in Chinese medicine",
+        "Guiding principles for acupuncture and moxibustion",
+        "Theoretical basis for herbal medicine prescriptions",
+        "Framework for health preservation and disease prevention"
       ],
       "historicalSignificance": [
-        "Earliest systematic medical theoretical work",
-        "Influenced medical development for over 2000 years",
-        "Foundation of all Chinese medicine schools",
-        "Cultural treasure of world medical history"
+        "Earliest comprehensive medical classic in China",
+        "Influenced Chinese medicine for over 2000 years",
+        "Foundation of all theoretical systems in Chinese medicine",
+        "Cultural heritage of traditional Chinese medicine"
       ]
-    }
+    },
+    "year": "战国时期"
   },
   "metrics": {
-    "totalChapters": 18,
+    "totalChapters": 2,
     "totalWords": 25000,
-    "totalSections": 81,
+    "totalSections": 2,
     "relatedBooks": 4,
-    "keyConcepts": 156,
+    "keyConcepts": 110,
     "readingTime": 480,
     "difficulty": 5
   },
-  "updatedAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-02-25T17:24:26.090Z",
   "metadata": {
-    "sourceFlags": ["db", "markdown", "seed"],
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
     "version": "1.0.0",
-    "lastReviewed": "2024-01-01T00:00:00Z"
+    "lastReviewed": "2026-02-25T17:24:26.092Z"
   }
 }

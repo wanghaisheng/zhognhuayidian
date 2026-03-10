@@ -1,0 +1,36 @@
+{
+  "id": "huo-bu",
+  "title": {
+    "zh": "火部",
+    "en": "Fire Section"
+  },
+  "order": 1,
+  "summary": "讨论火相关物质及其药用特性",
+  "sections": [
+    {
+      "id": "huo-bu-1",
+      "title": {
+        "zh": "火部第一章",
+        "en": "Fire Section Chapter One"
+      },
+      "order": 0,
+      "originalText": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+      "translation": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+      "interpretation": "本章探讨中医中火药的属性及其与五行理论的关系。",
+      "summary": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+      "keyConcepts": [
+        {
+          "id": "fire-medicines",
+          "term": "火药",
+          "description": "具有温热特性的药用物质",
+          "category": "药理学",
+          "relatedConcepts": [
+            "水药",
+            "土药",
+            "金药"
+          ]
+        }
+      ]
+    }
+  ]
+}

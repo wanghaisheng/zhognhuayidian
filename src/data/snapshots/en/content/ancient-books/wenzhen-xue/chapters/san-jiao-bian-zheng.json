@@ -1,0 +1,32 @@
+{
+  "id": "san-jiao-bian-zheng",
+  "title": {
+    "en": "Three Jiao Differentiation",
+    "zh": "三焦辨证"
+  },
+  "order": 1,
+  "summary": "Three jiao theory for warm disease diagnosis",
+  "sections": [
+    {
+      "id": "san-jiao-bian-zheng-1",
+      "title": "Three Jiao Differentiation Chapter One",
+      "order": 0,
+      "originalText": "上焦如雾，中焦如沤，下焦如渎。",
+      "translation": "The upper jiao is like mist, the middle jiao is like foam, the lower jiao is like a ditch.",
+      "interpretation": "This chapter uses vivid metaphors to describe the characteristics and functions of the three jiao in warm disease pathology.",
+      "keyConcepts": [
+        {
+          "id": "san-jiao-theory",
+          "term": "San Jiao Theory",
+          "description": "The theoretical framework dividing the body into upper, middle, and lower jiao for warm disease diagnosis",
+          "category": "Warm Diseases",
+          "relatedConcepts": [
+            "Four Levels Theory",
+            "Zang-Fu Theory",
+            "Triple Burner"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "labels": {
+    "title": "伤寒杂病论",
+    "description": "伤寒杂病论中医古籍"
+  },
+  "content": {
+    "id": "shanghan-zabing-lun",
+    "title": {
+      "zh": "伤寒杂病论",
+      "en": "Treatise on Cold Damage and Miscellaneous Diseases"
+    },
+    "dynasty": "东汉",
+    "author": "张仲景",
+    "category": "伤寒金匮",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "东汉",
+      "author": "张仲景",
+      "chapters": 2,
+      "wordCount": 45000,
+      "publishYear": "200",
+      "tags": [
+        "伤寒",
+        "杂病",
+        "辨证论治",
+        "张仲景",
+        "东汉医学"
+      ],
+      "coverImage": "/images/books/shanghan-zabing-lun-cover.jpg",
+      "difficulty": "High",
+      "influence": "Foundation of Syndrome Differentiation and Treatment",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "taiyang-bing",
+        "title": {
+          "zh": "太阳病脉证并治",
+          "en": "Taiyang Disease Patterns"
+        },
+        "order": 0,
+        "summary": "根据六经理论讨论太阳病证的诊断和治疗",
+        "sections": [
+          {
+            "id": "taiyang-bing-1",
+            "title": "太阳病第一章",
+            "order": 0,
+            "originalText": "太阳之为病，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+            "translation": "太阳病时，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+            "interpretation": "本章确立了太阳病证的基本诊断标准，太阳病代表六经理论中的表证阶段。",
+            "keyConcepts": [
+              {
+                "id": "taiyang-disease",
+                "term": "太阳病",
+                "description": "六经疾病传变的第一阶段，代表表证",
+                "category": "六经",
+                "relatedConcepts": [
+                  "阳明病",
+                  "少阳病",
+                  "太阴病"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yangming-bing",
+        "title": {
+          "zh": "阳明病脉证并治",
+          "en": "Yangming Disease Patterns"
+        },
+        "order": 1,
+        "summary": "讨论阳明病证的诊断和治疗",
+        "sections": [
+          {
+            "id": "yangming-bing-1",
+            "title": "阳明病第一章",
+            "order": 0,
+            "originalText": "阳明之为病，胃家实是也。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+            "translation": "阳明病时，胃家实。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+            "interpretation": "本章描述了阳明病证，阳明病代表胃和大肠经络的里热实证阶段。",
+            "keyConcepts": [
+              {
+                "id": "yangming-disease",
+                "term": "阳明病",
+                "description": "六经疾病的第二阶段，代表里热证",
+                "category": "六经",
+                "relatedConcepts": [
+                  "太阳病",
+                  "少阳病",
+                  "少阴病"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-lun",
+      "jinkui-yaolue",
+      "bencao-gangmu"
+    ],
+    "readingTime": {
+      "estimated": "6 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of six meridians theory",
+        "Basic diagnostic methods",
+        "Herbal medicine knowledge"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Established the foundation of syndrome differentiation and treatment",
+        "Created the six meridian diagnostic system",
+        "Systematically organized treatment principles for cold damage",
+        "Integrated diagnosis and treatment methodology"
+      ],
+      "clinicalApplications": [
+        "Treatment of acute febrile diseases",
+        "Foundation for herbal formula prescriptions",
+        "Diagnostic principles for exterior and interior patterns",
+        "Treatment protocols for various disease stages"
+      ],
+      "historicalSignificance": [
+        "First comprehensive work on clinical medicine",
+        "Established evidence-based medicine approach",
+        "Influenced medical practice for over 1800 years",
+        "Foundation of all clinical schools in Chinese medicine"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 45000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 450,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.338Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.765Z"
+  }
+}

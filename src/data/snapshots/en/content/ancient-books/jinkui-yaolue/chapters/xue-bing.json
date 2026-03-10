@@ -1,0 +1,32 @@
+{
+  "id": "xue-bing",
+  "title": {
+    "en": "Blood Diseases",
+    "zh": "血痹虚劳病脉证并治"
+  },
+  "order": 1,
+  "summary": "Discussion of blood-related diseases and deficiency conditions",
+  "sections": [
+    {
+      "id": "xue-bing-1",
+      "title": "Blood Diseases Chapter One",
+      "order": 0,
+      "originalText": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+      "translation": "Blood impediment means the body lacks sensation, it is wind impediment. Deficiency taxation means both yin and yang are deficient.",
+      "interpretation": "This chapter distinguishes between blood impediment and deficiency conditions, providing diagnostic criteria.",
+      "keyConcepts": [
+        {
+          "id": "blood-disorders",
+          "term": "Blood Disorders",
+          "description": "Conditions related to blood deficiency, stagnation, or heat in traditional Chinese medicine",
+          "category": "Internal Medicine",
+          "relatedConcepts": [
+            "Qi Disorders",
+            "Zang-Fu Theory",
+            "Blood-Heat"
+          ]
+        }
+      ]
+    }
+  ]
+}

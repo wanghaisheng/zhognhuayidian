@@ -1,0 +1,36 @@
+{
+  "id": "yangming-bing",
+  "title": {
+    "zh": "阳明病脉证并治",
+    "en": "Yangming Disease Patterns"
+  },
+  "order": 1,
+  "summary": "讨论阳明病证的诊断和治疗",
+  "sections": [
+    {
+      "id": "yangming-bing-1",
+      "title": {
+        "zh": "阳明病第一章",
+        "en": "Yangming Disease Chapter One"
+      },
+      "order": 0,
+      "originalText": "阳明之为病，胃家实是也。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+      "translation": "阳明病时，胃家实。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+      "interpretation": "本章描述了阳明病证，阳明病代表胃和大肠经络的里热实证阶段。",
+      "summary": "阳明病时，胃家实。阳明病，若能食，名中风；不能食，名中寒。阳明病，外证云何？答曰：身热，汗自出，不恶寒，反恶热也。",
+      "keyConcepts": [
+        {
+          "id": "yangming-disease",
+          "term": "阳明病",
+          "description": "六经疾病的第二阶段，代表里热证",
+          "category": "六经",
+          "relatedConcepts": [
+            "太阳病",
+            "少阳病",
+            "少阴病"
+          ]
+        }
+      ]
+    }
+  ]
+}

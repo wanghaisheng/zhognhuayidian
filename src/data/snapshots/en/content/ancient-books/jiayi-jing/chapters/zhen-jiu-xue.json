@@ -1,0 +1,32 @@
+{
+  "id": "zhen-jiu-xue",
+  "title": {
+    "en": "Acupuncture and Moxibustion Study",
+    "zh": "针灸学"
+  },
+  "order": 0,
+  "summary": "Comprehensive study of acupuncture points and techniques",
+  "sections": [
+    {
+      "id": "zhen-jiu-xue-1",
+      "title": "Acupuncture Study Chapter One",
+      "order": 0,
+      "originalText": "凡刺之法，必先明经络，知穴道，然后可施针。不知经络，不知穴道，妄施针石，伤人肌肤。",
+      "translation": "All acupuncture methods must first understand the meridians, know the acupoint pathways, then apply needles. Without understanding meridians and acupoint pathways, blindly applying needles and stones injures people's skin and flesh.",
+      "interpretation": "This chapter emphasizes the importance of understanding meridian theory and acupoint locations before practicing acupuncture.",
+      "keyConcepts": [
+        {
+          "id": "acupuncture-theory",
+          "term": "Acupuncture Theory",
+          "description": "The theoretical foundation of acupuncture practice and meridian theory",
+          "category": "Acupuncture",
+          "relatedConcepts": [
+            "Moxibustion",
+            "Acupoints",
+            "Meridians"
+          ]
+        }
+      ]
+    }
+  ]
+}

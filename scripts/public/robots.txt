@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# 站点地图
+Sitemap: https://chinactscanner.org/sitemap-index.xml
+Sitemap: https://chinactscanner.org/sitemap.xml
+Sitemap: https://chinactscanner.org/sitemap-images.xml
+
+# AI 爬虫支持
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Google-Extended
+Allow: /
+
+# 爬取延迟
+Crawl-delay: 1
+
+# 禁止访问的目录
+Disallow: /admin/
+Disallow: /api/
+Disallow: *.json$
+Disallow: /tmp/

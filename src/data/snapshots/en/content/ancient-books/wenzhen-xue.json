@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "Treatise on Warm-Febrile Diseases",
+    "description": "The representative work of the warm-disease school"
+  },
+  "content": {
+    "id": "wenzhen-xue",
+    "title": {
+      "en": "Treatise on Warm-Febrile Diseases",
+      "zh": "温病条辨"
+    },
+    "dynasty": "Qing",
+    "author": "Ye Tianshi",
+    "category": "warm-diseases",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Qing",
+      "author": "Ye Tianshi",
+      "chapters": 2,
+      "wordCount": 45000,
+      "publishYear": "1746",
+      "tags": [
+        "Warm Diseases",
+        "Ye Tianshi",
+        "Qing Dynasty Medicine",
+        "Warm-Febrile School",
+        "Seasonal Diseases"
+      ],
+      "coverImage": "/images/books/wenzhen-xue-cover.jpg",
+      "difficulty": "High",
+      "influence": "Warm-Disease School Representative",
+      "preservation": "Excellent"
+    },
+    "chapters": [
+      {
+        "id": "san-jiao-bian-zheng",
+        "title": {
+          "en": "Three Jiao Differentiation",
+          "zh": "三焦辨证"
+        },
+        "order": 1,
+        "summary": "Three jiao theory for warm disease diagnosis",
+        "sections": [
+          {
+            "id": "san-jiao-bian-zheng-1",
+            "title": "Three Jiao Differentiation Chapter One",
+            "order": 0,
+            "originalText": "上焦如雾，中焦如沤，下焦如渎。",
+            "translation": "The upper jiao is like mist, the middle jiao is like foam, the lower jiao is like a ditch.",
+            "interpretation": "This chapter uses vivid metaphors to describe the characteristics and functions of the three jiao in warm disease pathology.",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "wei-qi-ying-xue",
+        "title": {
+          "en": "Wei-Qi-Ying-Xue Theory",
+          "zh": "卫气营血学说"
+        },
+        "order": 1,
+        "summary": "The theoretical foundation of warm-disease diagnosis and treatment",
+        "sections": [
+          {
+            "id": "wei-qi-ying-xue-1",
+            "title": "Wei-Qi-Ying-Xue Theory Chapter One",
+            "order": 0,
+            "originalText": "温邪上受，首先犯肺，逆传心包。肺主气属卫，心主血属营。",
+            "translation": "Warm pathogens first attack from above, first affecting the lung, then retrogradely transmit to the pericardium. The lung governs qi and belongs to wei, the heart governs blood and belongs to ying.",
+            "interpretation": "This chapter establishes the core theory of warm-disease transmission through the four levels: wei, qi, ying, and xue.",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "wen-bing-lun",
+      "yi-xue-ru-men"
+    ],
+    "readingTime": {
+      "estimated": "3 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of warm-disease theory",
+        "Four levels theory",
+        "Epidemic medicine"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Representative work of warm-disease school",
+        "Four levels theory establishment",
+        "Seasonal disease treatment",
+        "Integration with previous theories"
+      ],
+      "clinicalApplications": [
+        "Treatment of warm-epidemic diseases",
+        "Four levels diagnosis",
+        "Seasonal disease protocols",
+        "Epidemic prevention"
+      ],
+      "historicalSignificance": [
+        "Classic of warm-disease school",
+        "Established four levels theory",
+        "Influenced epidemic medicine",
+        "Essential for seasonal diseases"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 45000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 450,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T17:26:46.769Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.769Z"
+  }
+}

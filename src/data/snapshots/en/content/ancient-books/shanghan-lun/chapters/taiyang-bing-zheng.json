@@ -1,0 +1,32 @@
+{
+  "id": "taiyang-bing-zheng",
+  "title": {
+    "en": "Taiyang Disease Patterns",
+    "zh": "太阳病脉证并治"
+  },
+  "order": 0,
+  "summary": "Detailed discussion of Taiyang disease patterns and treatments",
+  "sections": [
+    {
+      "id": "taiyang-bing-zheng-1",
+      "title": "Taiyang Disease Patterns Chapter One",
+      "order": 0,
+      "originalText": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+      "translation": "In Taiyang disease, with fever and thirst but no aversion to cold, it is a warm disease. In Taiyang disease, with fever and thirst and aversion to cold, it is cold damage.",
+      "interpretation": "This chapter distinguishes between warm diseases and cold damage within Taiyang patterns, providing diagnostic criteria.",
+      "keyConcepts": [
+        {
+          "id": "taiyang-patterns",
+          "term": "Taiyang Patterns",
+          "description": "Disease patterns affecting the Taiyang meridian in cold damage diseases",
+          "category": "Cold Damage",
+          "relatedConcepts": [
+            "Yangming Patterns",
+            "Shaoyang Patterns",
+            "Taiyin Patterns"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "shu-xue",
+  "title": {
+    "zh": "腧穴",
+    "en": "Acupoints"
+  },
+  "order": 1,
+  "summary": "针灸穴位及其功能的详细描述",
+  "sections": [
+    {
+      "id": "shu-xue-1",
+      "title": {
+        "zh": "腧穴第一章",
+        "en": "Acupoints Chapter One"
+      },
+      "order": 0,
+      "originalText": "腧穴者，经络之所会，气血之所行。知其所在，明其功能，则针到病除。",
+      "translation": "腧穴是经络交汇的地方，是气血运行的地方。了解其位置，明白其功能，那么针到病除。",
+      "interpretation": "本章解释了腧穴作为经络交汇点和气血运行位置的基本概念。",
+      "summary": "腧穴是经络交汇的地方，是气血运行的地方。了解其位置，明白其功能，那么针到病除。",
+      "keyConcepts": [
+        {
+          "id": "acupoints",
+          "term": "腧穴",
+          "description": "身体上用于针刺治疗以达到疗效的特定点",
+          "category": "针灸"
+        }
+      ]
+    }
+  ]
+}

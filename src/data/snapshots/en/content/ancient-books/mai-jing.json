@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "The Pulse Classic",
+    "description": "The first systematic work on pulse diagnosis in Chinese medicine"
+  },
+  "content": {
+    "id": "mai-jing",
+    "title": {
+      "en": "The Pulse Classic",
+      "zh": "脉经"
+    },
+    "dynasty": "Western Jin",
+    "author": "Wang Shuhe",
+    "category": "diagnostics",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Western Jin",
+      "author": "Wang Shuhe",
+      "chapters": 2,
+      "wordCount": 25000,
+      "publishYear": "280",
+      "tags": [
+        "Pulse Diagnosis",
+        "Diagnostics",
+        "Wang Shuhe",
+        "Western Jin Medicine",
+        "Pulse Theory"
+      ],
+      "coverImage": "/images/books/mai-jing-cover.jpg",
+      "difficulty": "High",
+      "influence": "Foundation of Pulse Diagnosis",
+      "preservation": "Fragmentary"
+    },
+    "chapters": [
+      {
+        "id": "mai-xiang",
+        "title": {
+          "en": "Pulse Images",
+          "zh": "脉象"
+        },
+        "order": 1,
+        "summary": "Detailed description of different pulse images and their significance",
+        "sections": [
+          {
+            "id": "mai-xiang-1",
+            "title": "Pulse Images Chapter One",
+            "order": 0,
+            "originalText": "浮脉为表，沉脉为里，迟脉为寒，数脉为热。",
+            "translation": "Floating pulse indicates exterior, deep pulse indicates interior, slow pulse indicates cold, rapid pulse indicates heat.",
+            "interpretation": "This chapter provides the basic classification of pulse images according to location and speed.",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "mai-xue",
+        "title": {
+          "en": "Pulse Study",
+          "zh": "脉学"
+        },
+        "order": 1,
+        "summary": "Systematic study of pulse diagnosis methods and theory",
+        "sections": [
+          {
+            "id": "mai-xue-1",
+            "title": "Pulse Study Chapter One",
+            "order": 0,
+            "originalText": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+            "translation": "Pulse is the mansion of blood. Long pulse indicates harmonious qi, short pulse indicates qi illness, rapid pulse indicates qi vexation, large pulse indicates qi illness, fine pulse indicates qi deficiency.",
+            "interpretation": "This chapter establishes the fundamental theory of pulse diagnosis, linking pulse characteristics to the state of qi and blood in the body.",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "nan-jing",
+      "shanghan-zabing-lun",
+      "jiayi-jing"
+    ],
+    "readingTime": {
+      "estimated": "4 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of pulse theory",
+        "Basic diagnostic methods",
+        "Qi-blood theory"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "First systematic work on pulse diagnosis",
+        "Established pulse classification system",
+        "Integrated previous pulse knowledge",
+        "Created diagnostic methodology"
+      ],
+      "clinicalApplications": [
+        "Foundation for pulse diagnosis",
+        "Guide to pulse examination techniques",
+        "Reference for pulse pattern identification",
+        "Diagnostic methodology for various conditions"
+      ],
+      "historicalSignificance": [
+        "Earliest comprehensive pulse diagnosis work",
+        "Established pulse as major diagnostic method",
+        "Influenced diagnostic practice for centuries",
+        "Foundation of modern pulse diagnosis"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 25000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 250,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T17:26:46.752Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.752Z"
+  }
+}

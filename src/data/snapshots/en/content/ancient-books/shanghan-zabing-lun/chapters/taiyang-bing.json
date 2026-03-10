@@ -1,0 +1,32 @@
+{
+  "id": "taiyang-bing",
+  "title": {
+    "en": "Taiyang Disease Patterns",
+    "zh": "太阳病脉证并治"
+  },
+  "order": 0,
+  "summary": "Discusses the diagnosis and treatment of Taiyang disease patterns according to six meridian theory",
+  "sections": [
+    {
+      "id": "taiyang-bing-1",
+      "title": "Taiyang Disease Chapter One",
+      "order": 0,
+      "originalText": "太阳之为病，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+      "translation": "When Taiyang is diseased, the pulse is floating, there is stiffness and pain in the head and neck, and aversion to cold. In Taiyang disease with fever and sweating, there is aversion to wind; when the pulse is slow, it is called wind strike. In Taiyang disease, whether there is already fever or not yet, there is necessarily aversion to cold, body pain, vomiting, and when both yin and yang pulses are tight, it is called cold damage.",
+      "interpretation": "This chapter establishes the basic diagnostic criteria for Taiyang disease patterns, which represent the exterior stage of disease according to the six meridian theory.",
+      "keyConcepts": [
+        {
+          "id": "taiyang-disease",
+          "term": "Taiyang Disease",
+          "description": "The first stage of six meridian disease progression, representing exterior patterns",
+          "category": "Six Meridians",
+          "relatedConcepts": [
+            "Yangming Disease",
+            "Shaoyang Disease",
+            "Taiyin Disease"
+          ]
+        }
+      ]
+    }
+  ]
+}

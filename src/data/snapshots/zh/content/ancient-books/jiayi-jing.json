@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "甲乙经",
+    "description": "甲乙经中医古籍"
+  },
+  "content": {
+    "id": "jiayi-jing",
+    "title": {
+      "zh": "甲乙经",
+      "en": "A-B Classic of Acupuncture and Moxibustion"
+    },
+    "dynasty": "魏晋",
+    "author": "皇甫谧",
+    "category": "针灸",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "魏晋",
+      "author": "皇甫谧",
+      "chapters": 2,
+      "wordCount": 38000,
+      "publishYear": "256",
+      "tags": [
+        "针灸",
+        "艾灸",
+        "皇甫谧",
+        "魏晋",
+        "腧穴"
+      ],
+      "coverImage": "/images/books/jiayi-jing-cover.jpg",
+      "difficulty": "High",
+      "influence": "Acupuncture Foundation Work",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "shu-xue",
+        "title": {
+          "zh": "腧穴第一章",
+          "en": "Acupoints Chapter One"
+        },
+        "order": 1,
+        "summary": "针灸穴位及其功能的详细描述",
+        "sections": [
+          {
+            "id": "shu-xue-1",
+            "title": "Acupoints Chapter One",
+            "order": 0,
+            "originalText": "腧穴者，经络之所会，气血之所行。知其所在，明其功能，则针到病除。",
+            "translation": "腧穴是经络交汇的地方，是气血运行的地方。了解其位置，明白其功能，那么针到病除。",
+            "interpretation": "本章解释了腧穴作为经络交汇点和气血运行位置的基本概念。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "zhen-jiu-xue",
+        "title": {
+          "zh": "针灸学",
+          "en": "Acupuncture and Moxibustion Study"
+        },
+        "order": 1,
+        "summary": "针灸穴位和技术的综合研究",
+        "sections": [
+          {
+            "id": "zhen-jiu-xue-1",
+            "title": "Acupuncture Study Chapter One",
+            "order": 0,
+            "originalText": "凡刺之法，必先明经络，知穴道，然后可施针。不知经络，不知穴道，妄施针石，伤人肌肤。",
+            "translation": "所有针灸方法必须先了解经络，知道腧穴通路，然后施针。不了解经络和腧穴通路，盲目施针和石头会伤人肌肤。",
+            "interpretation": "本章强调了在实践针灸前了解经络理论和腧穴位置的重要性。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "huangdi-neijing-ling-shu",
+      "zhen-jiu-jia-yi-jing",
+      "tong-ren-shu-xue-zhen-jiu-tu-jing"
+    ],
+    "readingTime": {
+      "estimated": "5 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of meridian theory",
+        "Basic acupuncture knowledge",
+        "Point location skills"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Earliest comprehensive acupuncture work",
+        "Systematic organization of 349 acupoints",
+        "Integration of previous acupuncture knowledge",
+        "Created acupuncture treatment methodology"
+      ],
+      "clinicalApplications": [
+        "Foundation for acupuncture practice",
+        "Reference for acupoint location and function",
+        "Guide to acupuncture techniques",
+        "Treatment protocols for various conditions"
+      ],
+      "historicalSignificance": [
+        "Earliest systematic acupuncture work",
+        "Established acupuncture as medical discipline",
+        "Influenced acupuncture development worldwide",
+        "Foundation of modern acupuncture practice"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 38000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 380,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.233Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.745Z"
+  }
+}

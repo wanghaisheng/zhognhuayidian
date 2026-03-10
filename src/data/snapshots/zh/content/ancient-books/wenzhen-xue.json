@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "温病条辨",
+    "description": "温病条辨中医古籍"
+  },
+  "content": {
+    "id": "wenzhen-xue",
+    "title": {
+      "zh": "温病条辨",
+      "en": "Treatise on Warm-Febrile Diseases"
+    },
+    "dynasty": "清代",
+    "author": "叶天士",
+    "category": "温病",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "清代",
+      "author": "叶天士",
+      "chapters": 2,
+      "wordCount": 45000,
+      "publishYear": "1746",
+      "tags": [
+        "温病",
+        "叶天士",
+        "清代医学",
+        "温病学派",
+        "季节性疾病"
+      ],
+      "coverImage": "/images/books/wenzhen-xue-cover.jpg",
+      "difficulty": "High",
+      "influence": "Warm-Disease School Representative",
+      "preservation": "Excellent"
+    },
+    "chapters": [
+      {
+        "id": "san-jiao-bian-zheng",
+        "title": {
+          "zh": "三焦辨证",
+          "en": "Three Jiao Differentiation"
+        },
+        "order": 1,
+        "summary": "用于温病诊断的三焦理论",
+        "sections": [
+          {
+            "id": "san-jiao-bian-zheng-1",
+            "title": "三焦辨证第一章",
+            "order": 0,
+            "originalText": "上焦如雾，中焦如沤，下焦如渎。",
+            "translation": "上焦如雾，中焦如沤，下焦如渎。",
+            "interpretation": "本章使用生动的比喻描述三焦在温病病理中的特征和功能。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "wei-qi-ying-xue",
+        "title": {
+          "zh": "卫气营血学说",
+          "en": "Wei-Qi-Ying-Xue Theory"
+        },
+        "order": 1,
+        "summary": "温病诊断和治疗的理论基础",
+        "sections": [
+          {
+            "id": "wei-qi-ying-xue-1",
+            "title": "卫气营血理论第一章",
+            "order": 0,
+            "originalText": "温邪上受，首先犯肺，逆传心包。肺主气属卫，心主血属营。",
+            "translation": "温邪上受，首先犯肺，逆传心包。肺主气属卫，心主血属营。",
+            "interpretation": "本章确立温病通过卫、气、营、血四个层次传变的核心理论。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "wen-bing-lun",
+      "yi-xue-ru-men"
+    ],
+    "readingTime": {
+      "estimated": "3 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of warm-disease theory",
+        "Four levels theory",
+        "Epidemic medicine"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Representative work of warm-disease school",
+        "Four levels theory establishment",
+        "Seasonal disease treatment",
+        "Integration with previous theories"
+      ],
+      "clinicalApplications": [
+        "Treatment of warm-epidemic diseases",
+        "Four levels diagnosis",
+        "Seasonal disease protocols",
+        "Epidemic prevention"
+      ],
+      "historicalSignificance": [
+        "Classic of warm-disease school",
+        "Established four levels theory",
+        "Influenced epidemic medicine",
+        "Essential for seasonal diseases"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 45000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 450,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.340Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.769Z"
+  }
+}

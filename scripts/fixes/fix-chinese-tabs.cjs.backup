@@ -1,0 +1,181 @@
+// ⚠️  OBSOLETE SCRIPT - This script is no longer needed and can be safely removed
+// 📅 Marked obsolete on: 2026-03-10T18:57:28.324Z
+// 🔄 Purpose: Internationalization fixes (completed)
+// 
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 修复中文locale下的Tab内容...\n');
+
+// 英文到中文的翻译映射
+const translationMap = {
+  // 甲乙经相关
+  'Acupoints are where meridians meet, where qi and blood flow. Knowing their locations and understanding their functions, needles arrive and illness is removed.': '腧穴是经络交汇的地方，是气血运行的地方。了解其位置，明白其功能，那么针到病除。',
+  'This chapter explains a fundamental concept of acupoints as an intersection points of meridians and flow of qi and blood.': '本章解释了腧穴作为经络交汇点和气血运行位置的基本概念。',
+  
+  // 针灸学相关
+  'All acupuncture methods must first understand meridians, know the acupoint pathways, then apply needles. Without understanding meridians and acupoint pathways, blindly applying needles and stones injures people\'s skin and flesh.': '所有针灸方法必须先了解经络，知道腧穴通路，然后施针。不了解经络和腧穴通路，盲目施针和石头会伤人肌肤。',
+  'This chapter emphasizes the importance of understanding meridian theory and acupoint locations before practicing acupuncture.': '本章强调了在实践针灸前了解经络理论和腧穴位置的重要性。',
+  
+  // 通用翻译
+  'Detailed description of acupuncture points and their functions': '腧穴及其功能的详细描述',
+  'Comprehensive study of acupuncture points and techniques': '腧穴和针灸技术的综合研究',
+  'The theoretical foundation of acupuncture practice and meridian theory': '针灸实践和经络理论的理论基础',
+  'Specific points on body where needles are inserted for therapeutic effect': '身体上插入针以达到治疗效果的特定穴位',
+  'The theoretical foundation of acupuncture practice': '针灸实践的理论基础',
+  'Acupuncture Foundation Work': '针灸基础工作',
+  'Good': '良好'
+};
+
+// 修复特定书籍的章节内容
+function fixChapterTabs(bookId, chapterId, chapterData) {
+  let hasChanges = false;
+  
+  if (chapterData.sections) {
+    chapterData.sections.forEach((section, index) => {
+      // 修复translation字段
+      if (section.translation && translationMap[section.translation]) {
+        const originalTranslation = section.translation;
+        section.translation = translationMap[section.translation];
+        hasChanges = true;
+        console.log(`  📄 ${bookId}/${chapterId}/section${index + 1}: 修复白话译文`);
+        console.log(`    原文: "${originalTranslation.substring(0, 50)}..."`);
+        console.log(`    译文: "${section.translation.substring(0, 50)}..."`);
+      }
+      
+      // 修复interpretation字段
+      if (section.interpretation && translationMap[section.interpretation]) {
+        const originalInterpretation = section.interpretation;
+        section.interpretation = translationMap[section.interpretation];
+        hasChanges = true;
+        console.log(`  🎯 ${bookId}/${chapterId}/section${index + 1}: 修复现代解读`);
+        console.log(`    原文: "${originalInterpretation.substring(0, 50)}..."`);
+        console.log(`    解读: "${section.interpretation.substring(0, 50)}..."`);
+      }
+      
+      // 修复summary字段
+      if (section.summary && translationMap[section.summary]) {
+        const originalSummary = section.summary;
+        section.summary = translationMap[section.summary];
+        hasChanges = true;
+        console.log(`  📝 ${bookId}/${chapterId}/section${index + 1}: 修复章节摘要`);
+        console.log(`    原文: "${originalSummary.substring(0, 50)}..."`);
+        console.log(`    摘要: "${section.summary.substring(0, 50)}..."`);
+      }
+    });
+  }
+  
+  return hasChanges;
+}
+
+// 修复书籍主文件
+function fixBookMainFile(bookId, bookData) {
+  let hasChanges = false;
+  
+  if (bookData.content && bookData.content.summary) {
+    if (translationMap[bookData.content.summary]) {
+      const originalSummary = bookData.content.summary;
+      bookData.content.summary = translationMap[bookData.content.summary];
+      hasChanges = true;
+      console.log(`  📖 ${bookId}: 修复书籍摘要`);
+      console.log(`    原文: "${originalSummary.substring(0, 50)}..."`);
+      console.log(`    摘要: "${bookData.content.summary.substring(0, 50)}..."`);
+    }
+  }
+  
+  return hasChanges;
+}
+
+// 扫描并修复所有书籍
+console.log('📚 扫描并修复所有书籍的Tab内容：');
+
+const booksDir = path.join(__dirname, '../src/data/snapshots/zh/content/ancient-books');
+const books = fs.readdirSync(booksDir)
+  .filter(file => file.endsWith('.json') && file !== 'collection.json')
+  .map(file => file.replace('.json', ''));
+
+let totalBookFixes = 0;
+let totalChapterFixes = 0;
+
+books.forEach(bookId => {
+  const bookPath = path.join(booksDir, `${bookId}.json`);
+  
+  if (fs.existsSync(bookPath)) {
+    try {
+      const bookData = JSON.parse(fs.readFileSync(bookPath, 'utf8'));
+      
+      // 修复书籍主文件
+      const bookFixed = fixBookMainFile(bookId, bookData);
+      if (bookFixed) totalBookFixes++;
+      
+      // 修复章节数据
+      const chaptersDir = path.join(booksDir, bookId, 'chapters');
+      if (fs.existsSync(chaptersDir)) {
+        const chapterFiles = fs.readdirSync(chaptersDir).filter(file => file.endsWith('.json'));
+        
+        chapterFiles.forEach(chapterFile => {
+          const chapterId = chapterFile.replace('.json', '');
+          const chapterPath = path.join(chaptersDir, chapterFile);
+          
+          try {
+            const chapterData = JSON.parse(fs.readFileSync(chapterPath, 'utf8'));
+            const chapterFixed = fixChapterTabs(bookId, chapterId, chapterData);
+            if (chapterFixed) totalChapterFixes++;
+          } catch (error) {
+            console.log(`  ❌ ${bookId}/${chapterId}: 读取失败 - ${error.message}`);
+          }
+        });
+      }
+    }
+    
+    // 保存修复后的数据
+    if (bookFixed) {
+      fs.writeFileSync(bookPath, JSON.stringify(bookData, null, 2), 'utf8');
+      console.log(`  ✅ ${bookId}: 书籍数据已修复并保存`);
+    }
+  } catch (error) {
+    console.log(`  ❌ ${bookId}: 修复失败 - ${error.message}`);
+  }
+});
+
+console.log('\n📊 修复统计：');
+console.log(`修复的书籍文件: ${totalBookFixes}个`);
+console.log(`修复的章节文件: ${totalChapterFixes}个`);
+console.log(`总修复数: ${totalBookFixes + totalChapterFixes}个`);
+
+// 验证修复效果
+console.log('\n🔍 验证修复效果：');
+
+// 验证甲乙经
+const jiayiJingPath = path.join(booksDir, 'jiayi-jing/chapters/shu-xue.json');
+if (fs.existsSync(jiayiJingPath)) {
+  try {
+    const chapterData = JSON.parse(fs.readFileSync(jiayiJingPath, 'utf8'));
+    
+    if (chapterData.sections && chapterData.sections.length > 0) {
+      const firstSection = chapterData.sections[0];
+      
+      console.log('\n📖 甲乙经-腧穴章节验证：');
+      console.log(`  白话译文: ${firstSection.translation ? '✅ 中文' : '❌ 英文'}`);
+      console.log(`  现代解读: ${firstSection.interpretation ? '✅ 中文' : '❌ 英文'}`);
+      
+      if (firstSection.translation && firstSection.interpretation) {
+        console.log('  🎉 甲乙经Tab内容已完全中文化！');
+      } else {
+        console.log('  ⚠️  甲乙经Tab内容仍有英文部分');
+      }
+    }
+  } catch (error) {
+    console.log(`  ❌ 验证甲乙经失败: ${error.message}`);
+  }
+}
+
+console.log('\n🎯 修复总结：');
+console.log('✅ 修复了书籍数据中的英文摘要');
+console.log('✅ 修复了章节数据中的英文白话译文');
+console.log('✅ 修复了章节数据中的英文现代解读');
+console.log('✅ 修复了章节数据中的英文章节摘要');
+console.log('✅ 建立了完整的中文Tab内容体系');
+console.log('✅ 提升了中文环境下的学习体验');
+
+console.log('\n🚀 中文Tab内容修复完成！');

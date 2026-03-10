@@ -1,0 +1,36 @@
+{
+  "id": "xue-bing",
+  "title": {
+    "zh": "血痹虚劳病脉证并治",
+    "en": "Blood Diseases"
+  },
+  "order": 1,
+  "summary": "讨论血相关疾病和虚损状况",
+  "sections": [
+    {
+      "id": "xue-bing-1",
+      "title": {
+        "zh": "血病第一章",
+        "en": "Blood Diseases Chapter One"
+      },
+      "order": 0,
+      "originalText": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+      "translation": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+      "interpretation": "本章区分血痹和虚损状况，提供诊断标准。",
+      "summary": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+      "keyConcepts": [
+        {
+          "id": "blood-disorders",
+          "term": "血病",
+          "description": "中医中与血虚、血瘀或血热相关的状况",
+          "category": "内科",
+          "relatedConcepts": [
+            "气病",
+            "脏腑理论",
+            "血热"
+          ]
+        }
+      ]
+    }
+  ]
+}

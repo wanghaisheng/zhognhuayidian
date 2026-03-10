@@ -1,0 +1,36 @@
+{
+  "id": "shui-bu",
+  "title": {
+    "zh": "水部",
+    "en": "Water Section"
+  },
+  "order": 0,
+  "summary": "讨论各种水类型及其药用特性",
+  "sections": [
+    {
+      "id": "shui-bu-1",
+      "title": {
+        "zh": "水部第一章",
+        "en": "Water Section Chapter One"
+      },
+      "order": 0,
+      "originalText": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+      "translation": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+      "interpretation": "本章确立了水在自然和医学中的基本重要性，反映了中医药学的整体观念。",
+      "summary": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+      "keyConcepts": [
+        {
+          "id": "water-medicines",
+          "term": "水药",
+          "description": "来自水源的药用物质",
+          "category": "药理学",
+          "relatedConcepts": [
+            "火药",
+            "土药",
+            "金药"
+          ]
+        }
+      ]
+    }
+  ]
+}

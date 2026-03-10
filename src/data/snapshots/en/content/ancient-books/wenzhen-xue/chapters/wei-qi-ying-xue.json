@@ -1,0 +1,32 @@
+{
+  "id": "wei-qi-ying-xue",
+  "title": {
+    "en": "Wei-Qi-Ying-Xue Theory",
+    "zh": "卫气营血学说"
+  },
+  "order": 0,
+  "summary": "The theoretical foundation of warm-disease diagnosis and treatment",
+  "sections": [
+    {
+      "id": "wei-qi-ying-xue-1",
+      "title": "Wei-Qi-Ying-Xue Theory Chapter One",
+      "order": 0,
+      "originalText": "温邪上受，首先犯肺，逆传心包。肺主气属卫，心主血属营。",
+      "translation": "Warm pathogens first attack from above, first affecting the lung, then retrogradely transmit to the pericardium. The lung governs qi and belongs to wei, the heart governs blood and belongs to ying.",
+      "interpretation": "This chapter establishes the core theory of warm-disease transmission through the four levels: wei, qi, ying, and xue.",
+      "keyConcepts": [
+        {
+          "id": "four-levels-theory",
+          "term": "Four Levels Theory",
+          "description": "The theoretical framework for warm disease progression through wei, qi, ying, and xue levels",
+          "category": "Warm Diseases",
+          "relatedConcepts": [
+            "Six Meridians",
+            "San Jiao Theory",
+            "Seasonal Diseases"
+          ]
+        }
+      ]
+    }
+  ]
+}

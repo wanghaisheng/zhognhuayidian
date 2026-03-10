@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "脉经",
+    "description": "脉经中医古籍"
+  },
+  "content": {
+    "id": "mai-jing",
+    "title": {
+      "zh": "脉经",
+      "en": "The Pulse Classic"
+    },
+    "dynasty": "西晋",
+    "author": "王叔和",
+    "category": "诊断",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "西晋",
+      "author": "王叔和",
+      "chapters": 2,
+      "wordCount": 25000,
+      "publishYear": "280",
+      "tags": [
+        "脉诊",
+        "诊断",
+        "王叔和",
+        "西晋医学",
+        "脉学理论"
+      ],
+      "coverImage": "/images/books/mai-jing-cover.jpg",
+      "difficulty": "High",
+      "influence": "Foundation of Pulse Diagnosis",
+      "preservation": "Fragmentary"
+    },
+    "chapters": [
+      {
+        "id": "mai-xiang",
+        "title": {
+          "zh": "脉象",
+          "en": "Pulse Images"
+        },
+        "order": 1,
+        "summary": "Detailed description of different pulse images and their significance",
+        "sections": [
+          {
+            "id": "mai-xiang-1",
+            "title": "脉象第一章",
+            "order": 0,
+            "originalText": "浮脉为表，沉脉为里，迟脉为寒，数脉为热。",
+            "translation": "浮脉主表，沉脉主里，迟脉主寒，数脉主热。",
+            "interpretation": "本章根据位置和速度提供脉象的基本分类。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "mai-xue",
+        "title": {
+          "zh": "脉学",
+          "en": "Pulse Study"
+        },
+        "order": 1,
+        "summary": "Systematic study of pulse diagnosis methods and theory",
+        "sections": [
+          {
+            "id": "mai-xue-1",
+            "title": "脉学第一章",
+            "order": 0,
+            "originalText": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+            "translation": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+            "interpretation": "本章确立脉诊的基本理论，将脉象特征与体内气血状态联系起来。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "nan-jing",
+      "shanghan-zabing-lun",
+      "jiayi-jing"
+    ],
+    "readingTime": {
+      "estimated": "4 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of pulse theory",
+        "Basic diagnostic methods",
+        "Qi-blood theory"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "First systematic work on pulse diagnosis",
+        "Established pulse classification system",
+        "Integrated previous pulse knowledge",
+        "Created diagnostic methodology"
+      ],
+      "clinicalApplications": [
+        "Foundation for pulse diagnosis",
+        "Guide to pulse examination techniques",
+        "Reference for pulse pattern identification",
+        "Diagnostic methodology for various conditions"
+      ],
+      "historicalSignificance": [
+        "Earliest comprehensive pulse diagnosis work",
+        "Established pulse as major diagnostic method",
+        "Influenced diagnostic practice for centuries",
+        "Foundation of modern pulse diagnosis"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 25000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 250,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.329Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.752Z"
+  }
+}

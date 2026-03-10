@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "Treatise on Cold Damage",
+    "description": "The classic work on cold damage diseases and six meridian theory"
+  },
+  "content": {
+    "id": "shanghan-lun",
+    "title": {
+      "en": "Treatise on Cold Damage",
+      "zh": "伤寒论"
+    },
+    "dynasty": "Eastern Han",
+    "author": "Zhang Zhongjing",
+    "category": "shanghan",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Eastern Han",
+      "author": "Zhang Zhongjing",
+      "chapters": 2,
+      "wordCount": 35000,
+      "publishYear": "200",
+      "tags": [
+        "Cold Damage",
+        "Six Meridians",
+        "Zhang Zhongjing",
+        "Eastern Han Medicine",
+        "Exterior Patterns"
+      ],
+      "coverImage": "/images/books/shanghan-lun-cover.jpg",
+      "difficulty": "High",
+      "influence": "Cold Disease Classic",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "taiyang-bing-zheng",
+        "title": {
+          "en": "Taiyang Disease Patterns",
+          "zh": "太阳病脉证并治"
+        },
+        "order": 0,
+        "summary": "Detailed discussion of Taiyang disease patterns and treatments",
+        "sections": [
+          {
+            "id": "taiyang-bing-zheng-1",
+            "title": "Taiyang Disease Patterns Chapter One",
+            "order": 0,
+            "originalText": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+            "translation": "In Taiyang disease, with fever and thirst but no aversion to cold, it is a warm disease. In Taiyang disease, with fever and thirst and aversion to cold, it is cold damage.",
+            "interpretation": "This chapter distinguishes between warm diseases and cold damage within Taiyang patterns, providing diagnostic criteria.",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "yangming-bing-zheng",
+        "title": {
+          "en": "Yangming Disease Patterns",
+          "zh": "阳明病脉证并治"
+        },
+        "order": 1,
+        "summary": "Discussion of Yangming disease patterns in cold damage",
+        "sections": [
+          {
+            "id": "yangming-bing-zheng-1",
+            "title": "Yangming Disease Patterns Chapter One",
+            "order": 0,
+            "originalText": "阳明病，外证云何？曰：身热，汗自出，不恶寒，反恶热也。",
+            "translation": "What are the exterior signs of Yangming disease? The answer is: body heat, spontaneous sweating, no aversion to cold, but rather aversion to heat.",
+            "interpretation": "This chapter describes the characteristic exterior manifestations of Yangming disease patterns.",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "jinkui-yaolue",
+      "wen-bing-tiao-bian"
+    ],
+    "readingTime": {
+      "estimated": "4 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of six meridians theory",
+        "Cold damage knowledge",
+        "Herbal medicine"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Focus on cold damage diseases",
+        "Systematic six meridian theory",
+        "Detailed treatment protocols",
+        "Integration with clinical practice"
+      ],
+      "clinicalApplications": [
+        "Treatment of cold damage diseases",
+        "Six meridian diagnosis",
+        "Herbal formula prescriptions",
+        "Seasonal disease treatment"
+      ],
+      "historicalSignificance": [
+        "Classic of cold damage medicine",
+        "Foundation of six meridian theory",
+        "Influenced clinical practice",
+        "Essential for Chinese medicine study"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 35000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 350,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T17:26:46.762Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.762Z"
+  }
+}

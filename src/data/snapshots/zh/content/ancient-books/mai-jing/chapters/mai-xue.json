@@ -1,0 +1,36 @@
+{
+  "id": "mai-xue",
+  "title": {
+    "zh": "脉学",
+    "en": "Pulse Study"
+  },
+  "order": 0,
+  "summary": "脉诊方法和理论的系统研究",
+  "sections": [
+    {
+      "id": "mai-xue-1",
+      "title": {
+        "zh": "脉学第一章",
+        "en": "Pulse Study Chapter One"
+      },
+      "order": 0,
+      "originalText": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+      "translation": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+      "interpretation": "本章确立脉诊的基本理论，将脉象特征与体内气血状态联系起来。",
+      "summary": "脉者，血之府也。长则气治，短则气病，数则气烦，大则气病，细则气少。",
+      "keyConcepts": [
+        {
+          "id": "pulse-diagnosis",
+          "term": "脉诊",
+          "description": "通过脉诊诊断疾病的艺术和科学",
+          "category": "诊断",
+          "relatedConcepts": [
+            "舌诊",
+            "腹部触诊",
+            "问诊"
+          ]
+        }
+      ]
+    }
+  ]
+}

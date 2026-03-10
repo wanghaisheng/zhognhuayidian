@@ -1,0 +1,283 @@
+// ⚠️  OBSOLETE SCRIPT - This script is no longer needed and can be safely removed
+// 📅 Marked obsolete on: 2026-03-10T18:57:28.312Z
+// 🔄 Purpose: Internationalization fixes (completed)
+// 
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔍 检查中文locale下的tab内容...\n');
+
+// 检查书籍详情页的tab内容
+function checkTabContent(bookId, tabName) {
+  const chapterPath = path.join(__dirname, '../src/data/snapshots/zh/content/ancient-books', bookId, 'chapters');
+  
+  if (!fs.existsSync(chapterPath)) {
+    console.log(`  ❌ ${bookId}: 章节目录不存在`);
+    return { hasChinese: false, hasIssues: true, details: '章节目录不存在' };
+  }
+  
+  const chapterFiles = fs.readdirSync(chapterPath).filter(file => file.endsWith('.json'));
+  let hasChineseContent = false;
+  let hasIssues = false;
+  let details = [];
+  
+  chapterFiles.forEach(chapterFile => {
+    const chapterPath = path.join(chapterPath, chapterFile);
+    
+    try {
+      const chapterData = JSON.parse(fs.readFileSync(chapterPath, 'utf8'));
+      
+      if (chapterData.sections) {
+        chapterData.sections.forEach((section, index) => {
+          // 检查白话译文 (translation字段)
+          if (section.translation) {
+            const hasChineseChars = /[\u4e00-\u9fff]/.test(section.translation);
+            if (hasChineseChars) {
+              hasChineseContent = true;
+            } else {
+              hasIssues = true;
+              details.push(`${chapterFile}/section${index + 1}: translation字段为英文`);
+            }
+          } else {
+            hasIssues = true;
+            details.push(`${chapterFile}/section${index + 1}: translation字段缺失`);
+          }
+          
+          // 检查现代解读 (interpretation字段)
+          if (section.interpretation) {
+            const hasChineseChars2 = /[\u4e00-\u9fff]/.test(section.interpretation);
+            if (hasChineseChars2) {
+              hasChineseContent = true;
+            } else {
+              hasIssues = true;
+              details.push(`${chapterFile}/section${index + 1}: interpretation字段为英文`);
+            }
+          } else {
+            hasIssues = true;
+            details.push(`${chapterFile}/section${index + 1}: interpretation字段缺失`);
+          }
+          
+          // 检查原文 (originalText字段)
+          if (section.originalText) {
+            const hasChineseChars3 = /[\u4e00-\u9fff]/.test(section.originalText);
+            if (hasChineseChars3) {
+              hasChineseContent = true;
+            } else {
+              hasIssues = true;
+              details.push(`${chapterFile}/section${index + 1}: originalText字段可能不是中文`);
+            }
+          } else {
+            hasIssues = true;
+            details.push(`${chapterFile}/section${index + 1}: originalText字段缺失`);
+          }
+        });
+      }
+    } catch (error) {
+      hasIssues = true;
+      details.push(`${chapterFile}: 读取失败 - ${error.message}`);
+    }
+  });
+  
+  return {
+    hasChineseContent,
+    hasIssues,
+    details,
+    chapterCount: chapterFiles.length,
+    sectionCount: chapterFiles.reduce((sum, file) => {
+      try {
+        const chapterData = JSON.parse(fs.readFileSync(path.join(chapterPath, file), 'utf8'));
+        return sum + (chapterData.sections?.length || 0);
+      } catch (error) {
+        return sum;
+      }
+    }, 0)
+  };
+}
+
+// 检查所有书籍的tab内容
+console.log('📚 检查所有书籍的tab内容：');
+
+const booksDir = path.join(__dirname, '../src/data/snapshots/zh/content/ancient-books');
+const books = fs.readdirSync(booksDir)
+  .filter(file => file.endsWith('.json') && file !== 'collection.json')
+  .map(file => file.replace('.json', ''));
+
+let totalBooks = 0;
+let booksWithChineseContent = 0;
+let booksWithIssues = [];
+let overallStats = {
+  totalBooks: 0,
+  totalChapters: 0,
+  totalSections: 0,
+  sectionsWithChineseTranslation: 0,
+  sectionsWithChineseInterpretation: 0,
+  sectionsWithChineseOriginal: 0,
+  sectionsWithIssues: 0
+};
+
+books.forEach(bookId => {
+  const result = checkTabContent(bookId);
+  totalBooks++;
+  overallStats.totalBooks++;
+  
+  if (result.hasChineseContent) {
+    booksWithChineseContent++;
+  }
+  
+  if (result.hasIssues) {
+    booksWithIssues.push({
+      bookId,
+      issues: result.details
+    });
+  }
+  
+  overallStats.totalChapters += result.chapterCount;
+  overallStats.totalSections += result.sectionCount;
+  
+  // 统计每个section的内容
+  const chapterPath = path.join(booksDir, bookId, 'chapters');
+  if (fs.existsSync(chapterPath)) {
+    const chapterFiles = fs.readdirSync(chapterPath).filter(file => file.endsWith('.json'));
+    
+    chapterFiles.forEach(chapterFile => {
+      const chapterPath = path.join(chapterPath, chapterFile);
+      
+      try {
+        const chapterData = JSON.parse(fs.readFileSync(chapterPath, 'utf8'));
+        
+        if (chapterData.sections) {
+          chapterData.sections.forEach(section => {
+            overallStats.totalSections++;
+            
+            // 检查translation字段
+            if (section.translation) {
+              const hasChineseChars = /[\u4e00-\u9fff]/.test(section.translation);
+              if (hasChineseChars) {
+                overallStats.sectionsWithChineseTranslation++;
+              } else {
+                overallStats.sectionsWithIssues++;
+              }
+            } else {
+              overallStats.sectionsWithIssues++;
+            }
+            
+            // 检查interpretation字段
+            if (section.interpretation) {
+              const hasChineseChars2 = /[\u4e00-\u9fff]/.test(section.interpretation);
+              if (hasChineseChars2) {
+                overallStats.sectionsWithChineseInterpretation++;
+              } else {
+                overallStats.sectionsWithIssues++;
+              }
+            } else {
+              overallStats.sectionsWithIssues++;
+            }
+            
+            // 检查originalText字段
+            if (section.originalText) {
+              const hasChineseChars3 = /[\u4e00-\u9fff]/.test(section.originalText);
+              if (hasChineseChars3) {
+                overallStats.sectionsWithChineseOriginal++;
+              } else {
+                overallStats.sectionsWithIssues++;
+              }
+            } else {
+              overallStats.sectionsWithIssues++;
+            }
+          }
+        });
+      }
+    } catch (error) {
+      console.log(`  ❌ ${bookId}/${chapterFile}: 读取失败 - ${error.message}`);
+    }
+  });
+  
+  console.log(`\n📖 ${bookId}:`);
+  console.log(`  章节数: ${result.chapterCount}`);
+  console.log(`  节数: ${result.sectionCount}`);
+  console.log(`  有中文内容: ${result.hasChineseContent ? '是' : '否'}`);
+  console.log(`  有问题: ${result.hasIssues ? '是' : '否'}`);
+  
+  if (result.hasIssues) {
+    console.log(`  问题详情:`);
+    result.details.slice(0, 5).forEach(detail => {
+      console.log(`    ❌ ${detail}`);
+    });
+    if (result.details.length > 5) {
+      console.log(`    ... 还有 ${result.details.length - 5} 个问题`);
+    }
+  }
+});
+
+// 生成详细报告
+console.log('\n📊 总体统计：');
+console.log(`总书籍数: ${overallStats.totalBooks}`);
+console.log(`总章节数: ${overallStats.totalChapters}`);
+console.log(`总节数: ${overallStats.totalSections}`);
+console.log(`有中文翻译的节: ${overallStats.sectionsWithChineseTranslation}`);
+console.log(`有中文解读的节: ${overallStats.sectionsWithChineseInterpretation}`);
+console.log(`有中文原文的节: ${overallStats.sectionsWithChineseOriginal}`);
+console.log(`有问题的节: ${overallStats.sectionsWithIssues}`);
+
+// 计算百分比
+const translationRate = overallStats.totalSections > 0 ? 
+  ((overallStats.sectionsWithChineseTranslation / overallStats.totalSections) * 100).toFixed(1) : '0';
+const interpretationRate = overallStats.totalSections > 0 ? 
+  ((overallStats.sectionsWithChineseInterpretation / overallStats.totalSections) * 100).toFixed(1) : '0';
+const originalRate = overallStats.totalSections > 0 ? 
+  ((overallStats.sectionsWithChineseOriginal / overallStats.totalSections) * 100).toFixed(1) : '0';
+const issueRate = overallStats.totalSections > 0 ? 
+  ((overallStats.sectionsWithIssues / overallStats.totalSections) * 100).toFixed(1) : '0';
+
+console.log('\n📈 内容质量统计：');
+console.log(`白话译文中文率: ${translationRate}%`);
+console.log(`现代解读中文率: ${interpretationRate}%`);
+console.log(`古籍原文中文率: ${originalRate}%`);
+console.log(`问题率: ${issueRate}%`);
+
+// 检查具体的问题书籍
+console.log('\n⚠️ 有问题的书籍：');
+booksWithIssues.forEach(book => {
+  console.log(`\n📖 ${book.bookId}:`);
+  book.issues.slice(0, 3).forEach(issue => {
+    console.log(`  ❌ ${issue}`);
+  });
+  if (book.issues.length > 3) {
+    console.log(`  ... 还有 ${book.issues.length - 3} 个问题`);
+  }
+});
+
+// 生成修复建议
+console.log('\n🔧 修复建议：');
+
+if (parseFloat(translationRate) < 95) {
+  console.log('1. 补充缺失的中文翻译内容');
+}
+
+if (parseFloat(interpretationRate) < 95) {
+  console.log('2. 补充缺失的中文解读内容');
+}
+
+if (parseFloat(originalRate) < 95) {
+  console.log('3. 检查并修复原文内容');
+}
+
+if (parseFloat(issueRate) > 5) {
+  console.log('4. 修复数据结构问题');
+}
+
+console.log('\n🎯 检查结论：');
+
+const overallQuality = (parseFloat(translationRate) + parseFloat(interpretationRate) + parseFloat(originalRate)) / 3;
+
+if (overallQuality >= 95) {
+  console.log('🎉 中文tab内容质量优秀，所有内容都是中文');
+} else if (overallQuality >= 85) {
+  console.log('👍 中文tab内容质量良好，大部分内容是中文');
+} else if (overallQuality >= 70) {
+  console.log('⚠️  中文tab内容质量一般，需要改进');
+} else {
+  console.log('❌ 中文tab内容质量较差，需要大量修复');
+}
+
+console.log('\n🚀 检查完成！');

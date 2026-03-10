@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "金匮要略",
+    "description": "金匮要略中医古籍"
+  },
+  "content": {
+    "id": "jinkui-yaolue",
+    "title": {
+      "zh": "金匮要略",
+      "en": "Essential Prescriptions of the Golden Cabinet"
+    },
+    "dynasty": "东汉",
+    "author": "张仲景",
+    "category": "伤寒金匮",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "东汉",
+      "author": "张仲景",
+      "chapters": 2,
+      "wordCount": 28000,
+      "publishYear": "200",
+      "tags": [
+        "内科",
+        "杂病",
+        "张仲景",
+        "东汉医学",
+        "脏腑理论"
+      ],
+      "coverImage": "/images/books/jinkui-yaolue-cover.jpg",
+      "difficulty": "High",
+      "influence": "Internal Medicine Foundation",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "xue-bing",
+        "title": {
+          "zh": "血痹虚劳病脉证并治",
+          "en": "Blood Diseases"
+        },
+        "order": 1,
+        "summary": "讨论血相关疾病和虚损状况",
+        "sections": [
+          {
+            "id": "xue-bing-1",
+            "title": "血痹虚劳病第一章",
+            "order": 0,
+            "originalText": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+            "translation": "血痹者，身体不仁，风痹也。虚劳者，阴阳两虚也。",
+            "interpretation": "本章区分血痹和虚损状况，提供诊断标准。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "zang-fu-bing",
+        "title": {
+          "zh": "脏腑经络先后病脉证",
+          "en": "Zang-Fu Diseases"
+        },
+        "order": 1,
+        "summary": "脏腑器官疾病的综合讨论",
+        "sections": [
+          {
+            "id": "zang-fu-bing-1",
+            "title": "脏腑经络病第一章",
+            "order": 0,
+            "originalText": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+            "translation": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+            "interpretation": "本章介绍中医中预防医学和疾病传变模式的概念。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "shanghan-lun",
+      "zhong-zang-zang-fu-lun"
+    ],
+    "readingTime": {
+      "estimated": "3 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of zang-fu theory",
+        "Internal medicine knowledge",
+        "Herbal medicine"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Focus on internal medicine",
+        "Systematic zang-fu theory",
+        "Comprehensive disease coverage",
+        "Preventive medicine concepts"
+      ],
+      "clinicalApplications": [
+        "Treatment of internal diseases",
+        "Zang-fu organ diagnosis",
+        "Herbal prescriptions",
+        "Preventive health measures"
+      ],
+      "historicalSignificance": [
+        "Classic of internal medicine",
+        "Foundation of zang-fu theory",
+        "Essential for clinical practice",
+        "Influenced medical education"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 28000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 280,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.326Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.749Z"
+  }
+}

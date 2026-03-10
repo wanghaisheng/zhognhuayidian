@@ -1,0 +1,10 @@
+{
+  "description": "第三阶段：文档完善",
+  "tasks": [
+    "完善各子目录 README",
+    "创建脚本使用指南",
+    "建立最佳实践文档",
+    "创建脚本索引"
+  ],
+  "nextAction": "node scripts/stage3-documentation.mjs"
+}

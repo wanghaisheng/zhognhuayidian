@@ -1,0 +1,32 @@
+{
+  "id": "huo-bu",
+  "title": {
+    "en": "Fire Section",
+    "zh": "火部"
+  },
+  "order": 1,
+  "summary": "Discusses fire-related substances and their medicinal properties",
+  "sections": [
+    {
+      "id": "huo-bu-1",
+      "title": "Fire Section Chapter One",
+      "order": 0,
+      "originalText": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+      "translation": "Fire is the qi of the south, its nature is flaming upward, its use is warming. Fire can generate earth, but can also overcome metal.",
+      "interpretation": "This chapter explores the properties of fire in Chinese medicine and its relationship with the five elements theory.",
+      "keyConcepts": [
+        {
+          "id": "fire-medicines",
+          "term": "Fire Medicines",
+          "description": "Medicinal substances with warming properties",
+          "category": "Pharmacology",
+          "relatedConcepts": [
+            "Water Medicines",
+            "Earth Medicines",
+            "Metal Medicines"
+          ]
+        }
+      ]
+    }
+  ]
+}

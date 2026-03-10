@@ -1,0 +1,32 @@
+{
+  "id": "shao-er-bing",
+  "title": {
+    "en": "Pediatric Diseases",
+    "zh": "少小婴孺方"
+  },
+  "order": 1,
+  "summary": "Discussion of pediatric diseases and treatments",
+  "sections": [
+    {
+      "id": "shao-er-bing-1",
+      "title": "Pediatric Diseases Chapter One",
+      "order": 0,
+      "originalText": "小儿者，纯阳之体，易寒易热，易虚易实。",
+      "translation": "Children are pure yang bodies, easily affected by cold and heat, easily becoming deficient or excessive.",
+      "interpretation": "This chapter describes the unique physiological characteristics of children and corresponding treatment principles.",
+      "keyConcepts": [
+        {
+          "id": "pediatrics",
+          "term": "Pediatrics",
+          "description": "Medical practice focused on children's health and diseases",
+          "category": "Clinical Medicine",
+          "relatedConcepts": [
+            "Women's Medicine",
+            "Internal Medicine",
+            "Surgery"
+          ]
+        }
+      ]
+    }
+  ]
+}

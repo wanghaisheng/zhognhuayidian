@@ -1,0 +1,36 @@
+{
+  "id": "taiyang-bing",
+  "title": {
+    "zh": "太阳病脉证并治",
+    "en": "Taiyang Disease Patterns"
+  },
+  "order": 0,
+  "summary": "根据六经理论讨论太阳病证的诊断和治疗",
+  "sections": [
+    {
+      "id": "taiyang-bing-1",
+      "title": {
+        "zh": "太阳病第一章",
+        "en": "Taiyang Disease Chapter One"
+      },
+      "order": 0,
+      "originalText": "太阳之为病，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+      "translation": "太阳病时，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+      "interpretation": "本章确立了太阳病证的基本诊断标准，太阳病代表六经理论中的表证阶段。",
+      "summary": "太阳病时，脉浮，头项强痛而恶寒。太阳病，发热汗出者，恶风也，其脉缓者，名为中风。太阳病，或已发热，或未发热，必恶寒，体痛呕逆，脉阴阳俱紧者，名为伤寒。",
+      "keyConcepts": [
+        {
+          "id": "taiyang-disease",
+          "term": "太阳病",
+          "description": "六经疾病传变的第一阶段，代表表证",
+          "category": "六经",
+          "relatedConcepts": [
+            "阳明病",
+            "少阳病",
+            "太阴病"
+          ]
+        }
+      ]
+    }
+  ]
+}

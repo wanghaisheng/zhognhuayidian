@@ -1,0 +1,32 @@
+{
+  "id": "shui-bu",
+  "title": {
+    "en": "Water Section",
+    "zh": "水部"
+  },
+  "order": 0,
+  "summary": "Discusses various types of water and their medicinal properties",
+  "sections": [
+    {
+      "id": "shui-bu-1",
+      "title": "Water Section Chapter One",
+      "order": 0,
+      "originalText": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+      "translation": "Heavenly water is one, earthly water is two, human water is three. Water is the source of all things, water is the chief of all medicines.",
+      "interpretation": "This chapter establishes the fundamental importance of water in both nature and medicine, reflecting the holistic view of Chinese pharmacology.",
+      "keyConcepts": [
+        {
+          "id": "water-medicines",
+          "term": "Water Medicines",
+          "description": "Medicinal substances derived from water sources",
+          "category": "Pharmacology",
+          "relatedConcepts": [
+            "Fire Medicines",
+            "Earth Medicines",
+            "Metal Medicines"
+          ]
+        }
+      ]
+    }
+  ]
+}

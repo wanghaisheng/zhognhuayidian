@@ -1,0 +1,36 @@
+{
+  "id": "yi-xue-yuan-liu",
+  "title": {
+    "zh": "医学源流",
+    "en": "Origin and Development of Medicine"
+  },
+  "order": 0,
+  "summary": "中医的历史发展和理论基础",
+  "sections": [
+    {
+      "id": "yi-xue-yuan-liu-1",
+      "title": {
+        "zh": "医学源流第一章",
+        "en": "Medical Origin Chapter One"
+      },
+      "order": 0,
+      "originalText": "医者，意也。意者，心之所之也。心有所之，谓之医。",
+      "translation": "医者，意也。意者，心之所之也。心有所之，谓之医。",
+      "interpretation": "本章探讨医学作为治疗意图或意志的哲学基础。",
+      "summary": "医者，意也。意者，心之所之也。心有所之，谓之医。",
+      "keyConcepts": [
+        {
+          "id": "medical-philosophy",
+          "term": "医学哲学",
+          "description": "医疗实践的哲学基础和伦理原则",
+          "category": "医学理论",
+          "relatedConcepts": [
+            "医学伦理",
+            "整体医学",
+            "预防医学"
+          ]
+        }
+      ]
+    }
+  ]
+}

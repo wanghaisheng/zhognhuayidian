@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "A-B Classic of Acupuncture and Moxibustion",
+    "description": "The earliest comprehensive work on acupuncture and moxibustion"
+  },
+  "content": {
+    "id": "jiayi-jing",
+    "title": {
+      "en": "A-B Classic of Acupuncture and Moxibustion",
+      "zh": "甲乙经"
+    },
+    "dynasty": "Wei-Jin",
+    "author": "Huangfu Mi",
+    "category": "acupuncture",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "Wei-Jin",
+      "author": "Huangfu Mi",
+      "chapters": 2,
+      "wordCount": 38000,
+      "publishYear": "256",
+      "tags": [
+        "Acupuncture",
+        "Moxibustion",
+        "Huangfu Mi",
+        "Wei-Jin Medicine",
+        "Acupoints"
+      ],
+      "coverImage": "/images/books/jiayi-jing-cover.jpg",
+      "difficulty": "High",
+      "influence": "Acupuncture Foundation Work",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "shu-xue",
+        "title": {
+          "en": "Acupoints",
+          "zh": "腧穴"
+        },
+        "order": 1,
+        "summary": "Detailed description of acupuncture points and their functions",
+        "sections": [
+          {
+            "id": "shu-xue-1",
+            "title": "Acupoints Chapter One",
+            "order": 0,
+            "originalText": "腧穴者，经络之所会，气血之所行。知其所在，明其功能，则针到病除。",
+            "translation": "Acupoints are where meridians meet, where qi and blood flow. Knowing their locations and understanding their functions, needles arrive and illness is removed.",
+            "interpretation": "This chapter explains the fundamental concept of acupoints as the intersection points of meridians and the flow of qi and blood.",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "zhen-jiu-xue",
+        "title": {
+          "en": "Acupuncture and Moxibustion Study",
+          "zh": "针灸学"
+        },
+        "order": 1,
+        "summary": "Comprehensive study of acupuncture points and techniques",
+        "sections": [
+          {
+            "id": "zhen-jiu-xue-1",
+            "title": "Acupuncture Study Chapter One",
+            "order": 0,
+            "originalText": "凡刺之法，必先明经络，知穴道，然后可施针。不知经络，不知穴道，妄施针石，伤人肌肤。",
+            "translation": "All acupuncture methods must first understand the meridians, know the acupoint pathways, then apply needles. Without understanding meridians and acupoint pathways, blindly applying needles and stones injures people's skin and flesh.",
+            "interpretation": "This chapter emphasizes the importance of understanding meridian theory and acupoint locations before practicing acupuncture.",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "huangdi-neijing-ling-shu",
+      "zhen-jiu-jia-yi-jing",
+      "tong-ren-shu-xue-zhen-jiu-tu-jing"
+    ],
+    "readingTime": {
+      "estimated": "5 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of meridian theory",
+        "Basic acupuncture knowledge",
+        "Point location skills"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Earliest comprehensive acupuncture work",
+        "Systematic organization of 349 acupoints",
+        "Integration of previous acupuncture knowledge",
+        "Created acupuncture treatment methodology"
+      ],
+      "clinicalApplications": [
+        "Foundation for acupuncture practice",
+        "Reference for acupoint location and function",
+        "Guide to acupuncture techniques",
+        "Treatment protocols for various conditions"
+      ],
+      "historicalSignificance": [
+        "Earliest systematic acupuncture work",
+        "Established acupuncture as medical discipline",
+        "Influenced acupuncture development worldwide",
+        "Foundation of modern acupuncture practice"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 38000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 380,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T17:26:46.745Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.745Z"
+  }
+}

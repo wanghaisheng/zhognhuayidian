@@ -1,0 +1,54 @@
+{
+  "title": "Scripts 目录索引",
+  "description": "所有脚本的快速索引和使用指南",
+  "lastUpdated": "2026-03-10T19:06:44.988Z",
+  "categories": [
+    {
+      "name": "generate",
+      "title": "生成脚本",
+      "description": "用于生成项目数据、路由、快照等的脚本集合",
+      "path": "scripts/generate/",
+      "scriptCount": 0
+    },
+    {
+      "name": "check",
+      "title": "检查脚本",
+      "description": "用于检查代码质量、链接、国际化等的脚本集合",
+      "path": "scripts/check/",
+      "scriptCount": 0
+    },
+    {
+      "name": "data",
+      "title": "数据处理脚本",
+      "description": "用于数据迁移、对齐、转换等的脚本集合",
+      "path": "scripts/data/",
+      "scriptCount": 0
+    },
+    {
+      "name": "utils",
+      "title": "工具脚本",
+      "description": "用于构建、优化、监控等的工具脚本集合",
+      "path": "scripts/utils/",
+      "scriptCount": 0
+    },
+    {
+      "name": "archive",
+      "title": "归档脚本",
+      "description": "已废弃的脚本，保留作为参考",
+      "path": "scripts/archive/",
+      "scriptCount": 0
+    }
+  ],
+  "quickReference": {
+    "国际化检查": "npm run check:hardcode",
+    "链接检查": "node scripts/check/check-links.mjs",
+    "数据生成": "node scripts/generate/generate-routes.ts",
+    "构建优化": "node scripts/utils/post-build.js"
+  },
+  "bestPractices": [
+    "始终在项目根目录运行脚本",
+    "运行前备份重要数据",
+    "定期检查脚本输出",
+    "使用版本控制跟踪更改"
+  ]
+}

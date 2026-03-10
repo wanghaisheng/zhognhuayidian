@@ -1,0 +1,32 @@
+{
+  "id": "yi-xue-yuan-liu",
+  "title": {
+    "en": "Origin and Development of Medicine",
+    "zh": "医学源流"
+  },
+  "order": 0,
+  "summary": "Historical development and theoretical foundations of Chinese medicine",
+  "sections": [
+    {
+      "id": "yi-xue-yuan-liu-1",
+      "title": "Medical Origin Chapter One",
+      "order": 0,
+      "originalText": "医者，意也。意者，心之所之也。心有所之，谓之医。",
+      "translation": "Medicine means intention. Intention is what the mind holds. When the mind holds something, it is called medicine.",
+      "interpretation": "This chapter explores the philosophical foundation of medicine as the intention or will to heal.",
+      "keyConcepts": [
+        {
+          "id": "medical-philosophy",
+          "term": "Medical Philosophy",
+          "description": "The philosophical foundation and ethical principles of medical practice",
+          "category": "Medical Theory",
+          "relatedConcepts": [
+            "Medical Ethics",
+            "Holistic Medicine",
+            "Preventive Medicine"
+          ]
+        }
+      ]
+    }
+  ]
+}

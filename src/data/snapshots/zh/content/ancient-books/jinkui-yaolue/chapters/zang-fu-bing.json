@@ -1,0 +1,36 @@
+{
+  "id": "zang-fu-bing",
+  "title": {
+    "zh": "脏腑经络先后病脉证",
+    "en": "Zang-Fu Diseases"
+  },
+  "order": 0,
+  "summary": "脏腑器官疾病的综合讨论",
+  "sections": [
+    {
+      "id": "zang-fu-bing-1",
+      "title": {
+        "zh": "脏腑病第一章",
+        "en": "Zang-Fu Diseases Chapter One"
+      },
+      "order": 0,
+      "originalText": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+      "translation": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+      "interpretation": "本章介绍中医中预防医学和疾病传变模式的概念。",
+      "summary": "问曰：上工治未病，中工治已病，何谓也？师曰：上工治未病者，见肝之病，知肝传脾，当先实脾。",
+      "keyConcepts": [
+        {
+          "id": "zang-fu-diseases",
+          "term": "脏腑疾病",
+          "description": "中医中影响脏腑器官的疾病",
+          "category": "内科",
+          "relatedConcepts": [
+            "气血理论",
+            "五行",
+            "阴阳理论"
+          ]
+        }
+      ]
+    }
+  ]
+}

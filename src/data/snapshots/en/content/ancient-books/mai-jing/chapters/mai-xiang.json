@@ -1,0 +1,32 @@
+{
+  "id": "mai-xiang",
+  "title": {
+    "en": "Pulse Images",
+    "zh": "脉象"
+  },
+  "order": 1,
+  "summary": "Detailed description of different pulse images and their significance",
+  "sections": [
+    {
+      "id": "mai-xiang-1",
+      "title": "Pulse Images Chapter One",
+      "order": 0,
+      "originalText": "浮脉为表，沉脉为里，迟脉为寒，数脉为热。",
+      "translation": "Floating pulse indicates exterior, deep pulse indicates interior, slow pulse indicates cold, rapid pulse indicates heat.",
+      "interpretation": "This chapter provides the basic classification of pulse images according to location and speed.",
+      "keyConcepts": [
+        {
+          "id": "pulse-qualities",
+          "term": "Pulse Qualities",
+          "description": "Different characteristics and qualities of pulse in diagnosis",
+          "category": "Diagnostics",
+          "relatedConcepts": [
+            "Pulse Diagnosis",
+            "Differential Diagnosis",
+            "Clinical Assessment"
+          ]
+        }
+      ]
+    }
+  ]
+}

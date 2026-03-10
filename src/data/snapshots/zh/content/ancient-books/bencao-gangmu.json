@@ -1,0 +1,155 @@
+{
+  "labels": {
+    "title": "本草纲目",
+    "description": "本草纲目中医古籍"
+  },
+  "content": {
+    "id": "bencao-gangmu",
+    "title": {
+      "zh": "本草纲目",
+      "en": "Compendium of Materia Medica"
+    },
+    "dynasty": "明代",
+    "author": "李时珍",
+    "category": "本草",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "明代",
+      "author": "李时珍",
+      "chapters": 2,
+      "wordCount": 1900000,
+      "publishYear": "1596",
+      "tags": [
+        "药理学",
+        "本草",
+        "李时珍",
+        "明代医学",
+        "药物分类"
+      ],
+      "coverImage": "/images/books/bencao-gangmu-cover.jpg",
+      "difficulty": "Medium",
+      "influence": "Comprehensive Pharmacological Masterpiece",
+      "preservation": "Excellent"
+    },
+    "chapters": [
+      {
+        "id": "huo-bu",
+        "title": {
+          "zh": "火部",
+          "en": "Fire Section"
+        },
+        "order": 1,
+        "summary": "讨论火相关物质及其药用特性",
+        "sections": [
+          {
+            "id": "huo-bu-1",
+            "title": "火部第一章",
+            "order": 0,
+            "originalText": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+            "translation": "火者，南方之气，其性炎上，其用温暖。火能生土，亦能克金。",
+            "interpretation": "本章探讨中医中火药的属性及其与五行理论的关系。",
+            "keyConcepts": [
+              {
+                "id": "fire-medicines",
+                "term": "火药",
+                "description": "具有温热特性的药用物质",
+                "category": "药理学",
+                "relatedConcepts": [
+                  "水药",
+                  "土药",
+                  "金药"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shui-bu",
+        "title": {
+          "zh": "水部",
+          "en": "Water Section"
+        },
+        "order": 1,
+        "summary": "讨论水相关物质及其药用特性",
+        "sections": [
+          {
+            "id": "shui-bu-1",
+            "title": "水部第一章",
+            "order": 0,
+            "originalText": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+            "translation": "天水为一，地水为二，人之水为三。水为万物之源，水为百药之长。",
+            "interpretation": "本章确立了水在自然和医学中的基本重要性，反映了中医药学的整体观念。",
+            "keyConcepts": [
+              {
+                "id": "water-medicines",
+                "term": "水药",
+                "description": "水源性药用物质",
+                "category": "药理学",
+                "relatedConcepts": [
+                  "火药",
+                  "土药",
+                  "金药"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shen-nong-ben-cao-jing",
+      "qianjin-fang",
+      "bencao-jing-jizhu"
+    ],
+    "readingTime": {
+      "estimated": "40 hours",
+      "difficulty": "Intermediate",
+      "prerequisites": [
+        "Basic knowledge of Chinese pharmacology",
+        "Understanding of drug properties",
+        "Herbal medicine basics"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Comprehensive collection of 1892 medicinal substances",
+        "Systematic classification of drugs by nature and properties",
+        "Detailed descriptions of drug processing and preparation",
+        "Integration of previous pharmacological works"
+      ],
+      "clinicalApplications": [
+        "Foundation for modern Chinese materia medica",
+        "Reference for herbal formula composition",
+        "Guide to drug processing and preparation",
+        "Source for pharmacological research"
+      ],
+      "historicalSignificance": [
+        "Most comprehensive pharmacological work in Chinese history",
+        "Influenced pharmacology worldwide",
+        "Standardized drug classification system",
+        "Bridge between traditional and modern pharmacology"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 1900000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 19000,
+    "difficulty": 3
+  },
+  "updatedAt": "2026-02-25T18:10:53.227Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.742Z"
+  }
+}

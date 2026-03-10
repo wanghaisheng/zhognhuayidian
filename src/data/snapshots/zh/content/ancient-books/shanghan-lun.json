@@ -1,0 +1,131 @@
+{
+  "labels": {
+    "title": "伤寒论",
+    "description": "伤寒论中医古籍"
+  },
+  "content": {
+    "id": "shanghan-lun",
+    "title": {
+      "zh": "伤寒论",
+      "en": "Treatise on Cold Damage"
+    },
+    "dynasty": "东汉",
+    "author": "张仲景",
+    "category": "伤寒金匮",
+    "year": "Unknown",
+    "metadata": {
+      "dynasty": "东汉",
+      "author": "张仲景",
+      "chapters": 2,
+      "wordCount": 35000,
+      "publishYear": "200",
+      "tags": [
+        "伤寒",
+        "六经",
+        "张仲景",
+        "东汉医学",
+        "表证"
+      ],
+      "coverImage": "/images/books/shanghan-lun-cover.jpg",
+      "difficulty": "High",
+      "influence": "Cold Disease Classic",
+      "preservation": "Good"
+    },
+    "chapters": [
+      {
+        "id": "taiyang-bing-zheng",
+        "title": {
+          "zh": "太阳病脉证并治",
+          "en": "Taiyang Disease Patterns"
+        },
+        "order": 0,
+        "summary": "Detailed discussion of Taiyang disease patterns and treatments",
+        "sections": [
+          {
+            "id": "taiyang-bing-zheng-1",
+            "title": "太阳病证第一章",
+            "order": 0,
+            "originalText": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+            "translation": "太阳病，发热而渴，不恶寒者，为温病。太阳病，发热而渴，恶寒者，为伤寒。",
+            "interpretation": "本章区分太阳病中的温病和伤寒证型，确立了鉴别诊断的标准。",
+            "keyConcepts": []
+          }
+        ]
+      },
+      {
+        "id": "yangming-bing-zheng",
+        "title": {
+          "zh": "阳明病脉证并治",
+          "en": "Yangming Disease Patterns"
+        },
+        "order": 1,
+        "summary": "Discussion of Yangming disease patterns in cold damage",
+        "sections": [
+          {
+            "id": "yangming-bing-zheng-1",
+            "title": "阳明病证第一章",
+            "order": 0,
+            "originalText": "阳明病，外证云何？曰：身热，汗自出，不恶寒，反恶热也。",
+            "translation": "阳明病的外证是什么？答案是：身热，汗自出，不恶寒，反恶热。",
+            "interpretation": "本章描述阳明病证的特征性外证表现。",
+            "keyConcepts": []
+          }
+        ]
+      }
+    ],
+    "relatedBooks": [
+      "huangdi-neijing",
+      "shanghan-zabing-lun",
+      "jinkui-yaolue",
+      "wen-bing-tiao-bian"
+    ],
+    "readingTime": {
+      "estimated": "4 hours",
+      "difficulty": "Advanced",
+      "prerequisites": [
+        "Understanding of six meridians theory",
+        "Cold damage knowledge",
+        "Herbal medicine"
+      ]
+    },
+    "studyNotes": {
+      "keyPoints": [
+        "Focus on cold damage diseases",
+        "Systematic six meridian theory",
+        "Detailed treatment protocols",
+        "Integration with clinical practice"
+      ],
+      "clinicalApplications": [
+        "Treatment of cold damage diseases",
+        "Six meridian diagnosis",
+        "Herbal formula prescriptions",
+        "Seasonal disease treatment"
+      ],
+      "historicalSignificance": [
+        "Classic of cold damage medicine",
+        "Foundation of six meridian theory",
+        "Influenced clinical practice",
+        "Essential for Chinese medicine study"
+      ]
+    }
+  },
+  "metrics": {
+    "totalChapters": 2,
+    "totalWords": 35000,
+    "totalSections": 2,
+    "relatedBooks": 4,
+    "keyConcepts": 0,
+    "readingTime": 350,
+    "difficulty": 5
+  },
+  "updatedAt": "2026-02-25T18:10:53.335Z",
+  "metadata": {
+    "sourceFlags": [
+      "db",
+      "markdown",
+      "seed"
+    ],
+    "version": "1.0.0",
+    "lastReviewed": "2026-02-25T17:26:46.762Z"
+  }
+}
