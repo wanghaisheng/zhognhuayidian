@@ -59,14 +59,17 @@ const loadLanguagePrefixes = () => {
 const getLocalesForCategory = (category) => {
   const snapshotsRoot = path.join(__dirname, '../src/data/snapshots');
   if (!fs.existsSync(snapshotsRoot)) return [];
-  return fs.readdirSync(snapshotsRoot).filter((locale) => {
+  console.log(`🔍 Looking for ${category} in ${snapshotsRoot}`);
+  const locales = fs.readdirSync(snapshotsRoot);
+  console.log(`📁 Available locales: ${locales.join(', ')}`);
+  const result = locales.filter((locale) => {
     const candidate = path.join(snapshotsRoot, locale, 'content', category);
-    try {
-      return fs.statSync(candidate).isDirectory();
-    } catch {
-      return false;
-    }
+    const exists = fs.existsSync(candidate) && fs.statSync(candidate).isDirectory();
+    console.log(`  ${locale}/${category}: ${exists ? '✅' : '❌'}`);
+    return exists;
   });
+  console.log(`✨ Found locales for ${category}: ${result.join(', ')}`);
+  return result;
 };
 
 // Helper to get slugs from snapshots/<locale>/content/<category>/*.json
@@ -135,23 +138,24 @@ const readJsonSafe = (p) => {
 };
 
 const getBookEntries = (locale) => {
-  const idx = readJsonSafe(path.join(__dirname, `../src/data/snapshots/${locale}/books.json`));
-  const items = Array.isArray(idx?.items) ? idx.items : [];
-  const contentDir = path.join(__dirname, `../src/data/snapshots/${locale}/content/books`);
-  const contentSlugs = fs.existsSync(contentDir)
-    ? fs.readdirSync(contentDir).filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/i, ''))
-    : [];
-  const bySlug = new Map(items.map(it => [it.slug, it]));
-  contentSlugs.forEach(slug => {
-    if (!bySlug.has(slug)) {
-      bySlug.set(slug, { slug, category: '' });
+  const contentDir = path.join(__dirname, `../src/data/snapshots/${locale}/content/ancient-books`);
+  if (!fs.existsSync(contentDir)) return [];
+  
+  const files = fs.readdirSync(contentDir);
+  const entries = [];
+  
+  files.forEach(file => {
+    if (file.endsWith('.json') && !file.includes('collection')) {
+      const slug = file.replace('.json', '');
+      entries.push({ slug, category: '' });
     }
   });
-  return Array.from(bySlug.values());
+  
+  return entries;
 };
 
 const detectBookCategory = (locale, slug, fallback) => {
-  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${slug}.json`);
+  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/ancient-books/${slug}.json`);
   const js = readJsonSafe(p);
   const fm = js?.frontMatter || {};
   const tags = Array.isArray(fm.tags) ? fm.tags.map(t => String(t).toLowerCase()) : [];
@@ -169,7 +173,7 @@ const detectBookCategory = (locale, slug, fallback) => {
 };
 
 const detectBookSpec = (locale, slug, category) => {
-  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${slug}.json`);
+  const p = path.join(__dirname, `../src/data/snapshots/${locale}/content/ancient-books/${slug}.json`);
   const js = readJsonSafe(p);
   const fm = js?.frontMatter || {};
   const tags = Array.isArray(fm.tags) ? fm.tags.map(t => String(t).toLowerCase()) : [];
@@ -212,9 +216,28 @@ const generateRoutes = () => {
   });
 
   // ===== Dynamic Content Routes from Markdown (filtered by per-locale existence) =====
-// 从content分析哪些是markdown目录
-  const categories = ['blog', 'glossary', 'learn', 'guides', 'history', 'comparisons', 'education'];
+  // TCM项目的内容分类
+  const categories = ['ancient-books', 'blog', 'glossary', 'learn', 'history'];
   
+  // Ancient Books (TCM核心内容) - 直接硬编码路径测试
+  const ancientBookRoutes = [];
+  const enBooksPath = path.join(__dirname, '../src/data/snapshots/en/content/ancient-books');
+  const zhBooksPath = path.join(__dirname, '../src/data/snapshots/zh/content/ancient-books');
+  
+  if (fs.existsSync(enBooksPath)) {
+    const enFiles = fs.readdirSync(enBooksPath).filter(f => f.endsWith('.json') && !f.includes('collection'));
+    const enSlugs = enFiles.map(f => f.replace('.json', ''));
+    ancientBookRoutes.push(...enSlugs.map(slug => `/book/${slug}`));
+    console.log(`📚 EN ancient books: ${enSlugs.join(', ')}`);
+  }
+  
+  if (fs.existsSync(zhBooksPath)) {
+    const zhFiles = fs.readdirSync(zhBooksPath).filter(f => f.endsWith('.json') && !f.includes('collection'));
+    const zhSlugs = zhFiles.map(f => f.replace('.json', ''));
+    ancientBookRoutes.push(...zhSlugs.map(slug => `/zh/book/${slug}`));
+    console.log(`📚 ZH ancient books: ${zhSlugs.join(', ')}`);
+  }
+
   // Blog
   const blogLocales = getLocalesForCategory('blog');
   const blogRoutes = blogLocales.flatMap((locale) => {
@@ -239,14 +262,6 @@ const generateRoutes = () => {
     return slugs.map((slug) => `${prefix}/learn/${slug}`);
   });
 
-  // Guides
-  const guidesLocales = getLocalesForCategory('guides');
-  const guidesRoutes = guidesLocales.flatMap((locale) => {
-    const prefix = getLocalePrefix(locale);
-    const slugs = getSnapshotSlugs('guides', locale);
-    return slugs.map((slug) => `${prefix}/learn/${slug}`);
-  });
-
   // History
   const historyLocales = getLocalesForCategory('history');
   const historyRoutes = historyLocales.flatMap((locale) => {
@@ -255,80 +270,39 @@ const generateRoutes = () => {
     return slugs.map((slug) => `${prefix}/history/${slug}`);
   });
 
-  // Reports → /reports/market/:slug
-  const reportsLocales = getLocalesForCategory('reports');
-  const reportRoutes = reportsLocales.flatMap((locale) => {
-    const prefix = getLocalePrefix(locale);
-    const slugs = getSnapshotSlugs('reports', locale);
-    return slugs.map((slug) => `${prefix}/reports/market/${slug}`);
-  });
-
-  // Manufacturers → /manufacturers/:slug
-  const manufacturersLocales = getLocalesForCategory('manufacturers');
-  const manufacturerRoutes = manufacturersLocales.flatMap((locale) => {
-    const prefix = getLocalePrefix(locale);
-    const slugs = getSnapshotSlugs('manufacturers', locale);
-    return slugs.map((slug) => `${prefix}/manufacturers/${slug}`);
-  });
-
-  // Comparisons → /compare/:slug
-  const comparisonLocales = getLocalesForCategory('comparisons');
-  const comparisonRoutes = comparisonLocales.flatMap((locale) => {
-    const prefix = getLocalePrefix(locale);
-    const slugs = getSnapshotSlugs('comparisons', locale);
-    return slugs.map((slug) => `${prefix}/compare/${slug}`);
-  });
-
-  // Education (Pricing only) → /pricing/:model where file is pricing-<model>.md
-  const educationLocales = getLocalesForCategory('education');
-  const pricingRoutes = educationLocales.flatMap((locale) => {
-    const prefix = getLocalePrefix(locale);
-    const slugs = getSnapshotSlugs('education', locale);
-    return slugs
-      .filter((slug) => slug.startsWith('pricing-'))
-      .map((slug) => {
-        const model = slug.replace(/^pricing-/, '');
-        return `${prefix}/pricing/${model}`;
-      });
-  });
-
   // ===== Combine All Routes =====
   const bookRoutes = [];
   const bookSpecRoutes = [];
   for (const [locale, prefix] of languagePrefixes.entries()) {
     const entries = getBookEntries(locale);
     entries.forEach((book) => {
-      const contentPath = path.join(__dirname, `../src/data/snapshots/${locale}/content/books/${book.slug}.json`);
+      const contentPath = path.join(__dirname, `../src/data/snapshots/${locale}/content/ancient-books/${book.slug}.json`);
       if (!fs.existsSync(contentPath)) return;
       const category = detectBookCategory(locale, book.slug, book.category);
-      const base = `${prefix}/library/${book.slug}`;
+      const base = `${prefix}/book/${book.slug}`;
       bookRoutes.push(base);
       const spec = detectBookSpec(locale, book.slug, category);
       if (spec) {
-        bookRoutes.push(`${prefix}/library/${category}/${spec}/${book.slug}`);
-        bookSpecRoutes.push(`${prefix}/library/${category}/${spec}`);
+        bookRoutes.push(`${prefix}/book/${category}/${spec}/${book.slug}`);
+        bookSpecRoutes.push(`${prefix}/book/${category}/${spec}`);
       }
     });
     // Add category index pages if the locale has at least one book in that category
     const hasMedicalClassics = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'medical-classics');
     const hasPharmacology = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'pharmacology');
     const hasFormulas = entries.some(b => detectBookCategory(locale, b.slug, b.category) === 'formulas');
-    if (hasMedicalClassics) bookRoutes.push(`${prefix}/library/medical-classics`);
-    if (hasPharmacology) bookRoutes.push(`${prefix}/library/pharmacology`);
-    if (hasFormulas) bookRoutes.push(`${prefix}/library/formulas`);
+    if (hasMedicalClassics) bookRoutes.push(`${prefix}/book/medical-classics`);
+    if (hasPharmacology) bookRoutes.push(`${prefix}/book/pharmacology`);
+    if (hasFormulas) bookRoutes.push(`${prefix}/book/formulas`);
   }
 
   const allRoutes = [
     ...staticRoutes,
+    ...ancientBookRoutes,
     ...blogRoutes,
     ...glossaryRoutes,
     ...learnRoutes,
-    ...guidesRoutes,
     ...historyRoutes,
-    ...reportRoutes,
-    ...manufacturerRoutes,
-    ...comparisonRoutes,
-    ...pricingRoutes,
     ...bookRoutes,
     ...bookSpecRoutes
   ];
@@ -340,15 +314,11 @@ const generateRoutes = () => {
     routes: uniqueRoutes,
     stats: {
       static: staticRoutes.length,
+      ancientBooks: ancientBookRoutes.length,
       blog: blogRoutes.length,
       glossary: glossaryRoutes.length,
       learn: learnRoutes.length,
-      guides: guidesRoutes.length,
       history: historyRoutes.length,
-      reports: reportRoutes.length,
-      manufacturers: manufacturerRoutes.length,
-      comparisons: comparisonRoutes.length,
-      pricing: pricingRoutes.length,
       books: bookRoutes.length,
       bookSpecs: bookSpecRoutes.length,
       total: uniqueRoutes.length
@@ -363,15 +333,11 @@ const main = () => {
   
   console.log('\n📋 Route Statistics:');
   console.log(`   - Static Routes: ${stats.static}`);
+  console.log(`   - Ancient Books: ${stats.ancientBooks}`);
   console.log(`   - Blog: ${stats.blog}`);
   console.log(`   - Glossary: ${stats.glossary}`);
   console.log(`   - Learn: ${stats.learn}`);
-  console.log(`   - Guides: ${stats.guides}`);
   console.log(`   - History: ${stats.history}`);
-  console.log(`   - Reports: ${stats.reports}`);
-  console.log(`   - Manufacturers: ${stats.manufacturers}`);
-  console.log(`   - Comparisons: ${stats.comparisons}`);
-  console.log(`   - Pricing: ${stats.pricing}`);
   console.log(`   - Books: ${stats.books}`);
   console.log(`   - Total: ${stats.total} routes\n`);
   
