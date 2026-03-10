@@ -1,5 +1,4 @@
-
-# TanStack Router SSR/SSG 最佳实践指南 (Cloudflare Pages 版)
+# TanStack Router SSR/SSG 最佳实践指南 (Cloudflare Pages 版) v1.7.0
  
 ### 新增：混合内容源（Supabase + Markdown）静态化/SSR 设计
 - 混合数据模型：公开内容以 Markdown 为主（content/<category>/<locale>/<slug>.md），结构化与列表数据来自 Supabase（仅匿名可读字段）。

@@ -1,6 +1,6 @@
-# SEO 集中化方案（TanStack Router + SSR）
+# SEO 集中化方案（TanStack Router + SSR）v1.7.0
 
-本方案将 canonical 与 alternate hreflang 等跨页面 SEO 链接集中到“根路由 Head”，页面仅负责内容级 SEO（title/description/OG/Twitter 等）；通过构建期注入资产与 SSR 路由白名单保证稳定性；不在服务端做 Head 兜底，确保搜索引擎一致性、可维护性与性能稳定性。
+本方案将 canonical 与 alternate hreflang 等跨页面 SEO 链接集中到"根路由 Head"，页面仅负责内容级 SEO（title/description/OG/Twitter 等）；通过构建期注入资产与 SSR 路由白名单保证稳定性；不在服务端做 Head 兜底，确保搜索引擎一致性、可维护性与性能稳定性。
 
 ## 背景与目标
 
@@ -8,8 +8,8 @@
 - 方案目标：
   - 集中输出 canonical 与 hreflang，统一语言前缀与 URL 规范
   - 页面只负责内容级 SEO，减少耦合与重复
--  取消服务端兜底，由路由层保证缺失标签的默认值与完整 head
-  - 引入本地化页面级 SEO（人工编辑）优先覆盖自动生成，确保质量
+- 取消服务端兜底，由路由层保证缺失标签的默认值与完整 head
+- 引入本地化页面级 SEO（人工编辑）优先覆盖自动生成，确保质量
 
 ## 核心原则
 
@@ -18,6 +18,31 @@
 - 规范化：URL 标准化为 https、无 www、无尾斜杠（根除外）；canonical 不带 query
 - 取消服务端兜底：不在服务端修补 Head；缺失由根路由/页面路由的 head 默认值覆盖
 - 评审优先：英文本地化页面 SEO（人工编辑）优先覆盖自动/动态值
+
+## 脚本组织化SEO管理 (v1.7.0新增)
+
+### 4.1 SEO脚本 (`scripts/seo/`)
+- `check-seo-coverage.js` - 检查SEO覆盖情况
+
+### 4.2 构建脚本 (`scripts/build/`)
+- `generate-dynamic-sitemap.ts` - 生成动态站点地图
+- `post-build.js` - 构建后SEO优化
+
+### 4.3 工具脚本 (`scripts/tools/`)
+- `audit-seo.mjs` - SEO审计
+- `check-links.mjs` - 链接检查
+
+### 4.4 NPM脚本映射
+```bash
+# SEO检查和优化
+npm run seo:check              # 检查SEO覆盖
+npm run tools:audit-seo        # SEO审计
+npm run generate:sitemap         # 生成站点地图
+
+# 构建时SEO优化
+npm run build                  # 完整构建包含SEO优化
+npm run build:prod             # 生产构建包含SEO检查
+```
 
 ## 架构设计
 

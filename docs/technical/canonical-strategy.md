@@ -1,6 +1,35 @@
-# Canonical 策略（站点级规范化 URL 规范）
+# Canonical 策略（站点级规范化 URL 规范）v1.7.0
 
-面向整站的 canonical 生成与管理规范，确保搜索引擎只索引我们希望的规范化页面版本，避免内容重复、权重稀释与抓取浪费。该策略与 SSR/SSG 渲染、国际化（i18n）和边缘层重定向协调一致，并由统一工具函数负责落实。
+面向整站的 canonical 生成与管理规范，确保搜索引擎只索引我们希望的规范化页面版本，避免内容重复、权重稀释与抓取浪费。该策略与 SSR/SSG 渲染、国际化（i18n）和边缘层重定向协调一致，并由统一工具函数负责落实。本文档已更新以反映v1.7.0的脚本重组优化。
+
+## 脚本化SEO管理 (v1.7.0新增)
+
+### SEO脚本集成
+```bash
+# SEO相关脚本
+node scripts/seo/check-seo-coverage.js          # 检查SEO覆盖
+node scripts/tools/check-links.mjs              # 检查链接
+node scripts/tools/audit-seo.mjs               # SEO审计
+```
+
+### 构建脚本集成
+```bash
+# 站点地图生成
+node scripts/build/generate-dynamic-sitemap.ts   # 生成动态站点地图
+node scripts/build/post-build.js                # 构建后优化包含SEO
+```
+
+### NPM脚本映射
+```bash
+# SEO检查和优化
+npm run seo:check              # 检查SEO覆盖
+npm run tools:audit-seo        # SEO审计
+npm run tools:check-links       # 检查链接
+
+# 构建时SEO优化
+npm run generate:sitemap         # 生成站点地图
+npm run build                  # 完整构建包含SEO优化
+```
 
 ## 目标
 - 统一、稳定、可预测的规范化 URL

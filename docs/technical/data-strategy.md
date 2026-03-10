@@ -1,15 +1,51 @@
-# 数据与内容统一策略（JSONB + Domain + Markdown）
+# 数据与内容统一策略（JSONB + Domain + Markdown）v1.7.0
 
 ## 1. 目标与范围
 - 统一结构化数据与非结构化内容的读取与渲染路径
 - 建立多语言数据的类型安全与优先级策略
 - 规范页面 SEO 元信息的统一来源
+- 集成脚本组织化的数据管理流程
 
 ## 2. 分层模型
 - 常量层：`src/data/constants/` 仅包含键与枚举
 - 结构化数据层：数据库（Supabase/PostgreSQL）或 `src/data/production/` 备份
 - 本地化层：`src/locales/{lang}/` 负责 UI 文案与标签
 - 访问/合并层：Hooks 提供 Domain 对象与 Markdown 合并输出
+
+## 3. 脚本组织化数据管理 (v1.7.0新增)
+
+### 3.1 数据处理脚本 (`scripts/data/`)
+- `align-book-data-structure.cjs` - 对齐书籍数据结构
+- `align-chapter-structure.cjs` - 对齐章节结构
+- `generate-book-data.cjs` - 生成书籍数据
+- `generate-book-chapters.cjs` - 生成书籍章节
+- `unify-book-data-structure.cjs` - 统一书籍数据结构
+
+### 3.2 质量检查脚本 (`scripts/checks/`)
+- `check-book-consistency.cjs` - 检查书籍一致性
+- `check-chinese-display-issues.cjs` - 检查中文显示问题
+- `check-locale-consistency.cjs` - 检查语言环境一致性
+
+### 3.3 修复脚本 (`scripts/fixes/`)
+- `fix-chinese-data.cjs` - 修复中文数据
+- `fix-category-keys.cjs` - 修复分类键
+- `fix-translation-content.cjs` - 修复翻译内容
+
+### 3.4 NPM脚本映射
+```bash
+# 数据管理
+npm run data:align-books      # 对齐书籍数据结构
+npm run data:generate-books    # 生成书籍数据
+npm run data:generate-chapters  # 生成书籍章节
+
+# 质量检查
+npm run check:book-consistency    # 检查书籍一致性
+npm run check:chinese-display     # 检查中文显示
+
+# 数据修复
+npm run fix:chinese-data      # 修复中文数据
+npm run fix:category-keys      # 修复分类键
+```
 
 ## 3. 数据库多语言（JSONB translations）
 - 模式：实体包含 `translations: Record<LanguageCode, DeepPartial<Entity>>`

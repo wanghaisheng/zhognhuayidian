@@ -1,8 +1,38 @@
-# 书籍详情页多语言实现指南
+# 书籍详情页多语言实现指南 v1.7.0
 
 ## 概述
 
-本文档详细说明了书籍详情页的多语言实现，包括架构设计、文件组织、命名规范和使用示例。
+本文档详细说明了书籍详情页的多语言实现，包括架构设计、文件组织、命名规范和使用示例。本文档已更新以反映v1.7.0的脚本重组优化。
+
+## 脚本化国际化管理 (v1.7.0新增)
+
+### 国际化脚本 (`scripts/i18n/`)
+```bash
+# 核心国际化脚本
+node scripts/i18n/check-i18n-consistency.js    # 检查国际化一致性
+node scripts/i18n/check-missing-labels.js       # 检查缺失标签
+node scripts/i18n/scan-labels-usage.mjs         # 扫描标签使用
+node scripts/i18n/scan-long-content.mjs           # 扫描长内容
+node scripts/i18n/prune-i18n-glossary.mjs        # 修剪国际化词汇表
+node scripts/i18n/migrate-long-content.mjs         # 迁移长内容
+```
+
+### 检查脚本 (`scripts/checks/`)
+```bash
+# 硬编码检查
+node scripts/checks/check-hardcode.cjs           # 检查硬编码文本
+```
+
+### NPM脚本映射
+```bash
+# 国际化工作流
+npm run i18n:check                    # 检查翻译完整性
+npm run i18n:scan-labels              # 扫描标签使用
+npm run i18n:report-long               # 报告长内容
+npm run i18n:prune-glossary            # 修剪词汇表
+npm run i18n:migrate-long-content       # 迁移长内容
+npm run check:hardcode                  # 检查硬编码
+```
 
 ## 🏗️ 架构设计原则
 
