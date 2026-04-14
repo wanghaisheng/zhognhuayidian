@@ -1,25 +1,39 @@
 ---
+import TermsPage from '@/components/pages/TermsPage';
+import I18nProvider from '@/components/I18nProvider';
+import { getLocalizedSEOConfig, generateCanonicalUrl, optimizeDescription } from '@/utils/seo';
+import i18n from '@/lib/i18n';
+
+// SEO 配置
+const basePath = '/terms';
+const localized = getLocalizedSEOConfig(i18n.language, basePath) || null;
+const title = (localized?.title as string) || (i18n.t('terms.seo.title') as string) || (i18n.language === 'zh' ? '服务条款' : 'Terms');
+const descriptionBase = (localized?.description as string) || (i18n.t('terms.seo.description') as string) || '';
+const description = optimizeDescription(descriptionBase, i18n.language);
+const canonical = generateCanonicalUrl(basePath, i18n.language);
+const ogImage = `${canonical.replace(/\/+$/, '')}/placeholder.svg`;
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang={i18n.language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>服务条款 - 中华医典</title>
-    <meta name="description" content="中华医典服务条款和使用条款" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-4">服务条款</h1>
-      <p class="text-lg text-gray-600">
-        中华医典服务条款和使用条款
-      </p>
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
-          <strong>Astro 迁移进行中...</strong>
-        </p>
-      </div>
-    </div>
+    <I18nProvider client:load>
+      <TermsPage client:load />
+    </I18nProvider>
   </body>
 </html>
