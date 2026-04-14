@@ -1,4 +1,6 @@
 ---
+import AboutPage from '@/components/pages/AboutPage';
+import I18nProvider from '@/components/I18nProvider';
 import { getLocalizedSEOConfig, generateCanonicalUrl, optimizeDescription } from '@/utils/seo';
 import i18n from '@/lib/i18n';
 
@@ -10,7 +12,6 @@ const descriptionBase = (localized?.description as string) || '';
 const description = optimizeDescription(descriptionBase, i18n.language);
 const canonical = generateCanonicalUrl(basePath, i18n.language);
 const ogImage = `${canonical.replace(/\/+$/, '')}/placeholder.svg`;
-const t = i18n.t;
 ---
 
 <!DOCTYPE html>
@@ -31,38 +32,8 @@ const t = i18n.t;
     <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
-    <div class="container mx-auto px-4 py-8">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold mb-8 text-center">
-          {t('about.title')}
-        </h1>
-        
-        <div class="prose max-w-none">
-          <p class="text-lg mb-6">
-            {t('about.description')}
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div class="bg-card p-6 rounded-lg">
-              <h2 class="text-2xl font-semibold mb-4">
-                {t('about.mission')}
-              </h2>
-              <p>
-                {t('about.missionDescription')}
-              </p>
-            </div>
-            
-            <div class="bg-card p-6 rounded-lg">
-              <h2 class="text-2xl font-semibold mb-4">
-                {t('about.vision')}
-              </h2>
-              <p>
-                {t('about.visionDescription')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <I18nProvider client:load>
+      <AboutPage client:load />
+    </I18nProvider>
   </body>
 </html>
