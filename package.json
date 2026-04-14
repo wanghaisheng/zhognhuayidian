@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:astro": "astro dev",
     "build": "npm run prebuild && npm run build:client && (npm run build:server || echo SSR skipped) && node scripts/build/post-build.js && node scripts/build/generate-cf-worker.mjs && node scripts/tools/check-links.mjs --mode=prod && node scripts/seo/check-seo-coverage.js",
+    "build:astro": "astro build",
     "build:client": "vite build",
     "build:server": "vite build --ssr",
     "build:prod": "npm run prebuild && npm run build:client && (npm run build:server || echo SSR skipped) && node scripts/build/post-build.js && node scripts/build/generate-cf-worker.mjs && node scripts/tools/check-links.mjs --mode=prod && node scripts/seo/check-seo-coverage.js",
@@ -19,6 +21,7 @@
     "check:hardcode": "node scripts/checks/check-hardcode.cjs",
     "seo:check": "node scripts/seo/check-seo-coverage.js",
     "preview": "vite preview",
+    "preview:astro": "astro preview",
     "i18n:check": "node scripts/i18n/check-translations.js",
     "i18n:scan-labels": "node scripts/i18n/scan-labels-usage.mjs",
     "i18n:migrate-long-content": "node scripts/i18n/migrate-long-content.mjs",
@@ -37,31 +40,26 @@
     "test:redirects-dev": "node scripts/checks/test-redirects-dev.js",
     "test:seo-head": "node scripts/checks/test-seo-head.js",
     "test": "vitest",
-    
     "data:align-books": "node scripts/data/align-book-data-structure.cjs",
     "data:align-chapters": "node scripts/data/align-chapter-structure.cjs",
     "data:generate-books": "node scripts/data/generate-book-data.cjs",
     "data:generate-chapters": "node scripts/data/generate-book-chapters.cjs",
     "data:generate-zh-books": "node scripts/data/generate-zh-books.cjs",
     "data:unify-structure": "node scripts/data/unify-book-data-structure.cjs",
-    
     "check:book-consistency": "node scripts/checks/check-book-consistency.cjs",
     "check:chinese-display": "node scripts/checks/check-chinese-display-issues.cjs",
     "check:locale-consistency": "node scripts/checks/check-locale-consistency.cjs",
     "check:all-categories": "node scripts/checks/check-all-category-displays.cjs",
     "check:nested-keys": "node scripts/checks/check-nested-keys.cjs",
-    
     "fix:chinese-data": "node scripts/fixes/fix-chinese-data.cjs",
     "fix:category-keys": "node scripts/fixes/fix-category-keys.cjs",
     "fix:translation-content": "node scripts/fixes/fix-translation-content.cjs",
     "fix:final-all": "node scripts/fixes/final-fix-all.cjs",
     "fix:locale-consistency": "node scripts/fixes/fix-locale-consistency.cjs",
-    
     "migration:execute": "node scripts/migration/execute-migration.mjs",
     "migration:html-data": "node scripts/migration/migrate-html-data.ts",
     "migration:markdown-to-db": "node scripts/migration/migrate-markdown-to-db.ts",
     "migration:simple": "node scripts/migration/simple-migration.mjs",
-    
     "tools:audit-seo": "node scripts/tools/audit-seo.mjs",
     "tools:find-git-objects": "node scripts/tools/find-large-git-objects.cjs",
     "tools:gsc-diagnostic": "node scripts/tools/gsc-diagnostic.js",
@@ -69,6 +67,9 @@
     "tools:comprehensive-check": "node scripts/tools/comprehensive-data-check.cjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/react": "^5.0.3",
+    "@astrojs/tailwind": "^6.0.2",
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.0",
@@ -106,6 +107,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/react-virtualized-auto-sizer": "^1.0.4",
     "@types/react-window": "^1.8.8",
+    "astro": "^6.1.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
