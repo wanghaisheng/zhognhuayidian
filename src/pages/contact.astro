@@ -1,24 +1,56 @@
 ---
+import { getLocalizedSEOConfig, generateCanonicalUrl, optimizeDescription } from '@/utils/seo';
+import i18n from '@/lib/i18n';
+
+// SEO 配置
+const basePath = '/contact';
+const localized = getLocalizedSEOConfig(i18n.language, basePath) || null;
+const title = (localized?.title as string) || (i18n.language === 'zh' ? '联系我们' : 'Contact Us');
+const descriptionBase = (localized?.description as string) || '';
+const description = optimizeDescription(descriptionBase, i18n.language);
+const canonical = generateCanonicalUrl(basePath, i18n.language);
+const ogImage = `${canonical.replace(/\/+$/, '')}/placeholder.svg`;
+const t = i18n.t;
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang={i18n.language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>联系我们 - 中华医典</title>
-    <meta name="description" content="如有任何问题或建议，欢迎与我们联系" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-4">联系我们</h1>
-      <p class="text-lg text-gray-600">
-        如有任何问题或建议，欢迎与我们联系。
-      </p>
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
-          <strong>Astro 迁移进行中...</strong>
-        </p>
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center">
+          {t('contact.pageTitle')}
+        </h1>
+        
+        <div class="prose max-w-none">
+          <p class="text-lg mb-6">
+            {t('contact.pageDescription')}
+          </p>
+          
+          <div class="bg-card p-6 rounded-lg mt-8">
+            <h2 class="text-2xl font-semibold mb-4">
+              联系方式
+            </h2>
+            <p>
+              如有任何问题或建议，欢迎与我们联系。
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
