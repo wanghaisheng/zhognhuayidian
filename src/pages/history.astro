@@ -1,25 +1,35 @@
 ---
+import HistoryPage from '@/components/pages/HistoryPage';
+import I18nProvider from '@/components/I18nProvider';
+import { getLanguageFromPath } from '@/utils/multilingualRoutes';
+import { buildPageHead } from '@/utils/seo';
+import i18n from '@/lib/i18n';
+import { markdownContentManager } from '@/lib/markdown';
+
+// 数据获取（替代 TanStack Router loader）
+const locale = getLanguageFromPath(Astro.url.pathname) || 'en';
+const historyList = await markdownContentManager.getContentList('history', locale);
+
+// SEO 配置
+const head = buildPageHead('/history', locale, {
+  title: i18n.t('history.ctDevelopment') as string,
+  description: i18n.t('history.description') as string,
+});
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>医学史 - 中华医典</title>
-    <meta name="description" content="中国医学发展历史，从古代到现代的医学演进" />
+    <title>{head.title}</title>
+    <meta name="description" content={head.description} />
+    {head.meta.map(meta => <meta {...meta} />)}
+    {head.links.map(link => <link {...link} />)}
   </head>
   <body>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-4">医学史</h1>
-      <p class="text-lg text-gray-600">
-        中国医学发展历史，从古代到现代的医学演进
-      </p>
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
-          <strong>Astro 迁移进行中...</strong>
-        </p>
-      </div>
-    </div>
+    <I18nProvider client:load>
+      <HistoryPage client:load />
+    </I18nProvider>
   </body>
 </html>
