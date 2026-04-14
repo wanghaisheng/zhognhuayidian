@@ -1,8 +1,25 @@
 ---
+import Library from '@/components/pages/Library';
+import I18nProvider from '@/components/I18nProvider';
+import i18n from '@/lib/i18n';
+
+// 数据获取（替代 TanStack Router loader）
+const books = [
+  {
+    id: 'huangdi-neijing',
+    title: '黄帝内经',
+    author: '佚名',
+    dynasty: '先秦',
+    category: 'medical-classics',
+    year: '-2000',
+    description: '中医经典著作，奠定中医理论基础',
+    tags: ['医经', '基础理论']
+  }
+];
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang={i18n.language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -10,16 +27,8 @@
     <meta name="description" content="浏览1000+部中医古籍，包括医经、本草、方书等" />
   </head>
   <body>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-4">古籍库</h1>
-      <p class="text-lg text-gray-600">
-        浏览1000+部中医古籍，包括医经、本草、方书等
-      </p>
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
-          <strong>Astro 迁移进行中...</strong>
-        </p>
-      </div>
-    </div>
+    <I18nProvider client:load>
+      <Library initialBooks={books} client:load />
+    </I18nProvider>
   </body>
 </html>
