@@ -1,14 +1,37 @@
 ---
 import AppLayout from '../layouts/AppLayout.astro';
+import ManufacturersPage from '../components/pages/ManufacturersPage';
+import I18nProvider from '../components/I18nProvider';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import i18n from '../lib/i18n';
+
+// Astro 负责数据获取
+const { getOrCreateStorageAdapter } = await import('../lib/storage/factory');
+const adapter = await getOrCreateStorageAdapter();
+
+// 获取制造商数据
+const manufacturersResult = await adapter.query('manufacturers', {
+  eq: { published: 1 },
+  order: { column: 'slug' }
+});
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: 1,
+    },
+  },
+});
 ---
 
 <AppLayout title="制造商 - 中华医典">
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-6">制造商</h1>
-    <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-      <p class="text-sm text-blue-800">
-        <strong>Astro 迁移进行中...</strong>
-      </p>
-    </div>
-  </div>
+  <I18nProvider client:visible>
+    <QueryClientProvider client={queryClient}>
+      <ManufacturersPage 
+        client:visible 
+        initialData={manufacturersResult.data || []}
+      />
+    </QueryClientProvider>
+  </I18nProvider>
 </AppLayout>

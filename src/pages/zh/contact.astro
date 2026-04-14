@@ -1,9 +1,9 @@
 ---
-import AppLayout from '../layouts/AppLayout.astro';
-import AboutPage from '../components/pages/AboutPage';
-import I18nProvider from '../components/I18nProvider';
+import AppLayout from '../../layouts/AppLayout.astro';
+import ContactPage from '../../components/pages/ContactPage';
+import I18nProvider from '../../components/I18nProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import i18n from '../lib/i18n';
+import i18n from '../../lib/i18n';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,10 +15,10 @@ const queryClient = new QueryClient({
 });
 ---
 
-<AppLayout title="关于我们 - 中华医典">
+<AppLayout title="联系我们 - 中华医典">
   <I18nProvider client:visible>
     <QueryClientProvider client={queryClient}>
-      <AboutPage client:visible />
+      <ContactPage client:visible />
     </QueryClientProvider>
   </I18nProvider>
 </AppLayout>
