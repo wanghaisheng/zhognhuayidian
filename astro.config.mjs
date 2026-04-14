@@ -15,6 +15,7 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  adapter: '@astrojs/cloudflare',
   vite: {
     ssr: {
       external: ['sql.js'],

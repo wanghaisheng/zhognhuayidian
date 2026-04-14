@@ -67,11 +67,10 @@
     "tools:comprehensive-check": "node scripts/tools/comprehensive-data-check.cjs"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.9",
     "@astrojs/mdx": "^5.0.3",
     "@astrojs/react": "^5.0.1",
     "@astrojs/tailwind": "^6.0.2",
-    "@types/react": "^18.3.28",
-    "@types/react-dom": "^18.3.7",
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.0",
@@ -106,6 +105,8 @@
     "@tanstack/react-query": "^5.56.2",
     "@tanstack/react-router": "^1.159.5",
     "@tanstack/react-router-ssr-query": "^1.159.5",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/react-virtualized-auto-sizer": "^1.0.4",
     "@types/react-window": "^1.8.8",
