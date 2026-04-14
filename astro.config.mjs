@@ -15,7 +15,13 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
-  adapter: '@astrojs/cloudflare',
+  i18n: {
+    locales: ['en', 'zh'],
+    defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   vite: {
     ssr: {
       external: ['sql.js'],

@@ -1,61 +1,14 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import ManufacturersList from '../components/pages/ManufacturersPage';
-import I18nProvider from '../components/I18nProvider';
-
-// 在服务端获取数据
-const { getOrCreateStorageAdapter } = await import('../lib/storage/factory');
-
-let manufacturers = [];
-let error = null;
-
-try {
-  const adapter = await getOrCreateStorageAdapter();
-  const result = await adapter.query('manufacturers', {
-    eq: { published: 1 },
-    order: { column: 'slug' }
-  });
-  
-  if (result.error) {
-    error = result.error.message;
-  } else {
-    manufacturers = result.data || [];
-  }
-} catch (err) {
-  error = err instanceof Error ? err.message : 'Unknown error';
-  console.error('Failed to fetch manufacturers:', err);
-}
+import AppLayout from '../layouts/AppLayout.astro';
 ---
 
-<MainLayout title="制造商 - 中华医典">
-  <I18nProvider client:visible>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-6">制造商</h1>
-      
-      {error ? (
-        <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
-          <p class="font-bold">加载失败</p>
-          <p class="text-sm">{error}</p>
-          <p class="text-xs mt-2">请确保环境变量 VITE_SUPABASE_URL 和 VITE_SUPABASE_PUBLISHABLE_KEY 已配置</p>
-        </div>
-      ) : (
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {manufacturers.map((manufacturer: any) => (
-            <div key={manufacturer.id} class="border rounded-lg p-4 hover:shadow-md transition">
-              <h2 class="text-xl font-semibold mb-2">{manufacturer.name_zh || manufacturer.name_en}</h2>
-              <p class="text-sm text-gray-600">{manufacturer.country}</p>
-              <p class="text-xs text-gray-500 mt-2">{manufacturer.description_zh || manufacturer.description_en}</p>
-            </div>
-          ))}
-        </div>
-      )}
-      
-      {manufacturers.length === 0 && !error && (
-        <div class="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded">
-          <p class="font-bold">暂无数据</p>
-          <p class="text-sm">数据库中暂无制造商数据</p>
-        </div>
-      )}
+<AppLayout title="制造商 - 中华医典">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-6">制造商</h1>
+    <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+      <p class="text-sm text-blue-800">
+        <strong>Astro 迁移进行中...</strong>
+      </p>
     </div>
-  </I18nProvider>
-</MainLayout>
+  </div>
+</AppLayout>

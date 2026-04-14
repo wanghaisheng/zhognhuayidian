@@ -1,0 +1,26 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title || '中华医典'}</title>
+    <meta name="description" content={description || '中国医疗器械数据库'} />
+  </head>
+  <body class="bg-background text-foreground">
+    <div class="flex flex-col min-h-screen">
+      <main id="main-content" class="flex-grow relative z-10">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
