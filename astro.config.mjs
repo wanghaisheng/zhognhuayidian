@@ -15,4 +15,14 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  vite: {
+    ssr: {
+      external: ['sql.js'],
+    },
+    build: {
+      rollupOptions: {
+        external: ['sql.js'],
+      },
+    },
+  },
 });
