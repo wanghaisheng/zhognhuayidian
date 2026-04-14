@@ -1,25 +1,37 @@
 ---
+import LearnCenterPage from '@/components/pages/LearnCenterPage';
+import I18nProvider from '@/components/I18nProvider';
+import { getLanguageFromPath } from '@/utils/multilingualRoutes';
+import { buildPageHead } from '@/utils/seo';
+import i18n from '@/lib/i18n';
+import { markdownContentManager } from '@/lib/markdown';
+
+// 数据获取（替代 TanStack Router loader）
+const locale = getLanguageFromPath(Astro.url.pathname) || 'en';
+const learnList = await markdownContentManager.getContentList('learn', locale);
+
+// SEO 配置
+const head = buildPageHead('/learn', locale, {
+  title: locale === 'zh' ? '学习中心' : 'Learn',
+  description: locale === 'zh'
+    ? '买方视角的 CT/MRI 学习资源：规格解析、总拥有成本与维保、流程优化与患者体验。'
+    : 'Buyer-focused CT/MRI learning resources: specs, total cost, service and workflow.',
+});
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>学习中心 - 中华医典</title>
-    <meta name="description" content="中医学习中心，提供系统的中医学习资源和教程" />
+    <title>{head.title}</title>
+    <meta name="description" content={head.description} />
+    {head.meta.map(meta => <meta {...meta} />)}
+    {head.links.map(link => <link {...link} />)}
   </head>
   <body>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold mb-4">学习中心</h1>
-      <p class="text-lg text-gray-600">
-        中医学习中心，提供系统的中医学习资源和教程
-      </p>
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
-          <strong>Astro 迁移进行中...</strong>
-        </p>
-      </div>
-    </div>
+    <I18nProvider client:load>
+      <LearnCenterPage initialLearnList={learnList} client:load />
+    </I18nProvider>
   </body>
 </html>
