@@ -92,22 +92,20 @@ interface BlogPageProps {
 const BlogPage: React.FC<BlogPageProps> = ({ initialData, locale }) => {
   const { t, i18n } = useTranslation();
   
-  // 如果有初始数据，使用初始数据；否则使用 useQuery
-  const { data: articles } = useQuery({
-    queryKey: ['supabase', 'articles', 'all', locale],
-    queryFn: async () => {
-      const { data } = await fetchArticlesAll();
-      return Array.isArray(data) ? data : [];
-    },
-    initialData: initialData,
-    staleTime: 5 * 60_000,
-  });
+  // 直接使用传入的数据，不再使用 useQuery
+  const articles = initialData || [];
 
   return (
     // 组件内容
   );
 };
 ```
+
+**重要提示**: 
+- 不应该在 Astro 中使用 TanStack QueryClient 和 QueryClientProvider
+- 数据获取完全由 Astro 前置代码块负责
+- React 组件只接收数据作为 props，不应该再使用 useQuery
+- React 组件变成纯 UI 组件，无状态、无数据获取逻辑
 
 ### 核心区别
 
@@ -185,7 +183,6 @@ export const Route = createFileRoute('/blog')({
 ---
 import BlogPage from '@/pages/BlogPage';
 import I18nProvider from '@/components/I18nProvider';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fetchArticlesAll } from '@/hooks/useSupabaseData';
 import { getLanguageFromPath } from '@/utils/multilingualRoutes';
 import { buildPageHead } from '@/utils/seo';
@@ -201,15 +198,6 @@ const head = buildPageHead('/blog', i18n.language, {
   title: i18n.language === 'zh' ? '博客' : 'Blog',
   description: i18n.t('blog.description')
 });
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      retry: 1,
-    },
-  },
-});
 ---
 
 <!DOCTYPE html>
@@ -224,13 +212,11 @@ const queryClient = new QueryClient({
   </head>
   <body>
     <I18nProvider client:load>
-      <QueryClientProvider client={queryClient}>
-        <BlogPage 
-          initialData={articles} 
-          locale={locale} 
-          client:visible 
-        />
-      </QueryClientProvider>
+      <BlogPage 
+        initialData={articles} 
+        locale={locale} 
+        client:visible 
+      />
     </I18nProvider>
   </body>
 </html>
@@ -238,11 +224,13 @@ const queryClient = new QueryClient({
 
 ## 注意事项
 
-1. **React 组件保持不变**: 只需要修改接收初始数据的方式
+1. **React 组件需要修改**: 需要移除 useQuery 等数据获取逻辑，改为接收数据作为 props
 2. **数据获取逻辑复用**: 将 TanStack Router loader 中的逻辑直接复制到 Astro 前置代码块
 3. **SEO 配置**: 将 head 函数的配置直接转换为 HTML head 标签
-4. **Providers**: 需要在 Astro 中手动添加 I18nProvider 和 QueryClientProvider
-5. **国际化**: 使用现有的 i18next 配置，不需要切换到 Astro i18n
+4. **不使用 TanStack QueryClient**: Astro 负责数据获取，不需要 QueryClientProvider
+5. **Providers**: 只需要在 Astro 中添加 I18nProvider，不需要 QueryClientProvider
+6. **国际化**: 使用现有的 i18next 配置，不需要切换到 Astro i18n
+7. **React 组件变成纯 UI 组件**: 无状态、无数据获取逻辑，只负责展示
 
 ## 当前实际路由列表
 
